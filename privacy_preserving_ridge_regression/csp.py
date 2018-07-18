@@ -399,7 +399,7 @@ class GarbledCircuit(object):
         #L = np.zeros(A.shape)
         for i in range(self.d-1):
             for j in range(i+1,self.d):
-                self.L[i][j] = self.wire_labels['A_0']*24
+                self.L[i][j] = np.array([ self.wire_labels['A_0'] ] *24)
         for j in range(self.d):
             print(j)
             for k in range(j-1):
