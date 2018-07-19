@@ -63,7 +63,13 @@ if __name__ == '__main__':
                 get_garbled_a_hat_b_hat = c.recv(1024)
                 garbled_circuit.A_hat_garbled = get_garbled_a_hat_b_hat['A_HAT_GARBLED']
                 garbled_circuit.b_hat_garbled = get_garbled_a_hat_b_hat['B_HAT_GARBLED']
+                
+                print('Calculating beta Started')
+	            start = time.time()
                 beta,wire_labels = garbled_circuit.execute()
+                print('Calculating beta Completed')
+        	    print('Total time taken %s'%(time.time()-start))
+        	    
                 print(beta,wire_labels)
 	    elif msg.split(":")[0] == 'User':
 		    if 'Please Send Public Key' in msg:
@@ -75,6 +81,11 @@ if __name__ == '__main__':
 	            ENC_MSGS_RECEIVED_FROM_USERS = True
 	            c_i = c.recv(1024)
 	            evaluator.c = pickle.loads(c_i)
+	            print('Calculating C with MuA & Mub Started')
+	            start = time.time()
 	            c_final = evaluator.calculate_c_hat()
+	            print('Calculating C with MuA & Mub Completed')
+        	    print('Total time taken %s'%(time.time()-start))
+        	    
 	            c.send('Thank you for connecting')
         	    c.close()

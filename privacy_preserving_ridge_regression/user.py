@@ -52,13 +52,24 @@ class User(object):
     def calculate(self):
         c = []
         #print(self.X_train.shape,self.y_train.shape)
+        i = 1
+        c_i = [ np.zeros((self.X_train.shape[1],self.X_train.shape[1])), np.zeros(self.X_train.shape[1])]
         for x_i,y_i in zip(self.X_train,self.y_train):
-            #print(x_i, y_i)
+            #print(x_i.shape, y_i.shape,c_i[0].shape,c_i[1].shape)
             A_i = np.dot(x_i.reshape(len(x_i), 1), x_i.reshape(len(x_i), 1).T)
             b_i = x_i * y_i
             #print(A_i.shape, b_i.shape)
-            c_i = self.paillier_encrypt(A_i, b_i, precision=2)
-            c.append(c_i)
+            if i%20 == 0:
+                c_i_enc = self.paillier_encrypt(c_i[0], c_i[1], precision=2)
+                c.append(c_i_enc)
+                c_i = [ np.zeros((self.X_train.shape[1],self.X_train.shape[1])), np.zeros(self.X_train.shape[1])]
+                print('Number of Records Encrypted %s. Currently Pending : %s'%(i, self.X_train.shape[0]-i))
+            else:
+                c_i[0] += A_i
+                c_i[1] += b_i
+            i += 1
+        c_i_enc = self.paillier_encrypt(c_i[0], c_i[1], precision=2)
+        c.append(c_i_enc)
         #c_mu = self.paillier_encrypt(self.mu_A, self.mu_b, precision=2)
         #self.c.append(c_mu)
         return c
@@ -79,7 +90,12 @@ if __name__ == '__main__':
 	    key = s.recv(1024).decode()
 	    
     print(key)
+    
     s.send('User: Sending Encrypted Messages')
+    start = time.time()
+    print('Calculating encrypted C and sending to Evaluator started')
     s.send(pickle.dumps(user.calculate()))
+    print('Calculating encrypted Cs and sending to Evaluator completed.')
+    print('Total time taken in calculating Cs : %s seconds'%(time.time()-start))
     #print s.recv(1024)
     s.close()

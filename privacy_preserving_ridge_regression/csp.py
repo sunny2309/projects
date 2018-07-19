@@ -368,7 +368,7 @@ class GarbledCircuit(object):
                 
         return out
     
-    def calculate_A_b(self)
+    def calculate_A_b(self):
         ## Subtract mu_A and mu_B from A_hat and b_hat
         self.A_garbled = np.empty(self.A_hat_garbled.shape,dtype=np.object)
         self.b_garbled = np.empty(self.b_hat_garbled.shape,dtype=np.object)
@@ -388,7 +388,7 @@ class GarbledCircuit(object):
         print('A',A.shape,A)
         print('B',b.shape,b)
         
-    def calculate_L(self)
+    def calculate_L(self):
         ## Get L using A with algo cholesky
         wl = dict(zip(self.wire_labels.values(), self.wire_labels.keys()))
         self.d = self.A_garbled.shape[0]
@@ -405,9 +405,9 @@ class GarbledCircuit(object):
             for k in range(j-1):
                 for i in range(j,self.d):
                     ljk = np.array([self.wire_labels[wl[i].replace('A','B')] for i in self.L[j][k]])
-                    out = GarbledMultiplication()(self.L[i][k], self.L[j][k],self.wire_labels)
-                    out = np.array([self.wire_labels[wl[i].replace('C','B')] for i in out])
-                    self.L[i][j] = GarbledSubtract()(self.L[i][j], out, self.wire_labels) ## Need to bring -4 as exponent
+                    mul = GarbledMultiplication()(self.L[i][k], ljk,self.wire_labels)
+                    mul = np.array([self.wire_labels[wl[i].replace('C','B')] for i in mul])
+                    self.L[i][j] = GarbledSubtract()(self.L[i][j], mul, self.wire_labels) ## Need to bring -4 as exponent
                     self.L[i][j] = np.array([self.wire_labels[wl[i].replace('C','A')] for i in self.L[i][j]])
         
             self.L[j][j] = GarbledSqrt()(self.L[j][j],self.wire_labels) ## Need to bring -4 as exponent
@@ -586,7 +586,11 @@ if __name__ == '__main__':
     s.send('CSP: Sending Public Key, Garbled Circuit & MUs. Please confirm.')
     msg = s.recv(1024).decode()
     if msg == 'Please Send':
+        print('Prapring Public/Private Key, Garbled Circuit, Garbled MuA,Mub and Wire Labels Started')
+        start = time.time()
 	    data = csp.get_garbled_circuit_and_mua_mub()
+	    print('Prapring Public/Private Key, Garbled Circuit, Garbled MuA,Mub and Wire Labels Completed')
+	    print('Total time taken %s'%(time.time()-start))
     s.send(pickle.dumps(data))
     
     while ENC_MSGS_RECEIVED_FROM_USERS != 'True':
@@ -596,8 +600,18 @@ if __name__ == '__main__':
     c.send('CSP: Please Send C')
     c_final = pickle.loads(s.recv(1024))
     csp.c_i = c_final
+    print('Decrypting C to get A_hat and b_hat Started')
+    start = time.time()
     csp.paillier_decrypt()
+    print('Decrypting C to get A_hat and b_hat Completed')
+    print('Total time taken %s'%(time.time()-start))
+    
+    print('Calculation of A_hat and b_hat Started')
+    start = time.time()
     a_hat_b_hat_garbled = csp.get_garbled_a_hat_b_hat()
+    print('Calculation of A_hat and b_hat Completed')
+    print('Total time taken %s'%(time.time()-start))
+    
     
     s.send('CSP: A_HAT and B_HAT Got Calculated')
     s.send(pickle.dumps(a_hat_b_hat_garbled))            
