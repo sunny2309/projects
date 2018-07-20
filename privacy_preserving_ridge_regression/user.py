@@ -68,17 +68,16 @@ if __name__ == '__main__':
     host = 'localhost'
     port = 12345
     s.connect((host, port))
-    s.send('User: Please Send Public Key')
-	key = s.recv(1024).decode()
-	
-	while 'Please try again after sometime' in key:
+    s.send(pickle.dumps('User: Please Send Public Key'))
+    key = s.recv(1024).decode()
+    while 'Please try again after sometime' in key:
 	    time.sleep(10)
-	    s.send('User: Please Send Public Key')
+	    s.send(pickle.dumps('User: Please Send Public Key'))
 	    key = s.recv(1024).decode()
 	    
     print(key)
     
-    s.send('User: Sending Encrypted Messages')
+    s.send(pickle.dumps('User: Sending Encrypted Messages'))
     start = time.time()
     print('Calculating encrypted C and sending to Evaluator started')
     s.send(pickle.dumps([user1.calculate(),user2.calculate()]))
