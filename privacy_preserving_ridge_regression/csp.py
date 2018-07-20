@@ -18,6 +18,50 @@ from Crypto.Cipher import DES
 import pickle
 import time
 
+class Gate(object):
+    pass
+
+class And(Gate):
+    def __call__(self,a,b):
+        return a and b
+
+class Or(Gate):
+    def __call__(self,a,b):
+        return a or b
+
+class Xor(Gate):
+    def __call__(self,a,b):
+        return 0 if (a==1 and b==1) or (a==0 and b==0) else 1
+
+class Not(Gate):
+    def __call__(self,a):
+        t = {0:1,1:0}
+        return t[a]
+                
+class Add(Gate):
+    
+    def add(self,a,b,carry):
+        #xor = Xor()
+        #and_g = And()
+        #or_g = Or()
+        o1 = Xor()(a,b)
+        o2 = And()(a,b)
+        add = Xor()(carry,o1)
+        o4 = And()(carry,o1)
+        cary = Or()(o4,o2)
+        return str(add), cary
+    
+    def __call__(self,a,b):
+        carry = 0
+        out = ''
+        for idx,i in reversed(list(enumerate(zip(a[:16],b[:16])))):
+            o,carry = self.add(int(i[0]),int(i[1]),carry)
+            out += o
+        #print(out)
+        out = ''.join(reversed(out))
+        return out + a[16:]
+
+
 def compute_twos_complement(binary):
     out = ''
     for i in binary:
@@ -89,17 +133,6 @@ def bin_to_int_garbled(binary,wire_labels):
     int_part -= int(wl[binary[0]].split('_')[-1])*pow(2,len(binary)-1)
     return int_part
 
-def compute_twos_complement_garbled(binary,wire_labels={}):
-    wl = dict(zip(wire_labels.values(),wire_labels.keys()))
-    out = []
-    for i in binary:
-        out += [wire_labels['B_1']] if '0' in wl[i] else [wire_labels['B_0']]
-    #print(out)
-    out = GarbledAdd()(((len(binary)-1)*[wire_labels['A_0']])+[wire_labels['A_1']], out, wire_labels)
-    wl = dict(zip(wire_labels.values(),wire_labels.keys()))
-    out = [wire_labels[wl[i].replace('C','B')] for i in out]
-    return out
-
 class GarbledCircuit(object):
     def __init__(self):
         pass
@@ -127,7 +160,7 @@ class GarbledCircuit(object):
         for i in binary:
             out += [wire_labels['B_1']] if '0' in wl[i] else [wire_labels['B_0']]
         #print(out)
-        out = GarbledAdd()(((len(binary)-1)*[wire_labels['A_0']])+[wire_labels['A_1']], out, wire_labels)
+        out = self.GarbledAdd(((len(binary)-1)*[wire_labels['A_0']])+[wire_labels['A_1']], out, wire_labels)
         out = [wire_labels[wl[i].replace('C','B')] for i in out]
         return out
 
@@ -145,7 +178,7 @@ class GarbledCircuit(object):
         return [wire_labels[val]] * n + a[:-n]
 
     def GarbledGreaterThanEqualTo(self,a, b, wire_labels):
-        return bin_to_int_garbled(a, wire_labels) >= bin_to_int_garbled(b, wire_labels)
+        return self.bin_to_int_garbled(a, wire_labels) >= self.bin_to_int_garbled(b, wire_labels)
     
     def GarbledPadZerosLeft(self,a, n, wire_labels={}, garbled_table=[]):
         wl = dict(zip(wire_labels.values(), wire_labels.keys()))
@@ -293,7 +326,7 @@ class GarbledCircuit(object):
         return out + [ wire_labels[wl[i].replace('A','C')] for i in a[16:]]
 
     def GarbledSubtract(self,a,b, wire_labels={}):
-        b2 = compute_twos_complement_garbled(b[:16],wire_labels)
+        b2 = self.compute_twos_complement_garbled(b[:16],wire_labels)
         #print(b2,b[16:])
         b2 = list(b2) + list(b[16:])
         return self.GarbledAdd(a,b2,wire_labels)
@@ -533,16 +566,15 @@ class GarbledCircuit(object):
             beta[i] = np.array([self.wire_labels[wl[i].replace('C','B')] for i in beta[i]])
         
         B = self.convert_to_float(beta,False)
-        #print(B.shape,B)
-        return B, beta, self.wire_labels
+        print(B.shape,B)
+        #return beta, self.wire_labels
         
     def execute(self):
         self.calculate_A_b()
         self.calculate_L()
         self.calculate_Y()
-        B, beta,wire_labels = self.calculate_beta()
+        self.calculate_beta()
         #return beta,wire_labels
-        return B
         
 class CSP(object):
     def __init__(self):
