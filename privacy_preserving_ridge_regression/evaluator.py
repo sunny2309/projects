@@ -20,7 +20,7 @@ import time
 
 class Evaluator(object):
     def __init__(self):
-        pass
+        self.c = []
     
     def calculate_c_hat(self):
         As,bs = zip(*self.c)
@@ -78,14 +78,15 @@ if __name__ == '__main__':
     	    	else:
     	    	    c.send('Please try again after sometime')
 	        elif 'Sending Encrypted Messages' in msg:
-	            ENC_MSGS_RECEIVED_FROM_USERS = True
 	            c_i = c.recv(1024)
-	            evaluator.c = pickle.loads(c_i)
-	            print('Calculating C with MuA & Mub Started')
-	            start = time.time()
-	            c_final = evaluator.calculate_c_hat()
-	            print('Calculating C with MuA & Mub Completed')
-        	    print('Total time taken %s'%(time.time()-start))
+	            evaluator.c.append(pickle.loads(c_i))
+	            if len(evaluator.c) == 2:
+	                ENC_MSGS_RECEIVED_FROM_USERS = True
+	                print('Calculating C with MuA & Mub Started')
+	                start = time.time()
+	                c_final = evaluator.calculate_c_hat()
+	                print('Calculating C with MuA & Mub Completed')
+            	    print('Total time taken %s'%(time.time()-start))
         	    
 	            c.send('Thank you for connecting')
         	    c.close()

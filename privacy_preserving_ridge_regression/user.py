@@ -19,22 +19,9 @@ import pickle
 import time
 
 class User(object):
-    def __init__(self):
-        df = pd.read_csv('auto-mpg.csv')
-        df = df[df['horsepower'] != '?']
-        cols = df.columns.tolist()
-        cols.remove('mpg')
-        cols.remove('car name')
-        self.X = df[cols].values.astype(np.float32)
-        self.y = df['mpg'].values.astype(np.float32)
-        self.X_train,self.X_test,self.y_train,self.y_test = train_test_split(self.X,self.y,train_size=.8,test_size=.2)
-        sc = StandardScaler()
-        self.X_train = sc.fit_transform(self.X_train)
-        self.X_test = sc.transform(self.X_test)
+    def __init__(self,X_train,y_train):
+        self.y_train = y_train
         self.X_train = np.around(self.X_train,2)
-        self.X_test = np.around(self.X_test,2)
-        #self.temp = np.around(np.dot(self.X_train.T,self.X_train),2)
-        #print(np.around(np.dot(self.X_train.T,self.X_train),2))
     
     def paillier_encrypt(self, A_i, b_i, precision=2):
         A_i_enc = np.zeros(A_i.shape,dtype=np.object)
@@ -50,32 +37,32 @@ class User(object):
         return A_i_enc, b_i_enc
     
     def calculate(self):
-        c = []
-        #print(self.X_train.shape,self.y_train.shape)
-        i = 1
-        c_i = [ np.zeros((self.X_train.shape[1],self.X_train.shape[1])), np.zeros(self.X_train.shape[1])]
+        A_i, b_i = np.zeros(self.X_train.shape), np.zeros(self.y_train.shape)
         for x_i,y_i in zip(self.X_train,self.y_train):
-            #print(x_i.shape, y_i.shape,c_i[0].shape,c_i[1].shape)
-            A_i = np.dot(x_i.reshape(len(x_i), 1), x_i.reshape(len(x_i), 1).T)
-            b_i = x_i * y_i
-            #print(A_i.shape, b_i.shape)
-            if i%20 == 0:
-                c_i_enc = self.paillier_encrypt(c_i[0], c_i[1], precision=2)
-                c.append(c_i_enc)
-                c_i = [ np.zeros((self.X_train.shape[1],self.X_train.shape[1])), np.zeros(self.X_train.shape[1])]
-                print('Number of Records Encrypted %s. Currently Pending : %s'%(i, self.X_train.shape[0]-i))
-            else:
-                c_i[0] += A_i
-                c_i[1] += b_i
-            i += 1
-        c_i_enc = self.paillier_encrypt(c_i[0], c_i[1], precision=2)
-        c.append(c_i_enc)
-        #c_mu = self.paillier_encrypt(self.mu_A, self.mu_b, precision=2)
-        #self.c.append(c_mu)
-        return c
+            A_i += np.dot(x_i.reshape(len(x_i), 1), x_i.reshape(len(x_i), 1).T)
+            b_i += x_i * y_i
+        A_i_enc,b_i_enc = self.paillier_encrypt(A_i, b_i, precision=2)
+        return A_i_enc, b_i_enc
 
 if __name__ == '__main__':
 
+    df = pd.read_csv('auto-mpg.csv')
+    df = df[df['horsepower'] != '?']
+    cols = df.columns.tolist()
+    cols.remove('mpg')
+    cols.remove('car name')
+    X = df[cols].values.astype(np.float32)
+    y = df['mpg'].values.astype(np.float32)
+    X_train, X_test, y_train, y_test = train_test_split(X, y,train_size=.8,test_size=.2)
+    sc = StandardScaler()
+    X_train = sc.fit_transform(X_train)
+    X_test = sc.transform(X_test)
+    
+    half = len(X_train)/ 2
+    user1 = User(X_train[:half],X_test[:half])
+    user2 = User(X_train[half:],X_test[half:])
+    
+    
     s = socket.socket()
     #host = socket.gethostname()
     host = 'localhost'
@@ -94,7 +81,7 @@ if __name__ == '__main__':
     s.send('User: Sending Encrypted Messages')
     start = time.time()
     print('Calculating encrypted C and sending to Evaluator started')
-    s.send(pickle.dumps(user.calculate()))
+    s.send(pickle.dumps([user1.calculate(),user2.calculate()]))
     print('Calculating encrypted Cs and sending to Evaluator completed.')
     print('Total time taken in calculating Cs : %s seconds'%(time.time()-start))
     #print s.recv(1024)
