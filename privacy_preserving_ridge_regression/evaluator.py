@@ -65,7 +65,7 @@ def float_to_bin(num,size=24):
     twos_complement = True if num<0 else False
     int_p,frac_p = str(num).split('.')
     frac_p = float('0.'+frac_p)
-    int_b = bin(int(int_p))[2:]
+    int_b = bin(int(int_p))[2:] if num > 0 else bin(int(int_p))[3:]
     frac_b = '.'
     for i in range(8):
         #print(frac_p)
@@ -81,8 +81,10 @@ def float_to_bin(num,size=24):
     out = out[:-4]  ## Need to change to -8 in future
     out += '11111100'
     out = out.zfill(size)
+    #print(out)
     if twos_complement:
         temp_out = compute_twos_complement(out[:size-8])
+    #print(temp_out)
     out = temp_out+out[size-8:] if twos_complement else out
     #print(out)
     return out
@@ -109,7 +111,7 @@ class Evaluator(object):
             mu_b_binary[i] = float_to_bin(self.mu_bf[i])
         
         mu_A_garbled = np.empty((self.d, self.d, 24,),dtype = np.object)
-        mu_b_garbled = np.empty((self.d, self.d, 24,),dtype = np.object)
+        mu_b_garbled = np.empty((self.d, 24,),dtype = np.object)
                     
         for i in range(mu_A_binary.shape[0]):
             for j in range(mu_A_binary.shape[1]):
@@ -131,7 +133,7 @@ if __name__ == '__main__':
     k,b,muAf,mubf = None, None, None, None
     num_of_features = 7 ### Please change it according to columns of training set................................................
     evaluator.d = num_of_features
-    ENC_MSGS_RECEIVED_FROM_USERS = True
+    ENC_MSGS_RECEIVED_FROM_USERS = 'False'
     c_final = None
 
     while True:
@@ -156,7 +158,6 @@ if __name__ == '__main__':
 	                ## Received public key of RSA and Random X values. will be doing Oblivious transfer now to get MuAs.
 	                k,b = int(np.random.choice(100)), int(np.random.choice(5))   ## Randomly generated k and b. (b is index within 0-4 that MuA and Mub will be retrieved)
 	                v = (x[b] + pow(k,pub_key_rsa.e, pub_key_rsa.n))  ## Generating V
-	                print('Reached Here')
 	                c.send(pickle.dumps('Please send MuPrimes. We are sending V. Please confirm.'))
 	                msg = pickle.loads(c.recv(1024))
 	                print(msg)
@@ -169,16 +170,23 @@ if __name__ == '__main__':
 	                    muprimes = pickle.loads(c.recv(4096))
 	                    evaluator.mu_Af = muprimes['MUA'][b] - k
 	                    evaluator.mu_bf = muprimes['MUB'][b] - k
+	                    print(evaluator.mu_Af)
 	                    garbled_circuit.mu_A_garbled, garbled_circuit.mu_b_garbled = evaluator.generate_mu_garbled()
+	                    print('Reached Here')
+	                msg = pickle.loads(c.recv(1024))
+	                print(msg)
+	                if 'Please Confirm Whether C Got Calculated' in msg:
+	                    c.send(pickle.dumps(str(ENC_MSGS_RECEIVED_FROM_USERS)))
 	        elif 'Please Confirm Whether C Got Calculated' in msg:
 	            c.send(pickle.dumps(str(ENC_MSGS_RECEIVED_FROM_USERS)))
 	        elif 'Please Send C' in msg:
 	            c.send(pickle.dumps(c_final))
 	        elif 'A_HAT and B_HAT Got Calculated' in msg:
-	            get_garbled_a_hat_b_hat = c.recv(1024)
+	            get_garbled_a_hat_b_hat = pickle.loads(c.recv(1000000))
+	            print(get_garbled_a_hat_b_hat['A_HAT_GARBLED'].shape, get_garbled_a_hat_b_hat['B_HAT_GARBLED'].shape)
 	            garbled_circuit.A_hat_garbled = get_garbled_a_hat_b_hat['A_HAT_GARBLED']
 	            garbled_circuit.b_hat_garbled = get_garbled_a_hat_b_hat['B_HAT_GARBLED']
-	            beta,wire_labels = garbled_circuit.execute()
+	            garbled_circuit.execute()
 	    elif msg.split(":")[0] == 'User':
 	        if 'Please Send Public Key' in msg:
 	            if gc_pub_key_mua_mub_wires:
@@ -186,10 +194,10 @@ if __name__ == '__main__':
 	            else:
 	                c.send(pickle.dumps('Please try again after sometime'))
 	        elif 'Sending Encrypted Messages' in msg:
-	            c_i = c.recv(1024)
-	            evaluator.c.append(pickle.loads(c_i))
-	            if len(evaluator.c) == 2:
-	                ENC_MSGS_RECEIVED_FROM_USERS = True
+	            c_i = pickle.loads(c.recv(150000))
+	            evaluator.c.append(c_i)
+	            if len(evaluator.c) == 4:     ## Set it equal to number of users
+	                ENC_MSGS_RECEIVED_FROM_USERS = 'True'
 	                c_final = evaluator.calculate_c_hat()
 	                c.send(pickle.dumps('Thank you for connecting'))
 	                c.close()

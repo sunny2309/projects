@@ -20,18 +20,53 @@ import time
 import rsa
 from garbled_circuit import GarbledCircuit
 
+def And(a,b):
+    return a and b
+
+def Or(a,b):
+    return a or b
+
+def Xor(a,b):
+    return 0 if (a==1 and b==1) or (a==0 and b==0) else 1
+
+def Not(a):
+    t = {0:1,1:0}
+    return t[a]
+
+def add(a,b,carry):
+    #xor = Xor()
+    #and_g = And()
+    #or_g = Or()
+    o1 = Xor(a,b)
+    o2 = And(a,b)
+    add = Xor(carry,o1)
+    o4 = And(carry,o1)
+    cary = Or(o4,o2)
+    return str(add), cary
+
+def Add(a,b):
+    carry = 0
+    out = ''
+    for idx,i in reversed(list(enumerate(zip(a[:16],b[:16])))):
+        o,carry = add(int(i[0]),int(i[1]),carry)
+        out += o
+    #print(out)
+    out = ''.join(reversed(out))
+    return out + a[16:]
+
+
 def compute_twos_complement(binary):
     out = ''
     for i in binary:
         out += '1' if i=='0' else '0'
     #print(out)
-    return Add()(out,((len(binary)-1)*'0')+'1')
+    return Add(out,((len(binary)-1)*'0')+'1')
         
 def float_to_bin(num,size=24):
     twos_complement = True if num<0 else False
     int_p,frac_p = str(num).split('.')
     frac_p = float('0.'+frac_p)
-    int_b = bin(int(int_p))[2:]
+    int_b = bin(int(int_p))[2:] if num > 0 else bin(int(int_p))[3:]
     frac_b = '.'
     for i in range(8):
         #print(frac_p)
@@ -47,8 +82,10 @@ def float_to_bin(num,size=24):
     out = out[:-4]  ## Need to change to -8 in future
     out += '11111100'
     out = out.zfill(size)
+    #print(out)
     if twos_complement:
         temp_out = compute_twos_complement(out[:size-8])
+    #print(temp_out)
     out = temp_out+out[size-8:] if twos_complement else out
     #print(out)
     return out
@@ -97,7 +134,7 @@ class CSP(object):
             for j in range(self.c_i[0].shape[0]):
                 self.A_hat_float[i][j] = self.private_key.decrypt(self.c_i[0][i][j])
 
-        for j in range(c_i[1].shape[0]):
+        for j in range(self.c_i[1].shape[0]):
                 self.b_hat_float[j] = self.private_key.decrypt(self.c_i[1][j])
             
     def get_garbled_circuit_and_mua_mub(self):
@@ -140,13 +177,13 @@ class CSP(object):
             b_hat_binary[i] = float_to_bin(self.b_hat_float[i])
 
         A_hat_garbled = np.empty((self.d,self.d, 24,),dtype = np.object)
-        b_hat_garbled = np.empty((self.d, self.d, 24,),dtype = np.object)
+        b_hat_garbled = np.empty((self.d, 24,),dtype = np.object)
 
-        for i in range(self.A_hat_b.shape[0]):
-            for j in range(self.A_hat_b.shape[1]):
+        for i in range(A_hat_binary.shape[0]):
+            for j in range(A_hat_binary.shape[1]):
                 A_hat_garbled[i][j] = np.array([(self.wire_labels['A_0'] if k=='0' else self.wire_labels['A_1']) for k in A_hat_binary[i][j]])
         
-        for i in range(self.b_hat_b.shape[0]):
+        for i in range(b_hat_binary.shape[0]):
             b_hat_garbled[i] = np.array([(self.wire_labels['A_0'] if k=='0' else self.wire_labels['A_1']) for k in b_hat_binary[i]])
 
         return {
@@ -191,23 +228,38 @@ if __name__ == '__main__':
         muA_primes = [muA+ki for muA,ki in zip(csp.muAs,ks)]  
         mub_primes = [mub+ki for mub,ki in zip(csp.muBs,ks)]
         muprimes = {'MUA':muA_primes, 'MUB':mub_primes}
-        print('Reached Here')
+        #print('Reached Here')
         s.send(pickle.dumps('CSP: Sending MU Primes. Please confirm'))
 
     msg = pickle.loads(s.recv(1024))
     print(msg)
     if 'Confirmed. Please send MUPrimes' in msg:
         s.send(pickle.dumps(muprimes))
-
+    
+    s.send(pickle.dumps('CSP: Please Confirm Whether C Got Calculated'))
+    ENC_MSGS_RECEIVED_FROM_USERS =  pickle.loads(s.recv(1024))
+    print(ENC_MSGS_RECEIVED_FROM_USERS)
     while ENC_MSGS_RECEIVED_FROM_USERS != 'True':
-        time.sleep(100)
+        time.sleep(60)
+        s.close()
+        s = socket.socket()
+        s.connect((host, port))
         s.send(pickle.dumps('CSP: Please Confirm Whether C Got Calculated'))
         ENC_MSGS_RECEIVED_FROM_USERS =  pickle.loads(s.recv(1024))
-    c.send(pickle.dumps('CSP: Please Send C'))
-    c_final = pickle.loads(s.recv(1024))
+        print(ENC_MSGS_RECEIVED_FROM_USERS)
+    s.close()
+    s = socket.socket()
+    s.connect((host, port))
+    s.send(pickle.dumps('CSP: Please Send C'))
+    c_final = pickle.loads(s.recv(500000))
+    print('Reached Here1')
     csp.c_i = c_final
     csp.paillier_decrypt()
     a_hat_b_hat_garbled = csp.get_garbled_a_hat_b_hat()
+    print('Reached Here2')
+    s.close()
+    s = socket.socket()
+    s.connect((host, port))
     s.send(pickle.dumps('CSP: A_HAT and B_HAT Got Calculated'))
     s.send(pickle.dumps(a_hat_b_hat_garbled))            
     s.close()

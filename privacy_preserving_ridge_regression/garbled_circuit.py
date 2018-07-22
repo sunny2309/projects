@@ -1,3 +1,23 @@
+import pickle
+import socket
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import scipy
+import math
+import phe
+import sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import  StandardScaler
+from phe import paillier
+import bitstring
+from bitstring import Bits
+from secrets import token_hex
+import copy
+from Crypto.Cipher import DES
+import time
+
+
 class GarbledCircuit(object):
     def __init__(self):
         pass
@@ -43,12 +63,27 @@ class GarbledCircuit(object):
         #print(out)
         return Add(out,((len(binary)-1)*'0')+'1')
 
+    def bin_to_float(self,binary):
+        int_p , frac_p = binary[:len(binary)-8], binary[len(binary)-8:]
+        int_part = 0.0
+        for i,j in enumerate(reversed(int_p[1:])):
+            int_part += (int(j) * pow(2, i))
+        #print(int_part)
+        int_part -= int(binary[0])*pow(2,len(binary)-9) ## 15
+        #print(int_part)
+        pow_part = 0.0
+        for i,j in enumerate(reversed(frac_p[1:])):
+            pow_part += (int(j) * pow(2, i))
+        pow_part -= pow(2,7)
+        #print(pow_part)
+        return int_part*pow(2,pow_part)
+
     def int_to_bin(self,num):
         twos_complement = True if num<0 else False
         int_b = bin(int(num))[2:] if num > 0 else bin(int(num))[3:]
         int_b = int_b.zfill(16)
         if twos_complement:
-            int_b = self.compute_twos_complement(int_b)
+            int_b = compute_twos_complement(int_b)
         return int_b
     
     def bin_to_int_garbled(self,binary,wire_labels):
@@ -368,10 +403,10 @@ class GarbledCircuit(object):
         if two_dimension:
             for i in range(a.shape[0]):
                 for j in range(a.shape[1]):
-                    out[i][j] = bin_to_float(''.join([ wl[k].split('_')[-1] for k in a[i][j] ]))
+                    out[i][j] = self.bin_to_float(''.join([ wl[k].split('_')[-1] for k in a[i][j] ]))
         else:
             for i in range(a.shape[0]):
-                out[i] = bin_to_float(''.join([ wl[k].split('_')[-1] for k in a[i] ]))
+                out[i] = self.bin_to_float(''.join([ wl[k].split('_')[-1] for k in a[i] ]))
                 
         return out
     
@@ -427,7 +462,6 @@ class GarbledCircuit(object):
         wl = dict(zip(self.wire_labels.values(), self.wire_labels.keys()))
         LT = self.L.transpose(1,0,2)
         self.Y  = np.empty(self.b_garbled.shape,dtype=np.object)
-        print(self.b_garbled[self.d - 1],LT[self.d-1][self.d-1])
         b_d_1 = [self.wire_labels[wl[i].replace('C','A')] for i in self.b_garbled[self.d-1]]
         lt_d_1 = [self.wire_labels[wl[i].replace('A','B')] for i in LT[self.d-1][self.d-1]]
         self.Y[self.d-1] = self.GarbledDivision(b_d_1, lt_d_1, self.wire_labels)
@@ -474,11 +508,10 @@ class GarbledCircuit(object):
         B = self.convert_to_float(beta,False)
         print(B.shape,B)
         #return beta, self.wire_labels
-        
+    
     def execute(self):
         self.calculate_A_b()
         self.calculate_L()
         self.calculate_Y()
         self.calculate_beta()
-        #return beta,wire_labels
-
+        #return B, beta,wire_labels

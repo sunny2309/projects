@@ -21,7 +21,7 @@ import time
 class User(object):
     def __init__(self,X_train,y_train):
         self.y_train = y_train
-        self.X_train = np.around(self.X_train,2)
+        self.X_train = np.around(X_train,2)
     
     def paillier_encrypt(self, A_i, b_i, precision=2):
         A_i_enc = np.zeros(A_i.shape,dtype=np.object)
@@ -37,10 +37,10 @@ class User(object):
         return A_i_enc, b_i_enc
     
     def calculate(self):
-        A_i, b_i = np.zeros(self.X_train.shape), np.zeros(self.y_train.shape)
+        A_i, b_i = np.zeros((self.X_train.shape[1],self.X_train.shape[1]),dtype=np.float32), np.zeros(self.X_train.shape[1],dtype=np.float32)
         for x_i,y_i in zip(self.X_train,self.y_train):
             A_i += np.dot(x_i.reshape(len(x_i), 1), x_i.reshape(len(x_i), 1).T)
-            b_i += x_i * y_i
+            b_i += (x_i * y_i)
         A_i_enc,b_i_enc = self.paillier_encrypt(A_i, b_i, precision=2)
         return A_i_enc, b_i_enc
 
@@ -53,35 +53,42 @@ if __name__ == '__main__':
     cols.remove('car name')
     X = df[cols].values.astype(np.float32)
     y = df['mpg'].values.astype(np.float32)
-    X_train, X_test, y_train, y_test = train_test_split(X, y,train_size=.8,test_size=.2)
+    X_train, X_test, y_train, y_test = train_test_split(X, y,train_size=.85,test_size=.15)
     sc = StandardScaler()
     X_train = sc.fit_transform(X_train)
     X_test = sc.transform(X_test)
     
-    half = len(X_train)/ 2
-    user1 = User(X_train[:half],X_test[:half])
-    user2 = User(X_train[half:],X_test[half:])
-    
-    
+    fourth = int(len(X_train)/ 4)
+    print(fourth)
+    user1 = User(X_train[:fourth],X_test[:fourth])
+    user2 = User(X_train[fourth:2*fourth],X_test[fourth:2*fourth])
+    user3 = User(X_train[2*fourth:3*fourth],X_test[2*fourth:3*fourth])
+    user4 = User(X_train[3*fourth:],X_test[3*fourth:])
     s = socket.socket()
     #host = socket.gethostname()
     host = 'localhost'
     port = 12345
     s.connect((host, port))
     s.send(pickle.dumps('User: Please Send Public Key'))
-    key = s.recv(1024).decode()
-    while 'Please try again after sometime' in key:
+    key = pickle.loads(s.recv(4096))
+    while isinstance(key,str):
 	    time.sleep(10)
+	    s.close()
+	    s = socket.socket()
+	    s.connect((host, port))
 	    s.send(pickle.dumps('User: Please Send Public Key'))
-	    key = s.recv(1024).decode()
+	    key = pickle.loads(s.recv(1024))
 	    
     print(key)
-    
-    s.send(pickle.dumps('User: Sending Encrypted Messages'))
-    start = time.time()
-    print('Calculating encrypted C and sending to Evaluator started')
-    s.send(pickle.dumps([user1.calculate(),user2.calculate()]))
-    print('Calculating encrypted Cs and sending to Evaluator completed.')
-    print('Total time taken in calculating Cs : %s seconds'%(time.time()-start))
+    user1.public_key = key
+    user2.public_key = key
+    user3.public_key = key
+    user4.public_key = key
+    for user in [user1, user2, user3, user4]:
+        s.close()
+        s = socket.socket()
+        s.connect((host, port))
+        s.send(pickle.dumps('User: Sending Encrypted Messages'))
+        s.send(pickle.dumps(user.calculate()))
     #print s.recv(1024)
     s.close()
