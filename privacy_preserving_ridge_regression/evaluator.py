@@ -94,6 +94,10 @@ class Evaluator(object):
         self.c = []
     
     def calculate_c_hat(self):
+        '''
+        This method sums up all C's received from each user. After summing up it adds MuA and Mub to A & b to generate 
+        C_hat = (A_hat,b_hat)
+        '''
         As,bs = zip(*self.c)
         c_final = sum(As),sum(bs)
         c_final = c_final[0]+self.mu_Af,c_final[1]+self.mu_bf
@@ -149,12 +153,13 @@ if __name__ == '__main__':
 	            if 'Sending Public Key, Garbled Circuit' in msg:
 	                c.send(pickle.dumps('Please Send'))
 	                gc_pub_key_mua_mub_wires = pickle.loads(c.recv(4096))
-	                print(gc_pub_key_mua_mub_wires)
+	                #print(gc_pub_key_mua_mub_wires)
 	                garbled_circuit = gc_pub_key_mua_mub_wires['GARBLED_CIRCUIT']
 	                x = gc_pub_key_mua_mub_wires['RANDOM']
 	                pub_key_rsa = gc_pub_key_mua_mub_wires['PUBLIC KEY RSA']
 	                pub_key_paillier = gc_pub_key_mua_mub_wires['PUBLIC KEY PAILLIER']
 	                evaluator.wire_labels = gc_pub_key_mua_mub_wires['WIRE_LABELS']
+	                ## Oblivioous transfer starts from here in evaluator part after it receives random X's from CSP which it uses to ask for MuA and Mub.
 	                ## Received public key of RSA and Random X values. will be doing Oblivious transfer now to get MuAs.
 	                k,b = int(np.random.choice(100)), int(np.random.choice(5))   ## Randomly generated k and b. (b is index within 0-4 that MuA and Mub will be retrieved)
 	                v = (x[b] + pow(k,pub_key_rsa.e, pub_key_rsa.n))  ## Generating V
@@ -168,11 +173,13 @@ if __name__ == '__main__':
 	                if 'Sending MU Primes. Please confirm' in msg:
 	                    c.send(pickle.dumps('Confirmed. Please send MUPrimes'))
 	                    muprimes = pickle.loads(c.recv(4096))
+	                    ## Once we get encrypted MuAs and Mubs from users from it we'll retrieve MuA and Mub using b & k.
 	                    evaluator.mu_Af = muprimes['MUA'][b] - k
 	                    evaluator.mu_bf = muprimes['MUB'][b] - k
-	                    print(evaluator.mu_Af)
+	                    #print(evaluator.mu_Af)
 	                    garbled_circuit.mu_A_garbled, garbled_circuit.mu_b_garbled = evaluator.generate_mu_garbled()
-	                    print('Reached Here')
+	                    #print('Reached Here')
+	                ## Preparation phase has completed now. Now CSP will come back online when C gets calculated from User side.
 	                msg = pickle.loads(c.recv(1024))
 	                print(msg)
 	                if 'Please Confirm Whether C Got Calculated' in msg:
@@ -182,11 +189,28 @@ if __name__ == '__main__':
 	        elif 'Please Send C' in msg:
 	            c.send(pickle.dumps(c_final))
 	        elif 'A_HAT and B_HAT Got Calculated' in msg:
-	            get_garbled_a_hat_b_hat = pickle.loads(c.recv(1000000))
+	            data = b''
+	            try:
+	                while True:
+	                    data_new = c.recv(1000)
+	                    if data_new:
+	                        data += data_new
+	                        c.settimeout(1)
+	                    else:
+	                        print ("Data null")
+	                        break
+	            finally:
+	                get_garbled_a_hat_b_hat = pickle.loads(data)
 	            print(get_garbled_a_hat_b_hat['A_HAT_GARBLED'].shape, get_garbled_a_hat_b_hat['B_HAT_GARBLED'].shape)
 	            garbled_circuit.A_hat_garbled = get_garbled_a_hat_b_hat['A_HAT_GARBLED']
 	            garbled_circuit.b_hat_garbled = get_garbled_a_hat_b_hat['B_HAT_GARBLED']
+	            print('Executing Garbled Circuit to generate beta started')
+	            start = time.time()
 	            garbled_circuit.execute()
+	            print('Executing Garbled Circuit to generate beta completed. Time taken : %s seconds'%str(time.time() - start))
+	            print('Closing Evaluator. Beta got calculated')
+	            s.close()
+	            break
 	    elif msg.split(":")[0] == 'User':
 	        if 'Please Send Public Key' in msg:
 	            if gc_pub_key_mua_mub_wires:
@@ -194,10 +218,23 @@ if __name__ == '__main__':
 	            else:
 	                c.send(pickle.dumps('Please try again after sometime'))
 	        elif 'Sending Encrypted Messages' in msg:
-	            c_i = pickle.loads(c.recv(150000))
+	            data = b''
+	            try:
+	                while True:
+	                    data_new = c.recv(1024)
+	                    if data_new:
+	                        data += data_new
+	                        c.settimeout(1)
+	                    else:
+	                        break
+	            finally:
+	                c_i = pickle.loads(data)
 	            evaluator.c.append(c_i)
 	            if len(evaluator.c) == 4:     ## Set it equal to number of users
 	                ENC_MSGS_RECEIVED_FROM_USERS = 'True'
+	                print('Calculating C_hat adding MuA and Mub to C from users started')
+	                start = time.time()
 	                c_final = evaluator.calculate_c_hat()
+	                print('Calculating C_hat adding MuA and Mub to C from users completed. Time taken : %s seconds'%str(time.time() - start))
 	                c.send(pickle.dumps('Thank you for connecting'))
 	                c.close()

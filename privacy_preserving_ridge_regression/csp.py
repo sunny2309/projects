@@ -125,9 +125,12 @@ class CSP(object):
         self.public_key, self.private_key = paillier.generate_paillier_keypair()
         self.d = 1
         self.pub,self.priv = rsa.newkeys(32)
-        self.x = np.random.choice(100,5)
+        self.x = np.random.choice(100,5)  ## 5 randoms which will be sent to evaluator for OT.
     
     def paillier_decrypt(self,precision=2):
+        '''
+        This method will be used to decrypt final C_hat received from evaluator after adding MuA and Mub to it.
+        '''
         #c = user.calculate_and_send_to_evaluater()
         self.A_hat_float, self.b_hat_float = np.empty(self.c_i[0].shape, dtype=np.float32), np.empty(self.c_i[1].shape, dtype=np.float32)
         for i in range(self.c_i[0].shape[0]):
@@ -138,6 +141,9 @@ class CSP(object):
                 self.b_hat_float[j] = self.private_key.decrypt(self.c_i[1][j])
             
     def get_garbled_circuit_and_mua_mub(self):
+        '''
+            This method initializes Garbled Circuit, encryption keys for Paillier, RSA, Wire labels which will be sent to evaluator.
+        '''
         self.wire_labels = {}
         self.wire_labels['A_0'] = token_hex(4)
         self.wire_labels['A_1'] = token_hex(4)
@@ -146,27 +152,21 @@ class CSP(object):
         self.wire_labels['C_0'] = token_hex(4)
         self.wire_labels['C_1'] = token_hex(4)
         
-        #mu_Af, mu_bf = np.random.randn(self.d,self.d), np.random.randn(self.d)
-        
         garbled_circuit = GarbledCircuit()
-        #garbled_circuit.mu_A_garbled = mu_A_garbled
-        #garbled_circuit.mu_b_garbled = mu_b_garbled
         garbled_circuit.wire_labels = self.wire_labels
         garbled_circuit.public_key = self.public_key
-        #return self.send_to_evaluator(A_hat_garbled,b_hat_garbled,mu_A_garbled,mu_b_garbled,wire_labels,mu_Af,mu_bf)
         return {
             'GARBLED_CIRCUIT': garbled_circuit,
-            #'MU_A_GARBLED' : mu_A_garbled,
-            #'MU_B_GARBLED' : mu_b_garbled,
             'WIRE_LABELS'  : self.wire_labels,
             'PUBLIC KEY PAILLIER'   : self.public_key,
 			'PUBLIC KEY RSA' : self.pub,
 			'RANDOM' : self.x
-            #'MU_AF'        : mu_Af,
-            #'MU_BF'        : mu_bf
          }
         
     def get_garbled_a_hat_b_hat(self):
+        '''
+         This method will be executed on C_hat = (A_hat, b_hat) which we get after decrypting it.
+        '''
         A_hat_binary = np.empty((self.d,self.d), dtype = np.object)
         b_hat_binary = np.empty((self.d,), dtype = np.object)
         for i in range(self.d):
@@ -195,22 +195,19 @@ if __name__ == '__main__':
     s = socket.socket()     
     csp = CSP()
     data, muprimes = None, None
-    #host = socket.gethostname() # Get local machine name
     host = 'localhost'
     port = 12345                # Reserve a port for your service.
     ENC_MSGS_RECEIVED_FROM_USERS = 'False'
-    #print(host)
     s.connect((host, port))
     s.send(pickle.dumps('CSP: Please send dimensions'))
     features = pickle.loads(s.recv(1024))
-    print(features)
-#    features = int()
+    print('Number of features : ',features)
     csp.d = int(features)
+    ## here we set MuAs and Mubs to array of length 5 where 5 different MuAs and Mubs will be there one of which will be asked by evaluator
+    ## CSP won't know which MuA and Mub evaluator requested.    
     csp.muAs = [np.random.randn(csp.d,csp.d) for i in range(5)]
     csp.muBs = [np.random.randn(csp.d) for i in range(5)]
-    print('Test')
     s.send(pickle.dumps('CSP: Sending Public Key, Garbled Circuit & MUs. Please confirm.'))
-    print('Test')
     msg = pickle.loads(s.recv(1024))
     print(msg)
     if msg == 'Please Send':
@@ -222,13 +219,13 @@ if __name__ == '__main__':
         ## Asking for V which will be used to compute MuPrimes for oblivious transfer
         s.send(pickle.dumps('CSP: Please send V'))
         v = int(pickle.loads(s.recv(1024)))
-        print('V : '+str(v))
+        #print('V : '+str(v))
+        ## After getting V from evaluator , we use it to encrypt MuAs and Mubs to send to evaluator.
         ks = [(pow(int((v-i)),csp.priv.d,csp.priv.n))  for i in csp.x]
         ## Calculated Mu primes which will be sent to Evaluator from which evaluator will get Mus for which he asked.
         muA_primes = [muA+ki for muA,ki in zip(csp.muAs,ks)]  
         mub_primes = [mub+ki for mub,ki in zip(csp.muBs,ks)]
         muprimes = {'MUA':muA_primes, 'MUB':mub_primes}
-        #print('Reached Here')
         s.send(pickle.dumps('CSP: Sending MU Primes. Please confirm'))
 
     msg = pickle.loads(s.recv(1024))
@@ -239,6 +236,8 @@ if __name__ == '__main__':
     s.send(pickle.dumps('CSP: Please Confirm Whether C Got Calculated'))
     ENC_MSGS_RECEIVED_FROM_USERS =  pickle.loads(s.recv(1024))
     print(ENC_MSGS_RECEIVED_FROM_USERS)
+    ## We loop over here to check wehter evaluator has calculated C_hat and if not then we got to sleep for 1 min by disconnecting CSP.
+    ## Every 1 min CSP comes online and asks evaluator about status of C calculation. This time can be increased.
     while ENC_MSGS_RECEIVED_FROM_USERS != 'True':
         time.sleep(60)
         s.close()
@@ -247,16 +246,17 @@ if __name__ == '__main__':
         s.send(pickle.dumps('CSP: Please Confirm Whether C Got Calculated'))
         ENC_MSGS_RECEIVED_FROM_USERS =  pickle.loads(s.recv(1024))
         print(ENC_MSGS_RECEIVED_FROM_USERS)
+        
     s.close()
     s = socket.socket()
     s.connect((host, port))
     s.send(pickle.dumps('CSP: Please Send C'))
+
     c_final = pickle.loads(s.recv(500000))
-    print('Reached Here1')
     csp.c_i = c_final
     csp.paillier_decrypt()
     a_hat_b_hat_garbled = csp.get_garbled_a_hat_b_hat()
-    print('Reached Here2')
+
     s.close()
     s = socket.socket()
     s.connect((host, port))

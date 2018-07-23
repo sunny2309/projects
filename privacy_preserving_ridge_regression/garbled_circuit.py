@@ -94,9 +94,16 @@ class GarbledCircuit(object):
             int_part += (int(j) * pow(2, i))
         int_part -= int(wl[binary[0]].split('_')[-1])*pow(2,len(binary)-1)
         return int_part
+        
+    def replaceLabels(self, l, first, second):
+        wl = self.inverseDict()
+        return [ self.wire_labels[wl[i].replace(first, second)] for i in l]
+    
+    def inverseDict(self):
+        return dict(zip(self.wire_labels.values(), self.wire_labels.keys()))
 
     def compute_twos_complement_garbled(self,binary,wire_labels={}):
-        wl = dict(zip(wire_labels.values(),wire_labels.keys()))
+        wl = self.inverseDict()
         out = []
         for i in binary:
             out += [wire_labels['B_1']] if '0' in wl[i] else [wire_labels['B_0']]
@@ -108,13 +115,13 @@ class GarbledCircuit(object):
     def GarbledLeftShift(self,a, n, wire_labels={}, garbled_table=[]):
         a = list(a)
         #print(a,wire_labels)
-        wl = dict(zip(wire_labels.values(), wire_labels.keys()))
+        wl = self.inverseDict()
         val =  [j for j in [wl[i] for i in list(set(a))] if '0' in j][0]
         return a[n:] + [wire_labels[val]] * n
 
     def GarbledRightShift(self,a, n, wire_labels={}, garbled_table=[]):
         a = list(a)
-        wl = dict(zip(wire_labels.values(), wire_labels.keys()))
+        wl = self.inverseDict()
         val =  [j for j in [wl[i] for i in list(set(a))] if '0' in j][0]
         return [wire_labels[val]] * n + a[:-n]
 
@@ -122,12 +129,12 @@ class GarbledCircuit(object):
         return self.bin_to_int_garbled(a, wire_labels) >= self.bin_to_int_garbled(b, wire_labels)
     
     def GarbledPadZerosLeft(self,a, n, wire_labels={}, garbled_table=[]):
-        wl = dict(zip(wire_labels.values(), wire_labels.keys()))
+        wl = self.inverseDict()
         val =  [j for j in [wl[i] for i in list(set(a))] if '0' in j][0]
         return [wire_labels[val]] * n + a 
 
     def GarbledPadZerosRight(self,a, n, wire_labels={}, garbled_table=[]):
-        wl = dict(zip(wire_labels.values(), wire_labels.keys()))
+        wl = self.inverseDict()
         val =  [j for j in [wl[i] for i in list(set(a))] if '0' in j][0]
         return a + [wire_labels[val]] * n
     
@@ -220,7 +227,7 @@ class GarbledCircuit(object):
                 return g
             
     def add(self,a,b,carry,wire_labels):
-        wl = dict(zip(wire_labels.values(), wire_labels.keys()))
+        wl = self.inverseDict()
         
         des_in = DES.new(b, DES.MODE_ECB)
         des_out = DES.new(a, DES.MODE_ECB)
@@ -256,7 +263,7 @@ class GarbledCircuit(object):
         return str(add), cary
     
     def GarbledAdd(self,a, b, wire_labels={}):
-        wl = dict(zip(wire_labels.values(),wire_labels.keys()))
+        wl = self.inverseDict()
         carry = wire_labels['A_0']
         out = []
         for idx,i in reversed(list(enumerate(zip(a[:16],b[:16])))):
@@ -264,7 +271,7 @@ class GarbledCircuit(object):
             out.append(o)
         #print(out)
         out = list(reversed(out))
-        return out + [ wire_labels[wl[i].replace('A','C')] for i in a[16:]]
+        return out + self.replaceLabels(a[16:], 'A', 'C')
 
     def GarbledSubtract(self,a,b, wire_labels={}):
         b2 = self.compute_twos_complement_garbled(b[:16],wire_labels)
@@ -274,16 +281,16 @@ class GarbledCircuit(object):
 
     def GarbledMultiplication(self,a,b, wire_labels={}):
         a,b =list(a),list(b)
-        wl = dict(zip(wire_labels.values(),wire_labels.keys()))
+        wl = self.inverseDict()
         negative_result = False
         if self.bin_to_int_garbled(a[:16],wire_labels) < 0 and self.bin_to_int_garbled(b[:16],wire_labels) < 0:
             temp = self.compute_twos_complement_garbled(a[:16],wire_labels)
-            temp = [ wire_labels[wl[i].replace('B','A')] for i in temp]
+            temp = self.replaceLabels(temp,'B','A')
             a = temp + a[16:]
             b = self.compute_twos_complement_garbled(b[:16], wire_labels) + b[16:]
         elif self.bin_to_int_garbled(a[:16], wire_labels) < 0:
             temp = self.compute_twos_complement_garbled(a[:16], wire_labels)
-            temp = [ wire_labels[wl[i].replace('B','A')] for i in temp]
+            temp = self.replaceLabels(temp,'B','A')
             a = temp + a[16:]
             negative_result = True
         elif self.bin_to_int_garbled(b[:16],wire_labels) < 0:
@@ -293,33 +300,33 @@ class GarbledCircuit(object):
         s = [wire_labels['B_0']]*16
         m = copy.copy(a[:16])
         for i in reversed(b[:16]):
-            #print(m,s)
             if '1' in wl[i]:     # when digit is one, add the intermediary product
                 s = self.GarbledAdd(m, s, wire_labels)
-                s = [ wire_labels[wl[i].replace('C','B')] for i in s]
+                s = self.replaceLabels(s,'C','B')
             m = self.GarbledLeftShift(m, 1, wire_labels)  # shift one per digit in b
-        s = [ wire_labels[wl[i].replace('B','C')] for i in s]
+        s = self.replaceLabels(s,'B','C')
         s = self.GarbledRightShift(s,4,wire_labels) ## Shifting left by 4 places to get exponent back to 2^-4
         
         if negative_result:
-            s = [wire_labels[wl[i].replace('C','B')] for i in s]
+            s = self.replaceLabels(s,'C','B')
             s = self.compute_twos_complement_garbled(s, wire_labels)
-            s = [wire_labels[wl[i].replace('B','C')] for i in s]
+            s = self.replaceLabels(s,'B','C')
             
-        return s+[ wire_labels[wl[val].replace('B', 'C')] for val in b[16:]]
+        return s+self.replaceLabels(b[:16],'B','C')
         
     def GarbledDivision(self,a, b,wire_labels={}):
         a,b = list(a),list(b)
-        wl = dict(zip(wire_labels.values(),wire_labels.keys()))
+        #print(self.bin_to_int_garbled(a[:16],wire_labels),self.bin_to_int_garbled(b[:16],wire_labels))
+        wl = self.inverseDict()
         negative_result = False
         if self.bin_to_int_garbled(a[:16],wire_labels) < 0 and self.bin_to_int_garbled(b[:16],wire_labels) < 0:
             temp = self.compute_twos_complement_garbled(a[:16],wire_labels)
-            temp = [ wire_labels[wl[i].replace('B','A')] for i in temp]
+            temp = self.replaceLabels(temp,'B','A')
             a = temp + a[16:]
             b = self.compute_twos_complement_garbled(b[:16], wire_labels) + b[16:]
         elif self.bin_to_int_garbled(a[:16], wire_labels) < 0:
             temp = self.compute_twos_complement_garbled(a[:16], wire_labels)
-            temp = [ wire_labels[wl[i].replace('B','A')] for i in temp]
+            temp = self.replaceLabels(temp,'B','A')
             a = temp + a[16:]
             negative_result = True
         elif self.bin_to_int_garbled(b[:16],wire_labels) < 0:
@@ -328,14 +335,14 @@ class GarbledCircuit(object):
         exp = 0
         if self.bin_to_int_garbled(a[:16],wire_labels) >= self.bin_to_int_garbled(b[:16],wire_labels):
             reminder = self.GarbledSubtract(a[:16], b[:16],wire_labels)
-            reminder = [wire_labels[wl[i].replace('C','A')] for i in reminder]
+            reminder = self.replaceLabels(reminder,'C','A')
             quotient = self.GarbledAdd([ wire_labels['A_0'] ]*16, (15*[ wire_labels['B_0'] ])+ [ wire_labels['B_1'] ],wire_labels)
-            quotient = [wire_labels[wl[i].replace('C','A')] for i in quotient]
+            quotient = self.replaceLabels(quotient,'C','A')
             while self.bin_to_int_garbled(reminder, wire_labels) > self.bin_to_int_garbled(b[:16], wire_labels):
                 reminder = self.GarbledSubtract(reminder, b[:16], wire_labels)
-                reminder = np.array([wire_labels[wl[i].replace('C','A')] for i in reminder])
+                reminder = self.replaceLabels(reminder,'C','A')
                 quotient = self.GarbledAdd(quotient, (15*[ wire_labels['B_0'] ])+ [ wire_labels['B_1'] ], wire_labels)
-                quotient = [wire_labels[wl[i].replace('C','A')] for i in quotient]
+                quotient = self.replaceLabels(quotient,'C','A')
             for i in range(2):
                 if self.bin_to_int_garbled(reminder, wire_labels) == 0:
                     break
@@ -345,10 +352,10 @@ class GarbledCircuit(object):
                     quotient = self.GarbledLeftShift(quotient, 1, wire_labels)
                     exp -= 1
                 reminder = self.GarbledSubtract(reminder, b[:16], wire_labels)
-                reminder = [wire_labels[wl[i].replace('C','A')] for i in reminder]
+                reminder = self.replaceLabels(reminder,'C','A')
                 quotient = self.GarbledAdd(quotient, (15*[ wire_labels['B_0'] ])+ [ wire_labels['B_1'] ], wire_labels)
-                quotient = [wire_labels[wl[i].replace('C','A')] for i in quotient]
-            quotient = [wire_labels[wl[i].replace('A','C')] for i in quotient]
+                quotient = self.replaceLabels(quotient,'C','A')
+            quotient = self.replaceLabels(quotient,'A','C')
         else:
             reminder = list(copy.copy(a[:16]))
             exp = -1
@@ -362,19 +369,17 @@ class GarbledCircuit(object):
                     reminder = self.GarbledLeftShift(reminder,1, wire_labels)
                     quotient = self.GarbledLeftShift(quotient,1, wire_labels)
                     exp -= 1
-            #print(reminder, b[:16],wire_labels)
             reminder = self.GarbledSubtract(reminder, b[:16],wire_labels)
             quotient = self.GarbledAdd(quotient, (15*[ wire_labels['B_0'] ])+ [ wire_labels['B_1'] ], wire_labels)
-        #print(exp,quotient)
         quotient = self.GarbledRightShift(quotient, abs(exp) - 4, wire_labels) if exp < -4 else self.GarbledLeftShift(quotient,4 - abs(exp), wire_labels)
         if negative_result:
-            quotient = [wire_labels[wl[i].replace('C','B')] for i in quotient]
+            quotient = self.replaceLabels(quotient,'C','B')
             quotient = self.compute_twos_complement_garbled(quotient, wire_labels)
-            quotient = [wire_labels[wl[i].replace('B','C')] for i in quotient]
-        return quotient+[ wire_labels[wl[val].replace('A', 'C')] for val in a[16:]]
+            quotient = self.replaceLabels(quotient,'B','C')
+        return quotient+self.replaceLabels(a[16:],'A','C')
     
     def GarbledSqrt(self,x,wire_labels={}):
-        wl = dict(zip(wire_labels.values(), wire_labels.keys()))
+        wl = self.inverseDict()
         num = copy.copy(x[:16])
         xx = self.bin_to_int_garbled(x[:16],wire_labels)
         e = [i for i in range(int(xx)) if pow(4,i)<=xx]
@@ -386,20 +391,20 @@ class GarbledCircuit(object):
         while wire_labels['B_1'] in e:
             if self.GarbledGreaterThanEqualTo(num, self.GarbledAdd(r, e, wire_labels), wire_labels):
                 out = self.GarbledAdd(r, e, wire_labels)
-                out = [ wire_labels[wl[i].replace('C','B')] for i in out]
+                out = self.replaceLabels(out,'C','B')
                 num = self.GarbledSubtract(num, out,wire_labels)
-                num = [ wire_labels[wl[i].replace('C','A')] for i in num]
+                num = self.replaceLabels(num,'C','A')
                 r = self.GarbledAdd(self.GarbledRightShift(r, 1, wire_labels), e, wire_labels)
-                r = [ wire_labels[wl[i].replace('C','A')] for i in r]
+                r = self.replaceLabels(r,'C','A')
             else:
                 r = self.GarbledRightShift(r, 1, wire_labels)
             e = self.GarbledRightShift(e, 2, wire_labels)
         r = self.GarbledLeftShift(r,2, wire_labels)
-        return r + [ wire_labels[wl[i].replace('A','C')] for i in x[16:] ]
+        return r + self.replaceLabels(x[16:],'A','C')
 
     def convert_to_float(self,a,two_dimension=True):
         out = np.empty(a.shape[:-1],dtype=np.float)
-        wl = dict(zip(self.wire_labels.values(),self.wire_labels.keys()))
+        wl = self.inverseDict()
         if two_dimension:
             for i in range(a.shape[0]):
                 for j in range(a.shape[1]):
@@ -428,85 +433,92 @@ class GarbledCircuit(object):
         
     def calculate_L(self):
         ## Get L using A with algo cholesky
-        wl = dict(zip(self.wire_labels.values(), self.wire_labels.keys()))
+        wl = self.inverseDict()
         self.d = self.A_garbled.shape[0]
         self.L = self.A_garbled.copy()
         for i in range(self.d):
             for j in range(self.d):
-                self.L[i][j] = np.array([self.wire_labels[wl[i].replace('C','A')] for i in self.L[i][j]])
+                self.L[i][j] = np.array(self.replaceLabels(self.L[i][j],'C','A'))
         for i in range(self.d-1):
             for j in range(i+1,self.d):
                 self.L[i][j] = np.array([ self.wire_labels['A_0'] ]*24)
         for j in range(self.d):
             for k in range(j):
                 for i in range(j,self.d):
-                    ljk = np.array([self.wire_labels[wl[i].replace('A','B')] for i in self.L[j][k]])
+                    ljk = self.replaceLabels(self.L[j][k],'A','B')
                     mul = self.GarbledMultiplication(self.L[i][k], ljk, self.wire_labels)
-                    mul = np.array([self.wire_labels[wl[i].replace('C','B')] for i in mul])
-                    self.L[i][j] = self.GarbledSubtract(self.L[i][j], mul, self.wire_labels) ## Need to bring -4 as exponent
-                    self.L[i][j] = np.array([self.wire_labels[wl[i].replace('C','A')] for i in self.L[i][j]])
+                    mul = self.replaceLabels(mul,'C','B')
+                    self.L[i][j] = np.array(self.GarbledSubtract(self.L[i][j], mul, self.wire_labels)) ## Need to bring -4 as exponent
+                    self.L[i][j] = np.array(self.replaceLabels(self.L[i][j],'C','A'))
             
-            self.L[j][j] = self.GarbledSqrt(self.L[j][j],self.wire_labels) ## Need to bring -4 as exponent
-            self.L[j][j] = np.array([self.wire_labels[wl[i].replace('C','A')] for i in self.L[j][j]])
+            self.L[j][j] = np.array(self.GarbledSqrt(self.L[j][j],self.wire_labels)) ## Need to bring -4 as exponent
+            self.L[j][j] = np.array(self.replaceLabels(self.L[j][j],'C','A'))
             
             for k in range(j+1,self.d):
-                ljj = np.array([self.wire_labels[wl[i].replace('A','B')] for i in self.L[j][j]])
-                self.L[k][j] = self.GarbledDivision(self.L[k][j], ljj, self.wire_labels) ## Need to bring -4 as exponent
-                self.L[k][j] = np.array([self.wire_labels[wl[i].replace('C','A')] for i in self.L[k][j]])
+                ljj = self.replaceLabels(self.L[j][j],'A','B')
+                self.L[k][j] = np.array(self.GarbledDivision(self.L[k][j], ljj, self.wire_labels)) ## Need to bring -4 as exponent
+                self.L[k][j] = np.array(self.replaceLabels(self.L[k][j],'C','A'))
         
         LF = self.convert_to_float(self.L)
-        print(LF.shape,LF)
+        print('L', LF.shape,LF)
         
     def calculate_Y(self):
         ## Use back substitution algo to get individual values of Y    : L.T * Y = b
-        wl = dict(zip(self.wire_labels.values(), self.wire_labels.keys()))
+        wl = self.inverseDict()
         LT = self.L.transpose(1,0,2)
         self.Y  = np.empty(self.b_garbled.shape,dtype=np.object)
-        b_d_1 = [self.wire_labels[wl[i].replace('C','A')] for i in self.b_garbled[self.d-1]]
-        lt_d_1 = [self.wire_labels[wl[i].replace('A','B')] for i in LT[self.d-1][self.d-1]]
-        self.Y[self.d-1] = self.GarbledDivision(b_d_1, lt_d_1, self.wire_labels)
-        self.Y[self.d-1] = np.array([self.wire_labels[wl[i].replace('C','B')] for i in self.Y[self.d-1]])
+        b_d_1 = self.replaceLabels(self.b_garbled[self.d-1],'C','A')
+        lt_d_1 = self.replaceLabels(LT[self.d-1][self.d-1],'A','B')
+        self.Y[self.d-1] = np.array(self.GarbledDivision(b_d_1, lt_d_1, self.wire_labels))
+        self.Y[self.d-1] = np.array(self.replaceLabels(self.Y[self.d-1],'C','B'))
         for i in reversed(range(self.d-1)):
             s = [ self.wire_labels['A_0'] ] * 24
             for j in range(i+1,self.d):
                 mul = self.GarbledMultiplication(LT[i][j], self.Y[j], self.wire_labels)
-                mul = np.array([self.wire_labels[wl[i].replace('C','B')] for i in mul])
+                mul = self.replaceLabels(mul,'C','B')
                 
                 s = self.GarbledAdd(s, mul, self.wire_labels)
-                s = np.array([self.wire_labels[wl[i].replace('C','A')] for i in s])
-                
-            s = np.array([self.wire_labels[wl[i].replace('A','B')] for i in s])
-            bi = np.array([self.wire_labels[wl[i].replace('C','A')] for i in self.b_garbled[i]])
-            self.Y[i] = self.GarbledDivision(bi, s, self.wire_labels)
-            self.Y[i] = np.array([self.wire_labels[wl[i].replace('C','B')] for i in self.Y[i]])
+                s = self.replaceLabels(s,'C','A')
+            
+            bi = self.replaceLabels(self.b_garbled[i],'C','A')
+            s = self.replaceLabels(s,'A','B')
+            s = self.GarbledSubtract(bi, s, self.wire_labels)
+            s = self.replaceLabels(s,'C','A')
+            lt = self.replaceLabels(LT[i][i],'A','B')
+            self.Y[i] = np.array(self.GarbledDivision(s, lt, self.wire_labels))
+            self.Y[i] = np.array(self.replaceLabels(self.Y[i],'C','B'))
         
         YF = self.convert_to_float(self.Y,False)
-        print(YF.shape,YF)
+        print('Y', YF.shape,YF)
         
     def calculate_beta(self):
         ## Use back substitution algo to get individual values of beta : L*beta = Y
-        wl = dict(zip(self.wire_labels.values(), self.wire_labels.keys()))
+        wl = self.inverseDict()
         beta = np.empty(self.Y.shape,dtype=np.object)
-        y0 = np.array([self.wire_labels[wl[i].replace('B','A')] for i in self.Y[0]])
-        l00 = np.array([self.wire_labels[wl[i].replace('A','B')] for i in self.L[0][0]])
-        beta[0] = self.GarbledDivision(y0, l00, self.wire_labels)
-        beta[0] = np.array([self.wire_labels[wl[i].replace('C','B')] for i in beta[0]])
+        y0 = self.replaceLabels(self.Y[0],'B','A')
+        l00 = self.replaceLabels(self.L[0][0],'A','B')
+        beta[0] = np.array(self.GarbledDivision(y0, l00, self.wire_labels))
+        beta[0] = np.array(self.replaceLabels(beta[0],'C','B'))
         for i in range(1,len(beta)):
             s = [ self.wire_labels['A_0'] ] * 24
             for j in range(i):
                 mul = self.GarbledMultiplication(self.L[i][j], beta[j], self.wire_labels)
-                mul = np.array([self.wire_labels[wl[i].replace('C','B')] for i in mul])
+                mul = self.replaceLabels(mul,'C','B')
                 
                 s = self.GarbledAdd(s, mul, self.wire_labels)
-                s = np.array([self.wire_labels[wl[i].replace('C','A')] for i in s])
-                
-            s = np.array([self.wire_labels[wl[i].replace('A','B')] for i in s])
-            yi = np.array([self.wire_labels[wl[i].replace('B','A')] for i in self.Y[i]])
-            beta[i] = self.GarbledDivision(yi, s, self.wire_labels)
-            beta[i] = np.array([self.wire_labels[wl[i].replace('C','B')] for i in beta[i]])
+                s = self.replaceLabels(s,'C','A')
+            
+            yi = self.replaceLabels(self.Y[i],'B','A')
+            s = self.replaceLabels(s,'A','B')
+            s = self.GarbledSubtract(yi, s, self.wire_labels)
+            s = self.replaceLabels(s,'C','A')
+            l = self.replaceLabels(self.L[i][i],'A','B')
+            
+            beta[i] = np.array(self.GarbledDivision(s, l, self.wire_labels))
+            beta[i] = np.array(self.replaceLabels(beta[i],'C','B'))
         
         B = self.convert_to_float(beta,False)
-        print(B.shape,B)
+        print('B', B.shape,B)
         #return beta, self.wire_labels
     
     def execute(self):
