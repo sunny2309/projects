@@ -19,36 +19,32 @@ import pickle
 import time
 
 
-def calculate_beta(L,Y):
-    beta = np.empty(Y.shape,dtype=np.float32)
+def calculate_Y(L,b):
+    Y = np.empty(b.shape,dtype=np.float32)
     d = Y.shape[0]
-    beta[0] = Y[0] / L[0][0]
+    Y[0] = b[0] / L[0][0]
     for i in range(1,d):
         s = 0.0
         for j in range(i):
-            mul = L[i][j] * beta[j]
-            # print(i,j,L[i][j],beta[j],mul)
+            mul = L[i][j] * Y[j]
             s += mul
-        #print(Y[i] / s)
-        s = Y[i] - s
-        beta[i] = s / L[i][i]
-    return beta
+        s = b[i] - s
+        Y[i] = s / L[i][i]
+    return Y
 
-def calculate_Y(L,b):
-    Y = np.empty(b.shape,dtype=np.float32)
+def calculate_beta(L,Y):
+    beta = np.empty(Y.shape,dtype=np.float32)
     d = b.shape[0]
     LT = L.T
-    Y[d-1] = b[d-1] / LT[d-1][d-1]
+    beta[d-1] = Y[d-1] / LT[d-1][d-1]
     for i in reversed(range(d-1)):
         s = 0.0
         for j in range(i+1,d):
-            mul = LT[i][j] * Y[j]
-            # print(i,j,L[i][j],beta[j],mul)
+            mul = LT[i][j] * beta[j]
             s += mul
-        #print(Y[i] / s)
-        s = b[i] - s
-        Y[i] = s / LT[i][i]
-    return Y
+        s = Y[i] - s
+        beta[i] = s / L[i][i]
+    return beta
 
 class User(object):
     def __init__(self,X_train,y_train):
@@ -150,8 +146,12 @@ if __name__ == '__main__':
     print('B : ',np.around(b,3))
     L = np.linalg.cholesky(A)
     print('L : ',np.around(L,3))
+    #L = L.T
     Y = calculate_Y(L,b)
     print('Y : ',np.around(Y,3))
     beta = calculate_beta(L,Y)    
     print('Beta :', np.around(beta,3))
+    print('Beta :',np.around(np.dot(np.dot(np.linalg.inv(np.dot(X_train.T,X_train)),X_train.T),y_train),3))
+    #np.dot(np.linalg.inv(L.T), np.dot(np.linalg.inv(L),b))
+    print('Beta :',np.around(np.dot(np.linalg.inv(L.T), np.dot(np.linalg.inv(L),b)),3))
     s.close()

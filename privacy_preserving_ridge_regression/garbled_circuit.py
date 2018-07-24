@@ -492,62 +492,62 @@ class GarbledCircuit(object):
         print('L : ', LF.shape,np.around(LF,3))
         
     def calculate_Y(self):
-        ## Use back substitution algo to get individual values of Y    : L.T * Y = b
+        ## Use back substitution algo to get individual values of beta : L*beta = Y
         wl = self.inverseDict()
-        LT = self.L.transpose(1,0,2)
-        self.Y  = np.empty(self.b_garbled.shape,dtype=np.object)
-        b_d_1 = self.replaceLabels(self.b_garbled[self.d-1],'C','A')
-        lt_d_1 = self.replaceLabels(LT[self.d-1][self.d-1],'A','B')
-        self.Y[self.d-1] = np.array(self.GarbledDivision(b_d_1, lt_d_1, self.wire_labels))
-        self.Y[self.d-1] = np.array(self.replaceLabels(self.Y[self.d-1],'C','B'))
-        for i in reversed(range(self.d-1)):
+        self.Y = np.empty(self.b_garbled.shape,dtype=np.object)
+        b0 = self.replaceLabels(self.b_garbled[0],'C','A')
+        l00 = self.replaceLabels(self.L[0][0],'A','B')
+        self.Y[0] = np.array(self.GarbledDivision(b0, l00, self.wire_labels))
+        self.Y[0] = np.array(self.replaceLabels(self.Y[0],'C','B'))
+        for i in range(1,self.d):
             s = [ self.wire_labels['A_0'] ] * self.size
-            for j in range(i+1,self.d):
-                mul = self.GarbledMultiplication(LT[i][j], self.Y[j], self.wire_labels)
+            for j in range(i):
+                mul = self.GarbledMultiplication(self.L[i][j], self.Y[j], self.wire_labels)
                 mul = self.replaceLabels(mul,'C','B')
-                
+
                 s = self.GarbledAdd(s, mul, self.wire_labels)
                 s = self.replaceLabels(s,'C','A')
-            
+
             bi = self.replaceLabels(self.b_garbled[i],'C','A')
             s = self.replaceLabels(s,'A','B')
             s = self.GarbledSubtract(bi, s, self.wire_labels)
             s = self.replaceLabels(s,'C','A')
-            lt = self.replaceLabels(LT[i][i],'A','B')
-            self.Y[i] = np.array(self.GarbledDivision(s, lt, self.wire_labels))
+            l = self.replaceLabels(self.L[i][i],'A','B')
+
+            self.Y[i] = np.array(self.GarbledDivision(s, l, self.wire_labels))
             self.Y[i] = np.array(self.replaceLabels(self.Y[i],'C','B'))
-        
+
         YF = self.convert_to_float(self.Y,False)
         print('Y : ', YF.shape,np.around(YF,3))
-        
+
     def calculate_beta(self):
-        ## Use back substitution algo to get individual values of beta : L*beta = Y
+        ## Use back substitution algo to get individual values of Y    : L.T * Y = b
         wl = self.inverseDict()
-        beta = np.empty(self.Y.shape,dtype=np.object)
-        y0 = self.replaceLabels(self.Y[0],'B','A')
-        l00 = self.replaceLabels(self.L[0][0],'A','B')
-        beta[0] = np.array(self.GarbledDivision(y0, l00, self.wire_labels))
-        beta[0] = np.array(self.replaceLabels(beta[0],'C','B'))
-        for i in range(1,len(beta)):
+        LT = self.L.transpose(1,0,2)
+        beta  = np.empty(self.Y.shape,dtype=np.object)
+        b_d_1 = self.replaceLabels(self.Y[self.d-1],'B','A')
+        lt_d_1 = self.replaceLabels(LT[self.d-1][self.d-1],'A','B')
+        beta[self.d-1] = np.array(self.GarbledDivision(b_d_1, lt_d_1, self.wire_labels))
+        beta[self.d-1] = np.array(self.replaceLabels(beta[self.d-1],'C','B'))
+        for i in reversed(range(self.d-1)):
             s = [ self.wire_labels['A_0'] ] * self.size
-            for j in range(i):
-                mul = self.GarbledMultiplication(self.L[i][j], beta[j], self.wire_labels)
+            for j in range(i+1,self.d):
+                mul = self.GarbledMultiplication(LT[i][j], beta[j], self.wire_labels)
                 mul = self.replaceLabels(mul,'C','B')
-                
+
                 s = self.GarbledAdd(s, mul, self.wire_labels)
                 s = self.replaceLabels(s,'C','A')
-            
+
             yi = self.replaceLabels(self.Y[i],'B','A')
             s = self.replaceLabels(s,'A','B')
             s = self.GarbledSubtract(yi, s, self.wire_labels)
             s = self.replaceLabels(s,'C','A')
-            l = self.replaceLabels(self.L[i][i],'A','B')
-            
-            beta[i] = np.array(self.GarbledDivision(s, l, self.wire_labels))
+            lt = self.replaceLabels(LT[i][i],'A','B')
+            beta[i] = np.array(self.GarbledDivision(s, lt, self.wire_labels))
             beta[i] = np.array(self.replaceLabels(beta[i],'C','B'))
-        
+
         B = self.convert_to_float(beta,False)
-        print('Beta : ', B.shape,np.around(B,3))
+        print('beta : ', B.shape,np.around(B,3))
         #return beta, self.wire_labels
     
     def execute(self):
