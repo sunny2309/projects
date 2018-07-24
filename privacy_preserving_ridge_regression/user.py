@@ -18,10 +18,42 @@ from Crypto.Cipher import DES
 import pickle
 import time
 
+
+def calculate_beta(L,Y):
+    beta = np.empty(Y.shape,dtype=np.float32)
+    d = Y.shape[0]
+    beta[0] = Y[0] / L[0][0]
+    for i in range(1,d):
+        s = 0.0
+        for j in range(i):
+            mul = L[i][j] * beta[j]
+            # print(i,j,L[i][j],beta[j],mul)
+            s += mul
+        #print(Y[i] / s)
+        s = Y[i] - s
+        beta[i] = s / L[i][i]
+    return beta
+
+def calculate_Y(L,b):
+    Y = np.empty(b.shape,dtype=np.float32)
+    d = b.shape[0]
+    LT = L.T
+    Y[d-1] = b[d-1] / LT[d-1][d-1]
+    for i in reversed(range(d-1)):
+        s = 0.0
+        for j in range(i+1,d):
+            mul = LT[i][j] * Y[j]
+            # print(i,j,L[i][j],beta[j],mul)
+            s += mul
+        #print(Y[i] / s)
+        s = b[i] - s
+        Y[i] = s / LT[i][i]
+    return Y
+
 class User(object):
     def __init__(self,X_train,y_train):
-        self.y_train = y_train
         self.X_train = np.around(X_train,2)
+        self.y_train = y_train
     
     def paillier_encrypt(self, A_i, b_i, precision=2):
         '''
@@ -49,6 +81,7 @@ class User(object):
         for x_i,y_i in zip(self.X_train,self.y_train):
             A_i += np.dot(x_i.reshape(len(x_i), 1), x_i.reshape(len(x_i), 1).T)
             b_i += (x_i * y_i)
+        #print(A_i,b_i)
         A_i_enc,b_i_enc = self.paillier_encrypt(A_i, b_i, precision=2)
         return A_i_enc, b_i_enc
 
@@ -67,15 +100,19 @@ if __name__ == '__main__':
     sc = StandardScaler()
     X_train = sc.fit_transform(X_train)
     X_test = sc.transform(X_test)
-    
+    print(X_train.shape,X_test.shape)
     ## Dividing data into 4 users. finding out length of 1/4th of data which will be used to divided data between users.
     ## This logic can be easily extended to N users.
-    fourth = int(len(X_train)/ 4)
+    fourth = int(X_train.shape[0]/ 4)
     print(fourth)
-    user1 = User(X_train[:fourth],X_test[:fourth])
-    user2 = User(X_train[fourth:2*fourth],X_test[fourth:2*fourth])
-    user3 = User(X_train[2*fourth:3*fourth],X_test[2*fourth:3*fourth])
-    user4 = User(X_train[3*fourth:],X_test[3*fourth:])
+    print(X_train[:fourth,:].shape,y_train[:fourth].shape)
+    print(X_train[fourth:2*fourth,:].shape,y_train[fourth:2*fourth].shape)
+    print(X_train[2*fourth:3*fourth,:].shape,y_train[2*fourth:3*fourth].shape)
+    print(X_train[3*fourth:,:].shape,y_train[3*fourth:].shape)
+    user1 = User(X_train[:fourth,:],y_train[:fourth])
+    user2 = User(X_train[fourth:2*fourth,:],y_train[fourth:2*fourth])
+    user3 = User(X_train[2*fourth:3*fourth,:],y_train[2*fourth:3*fourth])
+    user4 = User(X_train[3*fourth:,:],y_train[3*fourth:])
     
     s = socket.socket()
     host = 'localhost'
@@ -105,5 +142,16 @@ if __name__ == '__main__':
         s.connect((host, port))
         s.send(pickle.dumps('User: Sending Encrypted Messages'))
         s.send(pickle.dumps(user.calculate()))
-    print('Calculating C(A,b) for each user completed. Time taken : %s seconds'%str(time.time() - start))
+    print('Calculating C(A,b) for each user completed. Time taken : %.2f seconds'%(time.time() - start))
+    
+    A = np.dot(X_train.T, X_train)
+    print('A : ',np.around(A,3))
+    b = np.dot(X_train.T, y_train)
+    print('B : ',np.around(b,3))
+    L = np.linalg.cholesky(A)
+    print('L : ',np.around(L,3))
+    Y = calculate_Y(L,b)
+    print('Y : ',np.around(Y,3))
+    beta = calculate_beta(L,Y)    
+    print('Beta :', np.around(beta,3))
     s.close()

@@ -20,6 +20,11 @@ import time
 import rsa
 from garbled_circuit import GarbledCircuit
 
+size = 64 ## Total size of fixed point representation
+exp = 8 ## 8 bits from above will be used to represent exponent
+intp = size - exp ## Remaining 56 bits will be used to represent integer
+fracp = 16 ## Number of times loop should run for fractional part in float_t_bin method
+
 def And(a,b):
     return a and b
 
@@ -47,12 +52,12 @@ def add(a,b,carry):
 def Add(a,b):
     carry = 0
     out = ''
-    for idx,i in reversed(list(enumerate(zip(a[:16],b[:16])))):
+    for idx,i in reversed(list(enumerate(zip(a[:intp],b[:intp])))):
         o,carry = add(int(i[0]),int(i[1]),carry)
         out += o
     #print(out)
     out = ''.join(reversed(out))
-    return out + a[16:]
+    return out + a[intp:]
 
 
 def compute_twos_complement(binary):
@@ -62,13 +67,13 @@ def compute_twos_complement(binary):
     #print(out)
     return Add(out,((len(binary)-1)*'0')+'1')
         
-def float_to_bin(num,size=24):
+def float_to_bin(num):
     twos_complement = True if num<0 else False
     int_p,frac_p = str(num).split('.')
     frac_p = float('0.'+frac_p)
     int_b = bin(int(int_p))[2:] if num > 0 else bin(int(int_p))[3:]
     frac_b = '.'
-    for i in range(8):
+    for i in range(fracp):
         #print(frac_p)
         frac_p = frac_p*2
         t_i, t_f = str(frac_p).split('.')
@@ -79,36 +84,38 @@ def float_to_bin(num,size=24):
     out = int_b+frac_b
     out = out.replace('.','')
     #print(out)
-    out = out[:-4]  ## Need to change to -8 in future
-    out += '11111100'
+    #out = out[:-4]  ## Need to change to -8 in future
+    exponent = compute_twos_complement(int_to_bin(fracp).zfill(exp))
+    #print(exponent)
+    out += exponent    ###'11110000'
     out = out.zfill(size)
     #print(out)
     if twos_complement:
-        temp_out = compute_twos_complement(out[:size-8])
+        temp_out = compute_twos_complement(out[:size-exp])
     #print(temp_out)
-    out = temp_out+out[size-8:] if twos_complement else out
+    out = temp_out+out[size-exp:] if twos_complement else out
     #print(out)
     return out
 
 def int_to_bin(num):
     twos_complement = True if num<0 else False
-    int_b = bin(int(num))[2:]
+    int_b = bin(int(num))[2:] if num > 0 else bin(int(num))[3:]
     if twos_complement:
         int_b = compute_twos_complement(int_b)
     return int_b
 
 def bin_to_float(binary):
-    int_p , frac_p = binary[:len(binary)-8], binary[len(binary)-8:]
+    int_p , frac_p = binary[:size-exp], binary[size-exp:]
     int_part = 0.0
     for i,j in enumerate(reversed(int_p[1:])):
         int_part += (int(j) * pow(2, i))
     #print(int_part)
-    int_part -= int(binary[0])*pow(2,len(binary)-9) ## 15
+    int_part -= int(binary[0])*pow(2,size-exp-1) ## because numbering start at 0 for binary
     #print(int_part)
     pow_part = 0.0
     for i,j in enumerate(reversed(frac_p[1:])):
         pow_part += (int(j) * pow(2, i))
-    pow_part -= pow(2,7)
+    pow_part -= int(frac_p[0]) * pow(2,exp-1)
     #print(pow_part)
     return int_part*pow(2,pow_part)
 
@@ -176,8 +183,8 @@ class CSP(object):
         for i in range(self.d):
             b_hat_binary[i] = float_to_bin(self.b_hat_float[i])
 
-        A_hat_garbled = np.empty((self.d,self.d, 24,),dtype = np.object)
-        b_hat_garbled = np.empty((self.d, 24,),dtype = np.object)
+        A_hat_garbled = np.empty((self.d,self.d, size,),dtype = np.object)
+        b_hat_garbled = np.empty((self.d, size,),dtype = np.object)
 
         for i in range(A_hat_binary.shape[0]):
             for j in range(A_hat_binary.shape[1]):
