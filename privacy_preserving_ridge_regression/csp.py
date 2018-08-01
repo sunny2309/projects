@@ -152,12 +152,12 @@ class CSP(object):
             This method initializes Garbled Circuit, encryption keys for Paillier, RSA, Wire labels which will be sent to evaluator.
         '''
         self.wire_labels = {}
-        self.wire_labels['A_0'] = token_hex(4)
-        self.wire_labels['A_1'] = token_hex(4)
-        self.wire_labels['B_0'] = token_hex(4)
-        self.wire_labels['B_1'] = token_hex(4)
-        self.wire_labels['C_0'] = token_hex(4)
-        self.wire_labels['C_1'] = token_hex(4)
+        self.wire_labels['A_0'] = token_hex(8)
+        self.wire_labels['A_1'] = token_hex(8)
+        self.wire_labels['B_0'] = token_hex(8)
+        self.wire_labels['B_1'] = token_hex(8)
+        self.wire_labels['C_0'] = token_hex(8)
+        self.wire_labels['C_1'] = token_hex(8)
         
         garbled_circuit = GarbledCircuit()
         garbled_circuit.wire_labels = self.wire_labels

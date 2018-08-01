@@ -14,7 +14,7 @@ import bitstring
 from bitstring import Bits
 from secrets import token_hex
 import copy
-from Crypto.Cipher import DES
+from Crypto.Cipher import DES, AES
 import time
 
 
@@ -144,22 +144,22 @@ class GarbledCircuit(object):
     
     def GarbledAnd(self,a,b,wire_labels={},garbled_table=[]):
         
-        des_b_0 = DES.new(wire_labels['B_0'], DES.MODE_ECB)
-        des_a_0 = DES.new(wire_labels['A_0'], DES.MODE_ECB)
-        des_b_1 = DES.new(wire_labels['B_1'], DES.MODE_ECB)
-        des_a_1 = DES.new(wire_labels['A_1'], DES.MODE_ECB)
+        aes_b_0 = AES.new(wire_labels['B_0'], AES.MODE_ECB)
+        aes_a_0 = AES.new(wire_labels['A_0'], AES.MODE_ECB)
+        aes_b_1 = AES.new(wire_labels['B_1'], AES.MODE_ECB)
+        aes_a_1 = AES.new(wire_labels['A_1'], AES.MODE_ECB)
         ## 0 AND 0 = 0
         
-        garbled_table.append(des_a_0.encrypt(des_b_0.encrypt(wire_labels['C_0'])))
-        garbled_table.append(des_a_0.encrypt(des_b_1.encrypt(wire_labels['C_0'])))
-        garbled_table.append(des_a_1.encrypt(des_b_0.encrypt(wire_labels['C_0'])))
-        garbled_table.append(des_a_1.encrypt(des_b_1.encrypt(wire_labels['C_1'])))
+        garbled_table.append(aes_a_0.encrypt(aes_b_0.encrypt(wire_labels['C_0'])))
+        garbled_table.append(aes_a_0.encrypt(aes_b_1.encrypt(wire_labels['C_0'])))
+        garbled_table.append(aes_a_1.encrypt(aes_b_0.encrypt(wire_labels['C_0'])))
+        garbled_table.append(aes_a_1.encrypt(aes_b_1.encrypt(wire_labels['C_1'])))
         
-        des_in = DES.new(b, DES.MODE_ECB)
-        des_out = DES.new(a, DES.MODE_ECB)
+        aes_in = AES.new(b, AES.MODE_ECB)
+        aes_out = AES.new(a, AES.MODE_ECB)
         for g in garbled_table:
             try:
-                deciphered = des_in.decrypt(des_out.decrypt(g)).decode()
+                deciphered = aes_in.decrypt(aes_out.decrypt(g)).decode()
             except UnicodeDecodeError:
                 continue
             if deciphered in [ wire_labels['C_0'], wire_labels['C_1'] ]:
@@ -167,22 +167,22 @@ class GarbledCircuit(object):
         
     def GarbledOr(self,a,b,wire_labels={},garbled_table=[]):
         
-        des_b_0 = DES.new(wire_labels['B_0'], DES.MODE_ECB)
-        des_a_0 = DES.new(wire_labels['A_0'], DES.MODE_ECB)
-        des_b_1 = DES.new(wire_labels['B_1'], DES.MODE_ECB)
-        des_a_1 = DES.new(wire_labels['A_1'], DES.MODE_ECB)
+        aes_b_0 = AES.new(wire_labels['B_0'], AES.MODE_ECB)
+        aes_a_0 = AES.new(wire_labels['A_0'], AES.MODE_ECB)
+        aes_b_1 = AES.new(wire_labels['B_1'], AES.MODE_ECB)
+        aes_a_1 = AES.new(wire_labels['A_1'], AES.MODE_ECB)
         ## 0 AND 0 = 0
         
-        garbled_table.append(des_a_0.encrypt(des_b_0.encrypt(wire_labels['C_0'])))
-        garbled_table.append(des_a_0.encrypt(des_b_1.encrypt(wire_labels['C_1'])))
-        garbled_table.append(des_a_1.encrypt(des_b_0.encrypt(wire_labels['C_1'])))
-        garbled_table.append(des_a_1.encrypt(des_b_1.encrypt(wire_labels['C_1'])))
+        garbled_table.append(aes_a_0.encrypt(aes_b_0.encrypt(wire_labels['C_0'])))
+        garbled_table.append(aes_a_0.encrypt(aes_b_1.encrypt(wire_labels['C_1'])))
+        garbled_table.append(aes_a_1.encrypt(aes_b_0.encrypt(wire_labels['C_1'])))
+        garbled_table.append(aes_a_1.encrypt(aes_b_1.encrypt(wire_labels['C_1'])))
         
-        des_in = DES.new(b, DES.MODE_ECB)
-        des_out = DES.new(a, DES.MODE_ECB)
+        aes_in = AES.new(b, AES.MODE_ECB)
+        aes_out = AES.new(a, AES.MODE_ECB)
         for g in garbled_table:
             try:
-                deciphered = des_in.decrypt(des_out.decrypt(g)).decode()
+                deciphered = aes_in.decrypt(aes_out.decrypt(g)).decode()
             except UnicodeDecodeError:
                 continue
             if deciphered in [ wire_labels['C_0'], wire_labels['C_1'] ]:
@@ -190,22 +190,22 @@ class GarbledCircuit(object):
 
     def GarbledXor(self,a,b,wire_labels={},garbled_table=[]):
         
-        des_b_0 = DES.new(wire_labels['B_0'], DES.MODE_ECB)
-        des_a_0 = DES.new(wire_labels['A_0'], DES.MODE_ECB)
-        des_b_1 = DES.new(wire_labels['B_1'], DES.MODE_ECB)
-        des_a_1 = DES.new(wire_labels['A_1'], DES.MODE_ECB)
+        aes_b_0 = AES.new(wire_labels['B_0'], AES.MODE_ECB)
+        aes_a_0 = AES.new(wire_labels['A_0'], AES.MODE_ECB)
+        aes_b_1 = AES.new(wire_labels['B_1'], AES.MODE_ECB)
+        aes_a_1 = AES.new(wire_labels['A_1'], AES.MODE_ECB)
         ## 0 AND 0 = 0
         
-        garbled_table.append(des_a_0.encrypt(des_b_0.encrypt(wire_labels['C_0'])))
-        garbled_table.append(des_a_0.encrypt(des_b_1.encrypt(wire_labels['C_1'])))
-        garbled_table.append(des_a_1.encrypt(des_b_0.encrypt(wire_labels['C_1'])))
-        garbled_table.append(des_a_1.encrypt(des_b_1.encrypt(wire_labels['C_0'])))
+        garbled_table.append(aes_a_0.encrypt(aes_b_0.encrypt(wire_labels['C_0'])))
+        garbled_table.append(aes_a_0.encrypt(aes_b_1.encrypt(wire_labels['C_1'])))
+        garbled_table.append(aes_a_1.encrypt(aes_b_0.encrypt(wire_labels['C_1'])))
+        garbled_table.append(aes_a_1.encrypt(aes_b_1.encrypt(wire_labels['C_0'])))
         #print(garbled_table)
-        des_1 = DES.new(a, DES.MODE_ECB)
-        des_2 = DES.new(b, DES.MODE_ECB)
+        aes_1 = AES.new(a, AES.MODE_ECB)
+        aes_2 = AES.new(b, AES.MODE_ECB)
         for g in garbled_table:
             try:
-                deciphered = des_2.decrypt(des_1.decrypt(g)).decode()
+                deciphered = aes_2.decrypt(aes_1.decrypt(g)).decode()
             except UnicodeDecodeError:
                 continue
             #print(deciphered)
@@ -215,16 +215,16 @@ class GarbledCircuit(object):
         
     def GarbledNot(self,b,wire_labels={},garbled_table=[]):
         
-        des_a_0 = DES.new(wire_labels['A_0'], DES.MODE_ECB)
-        des_a_1 = DES.new(wire_labels['A_1'], DES.MODE_ECB)
+        aes_a_0 = AES.new(wire_labels['A_0'], AES.MODE_ECB)
+        aes_a_1 = AES.new(wire_labels['A_1'], AES.MODE_ECB)
         
-        garbled_table.append(des_a_0.encrypt(wire_labels['C_1']))
-        garbled_table.append(des_a_1.encrypt(wire_labels['C_0']))
+        garbled_table.append(aes_a_0.encrypt(wire_labels['C_1']))
+        garbled_table.append(aes_a_1.encrypt(wire_labels['C_0']))
         
-        des = DES.new(b, DES.MODE_ECB)
+        aes = AES.new(b, AES.MODE_ECB)
         for g in garbled_table:
             try:
-                deciphered = des.decrypt(g).decode()
+                deciphered = aes.decrypt(g).decode()
             except UnicodeDecodeError:
                 continue
             if deciphered in [ wire_labels['C_0'], wire_labels['C_1'] ]:
@@ -233,35 +233,35 @@ class GarbledCircuit(object):
     def add(self,a,b,carry,wire_labels):
         wl = self.inverseDict()
         
-        des_in = DES.new(b, DES.MODE_ECB)
-        des_out = DES.new(a, DES.MODE_ECB)
+        aes_in = AES.new(b, AES.MODE_ECB)
+        aes_out = AES.new(a, AES.MODE_ECB)
         
         o1 = self.GarbledXor(a,b,wire_labels)
         #print(a,b,o1)
-        o1 = des_in.decrypt(des_out.decrypt(o1)).decode()
+        o1 = aes_in.decrypt(aes_out.decrypt(o1)).decode()
         
         o2 = self.GarbledAnd(a,b,wire_labels)
-        o2 = des_in.decrypt(des_out.decrypt(o2)).decode()
+        o2 = aes_in.decrypt(aes_out.decrypt(o2)).decode()
         
         o1 = wire_labels[wl[o1].replace('C','B')]
         
-        des_in = DES.new(o1, DES.MODE_ECB)
-        des_out = DES.new(carry, DES.MODE_ECB)
+        aes_in = AES.new(o1, AES.MODE_ECB)
+        aes_out = AES.new(carry, AES.MODE_ECB)
         
         add = self.GarbledXor(carry,o1,wire_labels)
-        add = des_in.decrypt(des_out.decrypt(add)).decode()
+        add = aes_in.decrypt(aes_out.decrypt(add)).decode()
         
         o4 = self.GarbledAnd(carry,o1,wire_labels)
-        o4 = des_in.decrypt(des_out.decrypt(o4)).decode()
+        o4 = aes_in.decrypt(aes_out.decrypt(o4)).decode()
         
         o4 = wire_labels[wl[o4].replace('C', 'A')]
         o2 = wire_labels[wl[o2].replace('C', 'B')]
         
-        des_in = DES.new(o2, DES.MODE_ECB)
-        des_out = DES.new(o4, DES.MODE_ECB)
+        aes_in = AES.new(o2, AES.MODE_ECB)
+        aes_out = AES.new(o4, AES.MODE_ECB)
         
         cary = self.GarbledOr(o4, o2, wire_labels)
-        cary = des_in.decrypt(des_out.decrypt(cary)).decode()
+        cary = aes_in.decrypt(aes_out.decrypt(cary)).decode()
         
         cary = wire_labels[wl[cary].replace('C', 'A')]
         return str(add), cary
