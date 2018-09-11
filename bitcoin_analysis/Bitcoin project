@@ -1,0 +1,69 @@
+Deadline: 12th August, 2018 – 4pm
+
+
+My Details;
+Topic:"The Volatility of Cryptocurrencies: A Critical Analysis of a Financial Bubble Using Bitcoin As A Case Study"
+
+Analysis using Python
+I need a line graph showing the yearly closing prices of bitcoin from July 2010 to 2018
+-Time series graph from July 2010 to July 2018
+– A monte carlos simulation line graph to predict when the bubble will burst for the rest of 2018.
+-Also run the monte carlo simulation with this ratio in this link- https://woobull.com/introducing-nvt-ratio-bitcoins-pe-ratio-use-it-to-detect-bubbles/
+
+I am also interested in all the graphs plotted in this article attached on 'Economic bubble and Passage of Time' since it is related to what i am writing.
+
+
+Helpful links:
+- https://medium.com/@xoelop/weve-simulated-the-bitcoin-price-for-the-whole-2018-you-won-t-believe-the-result-4a602679dac2
+- https://blog.patricktriest.com/analyzing-cryptocurrencies-python/
+- https://mynabla.com/2017/11/09/a-monte-carlo-simulation-of-bitcoin-price-modeled-as-a-fractional-brownian-motion/
+- https://www.researchgate.net/publication/318392462_Modeling_the_price_of_Bitcoin_with_fractional_Brownian_motion_a_Monte_Carlo_approach
+- https://github.com/xoelop/Misc/blob/master/Bitcoin%20Price%20Simulation%202018.ipynb
+- https://coinmetrics.io/nvt/#assets=btc
+- https://medium.com/cryptolab/https-medium-com-kalichkin-rethinking-nvt-ratio-2cf810df0ab0
+- https://math.stackexchange.com/questions/1287634/implementing-ornstein-uhlenbeck-in-matlab
+- http://landonjross.io/simulating-brownian-motion-in-python-with-numpy.html
+- https://math.stackexchange.com/questions/542342/what-is-the-definition-of-a-sample-path-of-brownian-motion
+- https://math.stackexchange.com/questions/1287634/implementing-ornstein-uhlenbeck-in-matlab
+- https://jtsulliv.github.io/stock-movement/
+
+NVT Ratio:
+
+
+Hi Dmitry Kalichkin, congratulations for this amazing study! I’m trying to replicate it, but I have some problems. i’ve downloaded the data from this link https://coinmetrics.io/data-downloads/ so i use this formula to calcolate the new NTV: (exchangeVolume(USD)/[txVolume(USD) * (90 AVG txVolume(USD)]. Unfortunatly the result is not the same that…
+
+Go to the profile of Dmitry Kalichkin
+Dmitry Kalichkin
+Feb 14
+Use daily Network Value (aka Market Cap) in numerator, and 90 day avg Tx volume (USD) in denominator. There is no Exchange Volume anywhere in the formula
+
+Can you also do a bitcoin volatility graph with other top cryptocurrencies like ripple litecoin and ethereum
+M
+http://charts.woobull.com/bitcoin-volatility/
+
+
+Terms:
+
+Brownian Motion
+
+Laplace Transform
+
+Martingale: In probability theory, a martingale is a sequence of random variables (i.e., a stochastic process) for which, at a particular time in the realized sequence, the expectation of the next value in the sequence is equal to the present observed value even given knowledge of all prior observed values.
+
+Market Value: The term Network Value or Network Valuation is defined by the last traded price multiplied by the total number of tokens in circulation.
+
+Diffusion Proces: In probability theory and statistics, a diffusion process is a solution to a stochastic differential equation. It is a continuous-time Markov process with almost surely continuous sample paths. Brownian motion, reflected Brownian motion and Ornstein–Uhlenbeck processes are examples of diffusion processes.
+
+perturbation: a deviation of a system, moving object, or process from its regular or normal state or path, caused by an outside influence.
+
+Bubble Stages: A bubble cycle is formed by five steps: Displacement, Boom, Euphoria,
+Profit Taking, Panic. In the first step the asset price remains at a lower level and the process usually
+has an ‘initiative’ to increase. This corresponds to the regime I in our model. During the booming stage,
+the price becomes sensitive to positive market news and increases rapidly. Although sometimes due to
+divergence in market anticipations that the price may drop down, after oscillations the asset price will
+keep increasing. This is described by regime II. In regime III, the peak is shown and large negative
+drift is accumulated. This describes the euphoria stage where the asset price hits historically high levels;
+however, due to market capital limits or aversions of risk, the market expectations become negative. In
+the profit taking stage, asset price becomes sensitive to negative market news and the process shifts from
+regime III to regime II. In the end the process drops back to the mean-reversion level, or even continue
+to drop to regime I. This describes the last step of the bubble.
