@@ -1,0 +1,7 @@
+Download train_large.csv here.
+https://drive.google.com/file/d/1HFViEd04bBtMyPdfnsMAQ1m0wynVSPZi/view?usp=sharing
+In train_large.csv, first column is userID, second is itemID, third is rating.
+Fourth is timestamp and this can be ignored.
+In test_large.csv, first column is userID and second is itemID.
+Requirement is to predict rating, using the training result of train_large.csv, by recommender system.
+Especially, be careful the requirment image1 and 2.

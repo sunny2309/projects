@@ -1,0 +1,11 @@
+Type, Address, Block, Floor, Unit, Floor Area, Room, Sale/Rent
+HDB, 538 Upper Cross Street, ,18,267, 68, 3-Room, Rent
+HDB, 16 Jalan Teck Whye, ,05,115, 67, 3-Room, Sale
+HDB, 632 Yishun Street 61, 09,294,84,4-Room, Sale
+HDB, 535 Bukit Batok St 52, 06,611, Exec, Rent
+HDB, 644 Jurong West St 61, 04,122,5-Room,Rent
+Condominium,Parc Haven,16,05,14,600,1,Rent
+Condominium,NV Residences,89,02,02,797,2,Sale
+Condominium, Regis Mansion,15,06,05,1200,3,Sale
+Condominium, Loyang Valley, 202,02,03,1200,Rent
+

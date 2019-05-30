@@ -1,0 +1,34 @@
+import pandas as pd
+import numpy as np
+import os
+
+def load_dataset(n_valid=17100225, data_path='datasets/'):
+    ## Load the dataset
+    try:
+        # Try first, in case directory is wrong, one too deep
+        train_df = pd.read_csv(os.path.join('..', data_path, "training_large.csv"), names = ['user_id','item_id','rating','time'], low_memory=False)
+        train_df = train_df[train_df['rating'] != 'rating']
+        test_df = pd.read_csv(os.path.join('..', data_path, "test_large.csv"), names = ['user_id','item_id'])
+    except IOError:
+        train_df = pd.read_csv(os.path.join(data_path, "training_large.csv"), names = ['user_id','item_id','rating','time'], low_memory=False)
+        train_df = train_df[train_df['rating'] != 'rating']
+        test_df = pd.read_csv(os.path.join(data_path, "test_large.csv"), names = ['user_id','item_id','rating'])
+
+    train_data_tuple = (
+        train_df['user_id'].values[n_valid:],
+        train_df['item_id'].values[n_valid:],
+        train_df['rating'].values[n_valid:].astype(np.float32))
+    valid_data_tuple = (
+        train_df['user_id'].values[:n_valid],
+        train_df['item_id'].values[:n_valid],
+        train_df['rating'].values[:n_valid].astype(np.float32))
+    test_data_tuple = (
+        test_df['user_id'].values,
+        test_df['item_id'].values,
+        test_df['rating'].values)
+    n_users = 1 + np.maximum(test_df['user_id'].max(), train_df['user_id'].max())
+    n_items = 1 + np.maximum(test_df['item_id'].max(), train_df['item_id'].max())
+    return train_data_tuple, valid_data_tuple, test_data_tuple, n_users, n_items
+
+if __name__ == '__main__':
+    load_dataset()
