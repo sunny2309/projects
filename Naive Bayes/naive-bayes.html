@@ -13564,7 +13564,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13592,7 +13592,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;smsspamcollection/SMSSpamCollection&#39;</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Spam/Ham&#39;</span><span class="p">,</span><span class="s1">&#39;Mail&#39;</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -13609,7 +13609,7 @@ explain every step, though!</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[63]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13682,7 +13682,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Mail&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">mail</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">mail</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Mail&#39;</span><span class="p">]]</span>
@@ -13699,7 +13699,7 @@ explain every step, though!</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[64]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13765,7 +13765,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[a-z]+&#39;</span><span class="p">)</span>
@@ -13783,7 +13783,7 @@ explain every step, though!</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[65]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13849,7 +13849,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
@@ -13889,7 +13889,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
@@ -13906,7 +13906,7 @@ explain every step, though!</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[67]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13979,7 +13979,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Mail&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Spam/Ham&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> 
@@ -14001,7 +14001,7 @@ explain every step, though!</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[68]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -14018,7 +14018,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Spam/Ham&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">),</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">Y_train</span><span class="p">),</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">Y_val</span><span class="p">),</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">Y_test</span><span class="p">)</span>
@@ -14034,7 +14034,7 @@ explain every step, though!</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[69]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14043,7 +14043,7 @@ explain every step, though!</p>
 <pre>(Counter({&#39;ham&#39;: 4825, &#39;spam&#39;: 747}),
  Counter({&#39;ham&#39;: 2165, &#39;spam&#39;: 335}),
  Counter({&#39;spam&#39;: 134, &#39;ham&#39;: 866}),
- Counter({&#39;ham&#39;: 1794, &#39;spam&#39;: 278}))</pre>
+ Counter({&#39;spam&#39;: 278, &#39;ham&#39;: 1794}))</pre>
 </div>
 
 </div>
@@ -14061,7 +14061,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">NaiveBayesForSpam</span> <span class="p">:</span>
@@ -14154,7 +14154,7 @@ explain every step, though!</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14178,10 +14178,10 @@ explain every step, though!</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Total Words :  5131
-First Few Words :  [&#39;samantha&#39;, &#39;unfortunately&#39;, &#39;senses&#39;, &#39;another&#39;, &#39;indians&#39;, &#39;praveesh&#39;, &#39;anyway&#39;, &#39;triumphed&#39;, &#39;understood&#39;, &#39;their&#39;]
-CPU times: user 2.56 s, sys: 0 ns, total: 2.56 s
-Wall time: 2.56 s
+<pre>Total Words :  5113
+First Few Words :  [&#39;hint&#39;, &#39;diamonds&#39;, &#39;gorgeous&#39;, &#39;prepared&#39;, &#39;ah&#39;, &#39;value&#39;, &#39;sub&#39;, &#39;selected&#39;, &#39;no&#39;, &#39;pride&#39;]
+CPU times: user 2.1 s, sys: 492 µs, total: 2.1 s
+Wall time: 2.14 s
 </pre>
 </div>
 </div>
@@ -14190,9 +14190,19 @@ Wall time: 2.56 s
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below we are introducing 2nd model which will be trained using <code>train2</code> method. We have introduced new parameter called <code>times</code> in this method which plays significant role in selecting number of words to keep as words belonging to spam mails.</p>
+<p>Below method is called with default value of 20 for that parameter. Below we'll training 2 more model, one with value less than 20 and one with value more than 20.</p>
+<p>Please make a note of total number of words stored in dictionary of spam keywords.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14216,10 +14226,10 @@ Wall time: 2.56 s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Total Words :  204
-First Few Words :  [&#39;statement&#39;, &#39;freefone&#39;, &#39;order&#39;, &#39;services&#39;, &#39;pod&#39;, &#39;ae&#39;, &#39;truly&#39;, &#39;motorola&#39;, &#39;orange&#39;, &#39;bluetooth&#39;]
-CPU times: user 2.56 s, sys: 0 ns, total: 2.56 s
-Wall time: 2.56 s
+<pre>Total Words :  192
+First Few Words :  [&#39;sub&#39;, &#39;selected&#39;, &#39;loyal&#39;, &#39;dload&#39;, &#39;gbp&#39;, &#39;wkly&#39;, &#39;access&#39;, &#39;expires&#39;, &#39;land&#39;, &#39;auction&#39;]
+CPU times: user 2.09 s, sys: 2.19 ms, total: 2.09 s
+Wall time: 2.09 s
 </pre>
 </div>
 </div>
@@ -14228,9 +14238,18 @@ Wall time: 2.56 s
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below we are defining another model and training it with method <code>train2</code> with its parameter value <code>times=10</code>. This will result in keeping more words in dictionary for spam mails.</p>
+<p>Please make a note og total number of words stored in dictionary of spam keywords.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14254,10 +14273,10 @@ Wall time: 2.56 s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Total Words :  793
-First Few Words :  [&#39;customers&#39;, &#39;statement&#39;, &#39;marley&#39;, &#39;calls&#39;, &#39;freefone&#39;, &#39;java&#39;, &#39;order&#39;, &#39;services&#39;, &#39;pod&#39;, &#39;doubletxt&#39;]
-CPU times: user 2.97 s, sys: 0 ns, total: 2.97 s
-Wall time: 2.98 s
+<pre>Total Words :  712
+First Few Words :  [&#39;sub&#39;, &#39;selected&#39;, &#39;knickers&#39;, &#39;tenants&#39;, &#39;ibiza&#39;, &#39;honi&#39;, &#39;envelope&#39;, &#39;fastest&#39;, &#39;marvel&#39;, &#39;loyal&#39;]
+CPU times: user 2.12 s, sys: 0 ns, total: 2.12 s
+Wall time: 2.12 s
 </pre>
 </div>
 </div>
@@ -14266,9 +14285,18 @@ Wall time: 2.98 s
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below we are defining another model and training it with method <code>train2</code> with its parameter value <code>times=25</code>. This will result in keeping quite less words in dictionary for spam mails than when trained with <code>times=10 &amp; times=20</code>.</p>
+<p>Please make a note og total number of words stored in dictionary of spam keywords.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14292,10 +14320,10 @@ Wall time: 2.98 s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Total Words :  186
-First Few Words :  [&#39;statement&#39;, &#39;freefone&#39;, &#39;services&#39;, &#39;pod&#39;, &#39;ae&#39;, &#39;truly&#39;, &#39;motorola&#39;, &#39;orange&#39;, &#39;bluetooth&#39;, &#39;discount&#39;]
-CPU times: user 2.54 s, sys: 0 ns, total: 2.54 s
-Wall time: 2.54 s
+<pre>Total Words :  174
+First Few Words :  [&#39;loyal&#39;, &#39;dload&#39;, &#39;gbp&#39;, &#39;wkly&#39;, &#39;access&#39;, &#39;expires&#39;, &#39;land&#39;, &#39;auction&#39;, &#39;ppm&#39;, &#39;ringtone&#39;]
+CPU times: user 2.17 s, sys: 2.39 ms, total: 2.18 s
+Wall time: 2.18 s
 </pre>
 </div>
 </div>
@@ -14313,7 +14341,7 @@ Wall time: 2.54 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14334,8 +14362,8 @@ Wall time: 2.54 s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 9min 9s, sys: 111 ms, total: 9min 9s
-Wall time: 9min 9s
+<pre>CPU times: user 8min 51s, sys: 32.2 ms, total: 8min 51s
+Wall time: 8min 51s
 </pre>
 </div>
 </div>
@@ -14346,7 +14374,7 @@ Wall time: 9min 9s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Validation Accuracy : &#39;</span><span class="p">,</span><span class="n">accuracy_val1</span><span class="p">)</span>
@@ -14368,7 +14396,7 @@ Wall time: 9min 9s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation Accuracy :  0.9803012746234068
+<pre>Validation Accuracy :  0.9803468208092485
 Confusion Matrix : 
 </pre>
 </div>
@@ -14376,13 +14404,13 @@ Confusion Matrix :
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[76]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[846.,  17.],
+<pre>array([[848.,  17.],
        [  0.,   0.]])</pre>
 </div>
 
@@ -14394,7 +14422,7 @@ Confusion Matrix :
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14415,8 +14443,8 @@ Confusion Matrix :
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 20.8 s, sys: 0 ns, total: 20.8 s
-Wall time: 20.8 s
+<pre>CPU times: user 19.2 s, sys: 0 ns, total: 19.2 s
+Wall time: 19.2 s
 </pre>
 </div>
 </div>
@@ -14427,7 +14455,7 @@ Wall time: 20.8 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Validation Accuracy : &#39;</span><span class="p">,</span><span class="n">accuracy_val2</span><span class="p">)</span>
@@ -14449,7 +14477,7 @@ Wall time: 20.8 s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation Accuracy :  0.9706214689265537
+<pre>Validation Accuracy :  0.9673790776152981
 Confusion Matrix : 
 </pre>
 </div>
@@ -14457,13 +14485,13 @@ Confusion Matrix :
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[78]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[859.,  26.],
+<pre>array([[860.,  29.],
        [  0.,   0.]])</pre>
 </div>
 
@@ -14475,7 +14503,7 @@ Confusion Matrix :
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14496,8 +14524,8 @@ Confusion Matrix :
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 1min 19s, sys: 4 ms, total: 1min 19s
-Wall time: 1min 19s
+<pre>CPU times: user 1min 10s, sys: 40 ms, total: 1min 10s
+Wall time: 1min 10s
 </pre>
 </div>
 </div>
@@ -14508,7 +14536,7 @@ Wall time: 1min 19s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Validation Accuracy : &#39;</span><span class="p">,</span><span class="n">accuracy_val3</span><span class="p">)</span>
@@ -14530,7 +14558,7 @@ Wall time: 1min 19s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation Accuracy :  0.9707865168539326
+<pre>Validation Accuracy :  0.976271186440678
 Confusion Matrix : 
 </pre>
 </div>
@@ -14538,13 +14566,13 @@ Confusion Matrix :
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[80]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[864.,  26.],
+<pre>array([[864.,  21.],
        [  0.,   0.]])</pre>
 </div>
 
@@ -14556,7 +14584,7 @@ Confusion Matrix :
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14577,8 +14605,8 @@ Confusion Matrix :
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 18.9 s, sys: 4 ms, total: 18.9 s
-Wall time: 18.9 s
+<pre>CPU times: user 17.3 s, sys: 7.99 ms, total: 17.3 s
+Wall time: 17.3 s
 </pre>
 </div>
 </div>
@@ -14589,10 +14617,10 @@ Wall time: 18.9 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Validation Accuracy : &#39;</span><span class="p">,</span><span class="n">accuracy_val4</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Validation Accuracy : &#39;</span><span class="p">,</span><span class="n">accuracy_val4</span><span class="p">)</span> <span class="c1">## Please make a note here that confusion matrix has less value for false positives compared to other above models</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix : &#39;</span><span class="p">)</span>
 <span class="n">confusion_mat_val4</span>
 </pre></div>
@@ -14611,7 +14639,7 @@ Wall time: 18.9 s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation Accuracy :  0.971655328798186
+<pre>Validation Accuracy :  0.9663299663299664
 Confusion Matrix : 
 </pre>
 </div>
@@ -14619,13 +14647,13 @@ Confusion Matrix :
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[82]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[857.,  25.],
+<pre>array([[861.,  30.],
        [  0.,   0.]])</pre>
 </div>
 
@@ -14661,7 +14689,7 @@ Confusion Matrix :
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14682,8 +14710,8 @@ Confusion Matrix :
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 43 s, sys: 0 ns, total: 43 s
-Wall time: 43 s
+<pre>CPU times: user 39.6 s, sys: 0 ns, total: 39.6 s
+Wall time: 39.6 s
 </pre>
 </div>
 </div>
@@ -14694,7 +14722,7 @@ Wall time: 43 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test Accuracy : &#39;</span><span class="p">,</span><span class="n">accuracy_test2</span><span class="p">)</span>
@@ -14716,7 +14744,7 @@ Wall time: 43 s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test Accuracy :  0.9747668678003292
+<pre>Test Accuracy :  0.971195652173913
 Confusion Matrix : 
 </pre>
 </div>
@@ -14724,13 +14752,13 @@ Confusion Matrix :
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[84]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[1777.,   46.],
+<pre>array([[1787.,   53.],
        [   0.,    0.]])</pre>
 </div>
 
@@ -14742,7 +14770,7 @@ Confusion Matrix :
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14763,8 +14791,8 @@ Confusion Matrix :
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 2min 45s, sys: 7.99 ms, total: 2min 45s
-Wall time: 2min 45s
+<pre>CPU times: user 2min 27s, sys: 12 ms, total: 2min 27s
+Wall time: 2min 27s
 </pre>
 </div>
 </div>
@@ -14775,7 +14803,7 @@ Wall time: 2min 45s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test Accuracy : &#39;</span><span class="p">,</span><span class="n">accuracy_test3</span><span class="p">)</span>
@@ -14797,7 +14825,7 @@ Wall time: 2min 45s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test Accuracy :  0.9781540141998908
+<pre>Test Accuracy :  0.9808324205914567
 Confusion Matrix : 
 </pre>
 </div>
@@ -14805,13 +14833,13 @@ Confusion Matrix :
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[86]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[1791.,   40.],
+<pre>array([[1791.,   35.],
        [   0.,    0.]])</pre>
 </div>
 
@@ -14823,7 +14851,7 @@ Confusion Matrix :
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -14844,8 +14872,8 @@ Confusion Matrix :
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 39.1 s, sys: 3.99 ms, total: 39.1 s
-Wall time: 39.1 s
+<pre>CPU times: user 35.9 s, sys: 0 ns, total: 35.9 s
+Wall time: 35.9 s
 </pre>
 </div>
 </div>
@@ -14856,7 +14884,7 @@ Wall time: 39.1 s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test Accuracy : &#39;</span><span class="p">,</span><span class="n">accuracy_test4</span><span class="p">)</span>
@@ -14878,7 +14906,7 @@ Wall time: 39.1 s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test Accuracy :  0.9726177437020811
+<pre>Test Accuracy :  0.9721919302071974
 Confusion Matrix : 
 </pre>
 </div>
@@ -14886,13 +14914,13 @@ Confusion Matrix :
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[88]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[1776.,   50.],
+<pre>array([[1783.,   51.],
        [   0.,    0.]])</pre>
 </div>
 
