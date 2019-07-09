@@ -1,0 +1,661 @@
+link,name,Crossing,Finishing,Heading Accuracy,Short Passing,Volleys,Dribbling,Curve,FK Accuracy,Long Passing,Ball Control,Acceleration,Sprint Speed,Agility,Reactions,Balance,Shot Power,Jumping,Stamina,Strength,Long Shots,Aggression,Interceptions,Positioning,Vision,Penalties,Composure,Marking,Standing Tackle,Sliding Tackle,GK Diving,GK Handling,GK Kicking,GK Positioning,GK Reflexes
+http://sofifa.com/player/158023/lionel-messi/19/159481/,Lionel Messi (Lionel Andres Messi Cuccittini),86,95,70,92,86,97,93,94,89,96,91,86,93,95,95,85,68,72,66,94,48,22,94,94,75,96,33,28,26,6,11,15,14,8
+http://sofifa.com/player/211110/paulo-dybala/19/159481/,Paulo Dybala (Paulo Bruno Exequiel Dybala),82,82,68,87,88,92,88,88,77,92,87,83,91,86,85,82,75,80,65,88,48,32,84,87,86,84,23,20,20,5,4,4,5,8
+http://sofifa.com/player/153079/sergio-aguero/19/159481/,Sergio Aguero (Sergio Leonel Aguero del Castillo),70,93,77,81,85,89,82,73,64,89,86,78,86,91,91,88,81,76,73,83,65,24,93,83,83,90,30,20,12,13,15,6,11,14
+http://sofifa.com/player/201399/mauro-icardi/19/159481/,Mauro Icardi (Mauro Emanuel Icardi Rivero),46,91,91,73,85,77,58,45,54,81,77,78,76,88,76,84,94,69,76,70,56,22,92,64,82,85,45,24,20,13,9,5,7,9
+http://sofifa.com/player/167664/gonzalo-higuain/19/159481/,Gonzalo Higuain (Gonzalo Gerardo Higuain),68,90,79,75,88,83,74,62,60,84,69,71,75,86,69,86,79,70,85,80,50,20,90,75,70,85,35,22,18,5,12,7,5,10
+http://sofifa.com/player/183898/angel-di-maria/19/159481/,Angel Di Maria (Angel Fabian Di Maria Hernandez),85,74,51,83,77,86,88,86,79,86,85,84,92,82,77,83,72,78,60,80,73,38,82,84,73,84,38,59,56,10,7,11,12,11
+http://sofifa.com/player/192366/nicolas-otamendi/19/159481/,Nicolas Otamendi (Nicolas Hernan Otamendi),52,54,84,75,57,51,50,39,72,70,57,61,64,78,62,69,92,67,80,56,91,83,51,53,45,80,83,84,84,12,5,8,11,12
+http://sofifa.com/player/178562/ever-banega/19/159481/,Ever Banega (Ever Maximiliano David Banega),80,66,49,88,65,83,83,81,87,85,68,64,79,77,83,74,57,74,67,78,78,76,75,88,78,80,77,72,69,13,8,7,7,10
+http://sofifa.com/player/143076/alejandro-gomez/19/159481/,Alejandro Gomez (Alejandro Dario Gomez),81,76,38,81,72,85,79,79,74,85,94,86,92,81,94,76,70,75,48,79,56,40,80,82,72,84,50,30,34,8,11,12,9,6
+http://sofifa.com/player/211256/nicolas-tagliafico/19/159481/,Nicolas Tagliafico (Nicolas Alejandro Tagliafico),80,58,73,77,44,74,62,40,67,78,84,85,77,80,79,66,90,91,73,44,84,78,70,68,46,81,83,79,80,13,9,10,15,16
+http://sofifa.com/player/184144/nicolas-gaitan/19/159481/,Nicolas Gaitan (Osvaldo Nicolas Fabian Gaitan),80,71,54,81,81,84,88,72,75,83,84,79,87,82,81,72,81,69,46,73,69,40,77,82,71,80,35,42,43,8,11,9,7,5
+http://sofifa.com/player/226226/giovani-lo-celso/19/159481/,Giovani Lo Celso,77,78,57,82,69,84,82,71,83,85,77,80,82,82,81,81,64,80,69,76,65,65,79,84,65,79,61,68,64,10,7,10,15,14
+http://sofifa.com/player/170481/ezequiel-garay/19/159481/,Ezequiel Garay (Ezequiel Marcelo Garay),62,58,80,69,49,60,55,74,72,70,38,41,54,76,36,80,79,70,88,64,77,83,42,63,69,77,82,83,81,14,6,13,13,14
+http://sofifa.com/player/158963/lucas-biglia/19/159481/,Lucas Biglia (Lucas Rodrigo Biglia),74,50,54,86,78,80,71,76,82,84,65,65,76,80,78,77,62,75,65,75,83,82,50,80,72,80,80,78,74,14,12,7,12,7
+http://sofifa.com/player/215316/geronimo-rulli/19/159481/,Geronimo Rulli,12,15,12,32,16,14,19,20,23,15,54,48,58,76,50,24,65,42,73,17,26,21,12,58,24,61,15,13,17,83,77,77,75,86
+http://sofifa.com/player/224334/marcos-acuna/19/159481/,Marcos Acuna (Marcos Javier Acuna),87,66,63,78,68,87,87,78,76,85,79,75,84,80,86,83,69,90,84,84,88,76,77,82,74,88,78,80,75,8,14,13,13,14
+http://sofifa.com/player/207471/franco-vazquez/19/159481/,Franco Vazquez,73,74,68,84,81,84,79,68,78,85,58,62,69,78,39,76,50,68,79,84,78,57,77,84,67,80,50,43,42,14,15,13,9,7
+http://sofifa.com/player/142707/lisandro-lopez/19/159481/,Lisandro Lopez,66,86,79,75,74,78,78,73,71,82,77,83,84,77,80,77,84,75,75,75,61,52,84,72,85,85,35,58,34,8,10,11,13,6
+http://sofifa.com/player/170368/erik-lamela/19/159481/,Erik Lamela,77,74,69,82,77,85,83,80,73,84,76,74,75,78,74,81,63,78,68,82,84,45,79,83,75,78,48,51,42,10,15,11,8,13
+http://sofifa.com/player/214997/angel-correa/19/159481/,Angel Correa,74,82,67,74,79,87,82,65,65,87,87,82,87,82,83,80,50,74,63,83,41,48,79,78,55,74,58,53,44,13,10,9,8,16
+http://sofifa.com/player/215057/ivan-marcone/19/159481/,Ivan Marcone,58,48,73,81,49,77,59,60,83,78,54,34,60,80,60,73,35,86,85,66,84,76,58,75,59,80,72,80,71,16,11,12,16,10
+http://sofifa.com/player/215061/dario-benedetto/19/159481/,Dario Benedetto,55,84,76,71,73,75,69,60,66,79,78,82,77,76,73,83,86,72,77,80,66,35,82,69,76,81,45,25,25,10,14,12,8,11
+http://sofifa.com/player/215330/joaquin-correa/19/159481/,Joaquin Correa,74,77,68,78,75,87,79,63,69,86,83,87,84,77,67,78,64,75,74,71,48,36,77,77,57,73,39,37,26,11,10,7,8,8
+http://sofifa.com/player/193061/roberto-pereyra/19/159481/,Roberto Pereyra,78,74,60,82,73,85,78,72,75,84,75,76,75,74,73,68,65,77,63,74,66,70,76,80,72,78,50,64,70,4,5,3,4,8
+http://sofifa.com/player/231478/lautaro-martinez/19/159481/,Lautaro Martinez,56,82,79,66,68,81,71,33,50,79,82,83,79,78,73,79,81,75,86,68,74,31,82,72,66,77,46,22,25,11,8,8,8,13
+http://sofifa.com/player/214584/franco-armani/19/159481/,Franco Armani,18,11,19,34,18,19,14,16,21,32,40,40,40,78,34,25,65,28,82,17,35,21,18,55,20,51,10,13,18,78,75,70,81,86
+http://sofifa.com/player/188988/manuel-lanzini/19/159481/,Manuel Lanzini,74,70,56,80,61,86,76,76,77,85,84,76,85,72,89,75,75,73,39,75,48,27,73,79,73,77,27,36,25,14,9,6,7,15
+http://sofifa.com/player/173373/sergio-romero/19/159481/,Sergio Romero (Sergio German Romero),11,14,12,39,17,12,12,13,48,40,47,44,55,80,44,14,63,35,75,11,33,21,11,55,16,62,14,11,15,78,76,81,78,83
+http://sofifa.com/player/193601/german-pezzella/19/159481/,German Pezzella (German Alejandro Pezzella),40,48,82,64,40,54,46,25,56,66,60,58,34,77,48,54,82,63,82,50,82,80,47,22,35,72,78,82,78,7,9,13,10,15
+http://sofifa.com/player/207439/leandro-paredes/19/159481/,Leandro Paredes,76,55,60,84,71,78,79,78,82,82,75,69,77,74,77,82,61,79,69,77,83,72,74,82,57,74,73,75,75,9,14,6,9,10
+http://sofifa.com/player/172114/diego-valeri/19/159481/,Diego Valeri (Diego Hernan Valeri),77,2,71,79,75,79,80,81,1,81,61,60,73,80,73,83,68,81,64,84,53,36,83,1,78,83,39,40,30,15,15,8,10,12
+http://sofifa.com/player/183900/diego-perotti/19/159481/,Diego Perotti,79,66,57,80,60,88,72,64,69,88,81,76,83,76,78,73,64,69,60,71,51,36,78,81,90,80,58,31,22,5,8,14,6,8
+http://sofifa.com/player/179847/federico-fazio/19/159481/,Federico Fazio (Federico Julian Fazio),44,41,89,64,35,48,46,37,60,70,36,39,29,76,32,63,41,72,91,26,84,80,32,47,26,80,81,84,77,8,9,12,11,14
+http://sofifa.com/player/142754/javier-mascherano/19/159481/,Javier Mascherano (Javier Alejandro Mascherano),63,42,66,79,51,58,63,50,75,80,69,62,72,79,78,76,80,76,72,55,88,85,51,68,60,81,78,81,82,6,10,8,5,5
+http://sofifa.com/player/186547/mateo-musacchio/19/159481/,Mateo Musacchio (Mateo Pablo Musacchio),55,40,76,69,36,65,53,45,67,67,69,69,73,76,68,57,83,68,76,53,76,84,50,64,57,76,84,84,80,5,11,12,6,12
+http://sofifa.com/player/176376/ignacio-piatti/19/159481/,Ignacio Piatti,69,81,54,78,77,86,80,55,74,84,1,2,1,1,1,84,1,3,73,80,1,2,82,77,80,82,61,2,2,14,13,7,7,15
+http://sofifa.com/player/190972/eduardo-salvio/19/159481/,Eduardo Salvio (Eduardo Antonio Salvio),74,74,73,75,72,85,79,64,64,84,87,84,83,77,76,80,87,74,63,72,69,60,83,74,76,84,49,60,56,9,11,9,5,14
+http://sofifa.com/player/176915/augusto-fernandez/19/159481/,Augusto Fernandez (Augusto Matias Fernandez),70,69,59,81,57,77,65,61,80,81,69,71,75,77,79,74,59,75,73,73,80,77,75,79,62,81,68,76,64,9,13,6,16,9
+http://sofifa.com/player/215353/lucas-alario/19/159481/,Lucas Alario,48,84,81,69,76,75,49,43,48,79,71,73,72,71,71,75,90,71,78,62,72,22,85,65,75,74,22,27,20,8,15,7,15,15
+http://sofifa.com/player/207939/guido-pizarro/19/159481/,Guido Pizarro,62,59,68,79,62,69,66,54,73,74,62,52,62,71,44,69,74,90,80,65,87,80,67,71,60,75,74,80,76,7,12,16,15,7
+http://sofifa.com/player/226377/gonzalo-martinez/19/159481/,Gonzalo Martinez (Gonzalo Nicolas Martinez),74,73,32,70,74,85,78,73,68,81,90,87,91,80,87,80,53,76,61,82,48,26,75,72,80,82,47,28,30,6,9,13,12,15
+http://sofifa.com/player/183892/gabriel-mercado/19/159481/,Gabriel Mercado (Gabriel Ivan Mercado),68,60,76,71,66,57,68,54,65,69,75,75,66,72,60,68,76,77,82,58,81,80,63,60,49,69,77,80,78,12,16,10,12,6
+http://sofifa.com/player/159065/ezequiel-lavezzi/19/159481/,Ezequiel Lavezzi (Ezequiel Ivan Lavezzi),77,80,57,80,77,82,83,79,65,83,85,83,87,81,85,79,82,68,71,78,73,31,82,83,69,78,40,40,37,6,15,11,9,12
+http://sofifa.com/player/201862/marcos-rojo/19/159481/,Marcos Rojo (Faustino Marcos Alberto Rojo),74,50,78,72,48,64,67,57,73,67,68,69,68,74,63,80,82,65,77,63,92,77,57,57,55,73,76,79,80,7,8,12,15,10
+http://sofifa.com/player/215223/walter-benitez/19/159481/,Walter Benitez,12,14,13,26,13,15,19,17,27,14,48,48,43,72,40,25,57,42,80,14,28,21,18,46,25,62,17,20,17,78,79,72,79,81
+http://sofifa.com/player/184252/lucas-pratto/19/159481/,Lucas Pratto (Lucas David Pratto),70,77,79,71,74,75,67,56,70,77,68,74,71,76,61,86,76,75,91,76,84,54,81,79,78,78,57,46,60,8,15,6,15,15
+http://sofifa.com/player/191180/javier-pastore/19/159481/,Javier Pastore (Javier Matias Pastore),77,70,61,84,78,83,83,69,80,85,65,67,79,73,63,78,49,55,64,74,62,69,74,82,73,78,45,59,51,14,9,6,10,12
+http://sofifa.com/player/224254/cristian-pavon/19/159481/,Cristian Pavon (Cristian David Pavon),76,72,48,76,57,79,72,77,68,76,93,90,92,77,85,84,65,92,73,82,56,49,78,77,59,68,65,40,33,11,10,9,13,7
+http://sofifa.com/player/146963/javier-pinola/19/159481/,Javier Pinola (Javier Horacio Pinola),65,38,74,76,48,65,65,55,68,67,68,70,65,75,67,71,81,67,81,59,82,76,59,58,45,66,79,77,74,8,12,11,7,11
+http://sofifa.com/player/205849/esteban-andrada/19/159481/,Esteban Andrada,15,14,13,32,18,16,14,15,31,20,45,44,34,72,43,17,54,45,59,13,24,25,19,48,19,43,18,20,14,79,75,73,77,81
+http://sofifa.com/player/171828/ignacio-scocco/19/159481/,Ignacio Scocco (Ignacio Martin Scocco),65,80,55,73,79,81,81,79,72,82,78,78,78,75,84,82,67,71,70,79,71,33,81,72,78,79,37,30,28,14,12,14,6,12
+http://sofifa.com/player/196432/enzo-perez/19/159481/,Enzo Perez,68,68,65,82,64,75,62,63,76,76,75,74,76,76,79,75,75,76,74,72,89,74,75,76,74,76,77,76,75,9,11,7,15,13
+http://sofifa.com/player/153177/mauro-zarate/19/159481/,Mauro Zarate (Mauro Matias Zarate),65,80,55,74,75,86,81,82,58,85,82,77,88,76,73,78,70,72,66,83,66,38,78,68,72,73,55,30,30,7,16,16,6,12
+http://sofifa.com/player/183899/pablo-piatti/19/159481/,Pablo Piatti (Pablo Daniel Piatti),78,76,71,76,72,81,80,58,70,75,87,84,81,75,91,63,76,66,50,72,55,51,77,75,64,68,52,35,38,10,8,13,8,10
+http://sofifa.com/player/142966/jesus-datolo/19/159481/,Jesus Datolo (Jesus Alberto Datolo),77,71,57,79,66,79,83,77,79,79,69,66,84,71,68,77,55,65,66,77,46,57,75,80,75,72,31,49,46,10,8,11,14,13
+http://sofifa.com/player/215162/alejandro-donatti/19/159481/,Alejandro Donatti,38,53,86,70,36,50,68,76,68,62,49,54,52,71,34,80,83,70,85,67,76,78,55,35,48,59,79,75,75,13,10,6,15,12
+http://sofifa.com/player/216700/maximiliano-meza/19/159481/,Maximiliano Meza (Maximiliano Eduardo Meza),72,73,67,76,66,86,82,76,68,79,80,82,87,73,75,76,67,81,70,74,73,31,71,76,54,73,68,37,32,9,9,16,12,11
+http://sofifa.com/player/235926/matias-zaracho/19/159481/,Matias Zaracho,66,64,49,83,58,83,65,58,73,79,88,84,91,72,90,62,59,77,56,62,60,59,70,73,57,84,65,67,62,8,14,12,6,9
+http://sofifa.com/player/219576/rodrigo-battaglia/19/159481/,Rodrigo Battaglia (Rodrigo Andres Battaglia),46,61,68,78,53,74,45,59,76,76,65,68,60,75,61,76,70,85,78,78,87,82,75,72,57,73,81,83,76,7,7,7,9,9
+http://sofifa.com/player/214206/german-cano/19/159481/,German Cano (German Ezequiel Cano),44,83,73,69,78,73,66,56,61,78,70,74,75,76,71,82,73,73,68,73,48,35,81,68,81,78,44,23,19,14,10,8,6,13
+http://sofifa.com/player/160741/david-abraham/19/159481/,David Abraham (David Angel Abraham),44,46,78,73,65,44,45,67,75,59,76,79,61,76,55,74,77,68,80,63,79,75,31,49,54,78,77,81,77,6,10,12,9,8
+http://sofifa.com/player/214766/carlos-izquierdoz/19/159481/,Carlos Izquierdoz (Carlos Roberto Izquierdoz),44,45,82,66,50,36,32,26,57,62,52,50,36,76,52,55,85,84,80,54,74,80,35,33,51,58,78,79,78,8,11,7,8,8
+http://sofifa.com/player/216816/giovanni-simeone/19/159481/,Giovanni Simeone (Giovanni Pablo Simeone),40,79,80,68,72,76,69,60,55,76,79,78,76,76,74,79,84,74,72,66,70,24,80,60,71,76,51,29,26,12,15,9,14,11
+http://sofifa.com/player/216054/nery-dominguez/19/159481/,Nery Dominguez,58,61,68,77,43,66,44,56,80,75,59,58,60,73,60,77,71,80,79,69,69,75,56,80,55,73,77,77,78,15,13,12,11,16
+http://sofifa.com/player/143121/jose-sosa/19/159481/,Jose Sosa (Jose Ernesto Sosa),78,60,50,80,77,82,86,85,78,82,67,72,74,76,76,79,47,68,65,74,69,63,74,80,74,78,65,62,60,11,15,13,6,9
+http://sofifa.com/player/176919/nahuel-guzman/19/159481/,Nahuel Guzman (Nahuel Ignacio Guzman),20,10,15,40,12,21,18,22,46,25,51,52,70,75,57,25,66,38,79,17,33,29,19,55,12,65,26,13,12,76,75,67,80,78
+http://sofifa.com/player/188955/gustavo-bou/19/159481/,Gustavo Bou (Gustavo Leonardo Bou),69,77,74,71,70,77,66,71,61,77,78,78,74,74,76,80,77,79,75,73,52,39,78,71,71,78,19,22,21,6,6,15,16,7
+http://sofifa.com/player/215079/pablo-perez/19/159481/,Pablo Perez,67,61,58,78,39,72,65,72,76,79,69,69,72,80,74,69,60,74,78,65,92,72,69,80,59,74,70,75,72,10,7,16,15,14
+http://sofifa.com/player/232244/santiago-ascacibar/19/159481/,Santiago Ascacibar (Santiago Lionel Ascacibar),51,39,55,71,47,65,47,41,67,66,75,65,78,74,87,53,82,93,61,64,90,84,31,60,48,65,81,80,78,6,10,5,14,9
+http://sofifa.com/player/139064/leonardo-ponzio/19/159481/,Leonardo Ponzio (Leonardo Daniel Ponzio),67,47,62,74,41,64,57,66,76,72,64,42,72,73,71,77,75,72,73,66,88,79,67,68,70,80,79,77,78,16,9,10,14,12
+http://sofifa.com/player/219455/jonathan-calleri/19/159481/,Jonathan Calleri,56,76,83,66,71,74,57,35,58,75,71,72,72,77,79,78,83,74,71,69,68,37,79,67,72,74,55,39,32,11,12,8,8,6
+http://sofifa.com/player/205632/lucas-ocampos/19/159481/,Lucas Ocampos,75,73,77,74,75,74,72,65,70,76,78,79,77,83,58,77,76,89,78,69,83,67,71,71,70,76,63,52,48,11,8,15,12,7
+http://sofifa.com/player/205633/lucas-castro/19/159481/,Lucas Castro,78,58,58,80,67,80,76,68,76,82,76,73,78,73,78,77,66,72,68,74,65,72,75,77,68,75,52,70,70,6,7,9,15,5
+http://sofifa.com/player/211267/ricardo-centurion/19/159481/,Ricardo Centurion (Adrian Ricardo Centurion),68,72,61,68,60,83,68,73,66,77,91,90,89,74,88,68,60,86,57,70,63,38,67,74,67,75,28,37,38,7,6,7,11,8
+http://sofifa.com/player/226378/ramon-abila/19/159481/,Ramon Abila,51,80,76,64,72,69,52,48,52,76,68,67,67,73,82,83,72,68,89,57,76,19,81,51,75,72,35,23,22,16,14,15,14,15
+http://sofifa.com/player/226379/marcos-diaz/19/159481/,Marcos Diaz (Marcos Guillermo Diaz),17,11,15,24,11,13,13,15,21,16,39,39,30,73,35,25,53,35,74,13,43,18,14,38,23,33,17,21,22,75,73,62,82,78
+http://sofifa.com/player/152912/jose-sand/19/159481/,Jose Sand (Jose Gustavo Sand),53,83,82,70,78,69,60,66,46,77,44,48,53,83,50,77,71,62,82,72,75,33,84,70,84,83,44,24,28,11,16,15,9,14
+http://sofifa.com/player/152916/rubens-sambueza/19/159481/,Rubens Sambueza (Rubens Omar Oscar Sambueza),78,70,57,79,61,77,82,77,78,82,69,70,69,75,73,75,67,79,78,72,86,60,68,80,73,83,33,48,46,8,6,8,9,16
+http://sofifa.com/player/223061/franco-cervi/19/159481/,Franco Cervi,72,65,48,71,55,85,78,76,63,80,93,90,91,75,91,68,69,66,33,64,71,59,72,71,56,77,42,50,53,12,8,9,11,10
+http://sofifa.com/player/215135/leonardo-sigali/19/159481/,Leonardo Sigali,30,40,79,40,29,34,31,32,36,58,67,63,52,74,61,45,90,52,77,26,80,80,45,32,42,61,81,81,78,11,8,10,15,13
+http://sofifa.com/player/225659/guido-rodriguez/19/159481/,Guido Rodriguez,59,43,70,75,47,59,49,42,72,73,53,54,54,73,52,68,45,77,81,59,83,78,50,63,53,68,79,76,76,12,11,14,16,6
+http://sofifa.com/player/142721/marcelo-barovero/19/159481/,Marcelo Barovero,14,13,13,36,18,19,19,19,23,12,35,35,32,77,59,14,77,34,43,19,34,16,17,51,20,65,19,16,14,76,74,69,78,77
+http://sofifa.com/player/201095/agustin-marchesin/19/159481/,Agustin Marchesin,18,14,11,37,15,24,16,15,34,20,49,52,68,75,60,12,75,38,59,12,45,15,18,65,14,64,22,15,15,73,74,74,79,81
+http://sofifa.com/player/212616/rodrigo-javier-de-paul/19/159481/,Rodrigo Javier De Paul,76,68,50,79,57,84,80,68,73,82,78,74,78,72,72,78,58,70,68,79,56,28,75,77,70,76,24,44,40,13,12,10,7,14
+http://sofifa.com/player/188042/matias-suarez/19/159481/,Matias Suarez (Matias Ezequiel Suarez),71,76,64,72,75,80,72,70,69,81,73,70,80,79,77,80,68,58,73,75,50,18,81,76,70,82,33,29,23,9,16,11,13,8
+http://sofifa.com/player/143001/carlos-tevez/19/159481/,Carlos Tevez (Carlos Alberto Tevez),71,77,54,79,74,78,74,68,65,76,73,70,76,72,74,82,53,73,74,70,77,34,77,75,72,79,35,51,50,4,2,3,2,4
+http://sofifa.com/player/210333/alexander-szymanowski/19/159481/,Alexander Szymanowski,78,78,67,74,66,79,69,57,63,76,89,83,83,72,87,68,52,68,60,68,55,28,75,76,70,71,35,42,45,11,8,10,12,6
+http://sofifa.com/player/152993/renato-civelli/19/159481/,Renato Civelli,53,54,85,64,55,35,37,47,59,67,49,36,33,68,37,66,72,66,94,57,83,73,48,50,58,74,77,79,67,13,6,16,14,10
+http://sofifa.com/player/152997/dario-cvitanich/19/159481/,Dario Cvitanich,64,79,79,73,71,70,67,66,65,83,68,62,72,74,79,71,81,69,75,67,68,33,81,74,79,77,31,32,34,15,12,15,12,11
+http://sofifa.com/player/152999/rodrigo-palacio/19/159481/,Rodrigo Palacio (Rodrigo Sebastian Palacio),70,76,74,76,76,82,78,67,56,84,79,77,79,76,81,70,76,65,61,60,78,39,80,77,79,82,40,33,30,17,14,17,17,17
+http://sofifa.com/player/200875/emmanuel-gigliotti/19/159481/,Emmanuel Gigliotti,51,84,78,66,73,65,57,49,46,75,61,63,68,72,62,78,77,78,79,67,71,35,82,71,63,71,59,35,24,11,9,14,13,6
+http://sofifa.com/player/213432/facundo-ferreyra/19/159481/,Facundo Ferreyra,49,80,82,67,70,74,48,42,53,76,68,69,78,75,68,75,68,72,73,68,58,23,80,66,70,79,22,29,26,11,11,8,14,15
+http://sofifa.com/player/214968/federico-mancuello/19/159481/,Federico Mancuello,76,68,62,78,46,74,80,81,78,76,73,76,74,76,75,80,60,72,70,81,73,67,76,80,63,74,58,64,61,12,10,14,6,9
+http://sofifa.com/player/221634/luciano-acosta/19/159481/,Luciano Acosta (Luciano Federico Acosta),61,2,53,77,67,82,74,62,70,77,87,78,4,74,4,71,57,76,49,67,69,44,74,3,54,73,47,47,33,13,9,6,12,10
+http://sofifa.com/player/239301/lisandro-martinez/19/159481/,Lisandro Martinez,68,51,71,75,49,71,57,53,72,72,76,74,72,74,76,67,80,78,73,52,73,81,62,66,55,74,75,80,78,6,14,13,14,8
+http://sofifa.com/player/215256/renzo-saravia/19/159481/,Renzo Saravia,73,34,59,73,32,78,57,58,68,74,88,89,78,75,73,51,82,91,70,37,84,75,72,60,52,69,74,74,73,12,12,16,12,15
+http://sofifa.com/player/216796/federico-cartabia/19/159481/,Federico Cartabia (Federico Nicolas Cartabia),75,75,53,76,59,79,77,72,72,78,79,72,80,75,90,80,63,72,34,75,80,34,73,73,66,67,63,35,27,8,6,6,16,14
+http://sofifa.com/player/199667/ramiro-funes-mori/19/159481/,Ramiro Funes Mori (Jose Ramiro Funes Mori),66,40,79,70,25,63,49,58,62,69,61,68,65,67,61,70,77,74,78,56,83,76,49,59,52,64,75,77,74,9,9,13,10,7
+http://sofifa.com/player/173306/cristian-ansaldi/19/159481/,Cristian Ansaldi (Cristian Daniel Ansaldi),79,57,65,77,58,79,76,47,76,79,75,78,77,79,68,66,72,78,68,66,78,76,68,73,52,81,76,79,79,15,15,11,8,8
+http://sofifa.com/player/198140/rogelio-funes-mori/19/159481/,Rogelio Funes Mori (Rogelio Gabriel Funes Mori),65,80,77,70,72,75,75,58,65,73,78,75,77,78,72,72,79,79,78,67,78,49,80,72,70,76,25,45,44,8,10,15,6,15
+http://sofifa.com/player/219391/gonzalo-escalante/19/159481/,Gonzalo Escalante,62,66,63,76,59,67,63,52,73,72,71,72,66,72,70,79,76,84,73,63,85,78,64,70,64,74,74,76,77,10,12,7,12,11
+http://sofifa.com/player/201988/federico-fernandez/19/159481/,Federico Fernandez,23,26,77,68,21,39,49,40,58,65,47,50,48,71,48,27,76,65,78,29,79,76,36,44,42,71,76,78,77,12,12,13,14,12
+http://sofifa.com/player/200197/nicolas-blandi/19/159481/,Nicolas Blandi,55,80,80,68,77,65,55,54,60,78,64,61,76,78,57,76,84,74,68,72,49,43,83,45,74,79,33,30,27,13,10,15,15,15
+http://sofifa.com/player/215051/lisandro-lopez/19/159481/,Lisandro Lopez,33,48,79,66,50,59,37,32,56,62,64,66,64,73,55,67,84,55,77,44,77,77,38,41,46,73,76,76,75,14,12,8,6,13
+http://sofifa.com/player/215071/milton-casco/19/159481/,Milton Casco,74,58,62,73,39,76,68,58,67,73,85,86,85,72,82,83,80,92,72,71,80,73,73,66,50,74,69,71,72,15,8,13,12,6
+http://sofifa.com/player/221219/german-conti/19/159481/,German Conti (German Andres Conti),32,37,77,68,32,42,40,31,63,53,64,72,51,76,41,50,70,68,78,30,76,74,32,51,47,72,76,80,76,14,8,12,16,13
+http://sofifa.com/player/211263/lisandro-magallan/19/159481/,Lisandro Magallan,45,35,75,66,27,57,32,34,56,62,53,62,65,70,65,50,90,78,82,33,84,77,34,44,44,66,77,75,71,7,9,7,14,16
+http://sofifa.com/player/211269/guillermo-fernandez/19/159481/,Guillermo Fernandez (Guillermo Matias Fernandez),72,66,47,74,51,78,75,75,73,76,77,73,75,76,66,76,64,80,70,77,61,54,71,76,68,70,68,73,67,9,14,6,11,6
+http://sofifa.com/player/183895/maxi-moralez/19/159481/,Maxi Moralez (Maximiliano Nicol Moralez),74,72,56,74,70,77,76,70,73,76,84,67,83,74,77,69,32,77,33,70,65,45,74,77,74,76,48,58,51,6,5,14,14,9
+http://sofifa.com/player/231521/exequiel-palacios/19/159481/,Exequiel Palacios,67,71,59,76,57,76,68,42,74,77,76,78,79,73,77,80,72,85,65,78,73,68,73,75,59,77,66,70,68,10,5,8,9,6
+http://sofifa.com/player/217196/jose-luis-palomino/19/159481/,Jose Luis Palomino,60,26,77,66,32,56,55,36,60,64,63,49,46,76,44,48,33,72,86,29,78,80,28,30,44,68,74,78,78,9,16,9,8,11
+http://sofifa.com/player/188268/lautaro-acosta/19/159481/,Lautaro Acosta (Lautaro German Acosta),65,75,63,69,73,81,65,45,66,78,90,90,90,79,91,76,83,74,47,69,78,47,77,74,64,80,42,35,26,12,6,14,12,9
+http://sofifa.com/player/190577/sebastian-blanco/19/159481/,Sebastian Blanco (Sebastian Marcelo Blanco),71,70,66,76,76,77,65,60,72,76,77,78,87,77,79,81,65,85,59,79,80,33,73,74,62,63,30,22,32,9,7,9,13,12
+http://sofifa.com/player/165501/nicolas-pareja/19/159481/,Nicolas Pareja (Nicolas Martin Pareja),65,51,78,76,49,59,70,76,75,76,37,31,38,77,61,75,68,32,71,69,81,79,43,56,69,80,75,78,72,14,14,15,14,13
+http://sofifa.com/player/192906/luis-miguel-rodriguez/19/159481/,Luis Miguel Rodriguez,71,80,65,70,66,77,79,73,70,78,69,69,72,77,77,80,75,53,61,78,72,15,80,79,71,81,21,16,22,7,7,14,10,13
+http://sofifa.com/player/191628/leandro-chichizola/19/159481/,Leandro Chichizola,11,16,17,14,14,17,15,14,13,15,49,54,66,69,44,17,75,31,52,17,15,16,14,42,25,57,15,12,11,77,77,68,75,78
+http://sofifa.com/player/219536/ignacio-pussetto/19/159481/,Ignacio Pussetto,65,78,67,68,64,80,43,42,67,77,79,78,77,68,66,74,71,78,74,67,33,12,79,55,69,69,25,18,25,6,14,11,11,10
+http://sofifa.com/player/236441/fabricio-bustos/19/159481/,Fabricio Bustos,77,60,58,72,37,77,58,37,55,77,90,84,75,71,71,68,56,88,64,55,69,68,71,68,42,72,69,74,75,14,6,13,15,6
+http://sofifa.com/player/183966/facundo-roncaglia/19/159481/,Facundo Roncaglia (Facundo Sebastian Roncaglia),68,38,70,69,28,59,67,52,81,69,63,67,65,73,69,80,80,67,75,73,74,79,51,59,35,73,74,81,77,15,14,15,6,15
+http://sofifa.com/player/165536/gustavo-cabral/19/159481/,Gustavo Cabral (Gustavo Daniel Cabral Caceres),35,26,79,63,28,49,33,48,59,61,38,36,59,74,63,50,86,67,78,29,82,78,40,49,47,71,75,74,78,11,7,11,7,11
+http://sofifa.com/player/215998/ignacio-fernandez/19/159481/,Ignacio Fernandez,73,66,56,78,64,78,75,69,75,76,75,75,76,73,68,76,34,80,70,77,72,62,75,80,66,78,67,62,56,7,8,14,10,12
+http://sofifa.com/player/142784/pablo-zabaleta/19/159481/,Pablo Zabaleta (Pablo Javier Zabaleta Girod),74,49,74,72,50,71,68,66,64,75,50,51,66,80,64,66,79,68,73,57,85,81,70,66,64,76,79,82,79,10,14,15,7,5
+http://sofifa.com/player/214979/juan-musso/19/159481/,Juan Musso,20,18,15,31,15,16,16,12,24,20,46,42,32,59,39,18,51,35,70,14,27,18,19,48,25,67,12,14,16,78,75,72,77,79
+http://sofifa.com/player/214989/martin-benitez/19/159481/,Martin Benitez,69,75,57,75,66,81,63,42,63,75,88,78,84,75,66,72,51,83,66,73,44,57,75,69,69,75,65,33,23,7,9,15,9,12
+http://sofifa.com/player/228819/matias-vargas/19/159481/,Matias Vargas,73,72,39,71,59,81,56,53,69,78,92,84,89,64,93,71,59,85,50,69,47,30,68,73,69,77,43,42,37,10,13,14,10,7
+http://sofifa.com/player/170719/diego-buonanotte/19/159481/,Diego Buonanotte (Diego Mario Buonanotte Rende),74,62,36,74,61,78,83,76,73,77,4,85,86,70,87,69,58,63,30,78,30,25,69,77,71,71,35,31,18,15,16,16,9,13
+http://sofifa.com/player/143587/fernando-belluschi/19/159481/,Fernando Belluschi (Fernando Daniel Belluschi),76,66,58,73,75,73,82,79,74,78,69,69,79,78,74,83,69,63,70,80,73,65,74,80,75,78,67,66,59,11,9,12,13,7
+http://sofifa.com/player/173030/oscar-trejo/19/159481/,Oscar Trejo (Oscar Guido Trejo),73,73,64,75,72,80,74,69,70,79,67,73,85,76,76,73,63,86,71,68,70,68,74,79,73,74,66,66,55,14,14,7,16,11
+http://sofifa.com/player/167665/nicolas-domingo/19/159481/,Nicolas Domingo (Nicolas Mario Domingo),58,54,58,75,58,66,59,47,75,75,58,54,74,75,75,67,68,77,66,68,73,76,56,68,68,74,73,79,71,7,16,14,10,15
+http://sofifa.com/player/172018/jonatan-maidana/19/159481/,Jonatan Maidana (Jonathan Ramon Maidana),56,32,76,70,42,40,45,46,75,63,48,52,58,67,49,45,80,58,88,32,85,71,50,55,46,73,77,76,71,12,9,14,14,14
+http://sofifa.com/player/167669/federico-higuain/19/159481/,Federico Higuain (Federico Fernando Higuain),75,68,62,78,71,72,81,78,75,77,3,57,71,79,2,75,3,5,62,2,65,43,76,81,68,77,52,47,40,7,16,11,12,15
+http://sofifa.com/player/188938/cristian-alvarez/19/159481/,Cristian Alvarez (Cristian Dario Alvarez),14,11,12,20,15,13,12,14,31,22,45,50,66,65,53,22,60,38,65,15,25,24,17,31,14,58,12,14,15,75,73,71,76,78
+http://sofifa.com/player/215064/julio-furch/19/159481/,Julio Furch,51,77,80,69,66,65,60,48,57,72,51,65,54,74,51,78,75,78,85,69,60,46,79,63,64,76,39,25,27,11,9,13,8,13
+http://sofifa.com/player/237604/alan-franco/19/159481/,Alan Franco (Alan Javier Franco),35,27,78,62,35,36,31,35,31,68,68,63,41,72,74,45,75,79,77,28,71,75,35,40,42,61,77,78,71,6,8,12,7,13
+http://sofifa.com/player/215334/guido-carrillo/19/159481/,Guido Carrillo,34,75,83,64,76,70,46,36,57,74,54,62,66,71,62,75,78,69,79,72,72,34,78,59,77,70,43,29,26,10,11,6,9,12
+http://sofifa.com/player/110381/maximiliano-rodriguez/19/159481/,Maximiliano Rodriguez (Maximiliano Ruben Rodriguez),75,75,61,78,76,76,76,71,75,80,67,68,72,73,70,79,69,52,70,79,73,47,75,74,76,86,57,30,26,15,11,15,9,9
+http://sofifa.com/player/184626/nicolas-sanchez/19/159481/,Nicolas Sanchez (Nicolas Gabriel Sanchez),58,50,78,68,60,58,57,46,64,62,50,52,56,70,49,50,88,79,85,20,76,72,40,45,75,69,74,74,73,9,8,16,14,6
+http://sofifa.com/player/139062/willy-caballero/19/159481/,Willy Caballero (Wilfredo Daniel Caballero),12,11,22,33,13,12,23,11,48,30,43,46,39,71,55,23,70,37,69,14,30,19,7,47,16,57,14,11,12,74,72,71,76,74
+http://sofifa.com/player/212541/leonel-vangioni/19/159481/,Leonel Vangioni,76,51,60,69,61,71,71,62,69,73,87,79,77,70,66,78,73,79,69,73,85,75,68,64,69,68,70,74,74,9,9,9,11,7
+http://sofifa.com/player/172113/matias-fritzler/19/159481/,Matias Fritzler (Matias Lionel Fritzler),43,39,65,76,45,61,59,44,70,70,55,54,66,68,60,66,80,74,72,52,83,78,63,67,51,70,69,77,74,7,8,14,11,11
+http://sofifa.com/player/142959/mariano-barbosa/19/159481/,Mariano Barbosa (Mariano Damian Barbosa),12,11,13,38,12,15,11,12,36,17,42,43,48,75,47,25,62,41,61,12,37,22,12,40,24,56,13,15,11,76,72,76,74,75
+http://sofifa.com/player/190576/matias-caruzzo/19/159481/,Matias Caruzzo (Matias Nicolas Caruzzo),46,41,77,65,21,32,55,64,60,65,43,53,72,75,39,28,76,81,80,25,81,75,45,60,57,71,72,74,72,9,13,9,6,6
+http://sofifa.com/player/205186/paulo-gazzaniga/19/159481/,Paulo Gazzaniga (Paulo Dino Gazzaniga),21,12,14,32,8,20,33,21,49,20,63,65,64,59,49,44,66,45,67,19,32,16,13,52,41,55,23,20,11,76,73,84,74,77
+http://sofifa.com/player/228520/ezequiel-avila/19/159481/,Ezequiel Avila,56,76,67,68,78,73,58,57,62,74,77,79,76,72,87,79,63,68,78,75,80,38,70,66,71,69,42,40,41,11,6,6,10,14
+http://sofifa.com/player/214955/emmanuel-mas/19/159481/,Emmanuel Mas,64,55,74,71,60,71,64,50,68,74,78,79,73,72,64,71,82,87,77,65,76,75,70,69,57,70,66,72,75,7,7,15,14,16
+http://sofifa.com/player/231340/gonzalo-montiel/19/159481/,Gonzalo Montiel,66,38,68,73,34,65,39,36,62,72,86,82,76,73,70,60,80,86,73,57,85,74,71,62,57,71,70,73,72,6,10,11,5,6
+http://sofifa.com/player/219841/jorge-figal/19/159481/,Jorge Figal,57,42,74,73,28,69,44,30,68,73,74,72,73,76,63,61,78,79,74,45,75,76,35,57,37,73,72,76,69,7,11,7,16,9
+http://sofifa.com/player/198347/franco-jara/19/159481/,Franco Jara (Franco Daniel Jara),67,76,72,72,72,75,70,50,65,76,77,78,77,68,64,76,69,72,68,73,60,28,75,65,72,70,19,29,29,13,16,10,9,10
+http://sofifa.com/player/227275/agustin-rossi/19/159481/,Agustin Rossi (Agustin Daniel Rossi),16,12,18,29,15,19,17,21,24,21,44,45,36,77,37,24,64,31,72,20,22,25,17,44,22,48,22,19,16,73,69,64,77,76
+http://sofifa.com/player/214988/leonel-miranda/19/159481/,Leonel Miranda,69,63,58,83,52,72,73,67,74,76,79,79,81,68,85,72,53,84,60,73,70,71,67,68,55,71,65,69,67,14,11,15,9,10
+http://sofifa.com/player/217805/alexis-martin-arias/19/159481/,Alexis Martin Arias,20,19,14,29,12,18,17,14,22,22,62,42,35,71,57,18,66,35,65,15,25,27,19,28,23,35,20,18,16,81,68,76,73,77
+http://sofifa.com/player/215251/guido-herrera/19/159481/,Guido Herrera,17,17,20,29,18,20,12,21,18,20,53,45,39,70,54,24,56,42,63,12,27,28,12,16,28,43,24,15,17,75,73,71,76,77
+http://sofifa.com/player/179696/emiliano-insua/19/159481/,Emiliano Insua (Emiliano Adrian Insua Zapata),80,49,72,75,64,74,59,68,74,74,65,66,68,75,68,85,71,78,77,76,79,78,68,68,66,73,66,74,74,11,10,9,8,16
+http://sofifa.com/player/214770/diego-gonzalez/19/159481/,Diego Gonzalez (Diego Hernan Gonzalez),68,64,64,75,50,71,58,41,72,73,68,68,66,74,59,75,69,89,79,71,84,74,68,73,57,76,63,71,69,16,13,7,12,14
+http://sofifa.com/player/199669/leandro-gonzalez-pirez/19/159481/,Leandro Gonzalez Pirez (Leandro Martin Gonzalez Pirez),42,42,69,72,42,64,55,39,78,70,72,75,64,75,54,59,70,83,76,49,80,76,60,64,49,75,74,74,74,14,8,8,12,13
+http://sofifa.com/player/212214/augusto-solari/19/159481/,Augusto Solari (Augusto Jorge Mateo Solari),71,66,55,73,37,74,75,74,68,73,89,90,87,73,77,65,87,78,74,63,71,62,68,75,58,72,53,54,62,7,15,13,11,7
+http://sofifa.com/player/214781/silvio-romero/19/159481/,Silvio Romero (Silvio Ezequiel Romero),64,77,71,71,71,74,71,45,63,75,76,73,78,71,70,78,62,70,74,67,42,26,75,71,76,59,25,48,37,8,12,11,16,9
+http://sofifa.com/player/191488/lucas-orban/19/159481/,Lucas Orban (Lucas Alfonso Orban Alegre),70,48,64,67,47,57,74,44,64,67,57,69,65,69,51,67,78,68,76,49,79,74,59,58,61,71,69,75,78,16,9,12,13,15
+http://sofifa.com/player/210950/pablo-de-blasis/19/159481/,Pablo De Blasis,68,72,76,73,60,77,77,62,66,76,84,75,89,68,95,75,92,77,42,69,72,28,72,68,76,73,55,39,37,13,11,8,8,8
+http://sofifa.com/player/204555/ricardo-alvarez/19/159481/,Ricardo Alvarez (Ricardo Gabriel Alvarez),76,68,64,75,73,78,78,74,74,77,62,57,73,72,56,75,74,65,73,73,63,53,72,72,63,73,35,58,54,5,11,11,14,10
+http://sofifa.com/player/223245/brian-fernandez/19/159481/,Brian Fernandez,65,74,66,76,64,77,73,68,1,1,90,88,89,68,86,78,83,75,61,68,37,19,70,66,59,68,23,24,21,9,10,16,7,13
+http://sofifa.com/player/215322/jonathan-silva/19/159481/,Jonathan Silva,73,48,55,70,62,72,70,70,63,73,79,75,74,70,73,79,69,78,65,69,82,70,66,60,55,66,74,73,74,15,6,9,13,10
+http://sofifa.com/player/186650/matias-alustiza/19/159481/,Matias Alustiza (Matias Gustavo Alustiza),60,78,75,72,75,74,67,70,68,75,74,67,79,68,78,75,80,59,61,72,60,27,73,75,80,72,30,33,33,10,9,8,8,11
+http://sofifa.com/player/215069/rodrigo-rey/19/159481/,Rodrigo Rey,18,18,12,29,15,20,17,17,13,23,55,43,43,63,53,25,67,31,59,13,33,22,14,53,23,62,18,18,13,76,70,69,75,78
+http://sofifa.com/player/215070/guillermo-ortiz/19/159481/,Guillermo Ortiz,31,34,72,66,33,42,32,28,68,50,68,73,68,70,59,51,80,77,79,48,83,74,32,35,48,57,72,71,73,13,7,11,7,11
+http://sofifa.com/player/173857/mariano-andujar/19/159481/,Mariano Andujar (Mariano Gonzalo Andujar),14,11,10,23,11,16,13,16,23,20,45,45,40,69,40,25,70,38,70,10,39,20,13,45,23,60,21,18,19,73,73,62,75,77
+http://sofifa.com/player/215331/leonardo-jara/19/159481/,Leonardo Jara,73,41,60,67,52,72,59,40,72,74,69,78,70,69,60,65,71,86,79,70,67,75,3,66,38,67,66,73,75,8,14,13,9,6
+http://sofifa.com/player/186405/franco-di-santo/19/159481/,Franco Di Santo (Franco Matias Di Santo),62,70,72,76,77,75,70,49,63,76,68,69,66,76,59,76,60,69,77,72,76,43,74,73,74,73,48,38,32,7,10,10,10,9
+http://sofifa.com/player/226086/angel-gonzalez/19/159481/,Angel Gonzalez,66,73,46,68,44,77,51,38,62,72,86,85,84,72,78,75,57,76,62,66,59,53,75,69,52,71,50,48,33,9,10,15,10,16
+http://sofifa.com/player/220715/ezequiel-ponce/19/159481/,Ezequiel Ponce,59,75,75,60,64,74,68,57,47,71,77,76,75,73,76,76,79,75,74,63,43,29,74,56,66,67,49,30,28,12,16,7,7,6
+http://sofifa.com/player/215089/enzo-kalinski/19/159481/,Enzo Kalinski,60,45,72,78,49,71,68,58,74,75,75,61,71,65,64,59,87,83,79,57,75,70,70,73,41,68,65,73,69,7,6,14,15,8
+http://sofifa.com/player/202811/emiliano-martinez/19/159481/,Emiliano Martinez,22,16,26,45,13,13,22,20,48,35,59,57,49,69,49,18,60,14,70,16,37,13,12,64,42,53,11,20,20,74,74,75,72,75
+http://sofifa.com/player/215108/julio-buffarini/19/159481/,Julio Buffarini,64,53,66,70,47,73,53,59,68,72,86,85,77,71,79,74,74,87,74,69,87,70,69,62,72,63,62,72,74,7,10,14,9,11
+http://sofifa.com/player/232517/nicolas-silva/19/159481/,Nicolas Silva (Nicolas Alexis Silva),69,66,36,71,50,79,66,72,67,70,90,86,94,65,94,67,55,69,30,54,33,19,70,67,49,63,30,15,16,8,13,11,14,6
+http://sofifa.com/player/206154/hector-canteros/19/159481/,Hector Canteros,68,63,59,73,57,70,79,79,72,74,66,70,67,68,72,81,67,81,71,73,73,67,71,77,69,68,66,74,69,7,9,13,13,10
+http://sofifa.com/player/213582/alan-ruiz/19/159481/,Alan Ruiz,78,70,63,78,82,80,75,74,77,78,61,58,74,69,72,82,54,68,78,78,59,30,72,77,69,78,29,33,31,7,7,16,13,16
+http://sofifa.com/player/207441/luciano-vietto/19/159481/,Luciano Vietto,65,73,67,70,76,76,75,70,59,82,79,76,76,72,79,71,72,66,57,73,63,35,78,73,69,68,47,40,32,14,14,8,8,12
+http://sofifa.com/player/215123/alan-aguerre/19/159481/,Alan Aguerre,14,20,17,27,16,17,18,18,23,19,49,43,45,72,57,18,61,34,62,14,23,19,11,56,22,50,15,19,12,73,74,63,73,75
+http://sofifa.com/player/200278/santiago-garcia/19/159481/,Santiago Garcia,71,49,78,68,40,63,64,46,65,63,34,68,54,70,50,64,72,72,78,49,88,68,62,55,67,70,73,73,73,16,12,16,6,9
+http://sofifa.com/player/203864/bruno-zuculini/19/159481/,Bruno Zuculini,59,50,63,78,59,72,49,48,74,74,65,69,69,71,64,75,66,66,75,59,84,73,58,72,68,71,72,70,67,12,9,12,9,13
+http://sofifa.com/player/203872/gabriel-hauche/19/159481/,Gabriel Hauche (Gabriel Agustin Hauche),70,69,58,70,61,74,67,73,64,75,87,89,86,72,75,73,77,73,61,67,80,21,69,68,77,71,55,46,33,11,11,11,11,11
+http://sofifa.com/player/228708/lucas-martinez-quarta/19/159481/,Lucas Martinez Quarta,59,49,78,73,49,66,46,43,74,70,73,74,72,71,68,63,80,69,75,51,76,72,61,63,54,74,70,72,72,10,15,12,10,15
+http://sofifa.com/player/215152/agustin-allione/19/159481/,Agustin Allione,70,64,60,72,50,75,71,69,69,75,84,78,77,69,76,69,70,77,55,52,53,42,67,69,66,57,31,23,36,14,12,7,11,8
+http://sofifa.com/player/226162/emiliano-buendia/19/159481/,Emiliano Buendia,72,69,60,74,66,77,72,58,71,78,74,74,81,69,83,62,45,63,59,64,70,59,69,76,49,61,58,68,52,11,10,13,7,9
+http://sofifa.com/player/229749/alexander-barboza/19/159481/,Alexander Barboza (Alexander Nahuel Barboza Ullua),40,42,79,66,26,55,33,35,60,64,50,52,51,67,39,61,60,75,85,43,82,71,36,41,67,65,72,74,73,11,11,10,7,12
+http://sofifa.com/player/192373/milton-caraglio/19/159481/,Milton Caraglio (Milton Joel Caraglio),64,78,80,65,73,70,55,47,55,72,62,37,63,70,49,78,82,70,90,71,73,25,74,58,78,73,21,19,18,14,10,6,8,12
+http://sofifa.com/player/215165/ciro-rius/19/159481/,Ciro Rius,76,64,55,75,55,77,66,62,63,74,79,82,76,74,75,71,47,77,67,57,64,33,72,73,63,71,47,44,45,16,15,15,10,7
+http://sofifa.com/player/214665/juan-ramirez/19/159481/,Juan Ramirez (Juan Edgardo Ramirez),67,72,47,78,49,79,66,54,72,77,74,78,78,65,78,66,40,71,60,70,70,65,73,71,67,72,68,70,57,12,13,9,6,10
+http://sofifa.com/player/165531/ismael-sosa/19/159481/,Ismael Sosa (Victor Ismael Sosa),69,70,67,73,56,73,70,54,65,73,83,84,83,70,66,71,68,75,71,70,67,50,74,72,60,73,37,47,39,14,11,8,11,12
+http://sofifa.com/player/215199/ruben-botta/19/159481/,Ruben Botta,73,68,38,71,65,76,76,74,68,74,78,78,81,68,73,75,52,72,67,77,55,33,69,79,64,77,40,37,35,8,9,13,8,7
+http://sofifa.com/player/237221/juan-foyth/19/159481/,Juan Foyth (Juan Marcos Foyth),41,43,74,73,43,68,41,47,53,73,71,71,72,73,72,56,72,65,71,39,61,74,46,52,47,57,73,76,72,8,15,7,14,9
+http://sofifa.com/player/208054/leandro-fernandez/19/159481/,Leandro Fernandez,66,74,68,64,69,77,57,47,55,72,83,73,79,76,74,78,68,78,69,72,59,50,74,72,73,75,40,21,20,11,6,14,12,6
+http://sofifa.com/player/142780/gonzalo-rodriguez/19/159481/,Gonzalo Rodriguez (Gonzalo Javier Rodriguez),38,45,78,63,23,57,50,46,65,67,62,67,64,71,58,69,81,66,78,36,81,73,32,65,72,75,74,71,69,12,4,11,12,9
+http://sofifa.com/player/227772/gaston-gimenez/19/159481/,Gaston Gimenez,70,62,61,79,60,78,67,65,74,77,55,67,64,69,70,74,55,78,85,66,69,65,63,74,55,80,65,67,57,13,16,8,12,13
+http://sofifa.com/player/214973/lucas-villafanez/19/159481/,Lucas Villafanez,75,67,49,73,66,77,73,70,72,76,78,77,79,69,84,70,59,66,43,64,44,38,68,70,65,66,30,31,29,9,7,11,10,9
+http://sofifa.com/player/220609/valentin-vada/19/159481/,Valentin Vada,72,67,55,76,64,72,73,74,73,75,63,61,75,74,77,67,55,71,71,59,62,72,71,74,58,68,68,68,61,8,13,15,16,6
+http://sofifa.com/player/200653/guillermo-burdisso/19/159481/,Guillermo Burdisso,41,39,80,62,36,42,50,11,50,60,34,38,44,69,37,67,51,71,87,21,80,71,31,51,48,66,73,76,73,10,14,14,8,8
+http://sofifa.com/player/226765/lucas-gamba/19/159481/,Lucas Gamba (Lucas Emanuel Gamba),58,72,59,76,64,72,66,70,61,79,90,84,90,68,89,69,79,68,67,77,27,23,77,78,61,74,28,23,22,10,8,16,7,7
+http://sofifa.com/player/229595/lucas-rodriguez/19/159481/,Lucas Rodriguez,3,63,40,71,60,82,53,66,70,80,83,80,88,63,85,61,50,87,50,52,50,50,3,4,62,68,2,42,50,14,9,12,14,13
+http://sofifa.com/player/232670/fernando-zampedri/19/159481/,Fernando Zampedri (Fernando Matias Zampedri),50,76,78,63,63,73,45,33,46,69,68,72,65,69,61,75,81,68,87,72,72,15,73,56,67,69,34,19,22,5,8,9,10,15
+http://sofifa.com/player/201953/juan-sanchez-mino/19/159481/,Juan Sanchez Mino (Juan Manuel Sanchez Mino),79,68,64,76,65,76,78,73,72,77,75,71,74,71,64,76,65,79,68,77,71,71,71,79,67,71,69,73,69,12,13,11,14,9
+http://sofifa.com/player/215270/lucas-zelarayan/19/159481/,Lucas Zelarayan,71,64,50,73,69,77,74,75,72,75,75,72,88,69,76,73,81,70,59,65,50,44,69,78,67,61,50,43,35,8,9,11,6,10
+http://sofifa.com/player/215015/bruno-bianchi/19/159481/,Bruno Bianchi,46,30,70,68,26,57,32,24,66,61,55,62,64,65,55,52,73,67,80,35,66,75,40,43,21,58,77,75,72,14,15,14,16,10
+http://sofifa.com/player/214763/paolo-goltz/19/159481/,Paolo Goltz (Paolo Duval Goltz),55,48,75,64,53,56,73,68,66,62,54,62,54,70,48,70,73,67,85,60,85,70,45,59,66,71,75,72,69,13,14,7,15,7
+http://sofifa.com/player/237291/gustavo-blanco/19/159481/,Gustavo Blanco (Gustavo Ezequiel Blanco Leschuk),32,77,80,67,57,63,33,39,25,62,69,67,56,69,48,75,63,76,86,73,48,25,81,49,66,69,29,27,20,8,11,14,13,10
+http://sofifa.com/player/226811/franco-soldano/19/159481/,Franco Soldano,35,77,79,55,66,67,61,29,43,73,72,67,69,71,66,74,82,78,73,64,48,27,76,71,62,74,31,46,27,12,10,12,10,13
+http://sofifa.com/player/198145/sergio-araujo/19/159481/,Sergio Araujo (Sergio Ezequiel Araujo),59,72,60,63,71,77,81,59,59,80,74,74,74,78,71,69,60,67,62,72,32,20,74,65,69,66,45,22,27,13,12,13,7,15
+http://sofifa.com/player/215042/gaston-lezcano/19/159481/,Gaston Lezcano,71,70,68,66,62,74,64,65,64,72,82,79,79,74,78,75,77,75,69,69,61,23,74,64,65,73,18,18,18,7,11,14,8,9
+http://sofifa.com/player/199940/juan-ezequiel-cuevas/19/159481/,Juan Ezequiel Cuevas,73,66,60,74,60,75,68,53,63,75,83,82,81,67,88,65,77,72,58,62,64,41,71,72,65,59,35,52,49,15,13,8,13,16
+http://sofifa.com/player/215049/damian-perez/19/159481/,Damian Perez,61,45,60,68,44,68,55,47,60,68,80,80,82,72,86,69,88,91,43,67,75,71,70,42,55,54,68,72,73,14,16,11,10,14
+http://sofifa.com/player/225289/nicolas-fernandez/19/159481/,Nicolas Fernandez,61,75,65,67,66,75,57,48,50,75,90,80,85,73,89,68,78,71,40,67,40,27,76,72,56,70,26,27,25,7,14,10,11,8
+http://sofifa.com/player/215050/diego-braghieri/19/159481/,Diego Braghieri,28,35,75,63,37,50,39,32,59,65,68,53,49,67,53,75,67,69,81,62,84,68,38,47,48,69,71,73,73,7,9,14,6,7
+http://sofifa.com/player/215053/matias-zaldivia/19/159481/,Matias Zaldivia,64,32,71,65,41,60,44,35,65,60,60,54,47,74,54,47,83,78,78,39,73,72,57,60,41,75,73,72,75,8,14,6,8,12
+http://sofifa.com/player/223247/nelson-acevedo/19/159481/,Nelson Acevedo,49,49,72,75,43,68,51,53,71,73,67,68,67,78,61,62,84,92,78,65,72,70,65,64,45,75,69,78,76,6,9,16,6,15
+http://sofifa.com/player/215321/jonathan-schunke/19/159481/,Jonathan Schunke,35,28,79,71,35,32,46,55,69,62,30,32,28,74,28,65,31,62,92,40,73,68,29,29,62,71,69,77,64,7,11,6,13,12
+http://sofifa.com/player/157217/neri-cardozo/19/159481/,Neri Cardozo (Neri Raul Cardozo),72,67,55,69,55,69,73,70,73,72,81,80,80,70,73,67,72,83,75,70,70,63,72,75,61,70,69,70,64,9,15,15,10,13
+http://sofifa.com/player/172077/jose-maria-basanta/19/159481/,Jose Maria Basanta,51,41,75,62,45,55,55,40,61,60,53,54,34,76,35,67,72,53,76,52,74,76,49,39,47,71,69,72,71,9,10,10,8,14
+http://sofifa.com/player/171830/nicolas-spolli/19/159481/,Nicolas Spolli (Nicolas Federico Spolli),25,36,76,45,35,41,19,18,45,47,32,46,32,60,32,70,68,33,91,22,72,78,20,25,33,72,76,73,71,8,7,10,10,14
+http://sofifa.com/player/14907/albano-bizzarri/19/159481/,Albano Bizzarri (Albano Benjamin Bizzarri),11,17,10,27,19,18,19,18,26,23,55,45,53,68,51,19,68,31,55,19,40,19,10,49,20,60,11,12,11,72,71,64,78,73
+http://sofifa.com/player/205630/luciano-abecasis/19/159481/,Luciano Abecasis,75,37,58,68,48,75,73,41,59,68,89,82,75,75,73,75,63,79,65,45,81,68,67,69,48,71,66,68,71,9,11,12,6,15
+http://sofifa.com/player/207935/matias-dituro/19/159481/,Matias Dituro,13,12,12,32,19,17,12,17,25,19,32,48,31,64,32,20,56,42,72,16,20,21,19,36,20,68,18,12,18,72,72,76,71,76
+http://sofifa.com/player/224065/domingo-blanco/19/159481/,Domingo Blanco (Domingo Felipe Blanco),69,59,44,76,62,81,65,64,68,78,85,77,89,74,87,71,60,79,59,68,65,63,68,69,52,77,54,63,58,10,8,11,13,10
+http://sofifa.com/player/233029/rodrigo-aliendro/19/159481/,Rodrigo Aliendro,60,76,72,74,69,75,55,47,68,74,77,79,78,72,78,76,81,81,67,66,78,73,71,64,52,72,72,73,68,6,12,10,13,13
+http://sofifa.com/player/206152/luciano-aued/19/159481/,Luciano Aued,69,62,63,74,59,72,65,66,74,73,54,54,61,73,56,67,57,76,80,64,64,68,69,71,70,65,61,62,60,8,6,15,7,7
+http://sofifa.com/player/213581/martin-nervo/19/159481/,Martin Nervo,57,38,77,64,41,48,55,44,64,66,63,64,48,78,58,55,75,84,80,43,76,70,51,38,38,69,69,74,68,10,9,10,11,7
+http://sofifa.com/player/222041/lucas-boye/19/159481/,Lucas Boye (Lucas Ariel Boye),60,66,69,74,65,80,65,36,58,81,75,70,72,69,69,71,69,68,78,63,70,30,69,71,66,70,50,36,30,14,7,11,15,7
+http://sofifa.com/player/223065/gustavo-toledo/19/159481/,Gustavo Toledo,68,43,52,68,27,73,37,25,63,69,85,81,76,75,68,66,77,86,66,55,62,70,67,68,37,70,57,72,72,7,7,10,10,10
+http://sofifa.com/player/223066/andres-chavez/19/159481/,Andres Chavez,66,70,71,61,76,73,68,66,59,67,75,77,73,69,66,81,84,81,83,80,80,48,72,73,68,76,25,30,28,14,14,6,12,10
+http://sofifa.com/player/142942/javier-gandolfi/19/159481/,Javier Gandolfi (Javier Marcelo Gandolfi),44,34,73,70,50,45,58,64,69,60,65,43,64,58,53,67,83,65,81,40,82,71,26,62,58,70,69,74,72,12,15,12,16,13
+http://sofifa.com/player/205408/santiago-gentiletti/19/159481/,Santiago Gentiletti (Santiago Juan Gentiletti Selak),49,17,71,60,30,59,58,63,65,65,64,66,59,68,61,78,77,48,78,48,77,69,29,52,43,72,73,72,72,14,9,12,6,14
+http://sofifa.com/player/142950/roman-martinez/19/159481/,Roman Martinez (Roman Fernando  Martinez),66,68,55,77,66,70,77,55,71,73,69,54,70,72,62,73,64,68,71,75,71,55,74,75,41,71,50,70,53,9,10,8,8,15
+http://sofifa.com/player/191856/hernan-barcos/19/159481/,Hernan Barcos,57,70,76,70,71,67,68,69,68,75,63,61,58,69,70,76,71,47,85,70,74,52,75,71,75,76,41,40,38,6,7,16,14,11
+http://sofifa.com/player/192371/fabian-rinaudo/19/159481/,Fabian Rinaudo (Fabian Andres Rinaudo),62,58,64,77,60,69,54,53,76,70,73,65,71,74,72,75,77,75,78,72,81,77,60,64,52,76,71,74,74,15,12,15,15,9
+http://sofifa.com/player/162932/pablo-barrientos/19/159481/,Pablo Barrientos (Pablo Cesar Barrientos),70,60,63,75,71,75,83,77,73,74,61,61,77,71,76,74,55,50,58,71,65,37,63,80,75,75,45,31,31,6,14,14,9,9
+http://sofifa.com/player/215157/federico-lertora/19/159481/,Federico Lertora,64,49,80,61,53,62,54,58,59,73,64,62,63,67,54,65,83,77,73,40,82,78,54,63,58,64,73,80,79,8,7,14,8,7
+http://sofifa.com/player/220287/juan-dinenno/19/159481/,Juan Dinenno,44,77,4,60,67,62,56,60,48,70,66,71,57,66,44,76,75,74,82,64,46,21,76,59,68,66,25,15,21,16,7,15,8,8
+http://sofifa.com/player/223615/christian-chimino/19/159481/,Christian Chimino,71,35,58,58,34,63,58,45,53,66,78,82,67,72,63,60,66,84,67,53,70,71,54,48,62,69,70,70,73,12,13,15,11,6
+http://sofifa.com/player/219525/ezequiel-cerutti/19/159481/,Ezequiel Cerutti (Ezequiel Osvaldo Cerutti),70,59,58,68,65,76,63,51,65,71,88,84,85,68,70,68,67,74,56,70,73,34,70,69,69,73,56,17,18,10,12,10,14,8
+http://sofifa.com/player/215181/gino-peruzzi/19/159481/,Gino Peruzzi,68,38,57,69,40,68,65,50,66,69,79,82,73,71,70,67,78,78,66,60,73,76,55,53,46,72,65,74,73,10,13,9,5,8
+http://sofifa.com/player/165788/leonardo-ulloa/19/159481/,Leonardo Ulloa (Jose Leonardo Ulloa),51,74,83,69,71,69,55,56,63,72,35,41,55,74,57,76,74,67,87,63,71,33,77,63,73,72,55,48,45,13,8,8,16,11
+http://sofifa.com/player/229537/tomas-cardona/19/159481/,Tomas Cardona,44,48,77,61,39,55,44,39,56,61,46,65,66,67,49,49,84,80,83,40,78,74,42,33,59,65,69,71,70,14,14,12,10,10
+http://sofifa.com/player/215985/fernando-monetti/19/159481/,Fernando Monetti,19,19,23,48,19,19,23,13,42,36,56,57,48,66,59,24,62,32,64,15,29,18,15,55,24,31,29,14,24,74,74,76,70,72
+http://sofifa.com/player/142773/walter-montillo/19/159481/,Walter Montillo (Walter Damian Montillo),67,57,43,78,71,78,76,78,70,75,68,67,70,63,86,72,61,41,43,68,66,39,69,78,69,81,38,34,57,15,14,7,7,12
+http://sofifa.com/player/213433/fernando-tobio/19/159481/,Fernando Tobio,59,27,72,64,36,40,39,33,65,50,62,65,40,70,36,40,82,72,83,21,80,72,40,27,36,63,74,71,70,7,8,12,14,11
+http://sofifa.com/player/215250/cesar-rigamonti/19/159481/,Cesar Rigamonti,14,14,17,30,16,16,16,21,21,24,43,44,37,69,48,24,59,29,69,17,23,20,12,32,20,35,13,15,16,72,64,63,78,76
+http://sofifa.com/player/216019/damian-musto/19/159481/,Damian Musto,54,34,68,79,32,62,35,50,76,66,42,49,52,73,49,70,65,76,77,67,78,68,59,59,40,55,66,75,68,11,14,9,14,9
+http://sofifa.com/player/216020/leonardo-gil/19/159481/,Leonardo Gil,80,35,73,78,37,73,67,76,77,68,72,66,71,58,72,67,90,76,71,74,79,70,61,77,39,65,67,70,73,12,7,9,16,16
+http://sofifa.com/player/199387/pablo-chavarria/19/159481/,Pablo Chavarria,67,74,70,74,61,71,57,58,62,74,68,74,72,73,70,72,77,79,76,65,70,28,74,71,63,69,24,37,48,9,15,11,13,7
+http://sofifa.com/player/222429/andres-cubas/19/159481/,Andres Cubas (Adrian Andres Cubas),58,45,55,75,33,66,43,40,68,73,76,66,89,70,90,59,78,86,32,62,75,72,54,61,51,70,73,76,77,9,12,11,13,7
+http://sofifa.com/player/220128/jonatan-cristaldo/19/159481/,Jonatan Cristaldo,59,72,76,66,70,75,68,48,51,72,76,76,81,70,75,75,60,70,69,68,75,34,71,66,65,76,15,23,21,13,13,16,12,9
+http://sofifa.com/player/216036/rafael-delgado/19/159481/,Rafael Delgado,80,44,75,70,28,76,70,70,70,70,75,77,67,72,67,79,75,80,70,74,74,68,69,72,63,68,71,68,69,9,13,7,14,11
+http://sofifa.com/player/234468/emanuel-reynoso/19/159481/,Emanuel Reynoso,64,58,59,77,48,79,68,63,73,74,73,62,87,68,79,66,60,71,56,67,71,58,67,78,61,70,60,55,54,7,11,9,5,9
+http://sofifa.com/player/236007/ezequiel-barco/19/159481/,Ezequiel Barco,61,66,33,74,43,82,60,61,54,73,90,78,83,69,85,71,41,68,40,61,46,33,68,73,75,75,20,26,39,7,7,5,10,7
+http://sofifa.com/player/236527/santiago-caseres/19/159481/,Santiago Caseres,59,54,65,74,53,66,54,42,69,75,69,71,71,72,76,62,73,72,75,58,67,73,58,68,50,66,71,73,73,11,7,10,8,14
+http://sofifa.com/player/172019/pablo-mouche/19/159481/,Pablo Mouche (Pablo Nicolas Mouche),73,69,67,70,71,75,71,72,67,71,81,73,77,71,74,76,72,70,69,66,36,38,72,63,47,71,25,12,14,12,15,16,11,12
+http://sofifa.com/player/214772/nicolas-pasquini/19/159481/,Nicolas Pasquini,77,60,56,72,53,73,79,70,72,72,77,75,75,77,77,75,72,80,70,68,69,70,71,74,62,73,71,70,68,15,11,13,8,8
+http://sofifa.com/player/158969/leonardo-pisculichi/19/159481/,Leonardo Pisculichi (Leonardo Nicolas Pisculichi),74,69,62,72,74,72,79,81,75,76,66,62,71,65,77,78,69,52,59,76,59,48,67,75,77,74,58,29,23,12,10,8,6,14
+http://sofifa.com/player/218621/facundo-sanchez/19/159481/,Facundo Sanchez,62,56,61,64,51,73,51,40,59,72,90,90,75,78,72,67,52,85,65,64,71,62,59,60,62,66,71,70,69,12,7,15,6,14
+http://sofifa.com/player/215294/cristian-menendez/19/159481/,Cristian Menendez,50,72,77,67,51,64,51,47,56,69,70,66,75,74,50,74,72,77,80,70,56,47,75,76,72,74,32,21,30,14,12,9,13,7
+http://sofifa.com/player/193535/sebastian-prediger/19/159481/,Sebastian Prediger (Leonardo Sebastian Prediger),62,55,73,65,68,68,66,71,65,77,68,68,71,68,60,72,76,82,73,69,83,71,61,72,58,76,72,78,68,15,16,6,9,12
+http://sofifa.com/player/142592/israel-damonte/19/159481/,Israel Damonte (Israel Alejandro Damonte),67,64,75,70,56,70,57,61,71,73,66,50,69,73,69,63,77,74,77,65,78,72,69,69,60,75,71,68,65,12,15,13,9,16
+http://sofifa.com/player/235008/lucas-robertone/19/159481/,Lucas Robertone,71,72,64,69,66,75,79,73,68,77,84,77,83,59,72,72,77,62,48,68,47,36,72,65,67,62,40,42,44,7,15,11,14,14
+http://sofifa.com/player/223495/ivan-rossi/19/159481/,Ivan Rossi,55,44,39,66,44,64,51,41,64,68,69,73,70,60,69,58,59,73,74,62,83,76,52,66,43,62,73,79,78,7,12,13,10,14
+http://sofifa.com/player/227591/alexis-canelo/19/159481/,Alexis Canelo (Alexis Pedro Canelo),70,74,60,67,50,73,51,42,58,72,84,82,75,60,62,78,70,65,71,68,61,27,70,58,61,67,25,21,21,9,8,8,15,7
+http://sofifa.com/player/223240/gonzalo-bettini/19/159481/,Gonzalo Bettini,75,41,66,69,30,61,41,31,55,71,77,72,71,65,64,50,54,84,64,41,71,65,59,73,33,66,57,75,72,13,16,11,7,12
+http://sofifa.com/player/223243/victor-emanuel-aguilera/19/159481/,Victor Emanuel Aguilera,37,40,71,60,33,52,59,74,57,60,50,62,33,67,32,67,55,76,81,56,65,73,55,47,64,58,74,73,73,8,16,13,16,8
+http://sofifa.com/player/223248/juan-martin-lucero/19/159481/,Juan Martin Lucero,60,68,73,70,65,69,58,41,60,72,84,79,84,72,69,71,70,65,70,63,64,32,70,52,71,72,21,30,18,15,8,10,14,6
+http://sofifa.com/player/198426/gonzalo-castellani/19/159481/,Gonzalo Castellani (Gonzalo Pablo Castellani),70,63,68,77,61,75,77,72,73,74,67,71,70,70,72,80,59,69,80,74,79,66,68,72,72,74,75,48,36,12,13,7,14,11
+http://sofifa.com/player/219167/sergio-vittor/19/159481/,Sergio Vittor (Sergio Javier Vittor),59,52,1,71,55,4,48,51,2,3,9,2,52,69,37,75,60,73,2,65,2,67,3,58,62,67,71,73,1,9,13,14,9,16
+http://sofifa.com/player/157219/gaston-fernandez/19/159481/,Gaston Fernandez (Gaston Nicolas Fernandez),57,69,66,74,67,72,72,74,72,74,69,69,71,60,70,70,70,54,58,71,56,31,72,73,65,71,69,35,29,6,14,16,10,9
+http://sofifa.com/player/188196/ricardo-noir/19/159481/,Ricardo Noir (Ricardo Daniel Noir),71,69,66,67,66,72,71,47,61,68,81,80,79,70,77,71,69,78,71,69,65,57,70,69,61,69,33,38,41,8,10,10,6,12
+http://sofifa.com/player/232488/cristian-romero/19/159481/,Cristian Romero (Cristian Gabriel Romero),31,26,72,53,33,36,35,29,43,52,61,65,64,69,64,51,76,75,77,37,85,74,31,36,40,58,65,71,71,5,7,11,10,14
+http://sofifa.com/player/138798/german-lux/19/159481/,German Lux (German Dario Lux),12,13,13,12,12,11,13,12,29,35,31,37,38,67,55,12,68,43,71,11,45,17,11,49,12,43,20,13,14,71,72,75,71,72
+http://sofifa.com/player/222511/ezequiel-unsain/19/159481/,Ezequiel Unsain,15,14,15,35,18,22,20,17,24,25,50,44,54,66,56,30,63,37,65,12,17,20,9,45,22,36,15,19,20,77,68,75,65,78
+http://sofifa.com/player/204337/gervasio-nunez/19/159481/,Gervasio Nunez (Jonathan Guillermo Nunez Espinoza),68,66,37,71,57,73,70,69,69,69,75,79,76,69,54,74,72,73,80,70,42,48,67,70,71,67,40,38,34,10,6,16,8,9
+http://sofifa.com/player/240690/nicolas-gonzalez/19/159481/,Nicolas Gonzalez (Nicolas Ivan Gonzalez),64,70,69,65,48,78,56,42,54,76,79,79,78,70,76,70,69,73,59,54,54,35,74,64,58,72,25,42,35,10,6,9,5,8
+http://sofifa.com/player/226616/jonathan-galvan/19/159481/,Jonathan Galvan (Jonathan Sebastian Galvan),57,58,78,61,50,56,52,37,58,55,63,68,62,66,61,56,86,82,79,54,69,75,57,50,49,53,69,70,62,7,8,7,13,11
+http://sofifa.com/player/224057/agustin-farias/19/159481/,Agustin Farias (Carlos Agustin Farias),47,49,50,68,45,60,54,44,64,66,55,57,60,68,61,58,70,78,73,54,82,73,45,60,59,58,75,74,69,10,15,11,16,15
+http://sofifa.com/player/215358/marcelo-meli/19/159481/,Marcelo Meli,59,58,64,73,55,66,62,40,66,70,81,84,78,74,75,71,79,93,68,61,77,71,66,70,49,65,62,68,66,8,16,11,7,10
+http://sofifa.com/player/232255/agustin-bouzat/19/159481/,Agustin Bouzat,69,60,62,68,56,78,54,44,60,73,86,88,85,62,70,66,75,87,43,59,76,59,67,65,63,66,48,54,50,9,15,13,7,13
+http://sofifa.com/player/221250/geronimo-poblete/19/159481/,Geronimo Poblete (Geronimo Gaston Poblete),52,47,50,74,41,72,55,40,72,72,66,67,74,66,85,60,74,83,63,55,74,71,43,64,54,66,69,72,66,6,12,13,6,8
+http://sofifa.com/player/226385/cristian-espinoza/19/159481/,Cristian Espinoza (Cristian Omar Espinoza),72,64,46,67,58,75,57,61,2,70,81,75,80,66,77,71,62,77,5,67,14,30,65,70,54,65,4,33,36,16,8,12,7,8
+http://sofifa.com/player/228179/alexis-castro/19/159481/,Alexis Castro,68,67,66,71,52,72,61,63,69,71,75,73,77,67,68,65,67,71,67,77,47,72,71,71,55,66,58,61,55,8,14,16,7,13
+http://sofifa.com/player/231507/alexis-soto/19/159481/,Alexis Soto,70,33,44,69,37,75,71,60,44,70,74,76,71,65,66,44,73,85,62,34,75,70,41,55,38,61,72,73,74,12,5,6,7,14
+http://sofifa.com/player/202069/jose-luis-fernandez/19/159481/,Jose Luis Fernandez,71,62,65,60,52,69,69,68,65,70,87,84,85,73,83,74,81,85,54,74,69,75,66,71,55,69,66,65,62,10,13,9,15,9
+http://sofifa.com/player/183893/claudio-yacob/19/159481/,Claudio Yacob (Claudio Ariel Yacob),34,55,73,73,23,59,52,55,70,70,49,38,56,70,68,63,71,61,69,64,88,68,42,57,66,79,73,75,71,6,6,12,9,8
+http://sofifa.com/player/202331/facundo-quignon/19/159481/,Facundo Quignon (Facundo Tomas Quignon),67,52,60,76,54,74,64,45,72,73,69,67,75,70,64,63,65,77,69,59,65,68,64,73,53,66,68,66,67,14,7,15,7,10
+http://sofifa.com/player/210784/diego-morales/19/159481/,Diego Morales,65,62,37,66,69,81,79,76,65,79,72,65,66,69,74,67,54,64,67,63,71,26,67,76,70,73,29,36,24,13,10,11,10,14
+http://sofifa.com/player/184422/luis-ardente/19/159481/,Luis Ardente (Luis Emanuel Ardente),13,12,11,16,10,11,15,16,23,13,25,21,20,62,16,20,26,14,69,12,18,10,10,50,67,36,21,13,12,70,71,82,74,71
+http://sofifa.com/player/215144/emanuel-insua/19/159481/,Emanuel Insua,64,55,67,68,30,66,33,42,65,67,71,75,67,70,65,72,76,83,70,63,82,68,63,60,41,65,69,71,72,8,11,7,14,8
+http://sofifa.com/player/224104/damian-martinez/19/159481/,Damian Martinez (Damian Alberto Martinez),72,59,53,65,49,67,57,36,59,70,75,74,68,73,69,64,72,74,68,65,68,68,62,54,51,70,72,70,73,11,10,11,15,10
+http://sofifa.com/player/223593/javier-correa/19/159481/,Javier Correa,40,76,72,62,52,71,31,25,43,75,66,68,74,58,50,77,76,76,79,64,67,28,73,54,53,60,28,19,20,12,10,11,6,12
+http://sofifa.com/player/48745/fabricio-coloccini/19/159481/,Fabricio Coloccini,53,45,78,64,58,58,58,56,66,65,53,44,55,67,59,63,75,54,78,71,78,69,40,48,58,72,72,72,65,11,16,14,16,6
+http://sofifa.com/player/215147/lautaro-giannetti/19/159481/,Lautaro Giannetti,35,32,69,58,32,44,37,50,48,50,65,67,53,65,55,52,82,67,77,33,72,68,26,27,50,53,73,71,78,13,13,13,8,15
+http://sofifa.com/player/224367/german-lanaro/19/159481/,German Lanaro,29,15,72,69,24,40,25,24,69,56,41,55,57,63,37,61,82,74,90,55,78,62,22,35,40,62,69,74,68,10,11,10,14,6
+http://sofifa.com/player/165490/mariano-julio-izco/19/159481/,Mariano Julio Izco,70,53,60,76,60,72,68,50,74,72,68,68,69,74,68,79,55,55,69,69,72,73,61,74,60,75,65,68,68,5,14,15,10,8
+http://sofifa.com/player/213619/sebastian-saez/19/159481/,Sebastian Saez,40,77,70,58,65,71,52,44,42,68,68,74,71,74,64,69,59,70,78,57,65,18,73,48,75,62,28,15,14,8,6,7,9,8
+http://sofifa.com/player/215155/fernando-zuqui/19/159481/,Fernando Zuqui,60,65,56,77,49,75,61,58,73,72,64,68,82,72,75,63,64,79,70,64,60,66,65,69,53,67,73,59,58,7,9,15,15,7
+http://sofifa.com/player/226419/fabian-sambueza/19/159481/,Fabian Sambueza (Fabian Hector Sambueza),77,72,37,74,49,71,67,66,70,69,79,75,91,61,90,63,48,65,35,53,55,28,65,78,65,70,38,34,44,13,16,16,13,12
+http://sofifa.com/player/234100/gonzalo-escobar/19/159481/,Gonzalo Escobar,70,32,48,71,29,71,47,35,60,70,82,81,72,65,79,34,76,83,72,56,69,69,48,59,47,53,60,71,71,7,14,15,10,9
+http://sofifa.com/player/165493/nicolas-navarro/19/159481/,Nicolas Navarro (Nicolas Gaston Navarro),18,17,15,35,20,19,16,20,22,27,50,54,58,68,43,16,57,41,57,15,34,21,16,45,23,63,23,14,19,71,72,68,70,75
+http://sofifa.com/player/215160/fabrizio-angileri/19/159481/,Fabrizio Angileri,76,64,58,68,63,75,68,43,64,68,77,80,75,70,71,74,55,84,77,61,70,69,72,67,63,70,64,69,71,8,8,11,9,8
+http://sofifa.com/player/191104/juan-mercier/19/159481/,Juan Mercier (Juan Ignacio Mercier),64,52,64,75,63,66,71,66,70,75,65,50,65,75,63,72,77,34,80,66,75,73,64,75,60,70,76,73,65,14,11,12,10,15
+http://sofifa.com/player/177537/nicolas-bertolo/19/159481/,Nicolas Bertolo (Nicolas Santiago Bertolo),74,67,60,72,61,76,76,56,66,72,65,72,79,66,68,72,53,66,68,67,63,57,74,74,57,68,30,28,28,6,16,6,9,13
+http://sofifa.com/player/214671/rodrigo-gomez/19/159481/,Rodrigo Gomez,71,65,49,66,57,74,78,73,69,71,83,91,87,67,90,72,58,88,34,75,68,55,58,58,67,52,26,46,46,14,15,10,15,7
+http://sofifa.com/player/215193/lucas-menossi/19/159481/,Lucas Menossi,63,49,47,68,71,68,68,68,70,72,83,74,91,74,92,76,82,86,34,78,63,74,68,68,57,67,70,66,62,10,8,14,10,9
+http://sofifa.com/player/215202/lucas-janson/19/159481/,Lucas Janson,55,72,58,69,61,77,52,48,58,76,77,74,85,71,82,65,84,69,44,69,63,27,74,73,69,67,32,24,26,12,12,8,9,15
+http://sofifa.com/player/235176/christian-bernardi/19/159481/,Christian Bernardi (Cristian Oscar Bernardi),68,65,50,72,47,75,61,70,66,73,79,83,79,63,73,69,58,71,64,52,48,39,68,70,66,64,40,49,51,8,7,6,7,9
+http://sofifa.com/player/142762/jonathan-bottinelli/19/159481/,Jonathan Bottinelli (Jonathan Pablo Bottinelli),50,35,75,62,40,45,43,38,53,53,33,39,31,68,65,52,83,47,76,27,81,73,17,41,41,69,74,72,62,7,11,6,6,14
+http://sofifa.com/player/215215/fabricio-fontanini/19/159481/,Fabricio Fontanini,34,34,78,62,46,49,32,32,59,50,32,49,58,62,60,56,90,74,80,40,71,65,33,37,42,53,71,78,63,7,13,10,9,9
+http://sofifa.com/player/214965/claudio-riano/19/159481/,Claudio Riano,57,69,77,67,73,70,55,34,63,71,77,77,75,68,73,73,58,70,74,67,44,16,68,66,70,58,19,16,15,11,13,10,13,11
+http://sofifa.com/player/173245/ramon-fernandez/19/159481/,Ramon Fernandez (Ramon Ignacio Fernandez),59,6,48,73,67,71,76,75,2,73,71,7,2,66,75,71,70,67,63,3,70,57,69,70,68,68,53,56,57,14,14,11,10,9
+http://sofifa.com/player/224459/victor-salazar/19/159481/,Victor Salazar,60,47,52,67,35,70,47,35,62,65,91,91,91,66,80,55,64,85,63,49,76,64,58,43,36,55,63,75,71,13,16,8,7,13
+http://sofifa.com/player/235987/ivan-gomez/19/159481/,Ivan Gomez,49,52,67,78,45,69,47,44,74,71,66,64,67,69,78,61,66,77,69,46,73,67,47,50,47,67,71,69,68,6,15,13,9,10
+http://sofifa.com/player/222428/juan-komar/19/159481/,Juan Komar (Juan Cruz Komar),29,27,75,66,35,35,30,37,57,58,51,61,50,68,35,50,63,79,81,28,64,71,30,42,49,53,73,74,67,6,7,6,15,8
+http://sofifa.com/player/239837/alexis-mac-allister/19/159481/,Alexis Mac Allister,72,76,64,75,63,73,73,75,73,75,72,71,69,69,71,74,63,69,61,75,51,45,73,76,74,72,65,54,51,7,10,14,15,10
+http://sofifa.com/player/208607/martin-mantovani/19/159481/,Martin Mantovani (Martin Maximiliano Mantovani),47,37,75,67,55,55,63,45,65,60,36,33,48,68,61,59,66,53,80,34,79,73,46,33,42,64,74,71,67,9,9,11,14,12
+http://sofifa.com/player/153060/juan-insaurralde/19/159481/,Juan Insaurralde (Juan Manuel Insaurralde),46,38,73,67,23,4,46,27,3,58,47,36,58,71,52,48,72,65,2,35,1,70,37,52,40,63,3,71,70,11,10,13,6,13
+http://sofifa.com/player/142822/jonas-gutierrez/19/159481/,Jonas Gutierrez (Jonas Manuel Gutierrez),73,64,64,74,58,71,67,68,71,73,66,62,64,69,55,75,67,72,74,72,64,66,69,71,72,77,72,72,67,6,9,16,10,10
+http://sofifa.com/player/219879/matias-pisano/19/159481/,Matias Pisano,68,69,43,66,48,80,72,66,67,72,80,75,81,70,76,70,60,67,33,71,49,36,67,72,49,70,38,50,41,7,10,7,13,8
+http://sofifa.com/player/158956/julio-barroso/19/159481/,Julio Barroso (Julio Alberto Barroso),51,36,74,65,46,43,25,55,64,65,68,65,63,75,69,64,87,77,77,52,55,70,44,59,70,72,72,74,70,11,16,8,9,10
+http://sofifa.com/player/143598/luciano-pocrnjic/19/159481/,Luciano Pocrnjic (Luciano Dario Pocrnjic),14,12,16,16,11,10,12,13,19,13,26,28,38,72,35,10,32,41,60,10,28,15,11,58,24,41,15,10,10,71,71,64,74,70
+http://sofifa.com/player/163056/nereo-champagne/19/159481/,Nereo Champagne,13,17,20,18,16,12,15,18,25,15,40,36,56,67,32,25,62,31,62,15,30,23,10,50,20,51,20,14,13,74,70,66,68,76
+http://sofifa.com/player/237819/nicolas-dominguez/19/159481/,Nicolas Dominguez,63,65,67,75,56,69,45,47,67,72,74,74,73,70,73,67,84,90,68,63,77,71,64,66,44,69,68,72,70,6,11,9,10,5
+http://sofifa.com/player/224510/walter-bou/19/159481/,Walter Bou (Walter Ariel Bou),67,2,56,2,67,68,62,45,55,2,75,71,74,68,67,74,90,58,63,75,35,13,1,57,59,1,18,15,19,12,15,12,11,12
+http://sofifa.com/player/232708/milton-valenzuela/19/159481/,Milton Valenzuela (Milton Nahuel Valenzuela),72,33,53,65,33,67,67,38,54,65,78,74,80,67,83,56,73,76,62,47,74,68,58,67,54,62,70,73,71,15,14,10,15,9
+http://sofifa.com/player/223498/emanuel-cecchini/19/159481/,Emanuel Cecchini,63,60,63,70,39,70,54,39,68,71,71,74,75,66,60,73,61,74,63,74,54,73,64,66,38,56,76,72,65,16,15,6,16,9
+http://sofifa.com/player/189451/ariel-nahuelpan/19/159481/,Ariel Nahuelpan (Ariel Gerardo Nahuelpan Osten),48,72,73,68,65,65,67,56,42,68,55,55,55,68,32,77,65,62,92,69,79,39,71,60,73,71,30,36,32,9,8,7,12,12
+http://sofifa.com/player/224524/esteban-burgos/19/159481/,Esteban Burgos (Esteban Rodrigo Burgos),35,23,71,61,32,48,35,26,48,57,49,49,54,69,46,61,53,77,85,30,73,73,32,35,54,62,70,70,70,15,9,13,7,12
+http://sofifa.com/player/215309/lucas-albertengo/19/159481/,Lucas Albertengo,66,74,69,69,68,69,59,37,61,71,66,69,71,71,64,68,69,72,71,67,64,26,72,69,69,68,20,21,23,6,13,13,13,15
+http://sofifa.com/player/143119/mariano-pavone/19/159481/,Mariano Pavone (Hugo Mariano Pavone),50,73,76,62,70,57,52,64,50,70,54,49,55,66,73,76,81,69,85,80,75,22,74,56,74,73,30,27,21,8,12,12,15,14
+http://sofifa.com/player/176924/federico-gonzalez/19/159481/,Federico Gonzalez (Federico Rafael Gonzalez),66,74,67,69,47,71,59,35,65,74,76,70,73,66,66,70,78,81,78,71,58,46,67,71,66,65,28,24,22,14,7,10,10,12
+http://sofifa.com/player/215076/lorenzo-faravelli/19/159481/,Lorenzo Faravelli,69,69,59,71,59,72,63,65,69,71,73,76,77,69,73,69,73,72,68,75,71,76,68,63,67,67,65,75,68,11,14,10,9,14
+http://sofifa.com/player/219174/ramiro-carrera/19/159481/,Ramiro Carrera (Ramiro Angel Carrera),71,65,48,59,58,71,52,56,59,72,83,82,70,69,63,64,91,77,73,66,52,45,69,70,62,63,41,41,39,14,16,15,8,12
+http://sofifa.com/player/215083/maximiliano-urruti/19/159481/,Maximiliano Urruti,49,70,1,69,1,73,67,52,53,1,80,2,1,71,79,77,62,86,65,1,81,55,1,67,66,71,52,60,50,12,10,16,8,7
+http://sofifa.com/player/189228/maximiliano-caire/19/159481/,Maximiliano Caire,63,30,72,58,42,68,68,42,57,63,77,81,73,62,78,60,84,90,64,48,69,71,58,62,44,62,62,67,73,15,7,13,6,7
+http://sofifa.com/player/199726/marco-torsiglieri/19/159481/,Marco Torsiglieri (Marco Natanel Torsiglieri),48,35,76,67,36,42,52,46,66,52,38,45,37,67,35,58,62,64,90,32,77,65,42,54,56,64,73,67,69,9,14,10,14,10
+http://sofifa.com/player/139058/omar-perez/19/159481/,Omar Perez (Omar Sebastian Perez),72,53,52,77,69,66,77,81,74,76,50,47,57,73,74,73,31,32,80,72,57,51,70,81,63,81,48,46,43,10,16,15,7,13
+http://sofifa.com/player/225591/leonardo-suarez/19/159481/,Leonardo Suarez,73,70,54,73,59,75,75,70,67,74,72,65,87,66,90,65,74,50,32,70,36,15,68,73,62,68,23,22,11,11,14,6,15,7
+http://sofifa.com/player/211265/ariel-rojas/19/159481/,Ariel Rojas (Ariel Mauricio Rojas),72,66,67,69,71,69,70,65,64,75,62,68,68,71,69,74,71,72,71,73,71,66,72,72,66,71,70,62,57,6,10,14,9,8
+http://sofifa.com/player/193602/maximiliano-coronel/19/159481/,Maximiliano Coronel (Maximiliano Angel Coronel),45,38,71,59,42,42,44,47,57,59,55,45,54,68,46,62,92,45,73,33,71,65,26,42,40,55,68,74,73,11,9,14,13,6
+http://sofifa.com/player/156483/cristian-lucchetti/19/159481/,Cristian Lucchetti (Cristian David Lucchetti),23,13,23,34,18,24,27,30,32,35,40,45,44,69,45,40,62,35,55,16,45,17,16,51,54,41,21,22,13,71,68,75,65,75
+http://sofifa.com/player/215111/gonzalo-veron/19/159481/,Gonzalo Veron,69,66,55,67,71,72,48,66,58,68,85,88,86,71,70,71,46,65,63,64,54,37,68,68,67,64,31,37,31,15,7,9,7,7
+http://sofifa.com/player/186695/ezequiel-munoz/19/159481/,Ezequiel Munoz,30,19,74,60,18,38,29,30,55,54,43,44,41,65,37,57,79,67,78,31,78,69,21,29,21,62,67,74,72,11,11,7,11,12
+http://sofifa.com/player/158540/cristian-campestrini/19/159481/,Cristian Campestrini,11,10,13,28,11,12,11,15,12,15,24,26,30,68,50,24,60,38,72,10,45,13,12,39,21,63,15,12,11,73,70,63,70,72
+http://sofifa.com/player/214862/leandro-benegas/19/159481/,Leandro Benegas (Leandro Ivan Benegas),43,73,69,56,70,58,45,40,44,63,71,76,63,69,60,78,72,78,80,68,58,39,69,45,69,59,36,21,18,6,6,14,10,8
+http://sofifa.com/player/207440/franco-fragapane/19/159481/,Franco Fragapane,62,60,43,71,69,74,67,62,68,69,86,90,87,58,92,67,68,75,48,66,27,50,63,64,67,51,36,28,23,9,11,10,12,10
+http://sofifa.com/player/232543/sebastian-bertoli/19/159481/,Sebastian Bertoli (Sebastian Hernan Bertoli),12,19,10,23,9,14,12,21,24,20,24,33,38,69,40,25,62,19,60,10,33,11,7,39,72,44,12,13,11,73,69,75,67,71
+http://sofifa.com/player/216692/sebastian-torrico/19/159481/,Sebastian Torrico (Sebastian Alberto Torrico),18,20,14,23,18,17,14,21,18,22,48,49,32,69,51,24,60,25,58,12,20,21,13,37,21,36,20,14,15,68,69,70,74,69
+http://sofifa.com/player/193141/ivan-pillud/19/159481/,Ivan Pillud,65,34,65,65,53,61,69,64,63,64,74,77,62,70,61,71,77,70,82,55,74,67,55,57,69,67,71,73,72,16,14,7,11,7
+http://sofifa.com/player/210814/julian-velazquez/19/159481/,Julian Velazquez,43,40,73,52,36,49,36,35,50,52,65,70,67,62,50,62,73,70,77,32,73,67,36,48,48,64,73,71,79,15,14,7,15,11
+http://sofifa.com/player/142720/carlos-araujo/19/159481/,Carlos Araujo (Carlos Luciano Araujo),58,33,55,67,56,76,53,47,64,77,65,59,71,68,66,65,75,70,65,48,68,66,40,59,61,71,78,82,79,16,16,16,8,8
+http://sofifa.com/player/215168/juan-garro/19/159481/,Juan Garro,61,68,78,59,58,72,48,36,65,71,80,83,72,72,65,72,63,74,74,43,31,14,74,69,66,63,25,21,22,11,11,16,7,7
+http://sofifa.com/player/216706/franco-mussis/19/159481/,Franco Mussis (Franco Gabriel Mussis),62,51,59,71,55,62,63,65,69,67,73,69,72,69,75,73,75,77,74,74,79,68,61,69,51,72,69,70,69,11,14,14,8,14
+http://sofifa.com/player/178566/javier-garcia/19/159481/,Javier Garcia (Javier Hernan Garcia),11,11,12,13,14,11,13,13,12,15,35,35,38,62,43,12,63,31,41,14,17,24,10,53,19,32,20,14,11,74,64,74,69,76
+http://sofifa.com/player/223879/leonardo-javier-ramos/19/159481/,Leonardo Javier Ramos,37,74,74,66,78,66,51,20,48,69,74,71,84,58,69,68,72,65,83,60,73,21,72,57,66,70,40,21,22,13,13,8,10,12
+http://sofifa.com/player/215177/francisco-cerro/19/159481/,Francisco Cerro,66,59,59,73,56,67,59,57,71,70,72,73,67,73,63,73,75,85,80,62,68,71,64,66,53,61,70,73,67,6,15,11,11,14
+http://sofifa.com/player/158089/pablo-ledesma/19/159481/,Pablo Ledesma (Pablo Martin Ledesma),63,45,64,81,58,66,62,59,74,70,52,49,64,71,65,70,66,69,74,58,76,64,62,74,64,73,60,65,64,10,9,8,11,9
+http://sofifa.com/player/183969/juan-forlin/19/159481/,Juan Forlin (Juan Daniel Forlin),59,36,70,59,40,53,51,38,58,63,58,61,65,67,68,60,80,74,71,27,80,71,41,56,51,66,70,70,73,10,6,7,13,8
+http://sofifa.com/player/190629/daniel-villalva/19/159481/,Daniel Villalva (Daniel Alberto Villalba Barrios),64,65,61,70,73,75,71,63,59,74,79,79,85,68,91,72,78,72,32,66,43,49,65,69,63,77,22,23,22,7,7,8,7,16
+http://sofifa.com/player/190634/gaston-sauro/19/159481/,Gaston Sauro,34,26,73,69,14,49,25,44,66,56,59,56,52,68,49,57,82,67,80,30,76,68,27,44,44,59,67,68,65,11,12,14,9,8
+http://sofifa.com/player/222644/yamil-asad/19/159481/,Yamil Asad,65,69,52,70,61,74,76,69,66,73,77,73,82,67,71,70,72,80,56,67,68,57,69,66,65,67,60,62,58,6,12,15,8,7
+http://sofifa.com/player/186553/matias-rodriguez/19/159481/,Matias Rodriguez (Matias Nicolas Rodriguez),69,1,69,2,45,68,51,53,64,73,73,76,72,67,67,71,5,77,68,2,1,68,73,59,68,61,1,1,72,14,8,14,8,7
+http://sofifa.com/player/231360/jalil-elias/19/159481/,Jalil Elias,52,39,54,72,38,67,42,41,69,71,70,72,69,67,62,65,63,77,66,59,74,70,47,70,47,68,67,70,67,9,6,13,9,13
+http://sofifa.com/player/142794/facundo-erpen/19/159481/,Facundo Erpen (Facundo Adrian Erpen),53,48,74,62,47,46,39,49,57,63,50,34,43,65,50,70,76,67,80,60,74,68,23,51,47,67,68,70,69,16,12,12,15,12
+http://sofifa.com/player/227274/david-barbona/19/159481/,David Barbona (David Matias Barbona),69,64,45,67,60,74,60,62,65,69,79,85,76,65,77,67,69,70,66,58,44,26,67,65,59,54,45,40,38,8,6,13,12,11
+http://sofifa.com/player/227530/damian-lemos/19/159481/,Damian Lemos (Damian Oscar Lemos),56,37,72,64,31,60,60,53,66,62,62,68,66,74,57,46,77,87,75,36,84,73,50,56,51,67,70,72,74,8,16,12,15,8
+http://sofifa.com/player/214733/maximiliano-cerato/19/159481/,Maximiliano Cerato (Maximiliano Ivan Ceratto),66,62,53,67,52,73,54,62,45,72,91,91,90,54,74,60,53,80,49,56,51,27,74,64,60,57,35,17,20,7,8,12,12,14
+http://sofifa.com/player/226772/joaquin-laso/19/159481/,Joaquin Laso,40,27,67,57,28,43,33,23,47,55,60,64,50,64,54,46,72,71,84,26,86,69,24,30,35,54,65,70,77,10,13,14,12,7
+http://sofifa.com/player/234458/carlos-quintana/19/159481/,Carlos Quintana (Carlos Gustavo David Quintana),35,24,75,67,31,42,30,33,63,62,50,51,47,57,43,52,70,68,84,27,68,71,36,28,45,55,69,68,69,8,12,7,12,12
+http://sofifa.com/player/215262/fernando-marquez/19/159481/,Fernando Marquez,41,73,69,68,56,68,41,33,60,69,73,79,72,66,59,73,80,77,83,70,48,23,65,67,68,66,28,32,32,11,14,6,13,11
+http://sofifa.com/player/181989/andres-rios/19/159481/,Andres Rios,62,72,66,67,62,74,70,56,59,69,80,78,82,67,76,70,79,70,76,61,62,24,64,63,69,72,31,27,28,13,16,12,15,15
+http://sofifa.com/player/153062/victor-figueroa/19/159481/,Victor Figueroa (Victor Alberto Figueroa),65,65,42,71,64,70,75,70,75,71,79,74,77,70,85,73,84,73,34,70,74,58,64,72,34,73,40,49,38,6,16,13,12,16
+http://sofifa.com/player/228838/eric-remedi/19/159481/,Eric Remedi,55,40,68,71,35,59,38,52,69,67,68,57,69,69,71,61,66,81,70,67,77,69,56,68,50,57,65,71,64,14,14,11,9,10
+http://sofifa.com/player/219626/jose-luis-gomez/19/159481/,Jose Luis Gomez,69,53,54,68,42,72,75,35,64,68,85,87,82,68,83,68,81,75,58,60,67,72,65,60,45,62,65,64,69,13,11,13,7,7
+http://sofifa.com/player/212715/sebastian-palacios/19/159481/,Sebastian Palacios,62,66,53,65,62,74,62,45,60,69,88,87,90,68,88,73,73,71,60,65,65,47,70,62,53,70,19,32,34,15,13,6,13,9
+http://sofifa.com/player/232692/guillermo-acosta/19/159481/,Guillermo Acosta (Guillermo Gaston Acosta),64,62,59,70,56,69,62,50,70,69,80,72,83,75,88,65,79,87,65,67,69,69,66,71,42,60,61,62,60,7,14,15,11,8
+http://sofifa.com/player/232709/damian-batallini/19/159481/,Damian Batallini (Damian Batallini),66,70,61,62,46,73,45,44,59,71,79,75,74,55,65,69,64,68,71,52,70,52,72,70,49,68,61,50,51,14,6,7,10,6
+http://sofifa.com/player/220938/jorge-correa/19/159481/,Jorge Correa,63,63,46,70,67,72,65,64,66,72,76,70,75,68,84,80,55,72,54,70,49,36,62,70,54,72,17,26,21,7,12,12,15,7
+http://sofifa.com/player/212747/tomas-martinez/19/159481/,Tomas Martinez,62,55,47,71,50,74,66,59,60,72,75,66,82,64,81,49,63,67,40,72,47,33,68,70,57,68,34,42,36,9,14,15,14,16
+http://sofifa.com/player/233230/kevin-mac-allister/19/159481/,Kevin Mac Allister,59,41,58,66,32,62,33,41,50,65,72,70,72,68,68,49,70,78,57,37,68,70,55,51,45,68,72,73,70,8,6,7,12,8
+http://sofifa.com/player/204050/santiago-vergini/19/159481/,Santiago Vergini,60,33,67,66,27,60,39,50,61,64,31,43,54,61,41,45,39,67,81,38,64,70,51,59,49,65,67,77,70,6,7,6,13,8
+http://sofifa.com/player/227602/favio-alvarez/19/159481/,Favio Alvarez (Fabio Enrique Alvarez),60,67,48,72,59,76,60,52,67,71,77,74,69,62,59,66,61,75,67,60,49,34,51,71,57,55,29,28,23,8,6,14,7,11
+http://sofifa.com/player/215060/nicolas-aguirre/19/159481/,Nicolas Aguirre,68,65,62,73,57,69,75,75,68,71,72,69,70,69,63,82,45,67,77,74,77,60,66,69,71,66,68,63,70,7,12,8,9,14
+http://sofifa.com/player/212506/mauro-matos/19/159481/,Mauro Matos,47,69,78,64,65,57,68,53,51,66,50,53,56,73,58,71,83,50,75,71,50,25,78,49,75,68,23,25,27,8,13,16,14,14
+http://sofifa.com/player/224796/jorge-rodriguez/19/159481/,Jorge Rodriguez (Jorge Rodriguez),35,29,74,65,28,39,23,26,48,63,59,64,58,64,59,46,83,62,78,24,65,67,44,26,37,53,65,73,67,7,12,15,15,6
+http://sofifa.com/player/239389/alfredo-abalos/19/159481/,Alfredo Abalos,57,59,32,74,57,71,61,71,69,72,66,71,59,51,89,67,59,71,37,69,38,34,61,79,69,71,54,41,27,6,13,7,10,11
+http://sofifa.com/player/224542/nery-leyes/19/159481/,Nery Leyes,58,39,65,68,38,58,59,46,61,62,62,63,59,64,55,57,63,81,81,49,80,72,54,56,45,55,73,72,70,16,7,12,16,9
+http://sofifa.com/player/159520/nereo-fernandez/19/159481/,Nereo Fernandez (Nereo Ariel Fernandez),20,12,23,15,11,19,15,19,22,15,42,44,58,63,48,23,58,37,78,10,36,28,12,27,24,60,18,15,13,64,72,61,78,69
+http://sofifa.com/player/215332/carlos-auzqui/19/159481/,Carlos Auzqui,67,68,77,67,66,67,60,63,66,63,83,83,74,65,70,71,82,72,71,64,77,48,65,68,59,64,46,38,41,8,7,10,14,15
+http://sofifa.com/player/221990/yonathan-cabral/19/159481/,Yonathan Cabral (Yonathan Emanuel Cabral),33,23,78,52,31,44,31,28,56,44,37,54,36,65,39,40,57,42,87,28,73,67,33,44,41,55,71,72,64,10,7,12,15,9
+http://sofifa.com/player/235047/jonathan-menendez/19/159481/,Jonathan Menendez (Jonathan Diego Menendez),59,66,46,63,58,78,64,47,50,67,91,91,90,58,84,67,70,67,33,66,46,33,68,66,44,61,33,27,29,5,9,10,6,14
+http://sofifa.com/player/207657/fernando-barrientos/19/159481/,Fernando Barrientos (Fernando Omar Barrientos),70,42,49,73,42,67,63,58,71,69,68,65,72,67,74,74,73,74,69,70,67,64,63,69,50,63,69,68,60,8,10,9,9,8
+http://sofifa.com/player/231212/esteban-rolon/19/159481/,Esteban Rolon,54,42,58,73,57,57,47,55,71,74,69,66,66,67,68,70,68,68,65,59,72,67,55,65,53,67,66,68,66,15,8,15,10,11
+http://sofifa.com/player/219451/nehuen-paz/19/159481/,Nehuen Paz (Nehuen Mario Paz),58,30,70,56,29,56,48,36,54,58,46,53,35,70,32,60,33,68,91,46,60,70,49,39,42,57,70,72,70,13,13,10,8,7
+http://sofifa.com/player/177981/fernando-tissone/19/159481/,Fernando Tissone (Fernando Damian Tissone),59,58,54,69,67,64,69,73,68,70,60,57,61,67,59,81,74,67,71,68,80,70,62,65,59,69,69,70,65,9,6,11,14,14
+http://sofifa.com/player/205631/cristian-insaurralde/19/159481/,Cristian Insaurralde,65,76,66,63,57,70,59,57,38,71,77,79,83,72,71,71,67,82,63,65,50,49,71,55,68,67,43,24,28,7,9,10,8,14
+http://sofifa.com/player/234816/nicolas-gorosito/19/159481/,Nicolas Gorosito (Nicolas Ezequiel Gorosito),58,45,70,67,41,49,45,58,62,61,65,67,60,59,44,66,76,62,79,48,77,65,55,54,53,69,66,67,69,5,12,11,10,12
+http://sofifa.com/player/232514/gabriel-carabajal/19/159481/,Gabriel Carabajal (Horacio Gabriel Carabajal),64,62,39,65,43,75,43,40,63,72,68,71,72,65,74,63,53,67,68,73,40,26,71,75,41,62,35,30,36,5,11,9,14,6
+http://sofifa.com/player/172100/gabriel-penalba/19/159481/,Gabriel Penalba (Gabriel Martin Penalba),67,64,66,70,61,66,67,64,71,70,50,51,52,67,52,66,50,61,87,68,74,69,66,74,74,71,64,70,59,7,14,6,7,12
+http://sofifa.com/player/222022/leonel-di-placido/19/159481/,Leonel Di Placido,72,41,51,67,55,75,44,33,62,70,85,83,80,67,82,65,68,78,65,55,71,64,67,68,52,63,63,67,68,10,16,10,11,7
+http://sofifa.com/player/158790/gonzalo-bustamante/19/159481/,Gonzalo Bustamante (Luis Gonzalo Bustamante),65,66,43,71,59,72,49,57,70,69,72,71,79,63,70,67,65,71,62,68,56,24,62,69,53,66,35,37,32,8,10,9,16,6
+http://sofifa.com/player/233292/miguel-barbieri/19/159481/,Miguel Barbieri,28,27,74,50,33,45,32,32,45,46,67,70,57,63,57,56,94,54,85,25,72,66,39,34,42,66,65,69,68,8,9,12,12,12
+http://sofifa.com/player/215117/leandro-desabato/19/159481/,Leandro Desabato,60,47,53,68,53,67,67,52,69,64,68,70,70,71,73,58,83,74,70,58,80,73,59,64,34,62,65,68,66,6,7,11,8,7
+http://sofifa.com/player/142670/rodrigo-brana/19/159481/,Rodrigo Brana,61,49,62,73,62,69,58,59,77,70,39,41,60,64,67,69,64,40,61,66,75,68,58,69,50,75,71,74,69,15,8,9,8,14
+http://sofifa.com/player/231247/braian-cufre/19/159481/,Braian Cufre,73,57,50,69,65,72,63,53,69,73,77,75,76,63,73,74,71,86,67,70,63,64,67,67,62,68,68,63,65,6,7,12,13,6
+http://sofifa.com/player/233825/nicolas-leguizamon/19/159481/,Nicolas Leguizamon,35,70,71,60,66,69,41,33,51,66,74,73,73,67,60,73,77,75,79,61,70,18,69,39,55,72,25,21,25,8,11,5,10,13
+http://sofifa.com/player/210787/mauro-dos-santos/19/159481/,Mauro Dos Santos,52,37,66,66,32,39,53,43,56,64,54,59,63,65,61,52,81,67,78,33,78,68,42,41,46,68,66,70,69,8,14,6,13,12
+http://sofifa.com/player/228711/brian-mansilla/19/159481/,Brian Mansilla,55,69,64,65,51,71,54,34,57,70,90,92,86,65,78,67,65,69,72,63,37,14,65,60,62,59,26,22,22,7,7,13,6,9
+http://sofifa.com/player/190575/franco-zuculini/19/159481/,Franco Zuculini,61,52,57,74,51,69,57,60,71,73,66,68,72,68,77,72,76,68,65,58,71,66,58,69,46,72,66,68,64,15,6,7,12,7
+http://sofifa.com/player/192367/ignacio-canuto/19/159481/,Ignacio Canuto,39,38,72,64,37,54,46,45,67,57,46,51,58,62,71,63,82,68,82,50,64,64,23,48,51,60,71,73,68,15,10,12,13,13
+http://sofifa.com/player/217201/enrique-triverio/19/159481/,Enrique Triverio (Enrique Luis Triverio),43,70,72,55,68,65,56,60,40,66,55,62,62,69,55,75,78,64,74,68,44,36,73,62,70,67,25,22,27,8,11,16,9,10
+http://sofifa.com/player/227186/augusto-batalla/19/159481/,Augusto Batalla (Augusto Martin Batalla Barga),17,14,16,25,13,13,13,17,22,18,43,42,37,71,43,22,58,31,68,15,26,23,17,28,23,34,18,18,17,72,64,68,64,75
+http://sofifa.com/player/192370/mauro-formica/19/159481/,Mauro Formica (Mauro Abel Formica),66,66,65,63,65,74,63,59,67,72,74,72,69,64,74,73,70,49,59,73,52,33,67,72,67,60,34,24,29,14,14,9,13,14
+http://sofifa.com/player/205941/cristian-chavez/19/159481/,Cristian Chavez,55,72,60,63,66,74,63,44,54,72,78,74,75,67,83,75,55,68,47,70,44,28,68,62,67,67,34,32,24,9,14,11,12,13
+http://sofifa.com/player/188791/alberto-costa/19/159481/,Alberto Costa (Alberto Facundo Costa),68,63,70,74,65,71,74,78,72,70,60,55,74,64,72,83,59,54,66,72,69,63,61,74,76,75,68,73,66,12,16,7,14,7
+http://sofifa.com/player/200826/mauro-quiroga/19/159481/,Mauro Quiroga,23,67,78,63,62,66,59,41,58,67,67,64,63,67,76,68,71,72,79,63,68,26,72,45,68,73,32,15,17,10,15,13,9,7
+http://sofifa.com/player/216698/matias-garcia/19/159481/,Matias Garcia (Ariel Matias Garcia),62,55,51,67,38,74,64,45,63,70,77,82,73,63,77,50,64,88,62,47,69,54,68,67,44,66,50,60,55,14,13,14,12,10
+http://sofifa.com/player/198783/javier-toledo/19/159481/,Javier Toledo (Javier Fabian Toledo),58,70,79,57,64,62,62,59,57,61,53,50,50,66,37,76,78,33,86,74,66,23,77,64,69,70,42,50,31,9,11,8,12,10
+http://sofifa.com/player/179842/jose-san-roman/19/159481/,Jose San Roman (Jose Ignacio San Roman Canciani),60,15,59,57,14,64,32,36,58,66,73,58,60,73,67,30,73,81,65,18,63,75,60,53,46,55,73,74,71,7,8,15,9,11
+http://sofifa.com/player/178565/bruno-urribarri/19/159481/,Bruno Urribarri (Bruno Saul Urribarri),78,30,52,65,31,62,67,70,60,63,85,85,88,66,79,70,80,84,33,64,77,66,59,65,34,55,61,64,65,12,11,12,6,12
+http://sofifa.com/player/193414/nicolas-colazo/19/159481/,Nicolas Colazo,67,56,59,68,46,70,77,71,67,69,82,80,78,65,80,76,72,73,66,70,67,64,68,69,69,65,48,68,67,13,6,8,11,13
+http://sofifa.com/player/158088/pablo-alvarez/19/159481/,Pablo Alvarez (Pablo Sebastian  Valeira Alvarez),68,45,67,76,43,59,66,53,62,67,62,64,65,71,73,70,77,67,81,59,81,73,52,51,49,72,71,71,69,6,7,6,11,16
+http://sofifa.com/player/214409/ezequiel-videla/19/159481/,Ezequiel Videla (Ezequiel Videla Greppi),65,59,56,70,62,70,63,43,68,68,67,64,69,75,73,68,74,75,69,66,74,72,59,65,54,67,67,70,66,16,9,7,12,9
+http://sofifa.com/player/215178/erik-godoy/19/159481/,Erik Godoy,69,30,66,66,32,45,33,28,59,56,63,66,52,65,52,40,73,75,81,26,79,65,26,30,40,58,1,69,67,11,11,7,13,8
+http://sofifa.com/player/214933/diego-rodriguez/19/159481/,Diego Rodriguez,13,22,14,32,16,14,25,15,23,20,42,48,46,68,58,60,67,32,60,17,18,22,13,43,73,33,17,13,15,71,67,77,66,72
+http://sofifa.com/player/235927/pablo-cuadra/19/159481/,Pablo Cuadra,40,67,63,63,54,78,53,45,60,71,92,90,83,62,82,71,67,64,70,60,32,18,63,68,66,62,22,21,16,15,10,14,13,5
+http://sofifa.com/player/214937/lucas-villalba/19/159481/,Lucas Villalba,71,38,59,66,40,63,60,62,60,69,75,82,78,66,66,64,79,74,60,61,68,73,59,61,42,58,65,66,65,8,10,14,13,15
+http://sofifa.com/player/142756/patricio-toranzo/19/159481/,Patricio Toranzo (Patricio Daniel Toranzo),77,61,47,75,62,70,76,75,73,76,52,45,64,63,63,70,68,48,67,72,64,62,63,76,63,59,59,51,53,7,10,15,9,7
+http://sofifa.com/player/215213/axel-werner/19/159481/,Axel Werner,14,19,15,25,12,13,20,15,19,23,41,46,34,55,43,24,58,38,75,18,24,27,16,50,23,52,15,13,17,74,72,75,68,70
+http://sofifa.com/player/214971/francisco-pizzini/19/159481/,Francisco Pizzini,63,61,52,67,46,73,72,50,68,71,78,80,83,64,70,68,54,69,71,66,34,30,66,69,62,71,31,24,23,7,11,10,9,11
+http://sofifa.com/player/223422/emanuel-loeschbor/19/159481/,Emanuel Loeschbor,32,40,70,59,28,40,32,28,45,53,54,54,39,69,61,42,76,54,79,39,66,67,26,32,40,53,70,71,71,6,9,14,10,12
+http://sofifa.com/player/241607/tomas-belmonte/19/159481/,Tomas Belmonte,55,57,74,71,58,67,48,43,67,70,65,67,68,69,69,67,73,79,66,60,68,67,72,65,60,70,67,69,65,6,12,9,5,12
+http://sofifa.com/player/227785/cristian-guanca/19/159481/,Cristian Guanca,60,73,59,67,59,73,46,40,57,70,79,78,75,65,68,73,67,67,71,67,54,36,65,65,59,68,34,35,33,9,12,7,8,16
+http://sofifa.com/player/214986/fernando-meza/19/159481/,Fernando Meza,60,21,74,64,32,59,30,34,61,60,62,65,69,67,74,66,84,66,70,20,60,68,33,29,46,66,70,73,69,14,6,8,11,15
+http://sofifa.com/player/214987/german-voboril/19/159481/,German Voboril,64,34,54,66,29,66,55,21,61,67,77,77,64,65,65,26,70,68,70,29,71,71,21,41,37,52,65,72,70,9,11,13,8,12
+http://sofifa.com/player/214993/pablo-alvarado/19/159481/,Pablo Alvarado,56,31,70,56,28,59,27,34,55,61,58,63,66,69,67,45,80,67,73,34,67,67,43,34,40,68,65,73,70,14,6,14,7,11
+http://sofifa.com/player/123603/hugo-campagnaro/19/159481/,Hugo Campagnaro (Hugo Armando Campagnaro),58,28,65,56,29,45,37,35,56,53,34,42,51,64,70,68,82,39,86,36,66,69,38,44,38,73,74,70,68,10,13,15,12,15
+http://sofifa.com/player/191443/federico-mancinelli/19/159481/,Federico Mancinelli,61,33,63,64,34,55,39,29,48,65,45,35,53,74,69,56,52,75,78,50,75,68,46,31,55,76,76,71,59,13,10,11,15,10
+http://sofifa.com/player/214998/mauro-bogado/19/159481/,Mauro Bogado,63,58,43,67,53,63,70,72,77,74,61,67,72,78,71,80,51,83,63,79,58,59,61,68,68,58,69,68,65,13,7,6,14,9
+http://sofifa.com/player/215254/luciano-lollo/19/159481/,Luciano Lollo,34,25,74,60,28,37,27,29,32,55,34,30,40,66,47,42,82,40,74,25,71,66,33,30,67,68,73,71,68,11,11,8,9,10
+http://sofifa.com/player/237283/nicolas-reniero/19/159481/,Nicolas Reniero (Gaston Nicolas Reniero),53,72,69,66,52,71,61,51,60,72,64,66,62,64,65,69,70,68,76,65,41,23,68,49,59,66,44,17,18,13,13,7,10,15
+http://sofifa.com/player/218345/jonathan-zacaria/19/159481/,Jonathan Zacaria (Jonathan Fabian Zacaria),67,63,47,67,51,73,75,70,69,67,78,73,71,65,72,71,50,65,62,72,48,68,73,61,59,70,37,54,58,11,10,10,9,11
+http://sofifa.com/player/153066/lucas-licht/19/159481/,Lucas Licht (Lucas Matias Licht),80,52,53,52,48,76,73,68,71,69,70,68,69,66,73,71,69,69,66,68,69,67,56,64,84,72,71,73,71,8,14,6,15,8
+http://sofifa.com/player/226797/victor-malcorra/19/159481/,Victor Malcorra (Victor Ignacio Malcorra),70,61,47,70,49,71,81,82,68,74,76,75,77,70,78,78,78,74,66,65,56,58,60,71,70,71,70,64,56,7,15,12,14,14
+http://sofifa.com/player/244206/nehuen-perez/19/159481/,Nehuen Perez,21,21,66,65,22,18,21,32,42,58,67,61,52,75,55,42,69,54,62,16,72,71,18,22,40,51,65,75,72,9,8,8,9,6
+http://sofifa.com/player/212208/leonel-galeano/19/159481/,Leonel Galeano (Leonel Ezequiel Galeano),51,25,70,61,31,55,50,35,64,60,51,62,54,64,54,47,76,71,77,37,71,68,55,54,47,60,70,70,64,10,15,8,15,11
+http://sofifa.com/player/156662/adrian-bastia/19/159481/,Adrian Bastia (Adrian Jesus Bastia Beruzzi),61,54,67,72,61,73,46,60,63,67,59,44,58,60,59,67,70,63,74,70,82,78,62,63,76,72,64,67,63,11,11,15,9,6
+http://sofifa.com/player/242944/federico-pereyra/19/159481/,Federico Pereyra (Federico Hernan Pereyra),24,17,9,44,28,37,23,27,8,35,41,2,36,5,54,38,67,67,2,24,2,6,27,28,32,2,4,69,3,8,15,13,7,13
+http://sofifa.com/player/220429/gaston-campi/19/159481/,Gaston Campi,45,29,72,69,29,65,35,35,69,64,47,51,32,61,32,66,30,70,92,62,63,71,65,59,44,55,63,68,70,14,6,16,8,7
+http://sofifa.com/player/223501/adrian-sporle/19/159481/,Adrian Sporle,67,44,57,65,47,65,49,31,60,64,79,75,66,64,52,65,67,77,79,47,61,67,63,57,58,60,64,68,66,10,10,11,14,13
+http://sofifa.com/player/176920/miguel-angel-torren/19/159481/,Miguel Angel Torren (Miguel Angel Torren),39,39,64,63,39,53,60,60,69,52,69,70,67,57,68,53,78,71,78,51,69,70,49,47,35,63,71,68,67,13,15,9,16,11
+http://sofifa.com/player/219688/marcos-mauro-lopez/19/159481/,Marcos Mauro Lopez,45,39,75,66,37,57,36,39,62,63,60,59,35,62,56,50,64,68,71,45,64,67,35,36,38,52,64,71,67,16,11,9,11,12
+http://sofifa.com/player/242216/federico-varela/19/159481/,Federico Varela,59,52,48,72,63,1,72,54,68,1,73,72,71,68,79,74,59,71,51,65,58,47,68,1,57,66,40,59,53,13,7,12,11,6
+http://sofifa.com/player/227903/maximiliano-romero/19/159481/,Maximiliano Romero,45,73,66,55,62,64,44,42,42,68,75,77,69,63,68,74,83,66,73,65,49,17,65,52,59,67,22,21,18,15,10,16,14,14
+http://sofifa.com/player/228415/leonardo-godoy/19/159481/,Leonardo Godoy,66,34,61,66,36,68,40,35,63,65,73,72,71,68,73,32,61,79,77,45,80,68,59,57,41,61,64,71,67,13,8,9,8,8
+http://sofifa.com/player/158784/jorge-carranza/19/159481/,Jorge Carranza (Jorge Carlos Carranza),15,12,12,12,15,20,13,25,11,16,25,24,25,71,27,24,69,36,79,12,32,16,16,50,20,34,10,13,17,65,71,71,66,69
+http://sofifa.com/player/214594/matias-laba/19/159481/,Matias Laba (Matias Alejandro Laba),52,49,59,69,47,60,63,61,64,68,67,69,68,69,73,69,72,81,68,61,73,69,57,59,57,59,64,66,65,13,14,9,15,14
+http://sofifa.com/player/237122/tomas-guidara/19/159481/,Tomas Guidara,57,29,56,59,35,75,36,34,53,68,74,75,69,68,80,45,60,83,59,48,63,69,48,40,40,65,64,69,67,5,14,8,15,9
+http://sofifa.com/player/211272/claudio-corvalan/19/159481/,Claudio Corvalan (Gaston Claudio Corvalan),71,35,66,61,53,62,34,39,62,55,74,73,71,68,64,62,63,86,73,46,74,76,53,35,61,65,65,64,62,7,12,9,14,11
+http://sofifa.com/player/233034/juan-andrada/19/159481/,Juan Andrada,61,40,58,70,40,64,55,62,62,66,51,51,60,68,61,59,64,70,70,55,70,72,28,58,47,68,67,71,68,14,15,13,13,10
+http://sofifa.com/player/229201/alejandro-camargo/19/159481/,Alejandro Camargo (Alejandro Maximiliano Camargo),63,35,61,79,33,59,45,51,74,72,40,71,67,65,68,51,75,78,75,57,74,68,54,60,57,64,56,72,49,6,13,11,14,7
+http://sofifa.com/player/203859/lucas-aveldano/19/159481/,Lucas Aveldano (Lucas Elio Aveldano),36,49,71,63,27,33,25,28,62,61,54,57,52,63,43,71,73,75,82,43,78,66,53,52,59,62,68,66,60,9,10,11,15,7
+http://sofifa.com/player/169815/carlos-luna/19/159481/,Carlos Luna (Carlos Ariel Luna),68,72,77,74,67,59,62,62,59,68,61,48,68,67,73,78,90,29,77,65,80,45,62,41,79,68,27,17,16,15,13,12,16,7
+http://sofifa.com/player/223064/fabian-noguera/19/159481/,Fabian Noguera,29,45,71,51,28,37,31,29,44,48,47,47,49,58,52,35,66,68,92,28,70,65,51,38,32,62,70,67,64,7,16,9,13,8
+http://sofifa.com/player/215130/nelson-ibanez/19/159481/,Nelson Ibanez,19,14,13,23,18,20,12,13,24,16,46,44,38,56,55,21,51,37,65,16,32,18,14,27,23,40,15,14,12,74,65,75,68,71
+http://sofifa.com/player/224348/lucas-hoyos/19/159481/,Lucas Hoyos (Lucas Adrian Hoyos),18,12,17,33,20,21,18,20,24,25,58,50,45,63,60,19,60,35,60,19,30,24,15,32,26,44,15,20,18,74,65,64,63,73
+http://sofifa.com/player/207454/patricio-rodriguez/19/159481/,Patricio Rodriguez,71,63,40,68,70,72,72,69,69,70,78,77,82,64,82,65,72,65,34,60,26,42,66,66,71,63,16,31,29,14,7,12,8,11
+http://sofifa.com/player/223071/fernando-pellegrino/19/159481/,Fernando Pellegrino,16,17,16,28,15,15,19,22,25,25,36,37,28,62,52,20,57,30,67,15,19,19,12,36,24,34,14,16,15,66,75,57,71,68
+http://sofifa.com/player/228961/mauro-pitton/19/159481/,Mauro Pitton (Mauro Rodolfo Pitton),58,58,65,69,44,67,47,48,63,70,67,69,66,69,73,56,57,86,66,55,60,79,66,60,49,58,68,70,68,16,14,13,9,15
+http://sofifa.com/player/223335/lucas-diarte/19/159481/,Lucas Diarte,58,26,57,62,28,57,31,33,35,65,59,65,65,74,68,40,91,77,68,23,56,61,47,34,43,65,70,76,80,7,14,7,14,15
+http://sofifa.com/player/240743/leonardo-sequeira/19/159481/,Leonardo Sequeira,69,69,57,62,65,78,65,50,60,71,77,74,75,53,81,67,49,64,58,68,28,24,68,63,55,65,35,28,29,7,13,14,6,12
+http://sofifa.com/player/215149/lucas-ceballos/19/159481/,Lucas Ceballos,71,41,56,67,42,66,53,42,64,65,77,80,91,65,91,50,88,77,46,44,74,65,53,62,44,54,63,66,64,6,14,8,12,11
+http://sofifa.com/player/226170/emiliano-amor/19/159481/,Emiliano Amor,35,18,65,60,23,45,30,17,52,56,46,43,38,63,46,45,68,63,85,19,70,69,27,34,36,50,68,68,67,10,14,12,14,14
+http://sofifa.com/player/234108/gonzalo-maroni/19/159481/,Gonzalo Maroni,64,45,51,70,64,76,61,57,55,72,83,75,88,56,68,58,58,61,61,49,40,30,68,69,56,65,50,41,40,6,12,11,6,12
+http://sofifa.com/player/241026/tomas-chancalay/19/159481/,Tomas Chancalay (Tomas Alejandro Chancalay),62,65,54,64,60,75,67,50,62,71,82,81,86,62,81,62,60,69,57,60,52,43,65,63,58,69,33,33,32,10,8,8,7,8
+http://sofifa.com/player/214668/leandro-barrera/19/159481/,Leandro Barrera (Leandro Ivan Barrera),67,62,47,62,51,71,52,43,62,69,78,83,70,68,68,76,60,72,58,64,62,48,59,60,40,52,38,52,45,13,7,11,13,14
+http://sofifa.com/player/215183/ezequiel-rescaldani/19/159481/,Ezequiel Rescaldani,43,69,78,68,64,62,47,59,42,65,37,36,47,68,32,76,30,63,93,67,34,35,70,52,70,58,27,32,22,14,15,14,9,13
+http://sofifa.com/player/165520/oscar-scarione/19/159481/,Oscar Scarione (Ezequiel Oscar Scarione),69,63,65,71,70,68,73,70,67,68,64,65,71,68,75,76,49,69,56,68,55,42,68,71,71,69,29,32,30,14,7,16,10,11
+http://sofifa.com/player/215192/gaston-diaz/19/159481/,Gaston Diaz,72,46,53,68,48,70,77,67,68,72,73,65,70,70,69,75,67,79,68,69,69,66,65,71,61,66,67,67,63,7,8,8,7,8
+http://sofifa.com/player/232344/emanuel-dening/19/159481/,Emanuel Dening (Fernando Emanuel Dening),42,71,50,66,55,76,42,39,49,66,70,77,74,77,78,66,68,63,44,68,62,15,76,73,65,58,45,23,26,5,11,9,13,14
+http://sofifa.com/player/237994/nahuel-barrios/19/159481/,Nahuel Barrios (Cristian Nahuel Barrios),63,58,47,73,51,73,63,45,65,70,83,71,70,65,94,65,62,51,28,60,42,26,57,67,57,65,44,40,51,13,8,7,12,6
+http://sofifa.com/player/215212/guillermo-sara/19/159481/,Guillermo Sara,14,15,23,28,19,20,24,21,21,16,38,42,30,67,53,23,68,26,64,17,23,24,15,43,30,36,15,12,16,70,65,67,66,71
+http://sofifa.com/player/221619/victor-cabrera/19/159481/,Victor Cabrera,34,34,61,64,31,62,34,30,66,61,68,69,65,59,59,40,59,57,71,46,82,71,26,48,44,55,69,69,69,15,14,15,10,7
+http://sofifa.com/player/206005/denis-stracqualursi/19/159481/,Denis Stracqualursi,48,67,76,59,68,59,38,35,41,70,40,54,51,61,37,80,80,53,90,66,48,32,73,44,63,76,36,37,31,7,7,12,15,11
+http://sofifa.com/player/214983/matias-ibanez/19/159481/,Matias Ibanez,19,10,12,22,12,12,16,17,18,14,40,44,33,66,42,23,57,40,74,20,27,28,17,37,24,44,18,12,20,67,71,62,68,69
+http://sofifa.com/player/215239/jacobo-mansilla/19/159481/,Jacobo Mansilla,73,56,72,63,42,68,70,72,63,70,75,76,71,71,76,62,70,71,72,69,75,48,60,70,45,64,49,46,42,13,13,13,7,7
+http://sofifa.com/player/235467/marcelino-moreno/19/159481/,Marcelino Moreno (Damian Marcelino Moreno),68,56,48,73,60,78,58,52,70,73,84,82,86,64,85,69,68,64,42,63,57,48,62,67,70,71,43,58,46,8,9,15,8,12
+http://sofifa.com/player/216015/nestor-moiraghi/19/159481/,Nestor Moiraghi,25,25,71,53,23,38,29,27,61,52,46,62,45,61,61,55,67,51,74,25,75,75,21,29,60,62,66,70,66,11,12,12,14,13
+http://sofifa.com/player/217807/javier-mendoza/19/159481/,Javier Mendoza (Javier Osvaldo Mendoza),65,60,38,63,39,73,59,46,64,68,83,80,75,65,83,69,77,70,42,54,65,45,62,60,57,52,33,21,23,14,9,13,11,10
+http://sofifa.com/player/220624/lucas-acosta/19/159481/,Lucas Acosta,12,17,19,25,16,14,18,19,22,15,65,62,62,63,62,25,68,44,74,13,20,28,17,26,25,14,16,21,21,68,70,67,66,72
+http://sofifa.com/player/198100/emanuel-biancucchi/19/159481/,Emanuel Biancucchi,53,61,45,74,65,75,59,69,66,73,75,75,86,62,77,52,67,50,50,54,49,45,57,58,48,52,38,30,27,7,9,14,10,12
+http://sofifa.com/player/231128/hernan-toledo/19/159481/,Hernan Toledo,62,69,59,68,66,72,68,62,67,68,75,73,74,70,69,67,69,66,62,68,52,60,63,69,58,65,35,44,45,15,14,7,7,10
+http://sofifa.com/player/215001/francisco-mattia/19/159481/,Francisco Mattia,30,24,60,72,33,27,29,25,71,35,33,31,31,70,31,38,31,31,82,21,77,67,20,27,38,49,73,72,70,14,8,9,12,14
+http://sofifa.com/player/236506/marcos-senesi/19/159481/,Marcos Senesi,29,32,68,67,25,48,31,22,60,61,62,58,44,64,51,48,79,63,75,31,52,73,26,23,40,60,69,70,64,10,13,11,7,8
+http://sofifa.com/player/215010/emanuel-britez/19/159481/,Emanuel Britez,64,35,63,57,41,61,42,37,55,63,74,75,63,58,67,62,74,79,76,40,79,68,49,44,39,57,69,68,70,8,11,8,12,7
+http://sofifa.com/player/215267/tobias-figueroa/19/159481/,Tobias Figueroa,42,2,2,62,58,66,42,34,31,1,34,40,34,68,33,71,34,68,90,62,59,24,2,53,1,61,27,27,27,11,9,11,15,11
+http://sofifa.com/player/222693/hector-fertoli/19/159481/,Hector Fertoli,68,59,49,67,60,73,53,40,53,68,83,80,85,57,75,66,69,59,61,55,55,33,68,63,60,64,42,45,38,7,13,16,12,9
+http://sofifa.com/player/239590/ramiro-gonzalez/19/159481/,Ramiro Gonzalez,32,34,71,61,24,42,22,32,51,62,53,53,58,59,52,49,72,69,81,36,75,58,32,35,40,62,72,71,62,9,14,10,8,13
+http://sofifa.com/player/193510/diego-novaretti/19/159481/,Diego Novaretti (Diego Martin Novaretti),34,26,71,59,15,32,46,39,61,47,33,36,32,68,33,31,34,62,84,26,75,68,13,42,30,50,70,70,67,6,11,7,12,11
+http://sofifa.com/player/215020/juan-ignacio-cavallaro/19/159481/,Juan Ignacio Cavallaro,57,65,43,70,47,73,61,41,65,68,79,78,84,66,79,67,29,62,71,78,42,39,63,69,56,65,27,35,36,14,13,13,9,7
+http://sofifa.com/player/198386/sebastian-dubarbier/19/159481/,Sebastian Dubarbier,67,57,58,61,57,68,72,65,62,66,76,75,70,68,70,69,82,77,77,64,90,70,64,64,59,66,67,69,66,9,11,9,16,8
+http://sofifa.com/player/238069/gabriel-carrasco/19/159481/,Gabriel Carrasco (Gabriel Dario Carrasco),64,39,65,65,38,62,42,36,60,67,79,77,74,63,73,46,82,79,68,35,70,73,58,52,48,61,64,66,67,12,6,7,8,7
+http://sofifa.com/player/158966/gaston-machin/19/159481/,Gaston Machin,67,52,66,73,69,70,71,77,67,71,70,68,64,66,60,57,71,69,68,62,60,67,64,70,78,66,71,64,62,8,10,11,14,15
+http://sofifa.com/player/143112/pablo-luguercio/19/159481/,Pablo Luguercio (Pablo Ariel Luguercio),59,63,64,62,60,67,43,46,58,67,74,90,73,71,73,70,65,68,66,63,73,34,69,67,68,64,65,36,33,7,9,13,12,13
+http://sofifa.com/player/241931/franco-moyano/19/159481/,Franco Moyano,61,51,62,75,41,67,44,46,72,69,67,69,68,63,74,61,66,72,67,48,68,59,57,62,53,65,65,67,62,12,6,13,14,15
+http://sofifa.com/player/219670/gonzalo-piovi/19/159481/,Gonzalo Piovi,49,23,51,50,29,52,61,42,47,55,69,73,77,66,77,54,73,76,62,40,74,69,50,37,49,60,69,74,75,14,16,14,11,8
+http://sofifa.com/player/228893/manuel-guanini/19/159481/,Manuel Guanini,36,21,74,54,33,34,36,34,49,39,33,29,55,66,46,41,48,74,85,23,69,68,28,34,49,58,68,68,67,15,10,10,6,8
+http://sofifa.com/player/208158/federico-andrada/19/159481/,Federico Andrada (Federico Oscar Andrada),58,66,60,61,59,63,60,67,59,64,75,78,74,64,77,77,73,63,72,82,43,27,62,68,66,65,22,24,19,10,11,6,13,6
+http://sofifa.com/player/215328/gaston-gil-romero/19/159481/,Gaston Gil Romero,59,46,58,69,38,59,46,39,61,66,68,72,72,65,67,67,66,76,68,58,71,68,54,57,52,64,63,67,66,7,13,7,13,12
+http://sofifa.com/player/215335/maximiliano-nunez/19/159481/,Maximiliano Nunez,67,58,55,66,47,64,65,50,60,64,87,86,82,58,79,66,69,71,38,63,65,52,61,63,53,66,55,46,43,16,10,13,14,10
+http://sofifa.com/player/139057/clemente-rodriguez/19/159481/,Clemente Rodriguez (Clemente Juan Rodriguez),71,58,42,67,53,64,46,53,62,67,76,70,71,63,81,65,87,74,68,51,72,67,60,64,48,74,60,70,69,16,11,10,15,13
+http://sofifa.com/player/235827/gabriel-gudino/19/159481/,Gabriel Gudino,59,69,57,63,56,68,64,54,60,66,76,77,75,63,70,68,69,77,47,58,65,55,68,69,62,57,55,61,62,11,7,8,7,8
+http://sofifa.com/player/227900/nicolas-tripichio/19/159481/,Nicolas Tripichio,60,36,48,68,40,67,48,38,58,62,79,79,77,60,72,52,65,82,62,39,57,64,60,52,42,55,67,66,66,15,14,13,9,7
+http://sofifa.com/player/49212/julian-speroni/19/159481/,Julian Speroni,13,13,11,38,12,12,15,12,28,26,42,39,46,64,55,20,72,33,43,12,21,17,8,34,22,53,10,12,15,70,67,62,66,69
+http://sofifa.com/player/232770/santiago-colombatto/19/159481/,Santiago Colombatto,60,55,51,75,43,68,57,49,72,68,69,64,71,65,81,56,59,60,54,52,68,68,52,74,52,65,60,48,44,7,12,13,12,10
+http://sofifa.com/player/203863/luis-farina/19/159481/,Luis Farina (Luis Carlos Farina Olivera),65,60,58,66,55,72,73,68,62,73,68,66,74,66,72,75,66,41,61,59,45,49,63,66,65,61,41,50,48,10,9,7,9,9
+http://sofifa.com/player/203871/valentin-viola/19/159481/,Valentin Viola (Valentin Nicolas Viola),63,67,64,66,67,71,55,66,62,69,69,68,69,62,64,65,65,65,71,66,62,24,66,64,64,68,55,24,22,15,7,16,8,6
+http://sofifa.com/player/215139/emanuel-olivera/19/159481/,Emanuel Olivera,32,29,65,52,28,40,36,28,33,45,56,54,57,60,56,56,73,71,78,43,59,70,29,33,47,49,69,74,70,9,8,16,13,12
+http://sofifa.com/player/231524/tomas-pochettino/19/159481/,Tomas Pochettino,74,43,49,67,45,75,72,73,65,70,61,61,63,61,65,53,69,75,67,58,51,53,60,78,54,64,45,64,60,9,13,11,14,11
+http://sofifa.com/player/238180/claudio-spinelli/19/159481/,Claudio Spinelli,42,74,68,55,62,65,47,34,43,66,68,66,69,53,54,69,68,63,74,59,31,17,72,51,52,53,28,17,19,13,9,13,7,13
+http://sofifa.com/player/215143/juan-ignacio-sills/19/159481/,Juan Ignacio Sills,68,28,68,62,32,57,34,42,60,63,58,68,62,61,58,45,85,73,73,30,75,70,54,51,47,56,75,72,72,14,9,14,12,15
+http://sofifa.com/player/226407/gaston-bojanich/19/159481/,Gaston Bojanich (Gaston Dario Bojanich),34,22,70,61,30,37,26,24,58,51,42,44,31,58,33,43,71,69,82,24,63,68,28,27,37,68,69,67,61,15,6,12,8,6
+http://sofifa.com/player/215148/mariano-bittolo/19/159481/,Mariano Bittolo,66,34,59,63,35,63,60,38,34,61,75,78,67,60,75,40,76,75,52,35,65,64,56,37,47,58,59,68,69,11,6,16,15,12
+http://sofifa.com/player/224876/marcos-curado/19/159481/,Marcos Curado,29,27,72,56,36,29,33,28,41,49,55,59,39,71,49,61,71,63,80,28,71,65,31,32,47,61,67,68,62,12,15,8,10,8
+http://sofifa.com/player/226668/nicolas-mazzola/19/159481/,Nicolas Mazzola (Nicolas Mario Mazzola),31,70,63,48,65,61,41,31,39,69,61,55,64,63,45,72,70,69,89,58,61,27,72,53,62,51,39,23,21,7,15,13,12,7
+http://sofifa.com/player/222830/fausto-grillo/19/159481/,Fausto Grillo,48,33,67,55,43,63,38,39,31,57,71,74,70,64,67,32,90,74,74,36,68,64,44,53,48,53,66,66,65,7,16,10,13,14
+http://sofifa.com/player/142962/enrique-bologna/19/159481/,Enrique Bologna (Enrique Alberto Bologna Gomez),21,13,10,22,10,13,16,18,22,20,47,44,40,68,38,24,65,33,70,15,35,17,15,31,25,62,12,22,17,68,67,60,67,65
+http://sofifa.com/player/217203/leonardo-sanchez/19/159481/,Leonardo Sanchez (Leonardo Agustin Sanchez),34,28,72,43,33,40,36,29,38,43,36,30,33,68,33,56,31,49,90,22,66,65,27,29,47,50,70,72,68,10,10,10,9,12
+http://sofifa.com/player/215170/rodrigo-salinas/19/159481/,Rodrigo Salinas,34,71,72,57,63,62,39,28,32,64,46,55,53,70,47,71,73,60,74,58,66,26,70,46,65,50,33,32,29,7,12,8,14,9
+http://sofifa.com/player/219522/jeremias-ledesma/19/159481/,Jeremias Ledesma,15,13,15,31,14,15,16,13,22,11,49,42,40,64,50,22,60,40,60,20,23,20,13,36,22,41,13,13,12,68,66,64,66,71
+http://sofifa.com/player/233090/joaquin-torres/19/159481/,Joaquin Torres,56,53,42,65,47,76,48,42,60,69,85,90,90,61,84,55,74,65,60,60,40,41,63,58,39,63,31,30,32,7,10,12,7,8
+http://sofifa.com/player/219523/jonas-aguirre/19/159481/,Jonas Aguirre (Leonel Jonas Aguirre Avalo),63,54,46,65,58,72,56,43,57,68,94,94,85,58,80,65,54,64,68,60,55,40,56,54,64,50,32,52,48,12,13,15,14,9
+http://sofifa.com/player/232582/walter-andrade/19/159481/,Walter Andrade (Walter Saul Andrade),24,28,68,54,20,31,20,22,48,45,42,46,39,65,40,57,76,44,85,22,70,67,24,20,30,62,70,68,61,10,6,9,6,13
+http://sofifa.com/player/165784/dario-bottinelli/19/159481/,Dario Bottinelli,68,60,39,72,55,67,75,78,70,69,54,54,78,56,81,68,58,74,67,67,54,58,65,76,76,72,41,30,22,15,12,14,14,6
+http://sofifa.com/player/165787/jorge-ortiz/19/159481/,Jorge Ortiz (Jorge Alberto Ortiz),64,52,55,72,67,65,67,62,75,70,67,66,67,62,67,73,68,68,57,65,73,67,63,63,63,62,66,63,54,9,16,6,9,9
+http://sofifa.com/player/245148/maximiliano-comba/19/159481/,Maximiliano Comba,66,74,66,65,57,68,63,55,63,69,64,65,63,66,63,62,61,65,57,66,31,29,69,68,64,65,32,26,30,9,6,8,13,13
+http://sofifa.com/player/231070/bruno-pitton/19/159481/,Bruno Pitton,79,53,68,53,63,54,70,63,59,62,74,68,62,58,76,67,82,78,57,56,30,73,57,58,58,54,58,68,67,10,11,5,9,8
+http://sofifa.com/player/242081/agustin-almendra/19/159481/,Agustin Almendra,47,58,45,75,50,66,62,58,72,72,65,66,66,62,64,59,50,66,63,56,48,55,58,66,52,62,56,68,64,14,10,13,6,9
+http://sofifa.com/player/242342/gaston-lodico/19/159481/,Gaston Lodico,62,55,58,75,44,72,70,65,67,68,79,75,77,61,80,64,57,72,56,53,64,60,62,69,52,68,58,53,57,9,6,10,11,9
+http://sofifa.com/player/215208/eugenio-isnaldo/19/159481/,Eugenio Isnaldo,62,65,42,73,57,67,63,45,59,71,76,76,70,61,76,70,58,69,62,60,48,27,62,62,61,55,27,31,36,10,15,9,9,7
+http://sofifa.com/player/143018/german-herrera/19/159481/,German Herrera (German Gustavo Herrera),56,63,66,62,57,63,60,44,47,62,69,68,69,68,59,75,75,76,81,64,70,39,67,60,69,64,35,45,47,13,8,15,6,10
+http://sofifa.com/player/235947/juan-brunetta/19/159481/,Juan Brunetta,77,53,44,72,66,68,78,78,70,64,68,70,84,59,73,67,60,62,47,77,63,52,57,71,53,60,25,50,48,7,10,11,10,5
+http://sofifa.com/player/222639/roberto-ramirez/19/159481/,Roberto Ramirez,16,16,18,31,12,14,20,19,18,23,48,49,34,62,43,18,65,31,59,12,22,18,16,17,20,34,16,15,20,71,65,58,66,70
+http://sofifa.com/player/215987/facundo-oreja/19/159481/,Facundo Oreja,69,27,49,69,28,59,53,35,65,61,66,62,71,79,82,56,77,40,65,53,79,73,63,60,47,67,69,71,75,16,13,14,13,10
+http://sofifa.com/player/214969/fernando-godoy/19/159481/,Fernando Godoy,49,39,62,74,49,60,49,50,70,65,63,65,57,65,80,67,76,68,57,47,77,67,58,51,49,66,58,68,67,7,7,8,12,11
+http://sofifa.com/player/221627/hernan-hechalar/19/159481/,Hernan Hechalar (Hernan Ignacio Hechalar),61,64,55,64,63,68,64,62,57,65,80,79,86,66,76,65,66,76,64,64,39,43,62,64,65,64,56,21,19,14,11,16,14,14
+http://sofifa.com/player/214721/federico-falcone/19/159481/,Federico Falcone (Federico Matias Falcone),36,71,73,54,63,62,61,56,30,66,57,51,57,64,60,74,69,61,69,65,54,17,71,47,64,53,17,18,15,8,13,14,8,15
+http://sofifa.com/player/229575/daniel-mancini/19/159481/,Daniel Mancini (Daniel  Mancini),54,55,45,69,45,75,48,52,64,73,72,68,75,67,77,60,92,73,61,65,51,59,63,65,47,66,53,63,59,6,13,13,12,13
+http://sofifa.com/player/215240/matias-fissore/19/159481/,Matias Fissore,45,43,32,68,46,68,41,45,73,73,59,65,91,75,87,66,77,77,30,47,73,73,61,48,46,50,66,63,60,8,12,12,8,15
+http://sofifa.com/player/237512/gaston-togni/19/159481/,Gaston Togni (Gaston Alberto Togni),65,65,47,65,51,73,58,46,51,67,86,77,74,62,59,65,48,69,70,57,48,41,62,62,64,58,40,45,42,8,8,11,13,9
+http://sofifa.com/player/224205/mariano-barbieri/19/159481/,Mariano Barbieri (Mariano Omar Barbieri),69,64,58,67,54,68,51,39,65,65,76,76,93,61,89,63,73,75,35,68,45,26,65,64,48,53,39,37,33,14,13,16,8,16
+http://sofifa.com/player/232661/mariano-bareiro/19/159481/,Mariano Bareiro (Lucas Mariano Bareiro),42,53,71,69,45,67,50,63,65,69,72,70,71,62,65,60,72,73,69,59,60,69,52,63,45,50,65,67,69,8,7,12,10,10
+http://sofifa.com/player/142818/fabian-cubero/19/159481/,Fabian Cubero (Fabian Alberto Cubero),64,42,66,67,50,53,47,48,65,64,54,50,52,77,60,55,71,57,72,48,85,65,55,65,56,72,65,62,67,11,8,16,9,9
+http://sofifa.com/player/215266/lucas-melano/19/159481/,Lucas Melano,1,61,62,64,64,70,65,35,61,69,86,86,79,67,57,65,61,76,75,63,59,24,67,64,56,51,30,29,28,13,15,16,7,9
+http://sofifa.com/player/216037/nahuel-valentini/19/159481/,Nahuel Valentini,39,25,66,58,18,50,23,22,48,60,53,44,48,58,62,52,60,63,83,20,68,65,21,23,28,55,66,68,68,6,5,7,11,13
+http://sofifa.com/player/212714/tiago-casasola/19/159481/,Tiago Casasola,71,58,66,68,35,66,31,34,65,68,68,67,61,58,50,48,74,75,82,38,70,64,66,66,47,62,62,70,73,13,13,11,13,11
+http://sofifa.com/player/214765/marcelo-herrera/19/159481/,Marcelo Herrera (Luis Marcelo Herrera),58,42,68,67,33,59,47,35,69,64,65,66,61,65,61,61,70,73,75,53,78,70,52,49,42,61,66,63,60,8,13,15,11,12
+http://sofifa.com/player/244205/maximiliano-salas/19/159481/,Maximiliano Salas,60,67,56,67,49,68,48,35,65,68,73,72,70,66,71,70,61,70,86,70,32,16,64,60,54,59,49,13,19,9,12,15,12,13
+http://sofifa.com/player/226798/mauricio-martinez/19/159481/,Mauricio Martinez,52,35,51,67,37,68,39,70,70,66,62,67,61,60,41,73,65,75,82,68,67,69,57,59,55,60,70,70,64,11,15,10,10,12
+http://sofifa.com/player/179698/leandro-grimi/19/159481/,Leandro Grimi (Leandro Damian Marcelo Grimi),73,56,68,63,49,63,34,48,60,65,60,59,66,63,62,70,76,64,70,70,80,67,61,65,56,63,71,70,71,6,10,16,11,11
+http://sofifa.com/player/232695/franco-sbuttoni/19/159481/,Franco Sbuttoni,23,24,71,66,21,38,26,17,54,52,40,34,35,66,29,43,59,55,86,20,71,68,26,24,29,60,69,63,60,9,10,12,11,5
+http://sofifa.com/player/232699/lautaro-comas/19/159481/,Lautaro Comas,60,61,37,60,55,70,51,40,55,63,86,83,82,61,76,61,52,77,34,55,25,22,71,62,54,60,20,26,35,13,10,12,6,8
+http://sofifa.com/player/219647/agustin-vuletich/19/159481/,Agustin Vuletich,48,63,72,59,60,63,45,39,55,66,64,68,55,65,55,70,65,69,85,60,70,34,69,55,65,53,18,28,24,9,11,7,14,15
+http://sofifa.com/player/213272/lucas-chaves/19/159481/,Lucas Chaves,12,13,17,26,14,17,12,21,31,18,49,42,35,62,68,17,58,43,51,15,24,25,15,24,21,38,20,21,13,67,66,62,66,68
+http://sofifa.com/player/219931/diego-mendoza/19/159481/,Diego Mendoza,41,67,69,62,64,64,52,35,55,66,53,70,63,62,48,71,67,65,78,70,30,33,62,55,65,67,23,38,17,14,14,13,11,6
+http://sofifa.com/player/239388/franco-bechtholdt/19/159481/,Franco Bechtholdt,46,48,5,67,36,58,37,45,54,64,56,59,49,5,68,53,62,73,67,49,66,63,38,39,48,14,65,4,6,7,14,7,9,12
+http://sofifa.com/player/188194/luis-ibanez/19/159481/,Luis Ibanez (Luis Ezequiel Ibanez),67,61,55,65,68,73,82,78,67,73,78,78,83,66,80,83,74,67,59,75,75,63,65,60,74,63,65,66,61,11,7,10,13,8
+http://sofifa.com/player/206628/adrian-calello/19/159481/,Adrian Calello,52,34,47,69,28,60,61,40,61,69,55,48,66,61,64,48,51,84,68,51,60,62,62,52,41,50,66,73,66,12,15,7,13,9
+http://sofifa.com/player/241703/andres-lioi/19/159481/,Andres Lioi,61,65,45,67,53,71,53,47,58,68,71,70,70,61,78,61,54,74,51,43,48,60,59,57,53,68,48,52,56,11,10,8,8,8
+http://sofifa.com/player/219452/julian-fernandez/19/159481/,Julian Fernandez (Julian Rodrigo Fernandez),42,49,64,61,36,59,41,43,59,63,75,74,64,59,75,61,61,92,72,56,67,70,55,60,52,64,68,67,65,10,15,12,9,12
+http://sofifa.com/player/240956/matias-melluso/19/159481/,Matias Melluso (Matias German Melluso),66,41,61,63,38,68,45,33,62,67,76,68,75,69,68,47,63,69,59,45,58,59,59,51,44,62,64,70,66,13,13,14,12,6
+http://sofifa.com/player/172094/martin-bravo/19/159481/,Martin Bravo (Martin Ivan Bravo),62,61,66,67,62,69,59,53,64,66,70,75,75,60,77,71,77,74,68,66,59,30,63,61,67,77,32,31,27,9,6,7,11,16
+http://sofifa.com/player/243521/ivan-erquiaga/19/159481/,Ivan Erquiaga,69,48,69,68,42,68,38,32,66,67,78,76,72,61,75,47,65,69,51,39,59,59,67,48,47,65,61,65,64,12,10,11,10,8
+http://sofifa.com/player/223042/luciano-guaycochea/19/159481/,Luciano Guaycochea,43,57,53,69,66,68,67,66,64,65,77,73,79,60,84,59,43,76,59,55,57,61,72,63,64,65,59,68,53,14,15,7,7,12
+http://sofifa.com/player/240964/nicolas-linares/19/159481/,Nicolas Linares,56,52,51,69,54,67,53,56,63,65,66,64,62,64,74,62,60,72,63,50,60,67,52,63,58,60,68,66,64,9,7,7,14,13
+http://sofifa.com/player/213588/alejandro-sanchez/19/159481/,Alejandro Sanchez,20,18,17,24,19,20,13,14,22,20,23,20,23,66,48,23,33,18,67,14,13,10,10,43,25,33,24,15,14,64,61,66,66,71
+http://sofifa.com/player/226390/renzo-vera/19/159481/,Renzo Vera (Gonzalo Renzo Vera),48,30,65,59,38,39,38,58,58,56,38,40,35,54,54,74,59,60,84,59,78,65,31,26,70,49,66,65,68,8,6,15,14,15
+http://sofifa.com/player/223067/nahuel-yeri/19/159481/,Nahuel Yeri,65,55,59,68,43,65,53,41,64,67,74,77,74,65,69,61,66,80,72,59,69,63,65,63,51,58,66,67,66,13,14,14,12,14
+http://sofifa.com/player/215132/sebastian-moyano/19/159481/,Sebastian Moyano,19,20,12,24,16,21,20,19,24,25,49,44,36,56,50,20,59,36,67,17,19,27,14,20,22,41,23,13,15,66,66,67,65,71
+http://sofifa.com/player/226408/fernando-brandan/19/159481/,Fernando Brandan (Fernando Daniel  Brandan),56,63,37,57,45,71,53,60,54,67,87,84,86,65,83,64,76,62,38,62,33,32,59,62,59,66,31,29,30,8,16,16,10,16
+http://sofifa.com/player/242028/ricardo-dario-blanco/19/159481/,Ricardo Dario Blanco,63,60,39,71,55,70,65,71,68,68,66,65,59,49,85,62,56,65,44,70,39,22,60,70,63,59,40,35,28,5,10,10,11,7
+http://sofifa.com/player/192369/hernan-bernardello/19/159481/,Hernan Bernardello (Hernan Dario Bernardello),67,42,52,73,55,63,69,60,71,70,43,38,63,61,65,69,61,58,66,60,66,66,36,65,51,65,62,66,62,12,11,14,12,8
+http://sofifa.com/player/222585/francisco-fydriszewski/19/159481/,Francisco Fydriszewski,32,68,64,58,63,69,37,33,31,70,54,62,53,59,48,67,60,66,79,68,54,34,66,51,60,48,25,25,26,6,7,14,12,7
+http://sofifa.com/player/222587/franco-escobar/19/159481/,Franco Escobar,58,51,65,63,34,60,42,28,60,63,70,75,67,62,65,51,71,74,66,37,68,60,54,53,49,57,67,67,71,15,9,12,13,7
+http://sofifa.com/player/245371/thiago-almada/19/159481/,Thiago Almada,56,60,44,66,57,70,69,60,62,66,81,79,84,59,86,65,57,62,42,62,60,46,63,61,47,62,43,46,50,12,8,9,8,10
+http://sofifa.com/player/236669/emiliano-purita/19/159481/,Emiliano Purita,70,50,49,61,42,61,55,51,50,65,77,73,62,61,68,56,68,77,73,52,58,67,56,58,50,53,65,65,63,6,14,9,15,15
+http://sofifa.com/player/223105/nicolas-oroz/19/159481/,Nicolas Oroz,64,56,45,2,46,2,55,3,2,1,3,3,81,1,78,65,35,2,3,57,49,58,7,5,48,3,57,46,45,7,16,9,14,15
+http://sofifa.com/player/241025/leonardo-heredia/19/159481/,Leonardo Heredia (Leonardo Matias Heredia),60,62,54,62,71,72,65,45,59,68,75,77,69,62,58,71,60,65,70,63,51,33,68,62,56,63,32,31,30,11,8,13,8,8
+http://sofifa.com/player/214661/gaspar-iniguez/19/159481/,Gaspar Iniguez (Gaspar Emanuel Iniguez),62,44,48,72,48,68,58,46,68,70,68,68,76,60,80,68,72,73,67,60,64,64,60,62,50,60,61,66,62,14,15,8,14,16
+http://sofifa.com/player/217990/juan-pablo-gomez/19/159481/,Juan Pablo Gomez (Juan Pablo Gomez Vidal),71,39,72,62,38,57,46,46,61,65,70,70,70,56,58,56,66,75,82,49,54,57,54,47,48,53,71,63,68,14,11,12,15,14
+http://sofifa.com/player/224140/juan-pablo-mino/19/159481/,Juan Pablo Mino,55,47,46,63,43,51,42,37,65,59,77,69,77,61,56,57,46,88,86,48,80,59,65,52,54,65,69,70,66,15,16,9,14,10
+http://sofifa.com/player/244884/matias-pellegrini/19/159481/,Matias Pellegrini,56,64,52,61,46,73,51,58,58,70,77,78,73,66,74,68,49,59,49,50,41,46,65,65,59,51,51,49,50,13,10,11,6,11
+http://sofifa.com/player/227477/facundo-altamirano/19/159481/,Facundo Altamirano,12,12,18,27,20,15,15,15,27,22,45,45,43,67,32,39,68,39,58,13,28,30,12,40,27,46,25,18,24,65,64,68,65,68
+http://sofifa.com/player/214684/sebastian-jaime/19/159481/,Sebastian Jaime (Sebastian Oscar Jaime),57,66,68,71,45,58,48,50,48,64,77,67,70,53,59,61,72,67,75,59,58,48,75,54,72,60,32,47,32,14,8,8,6,7
+http://sofifa.com/player/233372/bautista-merlini/19/159481/,Bautista Merlini,61,57,39,71,49,68,61,58,64,63,80,84,94,64,86,57,55,66,41,59,70,36,59,63,59,67,55,43,47,12,10,6,15,11
+http://sofifa.com/player/229536/horacio-tijanovich/19/159481/,Horacio Tijanovich (Horacio Gabriel Tijanovich),55,68,52,64,52,67,55,47,55,68,77,78,75,62,72,64,75,63,58,61,56,24,67,62,58,61,59,17,19,12,5,5,14,7
+http://sofifa.com/player/241568/cristian-ferreira/19/159481/,Cristian Ferreira,64,62,55,70,65,68,71,73,68,70,71,73,69,69,78,72,59,63,61,75,44,42,61,69,64,76,53,44,48,10,11,5,8,9
+http://sofifa.com/player/222889/lucas-acevedo/19/159481/,Lucas Acevedo,31,40,68,56,31,21,36,31,33,55,34,52,32,62,30,46,45,69,88,23,83,66,32,34,39,55,62,64,61,15,13,7,16,7
+http://sofifa.com/player/215216/alexis-niz/19/159481/,Alexis Niz,58,39,67,46,30,34,28,27,46,48,54,67,57,61,58,56,91,63,72,46,64,71,30,29,41,58,59,71,68,7,11,14,14,13
+http://sofifa.com/player/142775/agustin-orion/19/159481/,Agustin Orion (Agustin Ignacio Orion),10,13,13,20,10,13,13,11,11,19,44,44,49,66,52,12,55,37,73,15,45,23,19,48,18,50,18,14,16,63,65,68,70,65
+http://sofifa.com/player/215993/dardo-miloc/19/159481/,Dardo Miloc,55,33,57,66,34,65,40,45,67,68,62,63,68,67,66,48,56,88,67,60,66,64,61,64,39,57,62,68,62,15,10,10,15,7
+http://sofifa.com/player/214972/federico-bravo/19/159481/,Federico Bravo,51,37,57,64,34,58,40,45,62,63,54,64,57,65,54,52,77,81,78,54,80,66,60,60,52,56,61,68,64,13,9,11,7,9
+http://sofifa.com/player/240320/gustavo-gotti/19/159481/,Gustavo Gotti,48,71,61,61,48,69,54,56,52,68,72,72,61,52,54,68,40,64,60,66,37,16,71,39,70,48,33,22,21,7,11,9,8,6
+http://sofifa.com/player/233924/maximiliano-lovera/19/159481/,Maximiliano Lovera,61,61,52,68,45,74,51,60,52,69,81,76,78,59,82,56,71,69,63,60,60,24,68,58,59,53,30,25,28,7,11,13,11,10
+http://sofifa.com/player/226757/matias-escudero/19/159481/,Matias Escudero (Matias Andres Escudero),26,16,69,54,21,31,23,24,46,53,57,55,46,73,62,32,79,47,70,25,66,77,25,28,38,47,61,63,61,8,15,14,9,13
+http://sofifa.com/player/216012/andres-imperiale/19/159481/,Andres Imperiale,48,19,64,63,23,45,28,30,71,50,50,59,54,63,52,36,75,66,77,16,81,66,23,29,35,51,65,63,65,10,9,9,8,12
+http://sofifa.com/player/234463/nazareno-solis/19/159481/,Nazareno Solis (Nazareno Damian Solis),66,66,40,63,62,73,56,55,46,67,83,81,90,66,89,64,62,48,39,59,31,18,60,63,48,56,30,36,38,10,10,11,13,10
+http://sofifa.com/player/234464/victorio-ramis/19/159481/,Victorio Ramis (Victorio Gabriel Ramis),52,68,64,65,61,71,56,43,47,69,75,73,69,63,68,68,67,68,68,59,68,34,68,61,57,70,45,32,30,10,8,12,10,11
+http://sofifa.com/player/215013/santiago-zurbriggen/19/159481/,Santiago Zurbriggen,54,36,67,66,31,51,56,37,54,56,73,65,63,61,65,60,79,80,73,34,68,66,48,41,42,58,65,63,65,7,12,16,11,15
+http://sofifa.com/player/219623/leonardo-rolon/19/159481/,Leonardo Rolon (Leonardo Gabriel Rolon),70,47,55,66,32,71,70,62,58,67,76,79,76,65,76,30,80,64,61,59,66,59,55,61,45,57,32,46,48,14,10,11,13,13
+http://sofifa.com/player/216053/ramiro-costa/19/159481/,Ramiro Costa,49,62,76,54,34,68,52,39,44,63,60,55,65,53,40,77,48,33,90,54,55,36,71,62,53,58,24,35,25,14,14,13,12,10
+http://sofifa.com/player/243446/matias-gomez/19/159481/,Matias Gomez,61,52,59,63,45,71,46,43,58,66,82,80,77,64,80,62,56,68,57,44,52,45,66,53,55,66,59,47,54,13,11,10,10,10
+http://sofifa.com/player/214777/leandro-diaz/19/159481/,Leandro Diaz (Leandro Nicolas Diaz),41,68,68,61,48,65,72,43,42,66,69,62,65,57,53,71,64,68,75,62,43,13,67,45,71,52,25,23,16,10,13,12,16,13
+http://sofifa.com/player/232697/lautaro-geminiani/19/159481/,Lautaro Geminiani (Lautaro Dante Geminiani),70,30,54,59,28,71,39,22,55,61,73,77,70,59,64,38,58,70,63,30,72,68,57,39,27,53,59,66,67,14,8,12,14,13
+http://sofifa.com/player/143107/marcos-gelabert/19/159481/,Marcos Gelabert (Marcos Agustin Gelabert),52,48,57,67,47,66,74,70,65,74,47,48,63,75,68,59,63,33,72,56,75,63,55,73,63,70,55,58,56,13,14,9,12,14
+http://sofifa.com/player/199435/pier-barrios/19/159481/,Pier Barrios (Pier Miqueas Barrios),68,33,62,56,34,49,28,38,52,58,68,69,66,66,67,62,57,70,69,58,70,67,34,53,41,54,65,66,66,6,9,11,13,8
+http://sofifa.com/player/184851/daniel-vega/19/159481/,Daniel Vega (Mario Daniel Vega),9,15,13,20,12,14,12,20,20,26,21,29,63,65,42,15,60,45,73,17,33,18,11,35,30,56,15,15,14,1,62,66,1,65
+http://sofifa.com/player/246045/pedro-de-la-vega/19/159481/,Pedro De la Vega,63,60,45,65,52,71,57,42,53,67,83,82,77,59,78,69,62,66,51,56,33,20,61,55,47,68,28,30,33,8,9,15,8,9
+http://sofifa.com/player/241696/hernan-de-la-fuente/19/159481/,Hernan De la Fuente,63,39,48,67,33,68,42,40,46,67,77,79,72,59,69,49,73,78,64,41,66,65,62,43,52,60,56,63,62,15,10,9,14,8
+http://sofifa.com/player/231219/braian-rivero/19/159481/,Braian Rivero,46,36,57,68,32,58,42,43,65,67,66,64,65,61,68,56,61,73,67,41,69,62,52,65,48,64,61,66,64,13,7,5,11,14
+http://sofifa.com/player/243763/gonzalo-rodriguez/19/159481/,Gonzalo Rodriguez (Gonzalo Emanuel Rodriguez),60,63,42,64,55,70,40,38,35,67,71,72,67,66,69,67,37,76,51,55,34,15,67,58,48,65,40,24,27,14,14,11,6,9
+http://sofifa.com/player/231222/fabian-henriquez/19/159481/,Fabian Henriquez,57,48,56,66,57,64,55,58,64,67,66,75,68,66,65,74,68,71,64,57,78,71,65,65,50,66,63,67,64,9,12,5,9,8
+http://sofifa.com/player/247094/gustavo-britos/19/159481/,Gustavo Britos,32,64,70,46,60,60,58,48,35,58,75,67,71,68,78,67,76,72,62,62,41,15,72,58,67,65,19,22,13,10,11,7,7,6
+http://sofifa.com/player/214863/alejandro-delfino/19/159481/,Alejandro Delfino,24,20,61,55,29,23,21,27,48,52,62,63,53,63,65,50,80,65,73,15,69,64,29,32,36,50,62,72,54,13,12,6,6,10
+http://sofifa.com/player/246864/nicolas-velez/19/159481/,Nicolas Velez,44,69,62,57,68,65,71,46,36,70,68,65,82,66,71,70,72,62,61,56,55,13,62,57,71,64,19,13,14,12,8,10,15,8
+http://sofifa.com/player/183894/matias-sanchez/19/159481/,Matias Sanchez (Matias Ariel Sanchez),49,47,43,66,59,63,57,58,58,65,70,69,64,69,76,51,51,73,62,54,65,67,52,63,50,65,62,63,64,10,10,6,16,16
+http://sofifa.com/player/233057/franco-troyansky/19/159481/,Franco Troyansky,45,64,65,56,52,66,44,58,53,69,75,68,63,68,69,67,81,76,62,59,58,13,61,58,61,69,16,16,31,10,9,15,13,6
+http://sofifa.com/player/226405/adrian-arregui/19/159481/,Adrian Arregui,45,52,68,63,58,62,39,36,63,64,71,69,68,55,69,61,82,82,69,63,82,67,50,56,53,62,59,68,65,9,16,7,16,15
+http://sofifa.com/player/240744/martin-ojeda/19/159481/,Martin Ojeda (Martin Exequiel Ojeda),64,57,57,67,41,67,55,31,64,66,75,79,78,61,78,53,45,69,49,56,44,42,59,54,46,63,19,21,28,7,15,5,13,10
+http://sofifa.com/player/243816/emanuel-iniguez/19/159481/,Emanuel Iniguez,64,24,59,53,28,55,35,29,50,64,72,74,69,54,58,43,76,73,59,25,54,65,42,50,46,64,67,70,67,13,14,6,12,6
+http://sofifa.com/player/242287/francisco-ortega/19/159481/,Francisco Ortega,66,50,55,65,53,69,57,47,51,67,79,81,75,57,74,64,60,76,62,52,55,59,58,48,57,54,57,63,61,8,7,14,11,11
+http://sofifa.com/player/233084/nahuel-molina/19/159481/,Nahuel Molina,65,24,47,64,30,60,52,32,58,64,79,70,72,62,74,53,76,78,65,38,60,70,56,50,38,63,60,65,58,12,13,8,5,10
+http://sofifa.com/player/236668/gabriel-rojas/19/159481/,Gabriel Rojas,66,45,41,60,49,68,56,51,51,65,71,80,78,63,72,56,64,75,61,59,61,63,62,55,50,64,62,66,64,7,6,13,9,9
+http://sofifa.com/player/215169/facundo-castillon/19/159481/,Facundo Castillon,59,61,58,62,59,68,60,57,56,62,77,81,79,64,77,70,75,59,67,68,43,20,62,64,67,63,27,25,21,14,11,8,9,7
+http://sofifa.com/player/165505/carlos-matheu/19/159481/,Carlos Matheu (Carlos Javier Matheu),55,21,1,9,21,49,37,15,19,12,64,64,51,66,47,22,66,58,77,31,9,65,47,50,30,13,10,6,51,9,8,7,14,8
+http://sofifa.com/player/224386/mauricio-tevez/19/159481/,Mauricio Tevez (Mauricio Alejandro Tevez),60,57,49,63,56,69,60,55,64,68,82,83,83,61,82,69,55,73,58,62,39,22,60,61,56,55,23,21,26,8,8,16,11,8
+http://sofifa.com/player/232067/neri-bandiera/19/159481/,Neri Bandiera (Neri Ricardo Bandiera),51,64,57,60,38,68,31,27,49,66,76,76,81,65,83,51,61,61,38,75,25,17,73,51,61,50,20,17,17,9,11,11,11,5
+http://sofifa.com/player/239491/juan-alvarez/19/159481/,Juan Alvarez,59,57,38,67,47,68,51,42,57,69,75,78,72,64,72,65,51,67,63,48,41,25,54,58,59,60,46,35,31,10,8,7,13,6
+http://sofifa.com/player/214660/lucas-rodriguez/19/159481/,Lucas Rodriguez (Lucas Nahuel Rodriguez),74,50,53,64,45,68,74,78,68,67,75,73,80,56,86,35,75,67,59,63,72,61,56,62,44,65,64,62,64,14,15,15,15,9
+http://sofifa.com/player/142998/cristian-munoz/19/159481/,Cristian Munoz (Cristian Fernando Munoz Hoffman),25,15,13,36,12,22,19,20,34,31,53,56,33,62,58,23,73,29,65,20,35,25,16,45,24,62,18,14,19,2,65,68,3,3
+http://sofifa.com/player/207769/pablo-caballero/19/159481/,Pablo Caballero (Pablo Nicolas Caballero Santos),46,66,77,65,66,61,33,29,45,64,32,32,31,70,47,72,82,33,77,61,68,25,71,60,72,66,31,25,26,15,10,9,13,13
+http://sofifa.com/player/215196/martin-galmarini/19/159481/,Martin Galmarini,68,56,60,67,56,67,64,59,66,70,76,48,68,63,60,67,69,73,72,57,80,61,63,68,61,67,74,63,63,16,14,6,14,14
+http://sofifa.com/player/208298/martin-rivero/19/159481/,Martin Rivero (Martin Rodrigo Rivero),57,57,55,68,63,67,78,76,65,65,74,72,82,68,70,74,59,65,65,76,60,64,66,73,67,65,66,64,58,8,11,13,15,8
+http://sofifa.com/player/240811/marcelo-torres/19/159481/,Marcelo Torres (Luis Marcelo Torres),51,67,67,58,47,64,48,44,45,65,76,75,73,64,71,61,63,61,70,59,51,25,64,64,61,64,30,28,24,15,6,14,8,5
+http://sofifa.com/player/215990/oliver-benitez/19/159481/,Oliver Benitez,27,20,65,45,32,22,55,62,35,43,49,52,37,60,54,60,70,62,82,31,64,62,24,28,37,58,67,67,65,11,12,12,16,15
+http://sofifa.com/player/173256/thomas-charles/19/159481/,Thomas Charles (Tomas Patricio Charles),61,51,65,61,63,64,46,58,53,59,45,53,55,61,46,67,77,65,73,40,68,65,41,58,59,59,61,68,65,7,6,16,8,9
+http://sofifa.com/player/228809/agustin-doffo/19/159481/,Agustin Doffo,64,56,42,67,42,70,65,59,61,66,72,71,61,50,66,57,47,50,50,62,33,21,58,71,51,59,25,30,31,13,13,16,15,14
+http://sofifa.com/player/230871/rodrigo-holgado/19/159481/,Rodrigo Holgado,49,6,65,63,57,3,48,49,47,66,68,70,70,53,73,64,67,61,63,9,40,21,56,55,4,54,22,30,35,5,7,5,11,12
+http://sofifa.com/player/221661/guido-vadala/19/159481/,Guido Vadala (Guido Nahuel Vadala),62,58,39,65,58,73,71,62,57,72,78,75,86,54,76,62,54,68,37,58,44,20,54,62,54,54,30,16,20,6,4,3,5,5
+http://sofifa.com/player/216802/juan-kaprof/19/159481/,Juan Kaprof (Juan Cruz Kaprof),38,65,55,71,48,70,51,42,56,63,73,69,71,62,79,61,61,55,71,64,60,20,67,62,68,63,38,23,15,13,8,13,11,9
+http://sofifa.com/player/243170/francisco-apaolaza/19/159481/,Francisco Apaolaza (Juan Francisco Apaolaza),39,70,70,55,55,56,40,33,51,60,69,68,68,54,57,69,72,67,72,64,46,35,67,52,55,62,32,30,22,9,11,14,7,11
+http://sofifa.com/player/211433/fernando-evangelista/19/159481/,Fernando Evangelista (Fernando Evangelista Iglesias),65,45,69,63,43,65,32,44,59,60,65,68,64,62,56,63,83,70,74,57,62,63,52,58,51,53,59,70,68,6,14,12,10,10
+http://sofifa.com/player/234223/leandro-maciel/19/159481/,Leandro Maciel,52,47,61,70,42,65,40,40,66,69,72,67,69,65,73,68,74,68,67,52,71,70,55,64,41,62,66,67,68,7,14,7,11,14
+http://sofifa.com/player/221441/gustavo-villarruel/19/159481/,Gustavo Villarruel (Gustavo Alejandro Villarruel),61,59,44,63,54,68,59,48,58,66,76,75,79,60,81,64,57,61,45,60,46,25,63,52,59,61,33,40,43,15,14,15,6,7
+http://sofifa.com/player/225282/jose-devecchi/19/159481/,Jose Devecchi,16,19,17,25,17,15,14,18,25,15,47,48,36,63,54,24,61,27,67,14,26,21,15,28,21,43,20,21,14,65,62,59,64,67
+http://sofifa.com/player/228867/julian-vitale/19/159481/,Julian Vitale,42,38,72,68,40,55,43,42,68,74,50,37,53,52,72,65,75,71,77,55,60,54,41,50,51,59,55,71,61,16,10,7,15,12
+http://sofifa.com/player/236804/facundo-medina/19/159481/,Facundo Medina,54,33,50,63,29,62,36,32,45,63,70,74,63,61,61,27,60,67,67,32,63,62,51,45,44,56,66,68,64,13,5,12,13,13
+http://sofifa.com/player/220937/matias-perez-acuna/19/159481/,Matias Perez Acuna,70,32,59,51,42,62,54,40,50,61,72,76,76,65,64,43,82,72,58,30,67,62,52,58,44,50,59,66,62,11,9,13,7,6
+http://sofifa.com/player/228375/matias-vera/19/159481/,Matias Vera,55,33,56,68,45,55,48,62,63,66,70,70,73,63,80,62,58,71,53,50,68,62,50,50,48,48,62,65,60,8,13,10,14,7

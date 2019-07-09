@@ -13264,13 +13264,157 @@ Gain(time) = 0.001</p>
 <pre><code>    Weather
    /      \
   /        \
+sunny      rainy
 Table 1    Table 2
 
 </code></pre>
-<p>Table 1:
-<img src='Table1.jpg' style="width:300px;height:350px;"></p>
-<p>Table 2:
-<img src='Table2.jpg' style="width:300px;height:350px;"></p>
+<p>Table 1:</p>
+<table>
+<thead><tr>
+<th>day</th>
+<th>time</th>
+<th>traffic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekend</td>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekend</td>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>wekdend</td>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2:</p>
+<table>
+<thead><tr>
+<th>day</th>
+<th>time</th>
+<th>traffic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekend</td>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>weekend</td>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>weekday</td>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
 <p>We'll now repeat same steps for Table 1 and Table 2 as we did at begining.</p>
 <p><strong>Table 1 Part:</strong></p>
 <p>P(Yes) = 5
@@ -13434,38 +13578,170 @@ Gain(time) = 0.196</p>
 <pre><code>                      Weather
                    /          \
                   /            \
-                day            day
+                sunny          rainy
                /   \           /  \
               /     \         /    \
           Weekday Weekend  Weekday Weekend
           Table1   Table2   Table3  Table4
 
 </code></pre>
-<p>Table1:
-<img src='tbl1.jpg' style="width:300px;height:350px;">
-Table2:
-<img src='tbl2.jpg' style="width:300px;height:350px;">
-Table3:
-<img src='tbl3.jpg' style="width:300px;height:350px;">
-Table4:
-<img src='tbl4.jpg' style="width:300px;height:350px;"></p>
+<p>Table1:</p>
+<table>
+<thead><tr>
+<th>time</th>
+<th>traffic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>no</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>Table2:</p>
+<table>
+<thead><tr>
+<th>time</th>
+<th>trafic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>Table3:</p>
+<table>
+<thead><tr>
+<th>time</th>
+<th>traffic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>8 am</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>Table4:</p>
+<table>
+<thead><tr>
+<th>time</th>
+<th>traffic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 am</td>
+<td>no</td>
+</tr>
+<tr>
+<td>1 pm</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Final Tree</strong></p>
 
 <pre><code>                          Weather
                        /          \
                       /            \
-                    day            day
+                    sunny          rainy
                    /   \           /  \
                   /     \         /    \
               Weekday Weekend  Weekday Weekend
               /          \       /      \
              /            \     /        \ 
-            time         Yes   Yes       No
-            /  \
-           /    \
-          1 pm   8 am
-          /       \
-          No      No</code></pre>
+            time         Yes   Yes       time
+            /  \                         /  \
+           /    \                       /    \
+          1 pm   8 am                  1 pm  8 am
+          /       \                    /       \  
+          No      No                  yes      no</code></pre>
 
 </div>
 </div>
@@ -13474,7 +13750,115 @@ Table4:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.-Construct-a-confusion-matrix-for-the-performance-of-your-tree-on-the-training-data.-What-is-the-misclassification-rate,-and-what-is-the-sensitivity-and-specificity-(assuming-that-&#8216;yes&#8217;-is-the-&#8216;important&#8217;-class)?">2. Construct a confusion matrix for the performance of your tree on the training data. What is the misclassification rate, and what is the sensitivity and specificity (assuming that &#8216;yes&#8217; is the &#8216;important&#8217; class)?<a class="anchor-link" href="#2.-Construct-a-confusion-matrix-for-the-performance-of-your-tree-on-the-training-data.-What-is-the-misclassification-rate,-and-what-is-the-sensitivity-and-specificity-(assuming-that-&#8216;yes&#8217;-is-the-&#8216;important&#8217;-class)?">&#182;</a></h3><p>We'll first below print actual and predicted labels and then calculate confusion Matrix, missclassification rate etc.</p>
-<p><img src='train_classification.jpg' style="width:300px;height:350px;"></p>
+<table>
+<thead><tr>
+<th>Actual</th>
+<th>Predicted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead><tr>
 <th>ConfusionMatrix</th>
@@ -13485,8 +13869,8 @@ Table4:
 <tbody>
 <tr>
 <td>Original(Yes)</td>
-<td>8 (True Positive)</td>
-<td>3 (False Negative)</td>
+<td>9 (True Positive)</td>
+<td>2 (False Negative)</td>
 </tr>
 <tr>
 <td>Original(No)</td>
@@ -13495,8 +13879,8 @@ Table4:
 </tr>
 </tbody>
 </table>
-<p>Missclassification Rate = 3/25 = 0.12 = 12 %</p>
-<p>Sensitivity = TP(TP+FN) = 8/11 = 0.727 = 72.7%</p>
+<p>Missclassification Rate = 2/25 = 0.08 = 8 %</p>
+<p>Sensitivity = TP(TP+FN) = 9/11 = 0.818 = 81.8%</p>
 <p>Specificity = TN(TN+FP) = 14/14 = 1.00 = 100.0 %</p>
 
 </div>
@@ -13507,7 +13891,75 @@ Table4:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.-Construct-the-confusion-matrix-that-results-if-your-algorithm-is-applied-to-the-test-set-in-Table-2-on-page-3.">3. Construct the confusion matrix that results if your algorithm is applied to the test set in Table 2 on page 3.<a class="anchor-link" href="#3.-Construct-the-confusion-matrix-that-results-if-your-algorithm-is-applied-to-the-test-set-in-Table-2-on-page-3.">&#182;</a></h3><p><img src='test_set.png'></p>
 <p>We'll first below print actual and predicted labels and then calculate confusion Matrix, missclassification rate etc.</p>
-<p><img src='test_classification.jpg' style="width:300px;height:350px;"></p>
+<table>
+<thead><tr>
+<th>Actual</th>
+<th>Predicted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead><tr>
 <th>ConfusionMatrix</th>
