@@ -1,0 +1,56 @@
+To issue any command to emacs, you have to do:
+M-x [Where M is the Alt key, it's called the Meta key in emacs lingo.]
+Okay. Right now I started a shell with eshell command.
+
+M-x eshell
+
+Okay?
+yes
+
+
+
+so Ci st-hart billaba
+i goto  billaba
+right?
+then
+?
+
+cd SpamFiltering/src/cleannie_exp/
+
+Let me show you. Now, I would do M-x eshell here.
+
+Okay?
+yup
+
+Now you edit hammie/classifiers/DocClassifer.py like I told you.
+Remove resutls.txt.
+And run driver.sh
+
+Okay?
+yup
+and how do i extarct the results file?
+*
+extract
+
+Okay. The results file is in ~/SpamFiltering/src/cleannie_exp/ 
+Copy it to staff.
+
+Go to staff.
+scp -r next:~/SpamFiltering/src/cleannie_exp/results.txt .
+
+This would copy the file into staff home directory.
+ok
+tAlhal gsod?
+yes
+that all?
+
+Yes
+ that's all.
+
+
+ok can i try it now and would bother u if i m stuck:
+)
+Okay.
+I will go and have a bath now.
+
+ok cool,,,enjoe

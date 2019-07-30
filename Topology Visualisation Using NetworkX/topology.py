@@ -79,14 +79,16 @@ for node in graph_data['nodes']:
         for n in node['tpid']:
             if n != node['id']:
                 G.add_node(n)
-                G.add_edge(node['id'],n, weight=2.0)
+                #G.add_edge(node['id'],n, weight=2.0)
+                G.add_edge(node['id'],n)
                 node_colors.append('orange')
                 node_sizes.append(300)
     if 'ip' in node and 'mac' in node:
         nx.set_node_attributes(G, {node['id'] : {'ip': node['ip'], 'mac': node['mac']}})
 
 for link in graph_data['links']:
-    G.add_edge(link['source'],link['target'], weight=0.5)
+    #G.add_edge(link['source'],link['target'], weight=0.5)
+    G.add_edge(link['source'],link['target'])
     
 
 plt.figure(figsize=(15,8))

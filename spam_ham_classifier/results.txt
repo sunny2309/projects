@@ -1,0 +1,369 @@
+==============================================================================
+dataset: CSDMC2010
+------------------------------------------------------------------------------
+total=1275, hams=885, spams=390, unsures=0
+fp count: 0, fn count: 22
+fp percentage: 0.000000%, fn percentage: 1.725490%
+
+Accuracy : 0.983
+Precision : 1.000
+Recall : 0.947
+F1-Score : 0.973
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       863
+           1       1.00      0.95      0.97       412
+
+   micro avg       0.98      0.98      0.98      1275
+   macro avg       0.99      0.97      0.98      1275
+weighted avg       0.98      0.98      0.98      1275
+
+Confusion Matrix : 
+[[863   0]
+ [ 22 390]]==============================================================================
+dataset: enron1
+------------------------------------------------------------------------------
+total=1506, hams=1151, spams=355, unsures=0
+fp count: 9, fn count: 88
+fp percentage: 0.597610%, fn percentage: 5.843293%
+
+Accuracy : 0.936
+Precision : 0.975
+Recall : 0.797
+F1-Score : 0.877
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.92      0.99      0.96      1072
+           1       0.97      0.80      0.88       434
+
+   micro avg       0.94      0.94      0.94      1506
+   macro avg       0.95      0.89      0.92      1506
+weighted avg       0.94      0.94      0.93      1506
+
+Confusion Matrix : 
+[[1063    9]
+ [  88  346]]==============================================================================
+dataset: enron2
+------------------------------------------------------------------------------
+total=1813, hams=1417, spams=396, unsures=0
+fp count: 3, fn count: 65
+fp percentage: 0.165472%, fn percentage: 3.585218%
+
+Accuracy : 0.962
+Precision : 0.992
+Recall : 0.858
+F1-Score : 0.920
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.98      1355
+           1       0.99      0.86      0.92       458
+
+   micro avg       0.96      0.96      0.96      1813
+   macro avg       0.97      0.93      0.95      1813
+weighted avg       0.96      0.96      0.96      1813
+
+Confusion Matrix : 
+[[1352    3]
+ [  65  393]]==============================================================================
+dataset: enron3
+------------------------------------------------------------------------------
+total=1644, hams=1257, spams=387, unsures=0
+fp count: 0, fn count: 85
+fp percentage: 0.000000%, fn percentage: 5.170316%
+
+Accuracy : 0.948
+Precision : 1.000
+Recall : 0.820
+F1-Score : 0.901
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.97      1172
+           1       1.00      0.82      0.90       472
+
+   micro avg       0.95      0.95      0.95      1644
+   macro avg       0.97      0.91      0.93      1644
+weighted avg       0.95      0.95      0.95      1644
+
+Confusion Matrix : 
+[[1172    0]
+ [  85  387]]==============================================================================
+dataset: enron4
+------------------------------------------------------------------------------
+total=1786, hams=455, spams=1331, unsures=0
+fp count: 4, fn count: 19
+fp percentage: 0.223964%, fn percentage: 1.063830%
+
+Accuracy : 0.987
+Precision : 0.997
+Recall : 0.986
+F1-Score : 0.991
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.96      0.99      0.97       440
+           1       1.00      0.99      0.99      1346
+
+   micro avg       0.99      0.99      0.99      1786
+   macro avg       0.98      0.99      0.98      1786
+weighted avg       0.99      0.99      0.99      1786
+
+Confusion Matrix : 
+[[ 436    4]
+ [  19 1327]]==============================================================================
+dataset: enron5
+------------------------------------------------------------------------------
+total=1543, hams=430, spams=1113, unsures=0
+fp count: 6, fn count: 8
+fp percentage: 0.388853%, fn percentage: 0.518471%
+
+Accuracy : 0.991
+Precision : 0.995
+Recall : 0.993
+F1-Score : 0.994
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.98      0.99      0.98       428
+           1       0.99      0.99      0.99      1115
+
+   micro avg       0.99      0.99      0.99      1543
+   macro avg       0.99      0.99      0.99      1543
+weighted avg       0.99      0.99      0.99      1543
+
+Confusion Matrix : 
+[[ 422    6]
+ [   8 1107]]==============================================================================
+dataset: enron6
+------------------------------------------------------------------------------
+total=1827, hams=444, spams=1383, unsures=0
+fp count: 14, fn count: 7
+fp percentage: 0.766284%, fn percentage: 0.383142%
+
+Accuracy : 0.989
+Precision : 0.990
+Recall : 0.995
+F1-Score : 0.992
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.98      0.97      0.98       451
+           1       0.99      0.99      0.99      1376
+
+   micro avg       0.99      0.99      0.99      1827
+   macro avg       0.99      0.98      0.98      1827
+weighted avg       0.99      0.99      0.99      1827
+
+Confusion Matrix : 
+[[ 437   14]
+ [   7 1369]]==============================================================================
+dataset: Ling-Spam
+------------------------------------------------------------------------------
+total=824, hams=697, spams=127, unsures=0
+fp count: 1, fn count: 13
+fp percentage: 0.121359%, fn percentage: 1.577670%
+
+Accuracy : 0.983
+Precision : 0.992
+Recall : 0.906
+F1-Score : 0.947
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       685
+           1       0.99      0.91      0.95       139
+
+   micro avg       0.98      0.98      0.98       824
+   macro avg       0.99      0.95      0.97       824
+weighted avg       0.98      0.98      0.98       824
+
+Confusion Matrix : 
+[[684   1]
+ [ 13 126]]==============================================================================
+dataset: trec07p_p1
+------------------------------------------------------------------------------
+total=1885, hams=678, spams=1207, unsures=0
+fp count: 0, fn count: 48
+fp percentage: 0.000000%, fn percentage: 2.546419%
+
+Accuracy : 0.975
+Precision : 1.000
+Recall : 0.962
+F1-Score : 0.981
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.96       630
+           1       1.00      0.96      0.98      1255
+
+   micro avg       0.97      0.97      0.97      1885
+   macro avg       0.96      0.98      0.97      1885
+weighted avg       0.98      0.97      0.97      1885
+
+Confusion Matrix : 
+[[ 630    0]
+ [  48 1207]]==============================================================================
+dataset: trec07p_p2
+------------------------------------------------------------------------------
+total=1885, hams=690, spams=1195, unsures=0
+fp count: 1, fn count: 61
+fp percentage: 0.053050%, fn percentage: 3.236074%
+
+Accuracy : 0.967
+Precision : 0.999
+Recall : 0.951
+F1-Score : 0.975
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.91      1.00      0.95       630
+           1       1.00      0.95      0.97      1255
+
+   micro avg       0.97      0.97      0.97      1885
+   macro avg       0.96      0.97      0.96      1885
+weighted avg       0.97      0.97      0.97      1885
+
+Confusion Matrix : 
+[[ 629    1]
+ [  61 1194]]==============================================================================
+dataset: trec07p_p3
+------------------------------------------------------------------------------
+total=1885, hams=667, spams=1218, unsures=0
+fp count: 0, fn count: 37
+fp percentage: 0.000000%, fn percentage: 1.962865%
+
+Accuracy : 0.980
+Precision : 1.000
+Recall : 0.971
+F1-Score : 0.985
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97       630
+           1       1.00      0.97      0.99      1255
+
+   micro avg       0.98      0.98      0.98      1885
+   macro avg       0.97      0.99      0.98      1885
+weighted avg       0.98      0.98      0.98      1885
+
+Confusion Matrix : 
+[[ 630    0]
+ [  37 1218]]==============================================================================
+dataset: trec07p_p4
+------------------------------------------------------------------------------
+total=1885, hams=663, spams=1222, unsures=0
+fp count: 1, fn count: 34
+fp percentage: 0.053050%, fn percentage: 1.803714%
+
+Accuracy : 0.981
+Precision : 0.999
+Recall : 0.973
+F1-Score : 0.986
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97       630
+           1       1.00      0.97      0.99      1255
+
+   micro avg       0.98      0.98      0.98      1885
+   macro avg       0.97      0.99      0.98      1885
+weighted avg       0.98      0.98      0.98      1885
+
+Confusion Matrix : 
+[[ 629    1]
+ [  34 1221]]==============================================================================
+dataset: trec07p_p5
+------------------------------------------------------------------------------
+total=1886, hams=674, spams=1212, unsures=0
+fp count: 0, fn count: 43
+fp percentage: 0.000000%, fn percentage: 2.279958%
+
+Accuracy : 0.977
+Precision : 1.000
+Recall : 0.966
+F1-Score : 0.983
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97       631
+           1       1.00      0.97      0.98      1255
+
+   micro avg       0.98      0.98      0.98      1886
+   macro avg       0.97      0.98      0.97      1886
+weighted avg       0.98      0.98      0.98      1886
+
+Confusion Matrix : 
+[[ 631    0]
+ [  43 1212]]==============================================================================
+dataset: trec07p_p6
+------------------------------------------------------------------------------
+total=1886, hams=665, spams=1221, unsures=0
+fp count: 0, fn count: 34
+fp percentage: 0.000000%, fn percentage: 1.802757%
+
+Accuracy : 0.982
+Precision : 1.000
+Recall : 0.973
+F1-Score : 0.986
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97       631
+           1       1.00      0.97      0.99      1255
+
+   micro avg       0.98      0.98      0.98      1886
+   macro avg       0.97      0.99      0.98      1886
+weighted avg       0.98      0.98      0.98      1886
+
+Confusion Matrix : 
+[[ 631    0]
+ [  34 1221]]==============================================================================
+dataset: trec07p_p7
+------------------------------------------------------------------------------
+total=1886, hams=667, spams=1219, unsures=0
+fp count: 1, fn count: 37
+fp percentage: 0.053022%, fn percentage: 1.961824%
+
+Accuracy : 0.980
+Precision : 0.999
+Recall : 0.971
+F1-Score : 0.985
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97       631
+           1       1.00      0.97      0.98      1255
+
+   micro avg       0.98      0.98      0.98      1886
+   macro avg       0.97      0.98      0.98      1886
+weighted avg       0.98      0.98      0.98      1886
+
+Confusion Matrix : 
+[[ 630    1]
+ [  37 1218]]==============================================================================
+dataset: trec07p_p8
+------------------------------------------------------------------------------
+total=1886, hams=673, spams=1213, unsures=0
+fp count: 0, fn count: 42
+fp percentage: 0.000000%, fn percentage: 2.226935%
+
+Accuracy : 0.978
+Precision : 1.000
+Recall : 0.967
+F1-Score : 0.983
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97       631
+           1       1.00      0.97      0.98      1255
+
+   micro avg       0.98      0.98      0.98      1886
+   macro avg       0.97      0.98      0.98      1886
+weighted avg       0.98      0.98      0.98      1886
+
+Confusion Matrix : 
+[[ 631    0]
+ [  42 1213]]

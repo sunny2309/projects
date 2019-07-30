@@ -1,0 +1,71 @@
+{
+  "directed": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "openflow:1",
+      "tpid": [
+        "openflow:1:2",
+        "openflow:1:1",
+        "openflow:1:LOCAL"
+      ]
+    },
+    {
+      "id": "host:00:00:00:00:00:01",
+      "ip": "10.0.0.1",
+      "mac": "00:00:00:00:00:01",
+      "tpid": [
+        "host:00:00:00:00:00:01"
+      ]
+    },
+    {
+      "id": "openflow:2",
+      "tpid": [
+        "openflow:2:LOCAL",
+        "openflow:2:1",
+        "openflow:2:2"
+      ]
+    },
+    {
+      "id": "host:00:00:00:00:00:02",
+      "ip": "10.0.0.2",
+      "mac": "00:00:00:00:00:02",
+      "tpid": [
+        "host:00:00:00:00:00:02"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "id": "host:00:00:00:00:00:01/openflow:1:1",
+      "source": "host:00:00:00:00:00:01",
+      "target": "openflow:1:1"
+    },
+    {
+      "id": "openflow:2:1/host:00:00:00:00:00:02",
+      "source": "openflow:2:1",
+      "target": "host:00:00:00:00:00:02"
+    },
+    {
+      "id": "openflow:1:2",
+      "source": "openflow:1:2",
+      "target": "openflow:2:2"
+    },
+    {
+      "id": "openflow:2:2",
+      "source": "openflow:2:2",
+      "target": "openflow:1:2"
+    },
+    {
+      "id": "openflow:1:1/host:00:00:00:00:00:01",
+      "source": "openflow:1:1",
+      "target": "host:00:00:00:00:00:01"
+    },
+    {
+      "id": "host:00:00:00:00:00:02/openflow:2:1",
+      "source": "host:00:00:00:00:00:02",
+      "target": "openflow:2:1"
+    }
+  ],
+  "multigraph": false
+}

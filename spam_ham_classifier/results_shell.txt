@@ -1,0 +1,1344 @@
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+CSDMC2010
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_CSDMC2010_SPAM, Test dir: /home/sunny/Downloads/spam-ham/test_CSDMC2010_SPAM
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_CSDMC2010_SPAM/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0932           22.83s
+         2           0.9707           25.66s
+         3           0.8695           23.05s
+         4           0.7864           23.60s
+         5           0.7137           24.15s
+         6           0.6527           24.21s
+         7           0.5973           24.50s
+         8           0.5495           24.37s
+         9           0.5046           23.95s
+        10           0.4658           23.37s
+        20           0.2454           22.35s
+        30           0.1543           21.26s
+        40           0.1088           20.21s
+        50           0.0849           18.91s
+        60           0.0705           17.82s
+        70           0.0577           16.51s
+        80           0.0489           15.26s
+        90           0.0417           13.92s
+       100           0.0365           12.44s
+       200           0.0109            0.00s
+train time: 23.195s
+('X_train shape:', (3052, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_CSDMC2010_SPAM/h):
+  2086
+Training spam (/home/sunny/Downloads/spam-ham/train_CSDMC2010_SPAM/s):
+   966
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $863Scoring now: $412total=1275, hams=885, spams=390, unsures=0
+fp count: 0, fn count: 22
+FP: 0.000000%, FN: 1.725490%
+Accuracy : 0.983
+Precision : 1.000
+Recall : 0.947
+F1-Score : 0.973
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       863
+           1       1.00      0.95      0.97       412
+
+   micro avg       0.98      0.98      0.98      1275
+   macro avg       0.99      0.97      0.98      1275
+weighted avg       0.98      0.98      0.98      1275
+
+Confusion Matrix :
+[[863   0]
+ [ 22 390]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+ENRON
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_ENRON/enron1, Test dir: /home/sunny/Downloads/spam-ham/test_ENRON/enron1
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_ENRON/enron1/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.1329           19.59s
+         2           1.0737           19.18s
+         3           1.0171           20.50s
+         4           0.9680           21.01s
+         5           0.9194           21.40s
+         6           0.8813           21.58s
+         7           0.8456           21.82s
+         8           0.8143           21.90s
+         9           0.7825           21.97s
+        10           0.7586           22.03s
+        20           0.5693           21.38s
+        30           0.4793           20.38s
+        40           0.4218           19.33s
+        50           0.3748           18.19s
+        60           0.3354           17.02s
+        70           0.3070           16.02s
+        80           0.2881           14.90s
+        90           0.2656           13.65s
+       100           0.2512           12.44s
+       200           0.1513            0.00s
+train time: 25.116s
+('X_train shape:', (3666, 1022))
+train-f1-score:   0.986
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_ENRON/enron1/h):
+  2600
+Training spam (/home/sunny/Downloads/spam-ham/train_ENRON/enron1/s):
+  1066
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $1072Scoring now: $434total=1506, hams=1151, spams=355, unsures=0
+fp count: 9, fn count: 88
+FP: 0.597610%, FN: 5.843293%
+Accuracy : 0.936
+Precision : 0.975
+Recall : 0.797
+F1-Score : 0.877
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.92      0.99      0.96      1072
+           1       0.97      0.80      0.88       434
+
+   micro avg       0.94      0.94      0.94      1506
+   macro avg       0.95      0.89      0.92      1506
+weighted avg       0.94      0.94      0.93      1506
+
+Confusion Matrix :
+[[1063    9]
+ [  88  346]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+Train dir: /home/sunny/Downloads/spam-ham/train_ENRON/enron2, Test dir: /home/sunny/Downloads/spam-ham/test_ENRON/enron2
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_ENRON/enron2/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0337           23.25s
+         2           0.9498           23.06s
+         3           0.8810           22.72s
+         4           0.8241           22.40s
+         5           0.7760           22.18s
+         6           0.7347           21.92s
+         7           0.6990           22.12s
+         8           0.6682           22.19s
+         9           0.6411           21.94s
+        10           0.6171           22.08s
+        20           0.4597           24.25s
+        30           0.3800           25.97s
+        40           0.3242           25.42s
+        50           0.2813           24.37s
+        60           0.2473           22.93s
+        70           0.2247           21.40s
+        80           0.2080           19.83s
+        90           0.1902           18.27s
+       100           0.1763           16.69s
+       200           0.1017            0.00s
+train time: 34.207s
+('X_train shape:', (4044, 1022))
+train-f1-score:   0.993
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_ENRON/enron2/h):
+  3006
+Training spam (/home/sunny/Downloads/spam-ham/train_ENRON/enron2/s):
+  1038
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $1355Scoring now: $458total=1813, hams=1417, spams=396, unsures=0
+fp count: 3, fn count: 65
+FP: 0.165472%, FN: 3.585218%
+Accuracy : 0.962
+Precision : 0.992
+Recall : 0.858
+F1-Score : 0.920
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.98      1355
+           1       0.99      0.86      0.92       458
+
+   micro avg       0.96      0.96      0.96      1813
+   macro avg       0.97      0.93      0.95      1813
+weighted avg       0.96      0.96      0.96      1813
+
+Confusion Matrix :
+[[1352    3]
+ [  65  393]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+Train dir: /home/sunny/Downloads/spam-ham/train_ENRON/enron3, Test dir: /home/sunny/Downloads/spam-ham/test_ENRON/enron3
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_ENRON/enron3/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0715           32.33s
+         2           1.0021           32.33s
+         3           0.9420           32.78s
+         4           0.8887           32.44s
+         5           0.8448           32.51s
+         6           0.8064           32.55s
+         7           0.7744           31.99s
+         8           0.7424           31.78s
+         9           0.7139           31.75s
+        10           0.6850           31.75s
+        20           0.5163           30.52s
+        30           0.4247           28.45s
+        40           0.3570           26.94s
+        50           0.3017           25.40s
+        60           0.2684           23.82s
+        70           0.2410           22.18s
+        80           0.2208           20.49s
+        90           0.2015           18.58s
+       100           0.1871           16.63s
+       200           0.1056            0.00s
+train time: 33.005s
+('X_train shape:', (3868, 1022))
+train-f1-score:   0.985
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_ENRON/enron3/h):
+  2840
+Training spam (/home/sunny/Downloads/spam-ham/train_ENRON/enron3/s):
+  1028
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $1172Scoring now: $472total=1644, hams=1257, spams=387, unsures=0
+fp count: 0, fn count: 85
+FP: 0.000000%, FN: 5.170316%
+Accuracy : 0.948
+Precision : 1.000
+Recall : 0.820
+F1-Score : 0.901
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.97      1172
+           1       1.00      0.82      0.90       472
+
+   micro avg       0.95      0.95      0.95      1644
+   macro avg       0.97      0.91      0.93      1644
+weighted avg       0.95      0.95      0.95      1644
+
+Confusion Matrix :
+[[1172    0]
+ [  85  387]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+Train dir: /home/sunny/Downloads/spam-ham/train_ENRON/enron4, Test dir: /home/sunny/Downloads/spam-ham/test_ENRON/enron4
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_ENRON/enron4/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           0.9960           24.65s
+         2           0.9020           24.77s
+         3           0.8199           25.24s
+         4           0.7599           25.09s
+         5           0.7041           25.29s
+         6           0.6565           25.26s
+         7           0.6177           24.85s
+         8           0.5817           24.88s
+         9           0.5489           24.94s
+        10           0.5226           25.16s
+        20           0.3522           24.19s
+        30           0.2739           23.75s
+        40           0.2241           22.69s
+        50           0.1930           22.27s
+        60           0.1698           20.91s
+        70           0.1516           19.88s
+        80           0.1385           18.32s
+        90           0.1257           16.65s
+       100           0.1139           15.07s
+       200           0.0580            0.00s
+train time: 30.286s
+('X_train shape:', (4214, 1022))
+train-f1-score:   0.997
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_ENRON/enron4/h):
+  1060
+Training spam (/home/sunny/Downloads/spam-ham/train_ENRON/enron4/s):
+  3154
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $440Scoring now: $1346total=1786, hams=455, spams=1331, unsures=0
+fp count: 4, fn count: 19
+FP: 0.223964%, FN: 1.063830%
+Accuracy : 0.987
+Precision : 0.997
+Recall : 0.986
+F1-Score : 0.991
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.96      0.99      0.97       440
+           1       1.00      0.99      0.99      1346
+
+   micro avg       0.99      0.99      0.99      1786
+   macro avg       0.98      0.99      0.98      1786
+weighted avg       0.99      0.99      0.99      1786
+
+Confusion Matrix :
+[[ 436    4]
+ [  19 1327]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+Train dir: /home/sunny/Downloads/spam-ham/train_ENRON/enron5, Test dir: /home/sunny/Downloads/spam-ham/test_ENRON/enron5
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_ENRON/enron5/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0896           21.30s
+         2           0.9972           20.68s
+         3           0.9245           20.65s
+         4           0.8640           20.34s
+         5           0.8133           20.07s
+         6           0.7692           19.91s
+         7           0.7302           19.96s
+         8           0.6920           20.32s
+         9           0.6625           20.29s
+        10           0.6345           20.23s
+        20           0.4373           21.17s
+        30           0.3354           20.79s
+        40           0.2694           19.84s
+        50           0.2237           18.79s
+        60           0.1932           18.28s
+        70           0.1707           17.36s
+        80           0.1524           16.28s
+        90           0.1368           14.82s
+       100           0.1241           13.47s
+       200           0.0641            0.00s
+train time: 26.729s
+('X_train shape:', (3632, 1022))
+train-f1-score:   0.998
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_ENRON/enron5/h):
+  1072
+Training spam (/home/sunny/Downloads/spam-ham/train_ENRON/enron5/s):
+  2560
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $428Scoring now: $1115total=1543, hams=430, spams=1113, unsures=0
+fp count: 6, fn count: 8
+FP: 0.388853%, FN: 0.518471%
+Accuracy : 0.991
+Precision : 0.995
+Recall : 0.993
+F1-Score : 0.994
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.98      0.99      0.98       428
+           1       0.99      0.99      0.99      1115
+
+   micro avg       0.99      0.99      0.99      1543
+   macro avg       0.99      0.99      0.99      1543
+weighted avg       0.99      0.99      0.99      1543
+
+Confusion Matrix :
+[[ 422    6]
+ [   8 1107]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+Train dir: /home/sunny/Downloads/spam-ham/train_ENRON/enron6, Test dir: /home/sunny/Downloads/spam-ham/test_ENRON/enron6
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_ENRON/enron6/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0225           29.79s
+         2           0.9451           29.03s
+         3           0.8812           28.49s
+         4           0.8304           28.01s
+         5           0.7863           27.36s
+         6           0.7489           26.81s
+         7           0.7153           26.49s
+         8           0.6873           26.17s
+         9           0.6620           25.97s
+        10           0.6403           25.76s
+        20           0.4863           25.59s
+        30           0.3867           25.03s
+        40           0.3220           23.74s
+        50           0.2826           22.18s
+        60           0.2509           21.17s
+        70           0.2246           19.58s
+        80           0.2060           18.32s
+        90           0.1892           16.79s
+       100           0.1776           15.23s
+       200           0.0957            0.00s
+train time: 30.620s
+('X_train shape:', (4173, 1022))
+train-f1-score:   0.995
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_ENRON/enron6/h):
+  1049
+Training spam (/home/sunny/Downloads/spam-ham/train_ENRON/enron6/s):
+  3124
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $451Scoring now: $1376total=1827, hams=444, spams=1383, unsures=0
+fp count: 14, fn count: 7
+FP: 0.766284%, FN: 0.383142%
+Accuracy : 0.989
+Precision : 0.990
+Recall : 0.995
+F1-Score : 0.992
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.98      0.97      0.98       451
+           1       0.99      0.99      0.99      1376
+
+   micro avg       0.99      0.99      0.99      1827
+   macro avg       0.99      0.98      0.98      1827
+weighted avg       0.99      0.99      0.99      1827
+
+Confusion Matrix :
+[[ 437   14]
+ [   7 1369]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+Ling-Spam
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_Ling-Spam, Test dir: /home/sunny/Downloads/spam-ham/test_Ling-Spam
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_Ling-Spam/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           0.7742           10.21s
+         2           0.6980           10.39s
+         3           0.6407           10.26s
+         4           0.5914           10.18s
+         5           0.5538           10.86s
+         6           0.5178           11.04s
+         7           0.4889           11.09s
+         8           0.4631           11.18s
+         9           0.4415           11.22s
+        10           0.4133           11.22s
+        20           0.2516           10.68s
+        30           0.1693           10.18s
+        40           0.1274            9.73s
+        50           0.1008            9.24s
+        60           0.0844            8.56s
+        70           0.0726            8.12s
+        80           0.0643            7.49s
+        90           0.0555            6.83s
+       100           0.0491            6.24s
+       200           0.0178            0.00s
+train time: 12.150s
+('X_train shape:', (2069, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_Ling-Spam/h):
+  1727
+Training spam (/home/sunny/Downloads/spam-ham/train_Ling-Spam/s):
+   342
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $685Scoring now: $139total=824, hams=697, spams=127, unsures=0
+fp count: 1, fn count: 13
+FP: 0.121359%, FN: 1.577670%
+Accuracy : 0.983
+Precision : 0.992
+Recall : 0.906
+F1-Score : 0.947
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.98      1.00      0.99       685
+           1       0.99      0.91      0.95       139
+
+   micro avg       0.98      0.98      0.98       824
+   macro avg       0.99      0.95      0.97       824
+weighted avg       0.98      0.98      0.98       824
+
+Confusion Matrix :
+[[684   1]
+ [ 13 126]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+PU1
+-------------------------------------------------------------
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+trec07p
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_trec07p_p1, Test dir: /home/sunny/Downloads/spam-ham/test_trec07p_p1
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_trec07p_p1/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0951           52.57s
+         2           0.9548           51.80s
+         3           0.8408           51.74s
+         4           0.7457           52.13s
+         5           0.6655           52.20s
+         6           0.5969           52.04s
+         7           0.5377           51.84s
+         8           0.4859           51.73s
+         9           0.4407           51.65s
+        10           0.4013           51.43s
+        20           0.1688           49.93s
+        30           0.0835           47.84s
+        40           0.0488           45.09s
+        50           0.0345           42.53s
+        60           0.0268           40.10s
+        70           0.0225           37.36s
+        80           0.0184           34.65s
+        90           0.0151           32.03s
+       100           0.0128           29.26s
+       200           0.0038            0.00s
+train time: 59.169s
+('X_train shape:', (7541, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_trec07p_p1/h):
+  2522
+Training spam (/home/sunny/Downloads/spam-ham/train_trec07p_p1/s):
+  5019
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $630Scoring now: $1255total=1885, hams=678, spams=1207, unsures=0
+fp count: 0, fn count: 48
+FP: 0.000000%, FN: 2.546419%
+Accuracy : 0.975
+Precision : 1.000
+Recall : 0.962
+F1-Score : 0.981
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.96       630
+           1       1.00      0.96      0.98      1255
+
+   micro avg       0.97      0.97      0.97      1885
+   macro avg       0.96      0.98      0.97      1885
+weighted avg       0.98      0.97      0.97      1885
+
+Confusion Matrix :
+[[ 630    0]
+ [  48 1207]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+trec07p
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_trec07p_p2, Test dir: /home/sunny/Downloads/spam-ham/test_trec07p_p2
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_trec07p_p2/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0959           51.84s
+         2           0.9563           53.28s
+         3           0.8429           52.60s
+         4           0.7486           52.24s
+         5           0.6688           52.37s
+         6           0.6004           52.63s
+         7           0.5400           52.88s
+         8           0.4883           52.87s
+         9           0.4425           52.53s
+        10           0.4027           52.33s
+        20           0.1676           51.01s
+        30           0.0806           48.84s
+        40           0.0482           45.83s
+        50           0.0337           43.40s
+        60           0.0266           40.95s
+        70           0.0226           38.41s
+        80           0.0196           35.51s
+        90           0.0172           32.59s
+       100           0.0153           29.77s
+       200           0.0051            0.00s
+train time: 61.596s
+('X_train shape:', (7542, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_trec07p_p2/h):
+  2522
+Training spam (/home/sunny/Downloads/spam-ham/train_trec07p_p2/s):
+  5020
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $630Scoring now: $1255total=1885, hams=690, spams=1195, unsures=0
+fp count: 1, fn count: 61
+FP: 0.053050%, FN: 3.236074%
+Accuracy : 0.967
+Precision : 0.999
+Recall : 0.951
+F1-Score : 0.975
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.91      1.00      0.95       630
+           1       1.00      0.95      0.97      1255
+
+   micro avg       0.97      0.97      0.97      1885
+   macro avg       0.96      0.97      0.96      1885
+weighted avg       0.97      0.97      0.97      1885
+
+Confusion Matrix :
+[[ 629    1]
+ [  61 1194]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+trec07p
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_trec07p_p3, Test dir: /home/sunny/Downloads/spam-ham/test_trec07p_p3
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_trec07p_p3/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0940           52.43s
+         2           0.9530           52.02s
+         3           0.8385           51.92s
+         4           0.7433           51.77s
+         5           0.6624           52.09s
+         6           0.5936           51.88s
+         7           0.5331           52.04s
+         8           0.4810           51.96s
+         9           0.4349           51.95s
+        10           0.3950           51.81s
+        20           0.1653           49.92s
+        30           0.0804           47.61s
+        40           0.0467           44.69s
+        50           0.0321           42.08s
+        60           0.0255           39.74s
+        70           0.0206           36.94s
+        80           0.0159           34.01s
+        90           0.0137           31.12s
+       100           0.0119           28.19s
+       200           0.0024            0.00s
+train time: 56.612s
+('X_train shape:', (7542, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_trec07p_p3/h):
+  2522
+Training spam (/home/sunny/Downloads/spam-ham/train_trec07p_p3/s):
+  5020
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $630Scoring now: $1255total=1885, hams=667, spams=1218, unsures=0
+fp count: 0, fn count: 37
+FP: 0.000000%, FN: 1.962865%
+Accuracy : 0.980
+Precision : 1.000
+Recall : 0.971
+F1-Score : 0.985
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97       630
+           1       1.00      0.97      0.99      1255
+
+   micro avg       0.98      0.98      0.98      1885
+   macro avg       0.97      0.99      0.98      1885
+weighted avg       0.98      0.98      0.98      1885
+
+Confusion Matrix :
+[[ 630    0]
+ [  37 1218]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+trec07p
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_trec07p_p4, Test dir: /home/sunny/Downloads/spam-ham/test_trec07p_p4
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_trec07p_p4/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0967           53.09s
+         2           0.9582           52.40s
+         3           0.8451           53.92s
+         4           0.7515           53.01s
+         5           0.6720           52.44s
+         6           0.6030           52.15s
+         7           0.5444           51.80s
+         8           0.4932           52.10s
+         9           0.4477           51.74s
+        10           0.4079           51.36s
+        20           0.1715           49.49s
+        30           0.0817           46.70s
+        40           0.0497           43.77s
+        50           0.0353           40.95s
+        60           0.0282           38.34s
+        70           0.0222           35.70s
+        80           0.0177           33.01s
+        90           0.0152           30.23s
+       100           0.0135           27.51s
+       200           0.0044            0.00s
+train time: 56.063s
+('X_train shape:', (7542, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_trec07p_p4/h):
+  2522
+Training spam (/home/sunny/Downloads/spam-ham/train_trec07p_p4/s):
+  5020
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $630Scoring now: $1255total=1885, hams=663, spams=1222, unsures=0
+fp count: 1, fn count: 34
+FP: 0.053050%, FN: 1.803714%
+Accuracy : 0.981
+Precision : 0.999
+Recall : 0.973
+F1-Score : 0.986
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97       630
+           1       1.00      0.97      0.99      1255
+
+   micro avg       0.98      0.98      0.98      1885
+   macro avg       0.97      0.99      0.98      1885
+weighted avg       0.98      0.98      0.98      1885
+
+Confusion Matrix :
+[[ 629    1]
+ [  34 1221]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+trec07p
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_trec07p_p5, Test dir: /home/sunny/Downloads/spam-ham/test_trec07p_p5
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_trec07p_p5/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0953           51.03s
+         2           0.9551           50.23s
+         3           0.8411           50.26s
+         4           0.7463           49.91s
+         5           0.6649           49.76s
+         6           0.5951           49.41s
+         7           0.5343           49.37s
+         8           0.4816           49.18s
+         9           0.4362           49.08s
+        10           0.3962           48.85s
+        20           0.1654           46.86s
+        30           0.0800           44.72s
+        40           0.0472           42.08s
+        50           0.0328           39.71s
+        60           0.0244           37.12s
+        70           0.0182           34.51s
+        80           0.0149           32.03s
+        90           0.0126           29.87s
+       100           0.0106           27.46s
+       200           0.0034            0.00s
+train time: 56.606s
+('X_train shape:', (7542, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_trec07p_p5/h):
+  2522
+Training spam (/home/sunny/Downloads/spam-ham/train_trec07p_p5/s):
+  5020
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $631Scoring now: $1255total=1886, hams=674, spams=1212, unsures=0
+fp count: 0, fn count: 43
+FP: 0.000000%, FN: 2.279958%
+Accuracy : 0.977
+Precision : 1.000
+Recall : 0.966
+F1-Score : 0.983
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97       631
+           1       1.00      0.97      0.98      1255
+
+   micro avg       0.98      0.98      0.98      1886
+   macro avg       0.97      0.98      0.97      1886
+weighted avg       0.98      0.98      0.98      1886
+
+Confusion Matrix :
+[[ 631    0]
+ [  43 1212]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+trec07p
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_trec07p_p6, Test dir: /home/sunny/Downloads/spam-ham/test_trec07p_p6
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_trec07p_p6/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0922           57.04s
+         2           0.9498           59.04s
+         3           0.8347           56.84s
+         4           0.7383           55.10s
+         5           0.6574           54.36s
+         6           0.5873           53.62s
+         7           0.5262           53.65s
+         8           0.4738           53.41s
+         9           0.4277           53.92s
+        10           0.3868           55.01s
+        20           0.1558           53.19s
+        30           0.0727           51.12s
+        40           0.0374           48.52s
+        50           0.0241           44.61s
+        60           0.0176           41.20s
+        70           0.0141           37.96s
+        80           0.0113           34.84s
+        90           0.0093           31.75s
+       100           0.0071           28.80s
+       200           0.0017            0.00s
+train time: 59.087s
+('X_train shape:', (7542, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_trec07p_p6/h):
+  2522
+Training spam (/home/sunny/Downloads/spam-ham/train_trec07p_p6/s):
+  5020
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $631Scoring now: $1255total=1886, hams=665, spams=1221, unsures=0
+fp count: 0, fn count: 34
+FP: 0.000000%, FN: 1.802757%
+Accuracy : 0.982
+Precision : 1.000
+Recall : 0.973
+F1-Score : 0.986
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.95      1.00      0.97       631
+           1       1.00      0.97      0.99      1255
+
+   micro avg       0.98      0.98      0.98      1886
+   macro avg       0.97      0.99      0.98      1886
+weighted avg       0.98      0.98      0.98      1886
+
+Confusion Matrix :
+[[ 631    0]
+ [  34 1221]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+trec07p
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_trec07p_p7, Test dir: /home/sunny/Downloads/spam-ham/test_trec07p_p7
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_trec07p_p7/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0949           51.72s
+         2           0.9546           52.35s
+         3           0.8406           53.52s
+         4           0.7453           53.21s
+         5           0.6651           52.64s
+         6           0.5959           53.27s
+         7           0.5363           52.70s
+         8           0.4844           52.87s
+         9           0.4377           52.41s
+        10           0.3975           52.83s
+        20           0.1630           50.93s
+        30           0.0769           48.28s
+        40           0.0419           45.47s
+        50           0.0254           42.49s
+        60           0.0177           39.59s
+        70           0.0144           36.82s
+        80           0.0115           33.89s
+        90           0.0087           31.03s
+       100           0.0072           28.22s
+       200           0.0018            0.00s
+train time: 56.688s
+('X_train shape:', (7542, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_trec07p_p7/h):
+  2522
+Training spam (/home/sunny/Downloads/spam-ham/train_trec07p_p7/s):
+  5020
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $631Scoring now: $1255total=1886, hams=667, spams=1219, unsures=0
+fp count: 1, fn count: 37
+FP: 0.053022%, FN: 1.961824%
+Accuracy : 0.980
+Precision : 0.999
+Recall : 0.971
+F1-Score : 0.985
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97       631
+           1       1.00      0.97      0.98      1255
+
+   micro avg       0.98      0.98      0.98      1886
+   macro avg       0.97      0.98      0.98      1886
+weighted avg       0.98      0.98      0.98      1886
+
+Confusion Matrix :
+[[ 630    1]
+ [  37 1218]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
+-------------------------------------------------------------
+Remove hammie.db. Start training afresh for this new dataset.
+trec07p
+-------------------------------------------------------------
+Train dir: /home/sunny/Downloads/spam-ham/train_trec07p_p8, Test dir: /home/sunny/Downloads/spam-ham/test_trec07p_p8
+('Spam Cutoff ', 0.9)
+('Ham Cutoff ', 0.15)
+--> Found a pickle file: /home/sunny/Downloads/spam-ham/train_trec07p_p8/features.pkl
+==============================================================================
+GradientBoostingClassifier
+______________________________________________________________________________
+Training: 
+GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.1, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=1, min_samples_split=2,
+              min_weight_fraction_leaf=0.0, n_estimators=200,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=1, warm_start=False)
+      Iter       Train Loss   Remaining Time 
+         1           1.0953           53.11s
+         2           0.9553           52.62s
+         3           0.8413           52.29s
+         4           0.7466           52.61s
+         5           0.6665           52.18s
+         6           0.5982           51.79s
+         7           0.5380           51.84s
+         8           0.4864           51.78s
+         9           0.4403           51.49s
+        10           0.4004           51.25s
+        20           0.1651           49.12s
+        30           0.0783           47.43s
+        40           0.0451           44.95s
+        50           0.0308           42.50s
+        60           0.0245           40.20s
+        70           0.0175           37.63s
+        80           0.0137           34.78s
+        90           0.0109           31.84s
+       100           0.0091           28.96s
+       200           0.0021            0.00s
+train time: 59.020s
+('X_train shape:', (7542, 1022))
+train-f1-score:   1.000
+()
+Training done.
+==============================================================================
+--> Training a logistic regression model.
+--> Done!
+--> Training a KNeihborsClassifer estimator.
+--> Done!
+--> Training an SVM on the dataset.
+--> Done!
+('hammie.db', 'dbm', 'c')
+Training ham (/home/sunny/Downloads/spam-ham/train_trec07p_p8/h):
+  2522
+Training spam (/home/sunny/Downloads/spam-ham/train_trec07p_p8/s):
+  5020
+====================================================================================================
+Testing now..
+--> Found a test pickle file.
+Scoring now: $631Scoring now: $1255total=1886, hams=673, spams=1213, unsures=0
+fp count: 0, fn count: 42
+FP: 0.000000%, FN: 2.226935%
+Accuracy : 0.978
+Precision : 1.000
+Recall : 0.967
+F1-Score : 0.983
+Classification Report : 
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97       631
+           1       1.00      0.97      0.98      1255
+
+   micro avg       0.98      0.98      0.98      1886
+   macro avg       0.97      0.98      0.98      1886
+weighted avg       0.98      0.98      0.98      1886
+
+Confusion Matrix :
+[[ 631    0]
+ [  42 1213]]
+====================================================================================================
+--> Pickling the test dict so far.
+Sleeping for 0s minutes. Let it cool down a bit.
