@@ -1,0 +1,37 @@
+the project asks us to tell a story from data. I think we should focus on a subset of the data that looks interesting. For example, from the map above it is quite obvious that a lot of kiwis (NZers) travel to Europe. the thickiness of the line = number of travel reviews. the colour of the line denotes the country they visits. Gold colour is UK.
+
+Out of the 511624 reviews in database, 3222 travellers (0.6%) came from NZ. However, NZ has a population of 4.6mio and that is only 0.06% of world's population.
+
+And given that Madrid, Spain is directly opposite to Christchurch, NZ on the globe. Us Kiwis are really making an effort to get there. Perhaps we can try to tell a story
+
+I think topic is to tell a story using only 3 charts. So maybe we can start with a target audience and purpose. E.g. how to Target NZ travellers in Europe? Maybe a chart on geographical split of where people go using maps, a review based chart on what people think of the hotels using word cloud or language recognition. And a trend on when people travel looking at seasonal patterns.. Or to summerise 1.when people travel 2. Where they travel / live 3. How they choose good accommodations
+User Avatar
+From the prof: Target audience: 1) Executive summary is for company's executives to make decisions, 2) RMarkdown and Jupyter notebook for other analysts 3) Presentation for us/classmates. For 3) we want to see how you applied theories you learned from lectures to justify your design choices.
+
+Question: Our team have several questions for the Final Project.
+
+1. Along with Tim's point, our team have confused with the concept of company's executives' There would be several possible definitions:
+1. The company can be a travel agent company, so our goal is to find a better way to help individual travellers find the most suitable hotel.
+2. A company owns all the hotels and would like to find how to improve the services.
+3. The hotel company own only one hotel, and would like to know how to improve.
+2. The project introduction mentions " 3 static figures". Show the figures be strickly static or can also be interactive?
+3. For the 3 figures, do they need to tell the same story or can be different?
+For example, if we find 3 points which can be beneficial for the company's executives, are the points necessary to be on the same topic?
+
+Thanks very much.
+Answer: 1) It is up to you and your team to define who the company's executives are. Choose a story that you and your team find most interesting. 2) 3 static figures only applies to the executive summary deliverable. 3) 3 figures can highlight different aspects of findings from your analysis. If you think 2 different representation of one key finding is beneficial and justifiable, you can do that too.
+
+FYI for the travel connection map I drew using the entire dataset before, it took 5 hours to run the code, and the map was not easy to read.
+
+if we focus on the domestic users, at least any maps we draw can be more zoomed in and easier to interpret.
+
+let me know if you have other preferences
+
+
+
+Plots:
+
+Relation between Positive, Negative and Tags
+Relation between Country and Tags
+Scatter Map based on Positive and negative reviews
+Word Cloud
