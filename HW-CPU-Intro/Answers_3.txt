@@ -1,0 +1,46 @@
+Ans1: CPU should be 100% used becuase both process uses 100% CPU with 5 instruction per process. I know this because its format of calling a process where first number is number of instructions that process will execute and 2nd number after ':' is pecentage of time it'll use CPU. Yes we verified this with -c and -p options as well.
+
+Ans2: It takes 10 CPU cycles to complete where 1st process which uses 4 CPU cycles and then on 5th cycle io process starts and gives up CPU. On 10th cycle it completes as soon as it gets io for which it was waiting. CPU was used '50%' of time. io was utilised '40%'. 
+
+Ans3: Yes.Switching order matters as it lets process switch. After switching order of processes from '-l 4:100,1:0' to '-l 1:0,4:100' now both processes completes within 6 cpu cycles. This time CPU utilisation is '83.33%'. io utilisation has also increased to '66.67%'.
+
+Ans4: '-l 1:0,4:100 -c -S SWITCH_ON_END'. Execution of this command prevents processes from giving up CPU. It prevents io waiting process from giving up CPU when waiting for io results. This keeps 2nd process READY state and eventhough CPU is not utilised by 1st process which is waiting for io won't give up CPU to be used by 2nd process. This again brings down CPU usage to '55.55%' and io usage to '44.44%'.
+
+Ans5: '-l 1:0,4:100 -c -S SWITCH_ON_IO'. It lets process switch happen. Execution of this command again allows process switch to happen. It lets io process which runs for 1 cycle and goes to WAITING for io give up CPU. Once 1st process gives up CPU 2nd process runs its 4 instructions. This again bring up CPU usage to '83.33%'. It also brings up io usage to '66.67%'.
+
+Ans6: '-l 3:0,5:100,5:100,5:100 -S SWITCH_ON_IO -I IO_RUN_LATER -c -p'. No. System resources are not efficiently utilised. CPU utilisation is aroun 66:67% in this case.
+
+Ans7: '-l 3:0,5:100,5:100,5:100 -S SWITCH_ON_IO -I IO_RUN_IMMEDIATE -c -p'. Execution of this command results in best execution of CPU with '100%' utilisation. It lets io process run again when it becomes ready again.
+
+Ans8: '-s 1 -l 3:50,3:50 -c -p'. Execution of this command lets process switching happen and results in under utilised resources. This results in wastage of 5 CPU cycles but there was no other process waiting to be executed hence '50%' utlisation of CPU was justified.
+
+'-s 1 -l 3:50,3:50 -I IO_RUN_IMMEDIATE -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 1 -l 3:50,3:50 -I IO_RUN_LATER -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 1 -l 3:50,3:50 -S SWITCH_ON_IO -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io. It lets process switching happen.
+
+'-s 1 -l 3:50,3:50 -S SWITCH_ON_END -c -p'. Execution of this command introduces overhead because it does not let process switching happen. It also under utilises CPU.CPU usage drops from 50% to '42.86%'.
+
+------------------------------------------------------------
+
+Ans8: '-s 2 -l 3:50,3:50 -c -p'. Execution of this command lets process switching happen and results in under utilised resources. It takes '13' cpu cycles to complete and utilises CPU '46.15%' time.
+
+'-s 2 -l 3:50,3:50 -I IO_RUN_IMMEDIATE -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 2 -l 3:50,3:50 -I IO_RUN_LATER -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 2 -l 3:50,3:50 -S SWITCH_ON_IO -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io. It lets process switching happen.
+
+'-s 2 -l 3:50,3:50 -S SWITCH_ON_END -c -p'. Execution of this command introduces overhead because it does not let process switching happen. CPU usage drops from '46.15%' to '26%'.
+-----------------------------------------------------------
+
+Ans8: '-s 3 -l 3:50,3:50 -c -p'. Execution of this command lets any process switching happen and results in under utilised resources. It takes 13 cpu cycle and '46.15%' CPU utilisation.
+
+'-s 3 -l 3:50,3:50 -I IO_RUN_IMMEDIATE -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 3 -l 3:50,3:50 -I IO_RUN_LATER -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 3 -l 3:50,3:50 -S SWITCH_ON_IO -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io. It lets process switching happen.
+
+'-s 3 -l 3:50,3:50 -S SWITCH_ON_END -c -p'. Execution of this command introduces overhead because it does not let process switching happen. CPU usage drops from '46.15%' to '33.33%'.

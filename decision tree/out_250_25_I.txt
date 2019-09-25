@@ -1,0 +1,87 @@
+Please enter training set size (must be a multiple of 250! and also <= 1000:)Please enter training set increment, must be either 10, 25, 50:Please enter a heuristic to use (either [C]ounting-based or [I]nformation theoretic): 
+
+Please enter training set size (must be a multiple of 250! and also <= 1000:) : 250
+Please enter training set increment, must be either 10, 25, 50: 25
+Please enter a heuristic to use (either [C]ounting-based or [I]nformation theoretic):  Information theoretic
+Full Dataset Size :  5644
+Train/Test Sizes :  250 5394
+
+Running With 25 Examples for Training Set
+Given current tree, there are 5274 correct classifications out of 5394 possible (a success rate of 97.7753 percent).
+
+Running With 50 Examples for Training Set
+Given current tree, there are 5274 correct classifications out of 5394 possible (a success rate of 97.7753 percent).
+
+Running With 75 Examples for Training Set
+Given current tree, there are 5274 correct classifications out of 5394 possible (a success rate of 97.7753 percent).
+
+Running With 100 Examples for Training Set
+Given current tree, there are 5307 correct classifications out of 5394 possible (a success rate of 98.3871 percent).
+
+Running With 125 Examples for Training Set
+Given current tree, there are 5307 correct classifications out of 5394 possible (a success rate of 98.3871 percent).
+
+Running With 150 Examples for Training Set
+Given current tree, there are 5296 correct classifications out of 5394 possible (a success rate of 98.1832 percent).
+
+Running With 175 Examples for Training Set
+Given current tree, there are 5296 correct classifications out of 5394 possible (a success rate of 98.1832 percent).
+
+Running With 200 Examples for Training Set
+Given current tree, there are 5296 correct classifications out of 5394 possible (a success rate of 98.1832 percent).
+
+Running With 225 Examples for Training Set
+Given current tree, there are 5296 correct classifications out of 5394 possible (a success rate of 98.1832 percent).
+
+Running With 250 Examples for Training Set
+Given current tree, there are 5296 correct classifications out of 5394 possible (a success rate of 98.1832 percent).
+
+
+-------------STATS----------------
+
+Training Set Size : 25, Success Rate : 97.7753
+Training Set Size : 50, Success Rate : 97.7753
+Training Set Size : 75, Success Rate : 97.7753
+Training Set Size : 100, Success Rate : 98.3871
+Training Set Size : 125, Success Rate : 98.3871
+Training Set Size : 150, Success Rate : 98.1832
+Training Set Size : 175, Success Rate : 98.1832
+Training Set Size : 200, Success Rate : 98.1832
+Training Set Size : 225, Success Rate : 98.1832
+Training Set Size : 250, Success Rate : 98.1832
+
+
+-----------FINAL TREE-------------
+
+Original Tree : 
+{
+    "odor": {
+        "p": "p",
+        "l": "e",
+        "m": "p",
+        "c": "p",
+        "n": {
+            "cap-shape": {
+                "b": "e",
+                "s": "e",
+                "c": "p",
+                "x": "e",
+                "f": "e"
+            }
+        },
+        "f": "p",
+        "a": "e"
+    }
+}
+
+Branch[0]: Attrib : #4: p; Poison
+Branch[1]: Attrib : #4: l; Edible
+Branch[2]: Attrib : #4: m; Poison
+Branch[3]: Attrib : #4: c; Poison
+Branch[4]: Attrib : #4: n; Attrib : #0: b; Edible
+Branch[5]: Attrib : #4: n; Attrib : #0: s; Edible
+Branch[6]: Attrib : #4: n; Attrib : #0: c; Poison
+Branch[7]: Attrib : #4: n; Attrib : #0: x; Edible
+Branch[8]: Attrib : #4: n; Attrib : #0: f; Edible
+Branch[9]: Attrib : #4: f; Poison
+Branch[10]: Attrib : #4: a; Edible

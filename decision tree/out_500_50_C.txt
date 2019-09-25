@@ -1,0 +1,85 @@
+Please enter training set size (must be a multiple of 250! and also <= 1000:)Please enter training set increment, must be either 10, 25, 50:Please enter a heuristic to use (either [C]ounting-based or [I]nformation theoretic): 
+
+Please enter training set size (must be a multiple of 250! and also <= 1000:) : 500
+Please enter training set increment, must be either 10, 25, 50: 50
+Please enter a heuristic to use (either [C]ounting-based or [I]nformation theoretic):  Counting-based
+Full Dataset Size :  5644
+Train/Test Sizes :  500 5144
+
+Running With 50 Examples for Training Set
+Given current tree, there are 5028 correct classifications out of 5144 possible (a success rate of 97.7449 percent).
+
+Running With 100 Examples for Training Set
+Given current tree, there are 5028 correct classifications out of 5144 possible (a success rate of 97.7449 percent).
+
+Running With 150 Examples for Training Set
+Given current tree, there are 5028 correct classifications out of 5144 possible (a success rate of 97.7449 percent).
+
+Running With 200 Examples for Training Set
+Given current tree, there are 5051 correct classifications out of 5144 possible (a success rate of 98.1921 percent).
+
+Running With 250 Examples for Training Set
+Given current tree, there are 5052 correct classifications out of 5144 possible (a success rate of 98.2115 percent).
+
+Running With 300 Examples for Training Set
+Given current tree, there are 5086 correct classifications out of 5144 possible (a success rate of 98.8725 percent).
+
+Running With 350 Examples for Training Set
+Given current tree, there are 5128 correct classifications out of 5144 possible (a success rate of 99.6890 percent).
+
+Running With 400 Examples for Training Set
+Given current tree, there are 5128 correct classifications out of 5144 possible (a success rate of 99.6890 percent).
+
+Running With 450 Examples for Training Set
+Given current tree, there are 5128 correct classifications out of 5144 possible (a success rate of 99.6890 percent).
+
+Running With 500 Examples for Training Set
+Given current tree, there are 5128 correct classifications out of 5144 possible (a success rate of 99.6890 percent).
+
+
+-------------STATS----------------
+
+Training Set Size : 50, Success Rate : 97.7449
+Training Set Size : 100, Success Rate : 97.7449
+Training Set Size : 150, Success Rate : 97.7449
+Training Set Size : 200, Success Rate : 98.1921
+Training Set Size : 250, Success Rate : 98.2115
+Training Set Size : 300, Success Rate : 98.8725
+Training Set Size : 350, Success Rate : 99.6890
+Training Set Size : 400, Success Rate : 99.6890
+Training Set Size : 450, Success Rate : 99.6890
+Training Set Size : 500, Success Rate : 99.6890
+
+
+-----------FINAL TREE-------------
+
+Original Tree : 
+{
+    "odor": {
+        "a": "e",
+        "f": "p",
+        "c": "p",
+        "m": "p",
+        "l": "e",
+        "p": "p",
+        "n": {
+            "spore-print-color": {
+                "r": "p",
+                "k": "e",
+                "n": "e",
+                "w": "e"
+            }
+        }
+    }
+}
+
+Branch[0]: Attrib : #4: a; Edible
+Branch[1]: Attrib : #4: f; Poison
+Branch[2]: Attrib : #4: c; Poison
+Branch[3]: Attrib : #4: m; Poison
+Branch[4]: Attrib : #4: l; Edible
+Branch[5]: Attrib : #4: p; Poison
+Branch[6]: Attrib : #4: n; Attrib : #19: r; Poison
+Branch[7]: Attrib : #4: n; Attrib : #19: k; Edible
+Branch[8]: Attrib : #4: n; Attrib : #19: n; Edible
+Branch[9]: Attrib : #4: n; Attrib : #19: w; Edible

@@ -1,0 +1,46 @@
+Ans1: CPU Utilisation should be 100% as both process are given 100% CPU usage with 5 instruction per process. We know this because its format of calling creating a process because first number in format is number of instructions that process will execute and 2nd number after ':' is pecentage of time it'll use CPU. Hence both uses 100% CPU context switching won't happen. Yes we verified this with -c and -p options as well that CPU usage is 100% where first process runs all instructions and 2nd process is in waiting and then 2nd process starts running when first process has completed running.
+
+Ans2: It takes 10 CPU cycles to complete where first 4 cycles are taken by 1st process which utilizes CPU and then on 5th cycle io process starts and gives up CPU going to WAITING State to get results for 4 cycles. On 10th cycle it completes as soon as it gets io for which it was waiting. CPU was busy '50%' of time. io was utilised '40%'. Context switching does not occur because first process has finihed when 2nd io intensive one goes to waiting state.
+
+Ans3: Yes.Switching order matters as it lets context switch happen. After switching order of processes from '-l 4:100,1:0' to '-l 1:0,4:100' now both processes completes within 6 cpu cycles. When run with '-c -p' options, we can clearly see context switch happening. This time CPU utilisation is around '83.33%' which was getting utilised only 50% if CPU intensive process runs first and uses CPU and completes.io utilisation has also increased from '66.67%' because io is utilised when CPU is getting used by CPU intensive process.
+
+Ans4: '-l 1:0,4:100 -c -S SWITCH_ON_END'. Execution of this command prevents context switching. It prevents io waiting process from giving up CPU when waiting for io results. This keeps 2nd process READY state and eventhough CPU is not utilised by 1st process which is waiting for io won't give up CPU to be used by 2nd process. This again brings down CPU usage to '55.55%' and io usage to '44.44%'. Total CPU cycles used are 9 out of which 4 are wasted by 1st process waiting for io and not giving up CPU for efficient utlisation.
+
+Ans5: '-l 1:0,4:100 -c -S SWITCH_ON_IO'. It lets context switch happen. Execution of this command again allows context switch to happen. It lets io process which runs for 1 cycle and goes to WAITING for io give up CPU. Once 1st process gives up CPU 2nd process runs its 4 instructions. This again bring up CPU usage to '83.33%'. It also brings up io utilisation as well to '66.67%'.
+
+Ans6: '-l 3:0,5:100,5:100,5:100 -S SWITCH_ON_IO -I IO_RUN_LATER -c -p'. No. System resources are not efficiently utilised. CPU utilisation is aroun 66:67% in this case which could have been more if context switching would have occured with some prioritisation.It takes 27 CPU cycles in total out of which 8 CPU cycles are waste of CPU which could have been utilised by CPU hungry process if proper order execution would have happened.
+
+Ans7: '-l 3:0,5:100,5:100,5:100 -S SWITCH_ON_IO -I IO_RUN_IMMEDIATE -c -p'. Execution of this command results in best execution of CPU with '100%' utilisation. It lets io process run again when it becomes ready again after it recieves io output and executes its another instruction using CPU and going to WAITING State again giving up CPU to CPU hungry processes. 
+
+Ans8: '-s 1 -l 3:50,3:50 -c -p'. Execution of this command lets context switching happen and results in under utilised resources. This results in wastage of 5 CPU cycles but there was no other process waiting to be executed hence '50%' utlisation of CPU was justified.
+
+'-s 1 -l 3:50,3:50 -I IO_RUN_IMMEDIATE -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 1 -l 3:50,3:50 -I IO_RUN_LATER -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 1 -l 3:50,3:50 -S SWITCH_ON_IO -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io. It lets context switching happen.
+
+'-s 1 -l 3:50,3:50 -S SWITCH_ON_END -c -p'. Execution of this command introduces overhead because it does not let context switching happen. It lets 1st process completes all its cycles(cpu+io) and then only lets 2nd process runs. Hence it takes around 14 cpu cycle for it to complete compared to previous above run of same command with 12 cycles. It also under utilises CPU.CPU usage drops from 50% to '42.86%'.
+
+------------------------------------------------------------
+
+Ans8: '-s 2 -l 3:50,3:50 -c -p'. Execution of this command lets context switching happen and results in under utilised resources. It takes '13' cpu cycles to complete and utilises CPU '46.15%' time.
+
+'-s 2 -l 3:50,3:50 -I IO_RUN_IMMEDIATE -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 2 -l 3:50,3:50 -I IO_RUN_LATER -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 2 -l 3:50,3:50 -S SWITCH_ON_IO -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io. It lets context switching happen.
+
+'-s 2 -l 3:50,3:50 -S SWITCH_ON_END -c -p'. Execution of this command introduces overhead because it does not let context switching happen. It lets 1st process completes all its cycles(cpu+io) and then only lets 2nd process runs. Hence it takes around 23 cpu cycle for it to complete compared to previous above run of same command with 13 cycles. It also under utilises CPU.CPU usage drops from '46.15%' to '26%'.
+-----------------------------------------------------------
+
+Ans8: '-s 3 -l 3:50,3:50 -c -p'. Execution of this command lets any context switching happen and results in under utilised resources. It takes 13 cpu cycle and '46.15%' CPU utilisation.
+
+'-s 3 -l 3:50,3:50 -I IO_RUN_IMMEDIATE -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 3 -l 3:50,3:50 -I IO_RUN_LATER -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io.
+
+'-s 3 -l 3:50,3:50 -S SWITCH_ON_IO -c -p'. Execution of this command does not introduce any overhead or fast completion and both processes completes in same amount of CPU cycles because both are 50% cpu and 50% io. It lets context switching happen.
+
+'-s 3 -l 3:50,3:50 -S SWITCH_ON_END -c -p'. Execution of this command introduces overhead because it does not let context switching happen. It lets 1st process completes all its cycles(cpu+io) and then only lets 2nd process runs. Hence it takes around 18 cpu cycle for it to complete compared to previous above run of same command with 13 cycles. It also under utilises CPU.CPU usage drops from '46.15%' to '33.33%'.

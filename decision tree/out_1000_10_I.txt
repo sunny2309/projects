@@ -1,0 +1,457 @@
+Please enter training set size (must be a multiple of 250! and also <= 1000:)Please enter training set increment, must be either 10, 25, 50:Please enter a heuristic to use (either [C]ounting-based or [I]nformation theoretic): 
+
+Please enter training set size (must be a multiple of 250! and also <= 1000:) : 1000
+Please enter training set increment, must be either 10, 25, 50: 10
+Please enter a heuristic to use (either [C]ounting-based or [I]nformation theoretic):  Information theoretic
+Full Dataset Size :  5644
+Train/Test Sizes :  1000 4644
+
+Running With 10 Examples for Training Set
+Given current tree, there are 4400 correct classifications out of 4644 possible (a success rate of 94.7459 percent).
+
+Running With 20 Examples for Training Set
+Given current tree, there are 4400 correct classifications out of 4644 possible (a success rate of 94.7459 percent).
+
+Running With 30 Examples for Training Set
+Given current tree, there are 4444 correct classifications out of 4644 possible (a success rate of 95.6934 percent).
+
+Running With 40 Examples for Training Set
+Given current tree, there are 4444 correct classifications out of 4644 possible (a success rate of 95.6934 percent).
+
+Running With 50 Examples for Training Set
+Given current tree, there are 4546 correct classifications out of 4644 possible (a success rate of 97.8898 percent).
+
+Running With 60 Examples for Training Set
+Given current tree, there are 4546 correct classifications out of 4644 possible (a success rate of 97.8898 percent).
+
+Running With 70 Examples for Training Set
+Given current tree, there are 4546 correct classifications out of 4644 possible (a success rate of 97.8898 percent).
+
+Running With 80 Examples for Training Set
+Given current tree, there are 4571 correct classifications out of 4644 possible (a success rate of 98.4281 percent).
+
+Running With 90 Examples for Training Set
+Given current tree, there are 4571 correct classifications out of 4644 possible (a success rate of 98.4281 percent).
+
+Running With 100 Examples for Training Set
+Given current tree, there are 4585 correct classifications out of 4644 possible (a success rate of 98.7295 percent).
+
+Running With 110 Examples for Training Set
+Given current tree, there are 4585 correct classifications out of 4644 possible (a success rate of 98.7295 percent).
+
+Running With 120 Examples for Training Set
+Given current tree, there are 4585 correct classifications out of 4644 possible (a success rate of 98.7295 percent).
+
+Running With 130 Examples for Training Set
+Given current tree, there are 4585 correct classifications out of 4644 possible (a success rate of 98.7295 percent).
+
+Running With 140 Examples for Training Set
+Given current tree, there are 4585 correct classifications out of 4644 possible (a success rate of 98.7295 percent).
+
+Running With 150 Examples for Training Set
+Given current tree, there are 4585 correct classifications out of 4644 possible (a success rate of 98.7295 percent).
+
+Running With 160 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 170 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 180 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 190 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 200 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 210 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 220 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 230 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 240 Examples for Training Set
+Given current tree, there are 4586 correct classifications out of 4644 possible (a success rate of 98.7511 percent).
+
+Running With 250 Examples for Training Set
+Given current tree, there are 4621 correct classifications out of 4644 possible (a success rate of 99.5047 percent).
+
+Running With 260 Examples for Training Set
+Given current tree, there are 4621 correct classifications out of 4644 possible (a success rate of 99.5047 percent).
+
+Running With 270 Examples for Training Set
+Given current tree, there are 4621 correct classifications out of 4644 possible (a success rate of 99.5047 percent).
+
+Running With 280 Examples for Training Set
+Given current tree, there are 4621 correct classifications out of 4644 possible (a success rate of 99.5047 percent).
+
+Running With 290 Examples for Training Set
+Given current tree, there are 4621 correct classifications out of 4644 possible (a success rate of 99.5047 percent).
+
+Running With 300 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 310 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 320 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 330 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 340 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 350 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 360 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 370 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 380 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 390 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 400 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 410 Examples for Training Set
+Given current tree, there are 4605 correct classifications out of 4644 possible (a success rate of 99.1602 percent).
+
+Running With 420 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 430 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 440 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 450 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 460 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 470 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 480 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 490 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 500 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 510 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 520 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 530 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 540 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 550 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 560 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 570 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 580 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 590 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 600 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 610 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 620 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 630 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 640 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 650 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 660 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 670 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 680 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 690 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 700 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 710 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 720 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 730 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 740 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 750 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 760 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 770 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 780 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 790 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 800 Examples for Training Set
+Given current tree, there are 4639 correct classifications out of 4644 possible (a success rate of 99.8923 percent).
+
+Running With 810 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 820 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 830 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 840 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 850 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 860 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 870 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 880 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 890 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 900 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 910 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 920 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 930 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 940 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 950 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 960 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 970 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 980 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 990 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+Running With 1000 Examples for Training Set
+Given current tree, there are 4644 correct classifications out of 4644 possible (a success rate of 100.0000 percent).
+
+
+-------------STATS----------------
+
+Training Set Size : 10, Success Rate : 94.7459
+Training Set Size : 20, Success Rate : 94.7459
+Training Set Size : 30, Success Rate : 95.6934
+Training Set Size : 40, Success Rate : 95.6934
+Training Set Size : 50, Success Rate : 97.8898
+Training Set Size : 60, Success Rate : 97.8898
+Training Set Size : 70, Success Rate : 97.8898
+Training Set Size : 80, Success Rate : 98.4281
+Training Set Size : 90, Success Rate : 98.4281
+Training Set Size : 100, Success Rate : 98.7295
+Training Set Size : 110, Success Rate : 98.7295
+Training Set Size : 120, Success Rate : 98.7295
+Training Set Size : 130, Success Rate : 98.7295
+Training Set Size : 140, Success Rate : 98.7295
+Training Set Size : 150, Success Rate : 98.7295
+Training Set Size : 160, Success Rate : 98.7511
+Training Set Size : 170, Success Rate : 98.7511
+Training Set Size : 180, Success Rate : 98.7511
+Training Set Size : 190, Success Rate : 98.7511
+Training Set Size : 200, Success Rate : 98.7511
+Training Set Size : 210, Success Rate : 98.7511
+Training Set Size : 220, Success Rate : 98.7511
+Training Set Size : 230, Success Rate : 98.7511
+Training Set Size : 240, Success Rate : 98.7511
+Training Set Size : 250, Success Rate : 99.5047
+Training Set Size : 260, Success Rate : 99.5047
+Training Set Size : 270, Success Rate : 99.5047
+Training Set Size : 280, Success Rate : 99.5047
+Training Set Size : 290, Success Rate : 99.5047
+Training Set Size : 300, Success Rate : 99.1602
+Training Set Size : 310, Success Rate : 99.1602
+Training Set Size : 320, Success Rate : 99.1602
+Training Set Size : 330, Success Rate : 99.1602
+Training Set Size : 340, Success Rate : 99.1602
+Training Set Size : 350, Success Rate : 99.1602
+Training Set Size : 360, Success Rate : 99.1602
+Training Set Size : 370, Success Rate : 99.1602
+Training Set Size : 380, Success Rate : 99.1602
+Training Set Size : 390, Success Rate : 99.1602
+Training Set Size : 400, Success Rate : 99.1602
+Training Set Size : 410, Success Rate : 99.1602
+Training Set Size : 420, Success Rate : 99.8923
+Training Set Size : 430, Success Rate : 99.8923
+Training Set Size : 440, Success Rate : 99.8923
+Training Set Size : 450, Success Rate : 99.8923
+Training Set Size : 460, Success Rate : 99.8923
+Training Set Size : 470, Success Rate : 99.8923
+Training Set Size : 480, Success Rate : 99.8923
+Training Set Size : 490, Success Rate : 99.8923
+Training Set Size : 500, Success Rate : 99.8923
+Training Set Size : 510, Success Rate : 99.8923
+Training Set Size : 520, Success Rate : 99.8923
+Training Set Size : 530, Success Rate : 99.8923
+Training Set Size : 540, Success Rate : 99.8923
+Training Set Size : 550, Success Rate : 99.8923
+Training Set Size : 560, Success Rate : 99.8923
+Training Set Size : 570, Success Rate : 99.8923
+Training Set Size : 580, Success Rate : 99.8923
+Training Set Size : 590, Success Rate : 99.8923
+Training Set Size : 600, Success Rate : 99.8923
+Training Set Size : 610, Success Rate : 99.8923
+Training Set Size : 620, Success Rate : 99.8923
+Training Set Size : 630, Success Rate : 99.8923
+Training Set Size : 640, Success Rate : 99.8923
+Training Set Size : 650, Success Rate : 99.8923
+Training Set Size : 660, Success Rate : 99.8923
+Training Set Size : 670, Success Rate : 99.8923
+Training Set Size : 680, Success Rate : 99.8923
+Training Set Size : 690, Success Rate : 99.8923
+Training Set Size : 700, Success Rate : 99.8923
+Training Set Size : 710, Success Rate : 99.8923
+Training Set Size : 720, Success Rate : 99.8923
+Training Set Size : 730, Success Rate : 99.8923
+Training Set Size : 740, Success Rate : 99.8923
+Training Set Size : 750, Success Rate : 99.8923
+Training Set Size : 760, Success Rate : 99.8923
+Training Set Size : 770, Success Rate : 99.8923
+Training Set Size : 780, Success Rate : 99.8923
+Training Set Size : 790, Success Rate : 99.8923
+Training Set Size : 800, Success Rate : 99.8923
+Training Set Size : 810, Success Rate : 100.0000
+Training Set Size : 820, Success Rate : 100.0000
+Training Set Size : 830, Success Rate : 100.0000
+Training Set Size : 840, Success Rate : 100.0000
+Training Set Size : 850, Success Rate : 100.0000
+Training Set Size : 860, Success Rate : 100.0000
+Training Set Size : 870, Success Rate : 100.0000
+Training Set Size : 880, Success Rate : 100.0000
+Training Set Size : 890, Success Rate : 100.0000
+Training Set Size : 900, Success Rate : 100.0000
+Training Set Size : 910, Success Rate : 100.0000
+Training Set Size : 920, Success Rate : 100.0000
+Training Set Size : 930, Success Rate : 100.0000
+Training Set Size : 940, Success Rate : 100.0000
+Training Set Size : 950, Success Rate : 100.0000
+Training Set Size : 960, Success Rate : 100.0000
+Training Set Size : 970, Success Rate : 100.0000
+Training Set Size : 980, Success Rate : 100.0000
+Training Set Size : 990, Success Rate : 100.0000
+Training Set Size : 1000, Success Rate : 100.0000
+
+
+-----------FINAL TREE-------------
+
+Original Tree : 
+{
+    "odor": {
+        "c": "p",
+        "f": "p",
+        "m": "p",
+        "a": "e",
+        "p": "p",
+        "l": "e",
+        "n": {
+            "spore-print-color": {
+                "w": {
+                    "cap-color": {
+                        "c": "e",
+                        "p": "e",
+                        "g": "e",
+                        "y": "p",
+                        "n": "e"
+                    }
+                },
+                "r": "p",
+                "k": "e",
+                "n": "e"
+            }
+        }
+    }
+}
+
+Branch[0]: Attrib : #4: c; Poison
+Branch[1]: Attrib : #4: f; Poison
+Branch[2]: Attrib : #4: m; Poison
+Branch[3]: Attrib : #4: a; Edible
+Branch[4]: Attrib : #4: p; Poison
+Branch[5]: Attrib : #4: l; Edible
+Branch[6]: Attrib : #4: n; Attrib : #19: w; Attrib : #2: c; Edible
+Branch[7]: Attrib : #4: n; Attrib : #19: w; Attrib : #2: p; Edible
+Branch[8]: Attrib : #4: n; Attrib : #19: w; Attrib : #2: g; Edible
+Branch[9]: Attrib : #4: n; Attrib : #19: w; Attrib : #2: y; Poison
+Branch[10]: Attrib : #4: n; Attrib : #19: w; Attrib : #2: n; Edible
+Branch[11]: Attrib : #4: n; Attrib : #19: r; Poison
+Branch[12]: Attrib : #4: n; Attrib : #19: k; Edible
+Branch[13]: Attrib : #4: n; Attrib : #19: n; Edible
