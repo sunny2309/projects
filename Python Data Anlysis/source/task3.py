@@ -111,7 +111,7 @@ print("=====================")
 '''
 Q 4.1 : Extract the final scores for the winning and losing players, and produce descriptive statistics for each scenario, specifically the minimum, mean, and maximum totals after each game. What do you observe about the winning and losing totals??
 
-Ans 4.1 : From minimum, mean and maximum final score we, can conclude that scores stays in range 190-250 for winning side while losing side losing side end up with scores from 100-175.
+Ans 4.1 : From minimum, mean and maximum final score we, can conclude that scores stays in range 190-250 for winning side while losing side losing side end up with scores from 95-180. Average losing score is around 150 whereas average winning score is around 215 (200+).
 '''
 print('\n----------Answers for Step 4.1 : -----------\n')
 n = 20
@@ -136,13 +136,25 @@ for i in range(n):   # for 20 simulation of game
     loser_final_piles.append(loser_pile)   # build the losing piles
     loser_final_scores.append(losing_score)  # build the losing scores
     
-    print('Game : %02d : Winner: %7s, Min(Loser Score)-%3d, Max(Winner Score)-%3d, Mean-%.2f'%\
-            (i+1, winner, losing_score, winning_score, (losing_score+winning_score)/2))
+    #print('Game : %02d : Winner: %7s, Min(Loser Score)-%3d, Max(Winner Score)-%3d, Mean-%.2f'%\
+    #        (i+1, winner, losing_score, winning_score, (losing_score+winning_score)/2))
     
     if sum(init_winner_pile) < sum(init_loser_pile):
         games_with_winner_having_lower_initial_total += 1
         lowest_init_by_winner.append(sum(init_winner_pile))
         highest_init_by_loser.append(sum(init_loser_pile))
+        
+        
+win_min_score = min(winner_final_scores)   
+win_mean_score = sum(winner_final_scores) / len(winner_final_scores) 
+win_max_score = max(winner_final_scores)  
+lose_min_score = min(loser_final_scores) 
+lose_mean_score = sum(loser_final_scores) / len(loser_final_scores)  
+lose_max_score = max(loser_final_scores) 
+
+print("min : {0}, mean : {1}, max : {2} for Winning total ".format(win_min_score, win_mean_score, win_max_score))
+print("min : {0}, mean : {1}, max : {2} for Losing total ".format(lose_min_score, lose_mean_score, lose_max_score))  
+
         
 '''
 Step 4.2: What proportion of games resulted in a winner that had a lower initial total than their opponent?
