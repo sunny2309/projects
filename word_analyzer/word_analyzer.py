@@ -121,4 +121,4 @@ if __name__ == '__main__':
     print('abcs : ', choice('abcs', idf))
     print('announce : ', choice('announce', idf))
     
-    
+    print('project : ',idf.getIDF('project'))
