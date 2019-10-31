@@ -13143,9 +13143,31 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://pokemondb.net/pokedex/all&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="n">all_rows</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number Of Rows : &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_rows</span><span class="p">))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number Of Rows :  927
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13166,20 +13188,22 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first_row</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
-<span class="n">first_row_data</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bulbasur</span> <span class="o">=</span> <span class="n">all_rows</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">first_row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">):</span>
-    <span class="n">hyperlinks</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">hyperlinks</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">hyperlink</span> <span class="ow">in</span> <span class="n">hyperlinks</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">hyperlink</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">])</span>
-    <span class="n">first_row_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-    
-<span class="n">first_row_data</span>
+<span class="n">id_etc</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">row_content</span> <span class="o">=</span> <span class="n">bulbasur</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">row_content</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">&#39;cell-num&#39;</span> <span class="ow">in</span> <span class="n">val</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="n">id_etc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">val</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;cell-name&#39;</span><span class="p">:</span>
+        <span class="n">hyperlink</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">hyperlink</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">])</span>
+<span class="n">id_etc</span>
 </pre></div>
 
     </div>
@@ -13196,22 +13220,23 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>/pokedex/bulbasaur
-/type/grass
-/type/poison
+<pre>Bulbasaur
+/pokedex/bulbasaur
+Grass Poison
+318
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;001&#39;, &#39;Bulbasaur&#39;, &#39;Grass Poison&#39;, &#39;318&#39;, &#39;45&#39;, &#39;49&#39;, &#39;49&#39;, &#39;65&#39;, &#39;65&#39;, &#39;45&#39;]</pre>
+<pre>[&#39;001&#39;, &#39;45&#39;, &#39;49&#39;, &#39;49&#39;, &#39;65&#39;, &#39;65&#39;, &#39;45&#39;]</pre>
 </div>
 
 </div>
@@ -13232,26 +13257,29 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">header_names</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">all_rows</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_data_frame</span><span class="p">(</span><span class="n">all_rows</span><span class="p">):</span>
+    <span class="n">header_names</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rows_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">all_rows</span><span class="p">:</span>
+        <span class="n">single_row_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">:</span>
+            <span class="n">header_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">header</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s1">&#39;Name&#39;</span><span class="p">:</span>
+                <span class="n">header_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;URL&#39;</span><span class="p">)</span>
+        <span class="n">row_content</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">row_content</span><span class="p">:</span>
+            <span class="n">single_row_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">val</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;cell-name&#39;</span><span class="p">:</span>
+                <span class="n">hyperlink</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+                <span class="n">single_row_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hyperlink</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">single_row_data</span><span class="p">:</span>
+            <span class="n">rows_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">single_row_data</span><span class="p">)</span>
 
-<span class="n">rows_data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">all_rows</span><span class="p">:</span>
-    <span class="n">single_row_data</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">headers</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">:</span>
-        <span class="n">header_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">header</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s1">&#39;Name&#39;</span><span class="p">:</span>
-            <span class="n">header_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;URL&#39;</span><span class="p">)</span>
-    <span class="n">row_content</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">row_content</span><span class="p">:</span>
-        <span class="n">single_row_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">val</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;cell-name&#39;</span><span class="p">:</span>
-            <span class="n">hyperlink</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
-            <span class="n">single_row_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hyperlink</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">])</span>
-    <span class="k">if</span> <span class="n">single_row_data</span><span class="p">:</span>
-        <span class="n">rows_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">single_row_data</span><span class="p">)</span>
-<span class="n">final_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header_names</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">header_names</span><span class="p">)</span>
+
+<span class="n">final_df</span> <span class="o">=</span> <span class="n">create_data_frame</span><span class="p">(</span><span class="n">all_rows</span><span class="p">)</span>
+
 <span class="n">final_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
@@ -13644,16 +13672,16 @@ dtype: object
       <th>Sp. Atk</th>
       <th>Sp. Def</th>
       <th>...</th>
-      <th>Ground</th>
-      <th>Ice</th>
-      <th>Normal</th>
       <th>Rock</th>
+      <th>Flying</th>
+      <th>Dragon</th>
+      <th>Ground</th>
       <th>Ghost</th>
-      <th>Electric</th>
+      <th>Fairy</th>
+      <th>Water</th>
       <th>Poison</th>
+      <th>Steel</th>
       <th>Grass</th>
-      <th>Psychic</th>
-      <th>Dark</th>
     </tr>
   </thead>
   <tbody>
@@ -13676,10 +13704,10 @@ dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
@@ -13700,10 +13728,10 @@ dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
@@ -13724,10 +13752,10 @@ dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
@@ -13748,10 +13776,10 @@ dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
@@ -13882,16 +13910,16 @@ After removing duplicates num of rows : 809
       <th>Sp. Atk</th>
       <th>Sp. Def</th>
       <th>...</th>
-      <th>Ground</th>
-      <th>Ice</th>
-      <th>Normal</th>
       <th>Rock</th>
+      <th>Flying</th>
+      <th>Dragon</th>
+      <th>Ground</th>
       <th>Ghost</th>
-      <th>Electric</th>
+      <th>Fairy</th>
+      <th>Water</th>
       <th>Poison</th>
+      <th>Steel</th>
       <th>Grass</th>
-      <th>Psychic</th>
-      <th>Dark</th>
     </tr>
   </thead>
   <tbody>
@@ -13914,10 +13942,10 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
@@ -13938,10 +13966,10 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
@@ -13962,10 +13990,10 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
@@ -14099,15 +14127,15 @@ After removing duplicates num of rows : 809
       <th>Sp. Atk</th>
       <th>Sp. Def</th>
       <th>...</th>
-      <th>Ice</th>
-      <th>Normal</th>
-      <th>Rock</th>
+      <th>Flying</th>
+      <th>Dragon</th>
+      <th>Ground</th>
       <th>Ghost</th>
-      <th>Electric</th>
+      <th>Fairy</th>
+      <th>Water</th>
       <th>Poison</th>
+      <th>Steel</th>
       <th>Grass</th>
-      <th>Psychic</th>
-      <th>Dark</th>
       <th>Sample</th>
     </tr>
   </thead>
@@ -14130,10 +14158,10 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>None</td>
     </tr>
     <tr>
@@ -14154,10 +14182,10 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>None</td>
     </tr>
     <tr>
@@ -14178,10 +14206,10 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>None</td>
     </tr>
     <tr>
@@ -14245,7 +14273,7 @@ After removing duplicates num of rows : 809
       <td>109</td>
       <td>85</td>
       <td>...</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14274,7 +14302,7 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14298,7 +14326,7 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14322,7 +14350,7 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14389,7 +14417,7 @@ After removing duplicates num of rows : 809
       <td>90</td>
       <td>80</td>
       <td>...</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14464,15 +14492,15 @@ After removing duplicates num of rows : 809
       <th>Sp. Atk</th>
       <th>Sp. Def</th>
       <th>...</th>
-      <th>Ice</th>
-      <th>Normal</th>
-      <th>Rock</th>
+      <th>Flying</th>
+      <th>Dragon</th>
+      <th>Ground</th>
       <th>Ghost</th>
-      <th>Electric</th>
+      <th>Fairy</th>
+      <th>Water</th>
       <th>Poison</th>
+      <th>Steel</th>
       <th>Grass</th>
-      <th>Psychic</th>
-      <th>Dark</th>
       <th>Sample</th>
     </tr>
   </thead>
@@ -14519,7 +14547,7 @@ After removing duplicates num of rows : 809
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14538,7 +14566,7 @@ After removing duplicates num of rows : 809
       <td>90</td>
       <td>80</td>
       <td>...</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14562,8 +14590,8 @@ After removing duplicates num of rows : 809
       <td>35</td>
       <td>35</td>
       <td>...</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14587,7 +14615,7 @@ After removing duplicates num of rows : 809
       <td>70</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -14668,7 +14696,7 @@ After removing duplicates num of rows : 809
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pokemon_name</span> <span class="o">=</span> <span class="s1">&#39;bulbasaur&#39;</span>
@@ -14683,7 +14711,7 @@ After removing duplicates num of rows : 809
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">tables</span><span class="p">:</span>
@@ -14806,7 +14834,7 @@ After removing duplicates num of rows : 809
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tables</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
@@ -14822,7 +14850,7 @@ After removing duplicates num of rows : 809
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -14940,7 +14968,7 @@ After removing duplicates num of rows : 809
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">game_dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">tables</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">tables</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
@@ -14969,7 +14997,7 @@ After removing duplicates num of rows : 809
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -15040,13 +15068,20 @@ After removing duplicates num of rows : 809
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Step-3.4:-Extract-the-location-table-and-transpose-it-for-all-the-pokemon-in-the-sample-(see-step-2.4).-Make-sure-you-include-wait-time-in-your-code-or-some-other-method-to-ensure-that-you-are-not-blocked-from-the-site-after-you-request-each-page.-Append-the-tables-into-a-single-DataFrame-with-the-pokemon-or-URL-as-the-index.">Step 3.4: Extract the location table and transpose it for all the pokemon in the sample (see step 2.4). Make sure you include wait time in your code or some other method to ensure that you are not blocked from the site after you request each page. Append the tables into a single DataFrame with the pokemon or URL as the index.<a class="anchor-link" href="#Step-3.4:-Extract-the-location-table-and-transpose-it-for-all-the-pokemon-in-the-sample-(see-step-2.4).-Make-sure-you-include-wait-time-in-your-code-or-some-other-method-to-ensure-that-you-are-not-blocked-from-the-site-after-you-request-each-page.-Append-the-tables-into-a-single-DataFrame-with-the-pokemon-or-URL-as-the-index.">&#182;</a></h3>
+<h3 id="Step-3.4:-Across-all-the-pokemon-pages,-the-location-table-is-almost*-always-the-second-to-last-table-on-the-page.-(Use-an-index-of--2.)-Extract-the-location-table-and-transpose-it-for-all-the-pokemon-in-the-sample-(see-step-2.4).-Make-sure-you-include-wait-time-in-your-code-or-some-other-method-to-ensure-that-you-are-not-blocked-from-the-site-after-you-request-each-page.-Unfortunately,-the-location-table-is-not-in-the-same-format-for-every-page,-so-we-will-be-extracting-only-the-information-for-the-X-and-Y-games-in-the-following-steps.">Step 3.4: Across all the pokemon pages, the location table is almost* always the second to last table on the page. (Use an index of -2.) Extract the location table and transpose it for all the pokemon in the sample (see step 2.4). Make sure you include wait time in your code or some other method to ensure that you are not blocked from the site after you request each page. Unfortunately, the location table is not in the same format for every page, so we will be extracting only the information for the X and Y games in the following steps.<a class="anchor-link" href="#Step-3.4:-Across-all-the-pokemon-pages,-the-location-table-is-almost*-always-the-second-to-last-table-on-the-page.-(Use-an-index-of--2.)-Extract-the-location-table-and-transpose-it-for-all-the-pokemon-in-the-sample-(see-step-2.4).-Make-sure-you-include-wait-time-in-your-code-or-some-other-method-to-ensure-that-you-are-not-blocked-from-the-site-after-you-request-each-page.-Unfortunately,-the-location-table-is-not-in-the-same-format-for-every-page,-so-we-will-be-extracting-only-the-information-for-the-X-and-Y-games-in-the-following-steps.">&#182;</a></h3><ul>
+<li>Check if the the column 'XY' is in the DataFrame. If so, create a new DataFrame with only the name or URL for the pokemon and the 'XY' column. Append that DataFrame to a list to concatenate with the other pokemon that have the XY location column.</li>
+<li>Create a single DataFrame that contains the name or URL of the pokemon and the XY location.</li>
+<li>Append all the sample pokemon and their XY locations to a single DataFrame.</li>
+<li>You should get 141 sample pokemon that meet this criteria.</li>
+<li>One sample pokemon (Meltan) has a page that will not work using this method. You can either remove Meltan from your sample or wrap your scraping code in a try/except statement.</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rows_data</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">pokemons</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">game_dataframe</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="p">[]</span>
@@ -15054,15 +15089,47 @@ After removing duplicates num of rows : 809
     <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://pokemondb.net/pokedex/</span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">pokemon_name</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">tables</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;User-agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0&#39;</span><span class="p">},</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">game_dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">tables</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">tables</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">game_dataframe</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">game_dataframe</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
     <span class="k">except</span><span class="p">:</span>
         <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">tables</span><span class="p">:</span>
-        <span class="n">main_table</span> <span class="o">=</span> <span class="p">[</span><span class="n">table</span> <span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">tables</span> <span class="k">if</span> <span class="n">table</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">14</span> <span class="ow">and</span> <span class="n">table</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">main_table</span><span class="p">:</span>
-            <span class="n">rows_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">main_table</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
-            <span class="n">pokemons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pokemon_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">game_dataframe</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="s1">&#39;XY&#39;</span> <span class="ow">in</span> <span class="n">game_dataframe</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">rows_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">game_dataframe</span><span class="p">[[</span><span class="s1">&#39;XY&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">pokemons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pokemon_name</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number Of Rows : &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows_data</span><span class="p">))</span>
+</pre></div>
 
-<span class="n">locations_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pokemons</span><span class="p">)</span>
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Number Of Rows :  140
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">locations_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;XY&#39;</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">pokemons</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Locations Data : &#39;</span><span class="p">,</span><span class="n">locations_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">locations_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15076,7 +15143,18 @@ After removing duplicates num of rows : 809
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Locations Data :  (140, 1)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -15099,107 +15177,29 @@ After removing duplicates num of rows : 809
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>RedBlue</th>
-      <th>Yellow</th>
-      <th>GoldSilverCrystal</th>
-      <th>RubySapphire</th>
-      <th>FireRedLeafGreen</th>
-      <th>Emerald</th>
-      <th>DiamondPearlPlatinum</th>
-      <th>HeartGoldSoulSilver</th>
-      <th>BlackWhiteBlack 2White 2</th>
       <th>XY</th>
-      <th>Omega RubyAlpha Sapphire</th>
-      <th>SunMoon</th>
-      <th>Ultra SunUltra Moon</th>
-      <th>Let's Go PikachuLet's Go Eevee</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Charmander</th>
-      <td>Pallet Town</td>
-      <td>Route 24</td>
-      <td>Trade/migrate from another game</td>
-      <td>Trade/migrate from another game</td>
-      <td>Pallet Town</td>
-      <td>Trade/migrate from another game</td>
-      <td>Trade/migrate from another game</td>
-      <td>Pallet Town</td>
-      <td>Trade/migrate from another game</td>
       <td>Lumiose City</td>
-      <td>Trade/migrate from another game</td>
-      <td>Trade/migrate from another game</td>
-      <td>Route 3</td>
-      <td>Route 3, 4, 24, Rock Tunnel</td>
     </tr>
     <tr>
-      <th>Slowbro</th>
-      <td>Route 23, Cerulean Cave, Seafoam Islands</td>
-      <td>Route 12, 13, Seafoam Islands</td>
-      <td>Slowpoke Well</td>
-      <td>Trade/migrate from another game</td>
-      <td>Berry Forest, Cape Brink, Cerulean Cave, Seafo...</td>
-      <td>Trade/migrate from another game</td>
-      <td>Trade/migrate from another game</td>
-      <td>Evolve Slowpoke</td>
-      <td>Seafoam Islands, Slowpoke Well</td>
-      <td>Abundant Shrine</td>
-      <td>Trade/migrate from another game</td>
-      <td>Evolve Slowpoke</td>
-      <td>Kala'e Bay</td>
-      <td>Seafoam Islands</td>
+      <th>Wartortle</th>
+      <td>Evolve Squirtle</td>
     </tr>
     <tr>
-      <th>Doduo</th>
-      <td>Route 16, 17, 18, Safari Zone</td>
-      <td>Route 16, 17, 18</td>
-      <td>Route 22, 26, 27, 28, Mt. Silver</td>
-      <td>Safari Zone</td>
-      <td>Route 16, 17, 18, Safari Zone</td>
-      <td>Safari Zone</td>
-      <td>Route 201</td>
-      <td>Route 22, 26, 27, 28, Mt. Silver</td>
-      <td>Route 12</td>
-      <td>Trade/migrate from another game</td>
-      <td>Route 5</td>
-      <td>Safari Zone</td>
-      <td>Trade/migrate from another game</td>
-      <td>Route 16, 17, 18</td>
+      <th>Butterfree</th>
+      <td>Evolve Caterpie/Metapod</td>
     </tr>
     <tr>
-      <th>Voltorb</th>
-      <td>Route 10, Power Plant</td>
-      <td>Power Plant</td>
-      <td>Route 10, Olivine City, Team Rocket HQ</td>
-      <td>New Mauville</td>
-      <td>Route 10, Power Plant</td>
-      <td>New Mauville</td>
-      <td>Route 218</td>
-      <td>Route 10, Olivine City, Team Rocket HQ</td>
-      <td>Trade/migrate from another game</td>
-      <td>Breed Electrode</td>
-      <td>Route 110, New Mauville</td>
-      <td>Trade/migrate from another game</td>
-      <td>Breed Electrode</td>
-      <td>Power Plant</td>
+      <th>Pidgey</th>
+      <td>Route 2, 3</td>
     </tr>
     <tr>
-      <th>Rhydon</th>
-      <td>Cerulean Cave</td>
-      <td>Cerulean Cave, Cinnabar Island</td>
-      <td>Blackthorn City</td>
-      <td>Victory Road</td>
-      <td>Evolve Rhyhorn</td>
-      <td>Route 227, 228, Stark Mountain</td>
-      <td>Route 227, 228, Stark Mountain, Victory Road</td>
-      <td>Evolve Rhyhorn</td>
+      <th>Raticate</th>
       <td>Trade/migrate from another game</td>
-      <td>Evolve Rhyhorn</td>
-      <td>Trade/migrate from another game</td>
-      <td>Evolve Rhyhorn</td>
-      <td>Evolve Rhyhorn</td>
-      <td>Cerulean Cave, Victory Road</td>
     </tr>
   </tbody>
 </table>
@@ -15225,7 +15225,7 @@ After removing duplicates num of rows : 809
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">avg_atck_defence_per_type</span> <span class="o">=</span> <span class="n">final_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()[[</span><span class="s1">&#39;Attack&#39;</span><span class="p">,</span> <span class="s1">&#39;Defense&#39;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">avg_atck_defence_per_type</span> <span class="o">=</span> <span class="n">final_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Type&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()[[</span><span class="s1">&#39;Attack&#39;</span><span class="p">,</span> <span class="s1">&#39;Defense&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Attack&#39;</span><span class="p">:</span> <span class="s1">&#39;Avg. Attack&#39;</span><span class="p">,</span> <span class="s1">&#39;Defense&#39;</span><span class="p">:</span> <span class="s1">&#39;Avg. Defense&#39;</span><span class="p">})</span>
 <span class="n">avg_atck_defence_per_type</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15262,8 +15262,8 @@ After removing duplicates num of rows : 809
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Attack</th>
-      <th>Defense</th>
+      <th>Avg. Attack</th>
+      <th>Avg. Defense</th>
     </tr>
     <tr>
       <th>Type</th>
@@ -15310,12 +15310,12 @@ After removing duplicates num of rows : 809
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sorted_vals</span> <span class="o">=</span> <span class="n">avg_atck_defence_per_type</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Attack&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sorted_vals</span> <span class="o">=</span> <span class="n">avg_atck_defence_per_type</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Avg. Attack&#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min Avg Attack, Type : (</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%d</span><span class="s1">), Max Avg Attack, Type : (</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%d</span><span class="s1">)&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">sorted_vals</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sorted_vals</span><span class="o">.</span><span class="n">Attack</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">sorted_vals</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">sorted_vals</span><span class="o">.</span><span class="n">Attack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min Avg Attack, Type : (</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%d</span><span class="s1">), Max Avg Attack, Type : (</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%d</span><span class="s1">)&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">sorted_vals</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sorted_vals</span><span class="p">[</span><span class="s1">&#39;Avg. Attack&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">sorted_vals</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">sorted_vals</span><span class="p">[</span><span class="s1">&#39;Avg. Attack&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -15343,12 +15343,12 @@ After removing duplicates num of rows : 809
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sorted_vals</span> <span class="o">=</span> <span class="n">avg_atck_defence_per_type</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Defense&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sorted_vals</span> <span class="o">=</span> <span class="n">avg_atck_defence_per_type</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Avg. Defense&#39;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min Avg Defense, Type : (</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%d</span><span class="s1">), Max Avg Defense, Type : (</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%d</span><span class="s1">)&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">sorted_vals</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sorted_vals</span><span class="o">.</span><span class="n">Defense</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">sorted_vals</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">sorted_vals</span><span class="o">.</span><span class="n">Defense</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Min Avg Defense, Type : (</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%d</span><span class="s1">), Max Avg Defense, Type : (</span><span class="si">%s</span><span class="s1"> - </span><span class="si">%d</span><span class="s1">)&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">sorted_vals</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sorted_vals</span><span class="p">[</span><span class="s1">&#39;Avg. Defense&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">sorted_vals</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">sorted_vals</span><span class="p">[</span><span class="s1">&#39;Avg. Defense&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -15377,17 +15377,18 @@ After removing duplicates num of rows : 809
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Step-4.2:-Join-the-pokedex-data-to-the-location-DataFrame-for-the-sample-pokemon.-(Exclude-pokemon-that-are-not-in-the-sample.)-For-the-locations-in-pokemon-Yellow,-calculate-the-average-total-points-for-each-location.-Which-location-has-the-highest-average-total-point-score?">Step 4.2: Join the pokedex data to the location DataFrame for the sample pokemon. (Exclude pokemon that are not in the sample.) For the locations in pokemon Yellow, calculate the average total points for each location. Which location has the highest average total point score?<a class="anchor-link" href="#Step-4.2:-Join-the-pokedex-data-to-the-location-DataFrame-for-the-sample-pokemon.-(Exclude-pokemon-that-are-not-in-the-sample.)-For-the-locations-in-pokemon-Yellow,-calculate-the-average-total-points-for-each-location.-Which-location-has-the-highest-average-total-point-score?">&#182;</a></h3>
+<h3 id="Step-4.2:-Join-the-pokedex-data-to-the-location-DataFrame-created-in-Step-3.4.-(Exclude-pokemon-that-are-not-in-the-sample.)-For-the-locations-in-pokemon-X/Y,-calculate-the-average-total-points-for-each-location.-Which-location-has-the-highest-average-total-point-score?">Step 4.2: Join the pokedex data to the location DataFrame created in Step 3.4. (Exclude pokemon that are not in the sample.) For the locations in pokemon X/Y, calculate the average total points for each location. Which location has the highest average total point score?<a class="anchor-link" href="#Step-4.2:-Join-the-pokedex-data-to-the-location-DataFrame-created-in-Step-3.4.-(Exclude-pokemon-that-are-not-in-the-sample.)-For-the-locations-in-pokemon-X/Y,-calculate-the-average-total-points-for-each-location.-Which-location-has-the-highest-average-total-point-score?">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">combined_locations_general_data</span> <span class="o">=</span> <span class="n">locations_data</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">final_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">),</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
 <span class="n">combined_locations_general_data</span> <span class="o">=</span> <span class="n">combined_locations_general_data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined_locations_general_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">combined_locations_general_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15401,7 +15402,18 @@ After removing duplicates num of rows : 809
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(140, 31)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -15425,25 +15437,25 @@ After removing duplicates num of rows : 809
     <tr style="text-align: right;">
       <th></th>
       <th>index</th>
-      <th>RedBlue</th>
-      <th>Yellow</th>
-      <th>GoldSilverCrystal</th>
-      <th>RubySapphire</th>
-      <th>FireRedLeafGreen</th>
-      <th>Emerald</th>
-      <th>DiamondPearlPlatinum</th>
-      <th>HeartGoldSoulSilver</th>
-      <th>BlackWhiteBlack 2White 2</th>
+      <th>XY</th>
+      <th>#</th>
+      <th>URL</th>
+      <th>Type</th>
+      <th>Total</th>
+      <th>HP</th>
+      <th>Attack</th>
+      <th>Defense</th>
+      <th>Sp. Atk</th>
       <th>...</th>
-      <th>Ice</th>
-      <th>Normal</th>
-      <th>Rock</th>
+      <th>Flying</th>
+      <th>Dragon</th>
+      <th>Ground</th>
       <th>Ghost</th>
-      <th>Electric</th>
+      <th>Fairy</th>
+      <th>Water</th>
       <th>Poison</th>
+      <th>Steel</th>
       <th>Grass</th>
-      <th>Psychic</th>
-      <th>Dark</th>
       <th>Sample</th>
     </tr>
   </thead>
@@ -15451,15 +15463,15 @@ After removing duplicates num of rows : 809
     <tr>
       <th>0</th>
       <td>Charmander</td>
-      <td>Pallet Town</td>
-      <td>Route 24</td>
-      <td>Trade/migrate from another game</td>
-      <td>Trade/migrate from another game</td>
-      <td>Pallet Town</td>
-      <td>Trade/migrate from another game</td>
-      <td>Trade/migrate from another game</td>
-      <td>Pallet Town</td>
-      <td>Trade/migrate from another game</td>
+      <td>Lumiose City</td>
+      <td>4</td>
+      <td>/pokedex/charmander</td>
+      <td>Fire</td>
+      <td>309</td>
+      <td>39</td>
+      <td>52</td>
+      <td>43</td>
+      <td>60</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -15474,43 +15486,43 @@ After removing duplicates num of rows : 809
     </tr>
     <tr>
       <th>1</th>
-      <td>Slowbro</td>
-      <td>Route 23, Cerulean Cave, Seafoam Islands</td>
-      <td>Route 12, 13, Seafoam Islands</td>
-      <td>Slowpoke Well</td>
-      <td>Trade/migrate from another game</td>
-      <td>Berry Forest, Cape Brink, Cerulean Cave, Seafo...</td>
-      <td>Trade/migrate from another game</td>
-      <td>Trade/migrate from another game</td>
-      <td>Evolve Slowpoke</td>
-      <td>Seafoam Islands, Slowpoke Well</td>
+      <td>Wartortle</td>
+      <td>Evolve Squirtle</td>
+      <td>8</td>
+      <td>/pokedex/wartortle</td>
+      <td>Water</td>
+      <td>405</td>
+      <td>59</td>
+      <td>63</td>
+      <td>80</td>
+      <td>65</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>sample</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Doduo</td>
-      <td>Route 16, 17, 18, Safari Zone</td>
-      <td>Route 16, 17, 18</td>
-      <td>Route 22, 26, 27, 28, Mt. Silver</td>
-      <td>Safari Zone</td>
-      <td>Route 16, 17, 18, Safari Zone</td>
-      <td>Safari Zone</td>
-      <td>Route 201</td>
-      <td>Route 22, 26, 27, 28, Mt. Silver</td>
-      <td>Route 12</td>
+      <td>Butterfree</td>
+      <td>Evolve Caterpie/Metapod</td>
+      <td>12</td>
+      <td>/pokedex/butterfree</td>
+      <td>Bug Flying</td>
+      <td>395</td>
+      <td>60</td>
+      <td>45</td>
+      <td>50</td>
+      <td>90</td>
       <td>...</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -15522,22 +15534,22 @@ After removing duplicates num of rows : 809
     </tr>
     <tr>
       <th>3</th>
-      <td>Voltorb</td>
-      <td>Route 10, Power Plant</td>
-      <td>Power Plant</td>
-      <td>Route 10, Olivine City, Team Rocket HQ</td>
-      <td>New Mauville</td>
-      <td>Route 10, Power Plant</td>
-      <td>New Mauville</td>
-      <td>Route 218</td>
-      <td>Route 10, Olivine City, Team Rocket HQ</td>
-      <td>Trade/migrate from another game</td>
+      <td>Pidgey</td>
+      <td>Route 2, 3</td>
+      <td>16</td>
+      <td>/pokedex/pidgey</td>
+      <td>Normal Flying</td>
+      <td>251</td>
+      <td>40</td>
+      <td>45</td>
+      <td>40</td>
+      <td>35</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -15546,20 +15558,20 @@ After removing duplicates num of rows : 809
     </tr>
     <tr>
       <th>4</th>
-      <td>Rhydon</td>
-      <td>Cerulean Cave</td>
-      <td>Cerulean Cave, Cinnabar Island</td>
-      <td>Blackthorn City</td>
-      <td>Victory Road</td>
-      <td>Evolve Rhyhorn</td>
-      <td>Route 227, 228, Stark Mountain</td>
-      <td>Route 227, 228, Stark Mountain, Victory Road</td>
-      <td>Evolve Rhyhorn</td>
+      <td>Raticate</td>
       <td>Trade/migrate from another game</td>
+      <td>20</td>
+      <td>/pokedex/raticate</td>
+      <td>Normal</td>
+      <td>413</td>
+      <td>55</td>
+      <td>81</td>
+      <td>60</td>
+      <td>50</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -15570,7 +15582,7 @@ After removing duplicates num of rows : 809
     </tr>
   </tbody>
 </table>
-<p>5 rows × 44 columns</p>
+<p>5 rows × 31 columns</p>
 </div>
 </div>
 
@@ -15582,10 +15594,10 @@ After removing duplicates num of rows : 809
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">avg_total_point_per_location</span> <span class="o">=</span> <span class="n">combined_locations_general_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Yellow&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()[[</span><span class="s1">&#39;Total&#39;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">avg_total_point_per_location</span> <span class="o">=</span> <span class="n">combined_locations_general_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;XY&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()[[</span><span class="s1">&#39;Total&#39;</span><span class="p">]]</span>
 <span class="n">avg_total_point_per_location</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -15599,7 +15611,7 @@ After removing duplicates num of rows : 809
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[49]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -15625,30 +15637,30 @@ After removing duplicates num of rows : 809
       <th>Total</th>
     </tr>
     <tr>
-      <th>Yellow</th>
+      <th>XY</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>A POKéMON that races across the land. It is said that one is born every time a new volcano appears.</th>
-      <td>580.0</td>
+      <th>Ambrette Town</th>
+      <td>355.5</td>
     </tr>
     <tr>
-      <th>Before food becomes scarce in wintertime, its habit is to hoard food in many hidden locations.</th>
+      <th>Breed Electrode</th>
       <td>330.0</td>
     </tr>
     <tr>
-      <th>CLAYDOL is an enigma that appeared from a clay statue made by an ancient civilization dating back 20,000 years. This POKéMON shoots beams from both its hands.</th>
-      <td>500.0</td>
+      <th>Breed Gurdurr/Conkeldurr</th>
+      <td>305.0</td>
     </tr>
     <tr>
-      <th>Cerulean Cave, Cinnabar Island</th>
-      <td>485.0</td>
+      <th>Breed Hariyama</th>
+      <td>237.0</td>
     </tr>
     <tr>
-      <th>Even though it is small, it can’t be ignored because it will slug any handy target without warning.</th>
-      <td>210.0</td>
+      <th>Breed Haunter/Gengar</th>
+      <td>310.0</td>
     </tr>
   </tbody>
 </table>
@@ -15663,10 +15675,10 @@ After removing duplicates num of rows : 809
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">avg_total_point_per_location</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Total&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">avg_total_point_per_location</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Total&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -15679,7 +15691,7 @@ After removing duplicates num of rows : 809
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -15705,90 +15717,30 @@ After removing duplicates num of rows : 809
       <th>Total</th>
     </tr>
     <tr>
-      <th>Yellow</th>
+      <th>XY</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Roaming Hoenn</th>
-      <td>600.000000</td>
+      <th>Sea Spirit's Den, Roaming Kalos</th>
+      <td>580.0</td>
     </tr>
     <tr>
-      <th>A POKéMON that races across the land. It is said that one is born every time a new volcano appears.</th>
-      <td>580.000000</td>
+      <th>Evolve Vanillite/Vanillish</th>
+      <td>535.0</td>
     </tr>
     <tr>
-      <th>It is hard for it to support its own weight out of water, so it gets down on all fours. But it moves fast.</th>
-      <td>530.000000</td>
+      <th>Evolve Chespin/Quilladin</th>
+      <td>530.0</td>
     </tr>
     <tr>
-      <th>CLAYDOL is an enigma that appeared from a clay statue made by an ancient civilization dating back 20,000 years. This POKéMON shoots beams from both its hands.</th>
-      <td>500.000000</td>
+      <th>Tower of Mastery</th>
+      <td>525.0</td>
     </tr>
     <tr>
-      <th>Route 38, 39</th>
-      <td>490.000000</td>
-    </tr>
-    <tr>
-      <th>Route 12, 13, Seafoam Islands</th>
-      <td>490.000000</td>
-    </tr>
-    <tr>
-      <th>Cerulean Cave, Cinnabar Island</th>
-      <td>485.000000</td>
-    </tr>
-    <tr>
-      <th>Evolve Clamperl</th>
-      <td>485.000000</td>
-    </tr>
-    <tr>
-      <th>Route 2, 5, 8, 11, 13, 14, 15, 25, 26, 27, 35, 37, 38, 39, 43, Ilex Forest</th>
-      <td>452.000000</td>
-    </tr>
-    <tr>
-      <th>Safari Zone</th>
-      <td>420.000000</td>
-    </tr>
-    <tr>
-      <th>This POKéMON is fully covered by nonflammable fur. It can withstand any kind of fire attack.</th>
-      <td>405.000000</td>
-    </tr>
-    <tr>
-      <th>Trade/migrate from another game</th>
-      <td>403.833333</td>
-    </tr>
-    <tr>
-      <th>It spreads its petals to absorb sunlight. It also floats in the air to get closer to the sun.</th>
-      <td>340.000000</td>
-    </tr>
-    <tr>
-      <th>Before food becomes scarce in wintertime, its habit is to hoard food in many hidden locations.</th>
-      <td>330.000000</td>
-    </tr>
-    <tr>
-      <th>Power Plant</th>
-      <td>330.000000</td>
-    </tr>
-    <tr>
-      <th>Its pleasantly aromatic leaves have the ability to check the humidity and temperature.</th>
-      <td>318.000000</td>
-    </tr>
-    <tr>
-      <th>Route 16, 17, 18</th>
-      <td>310.000000</td>
-    </tr>
-    <tr>
-      <th>Route 24</th>
-      <td>309.000000</td>
-    </tr>
-    <tr>
-      <th>Route 10, 11, 12, 13, Vermilion City</th>
-      <td>295.000000</td>
-    </tr>
-    <tr>
-      <th>Even though it is small, it can’t be ignored because it will slug any handy target without warning.</th>
-      <td>210.000000</td>
+      <th>Evolve Mienfoo</th>
+      <td>510.0</td>
     </tr>
   </tbody>
 </table>
@@ -15804,7 +15756,7 @@ After removing duplicates num of rows : 809
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Location <strong>Roaming Hoenn</strong> has highest total as we can see above from sorted values.</p>
+<p>Location <strong>Sea Spirit's Den, Roaming Kalos</strong> has highest total as we can see above from sorted values.</p>
 
 </div>
 </div>
