@@ -1,0 +1,92 @@
+Handling Oscar
+Introduction
+We are focussing on the Entertainment industry. Our project analyses data surrounding the Oscar Academy Awards won in the past 20 years. We’d be scraping data and dig into existing datasets to look closely if there are any patterns being followed for the nominees nominated and the awards being won. We also try to figure out if there are any bias in the system towards a specific gender/race, ethnicity/minority groups/nationalities, or the categories of films, etc. We find it interesting because the Oscars are a representation of the diversity and talent in the entertainment industry all over the World. 
+
+Analyzing the demographics of cast members of all oscar-winning movies in the past 20(or more) years will help us see if the awarding system is biased in any way? if any specific characteristics or factors do play a more important role in decision making and awarding system.  
+Factors to consider are: 
+Gender
+Race (White, Black, AAPI, Hispanic)
+Sexual orientation
+Nationality
+Budget
+Genre
+
+Questions of Interest
+1. Can we come up with a model that could predict the winner among the nominees? Or determine their success factors?  Has there been a change over time, is there an obvious pattern? (The trend of some notable groups?)
+Or in more detail: 
+
+2. Do IMDB ratings ( audience taste) agree with the academy members’ opinion?
+
+3. Does budget necessarily play an important role? (https://data.world/popculture/imdb-5000-movie-dataset)
+
+4. Does diversity or “lack of diversity” of cast and crew in terms of race, gender, sexual orientation, etc. show a pattern of some sort? 
+
+5. What movie genre and categories are more likely to win the award?
+
+
+Data Processing and Analysis
+Dataset Description
+We will be scraping the academy awards database http://awardsdatabase.oscars.org/search/results to extract nominees and winners for each category. This web interface is maintained by the Academy of Motion Picture Arts and Sciences. 
+
+We will then use data gathered by crowdflower sourced at data.world to get demographic information of winners. Demographic information, including race, sexual orientation, etc. 
+https://data.world/crowdflower/academy-awards-demographics
+
+We’d also like to use the imdb python package as well, which is according to their documentation, “useful to retrieve and manage the data of the IMDb movie database about movies, people, characters and companies.” https://pypi.org/project/IMDbPY/
+
+
+Data Sources:
+- https://cs.uwaterloo.ca/~s255khan/oscars.html - actors.csv, actress.csv, directors.csv, movies.csv
+- https://www.kaggle.com/theacademy/academy-awards - database.csv
+- https://data.world/popculture/imdb-5000-movie-dataset- movie_metadata.csv
+- https://data.world/crowdflower/academy-awards-demographics - demographics.csv
+
+
+
+```Python
+
+ia = imdb.IMDb()
+
+for year, film in zip(main_df.Year, main_df.Film):
+    imdb_ratings, genres, votes, plot = [], [], [], []
+    try:
+        movies = ia.search_movie(film)
+    except:
+        imdb_ratings.append(None)
+        genres.append(None)
+        votes.append(None)
+        plot.append(None)
+        continue
+        
+    final_movie = None
+    if '/' in year:
+        y1, y2 = year.split('/')
+        for movie in movies:
+            if (movie.get('year', None) == y1):
+                final_movie = movie
+                break
+            elif (movie.get('year', None) == y2):
+                final_movie = movie
+                break
+    else:
+        for movie in movies:
+            if movie.get('year', None) == year:
+                final_movie = movie
+                break
+    if final_movie:
+        imdb_ratings.append(final_movie.get('rating', None))
+        genres.append(final_movie.get('genres', None))
+        votes.append(final_movie.get('votes', None))
+        plot.append(final_movie.get('plot', None))
+    else:
+        imdb_ratings.append(None)
+        genres.append(None)
+        votes.append(None)
+        plot.append(None)
+
+main_df['IMDB_Ratings'] = imdb_ratings
+main_df['genres'] = genres
+main_df['votes'] = votes
+main_df['plot'] = plot
+
+main_df.head()
+```
