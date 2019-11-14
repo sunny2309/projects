@@ -1,0 +1,163 @@
+{
+  "scandevice": [
+    {
+      "scanlldp": [
+        {
+          "Vendor": "AAA",
+          "Hostname": "rtr1.bac.it",
+          "IPAddress": "1.1.1.1",
+          "lldp": [
+            {
+              "localport": "ge-0/0/1",
+              "neighborport": "ge-0/1/1",
+              "systemname": "rtr3.bac.it"
+            },
+            {
+              "localport": "ge-1/0/1",
+              "neighborport": "ge-1/0/2",
+              "systemname": "rtr3.bac.it"
+            },
+            {
+              "localport": "ge-1/0/2",
+              "neighborport": "ge-2/0/1",
+              "systemname": "rtr2.bac.it"
+            },
+            {
+              "localport": "ge-2/0/3",
+              "neighborport": "ge-2/0/3",
+              "systemname": "rtr1.bac.it"
+            },
+            {
+              "localport": "xe-0/0/0",
+              "neighborport": "69238784",
+              "systemname": "rtr5.bac.it"
+            }
+          ]
+        },
+        {
+          "Vendor": "AAA",
+          "Hostname": "rtr2.bac.it",
+          "IPAddress": "1.1.1.2",
+          "lldp": [
+            {
+              "localport": "ge-0/1/5",
+              "neighborport": "ge-0/1/5",
+              "systemname": "mse02.rndlab"
+            },
+            {
+              "localport": "ge-4/0/3",
+              "neighborport": "ge-4/0/2",
+              "systemname": "mse02.rndlab"
+            },
+            {
+              "localport": "ge-4/0/2",
+              "neighborport": "ge-4/0/3",
+              "systemname": "mse02.rndlab"
+            },
+            {
+              "localport": "ge-4/0/8",
+              "neighborport": "ge-4/0/8",
+              "systemname": "mse02.rndlab"
+            },
+            {
+              "localport": "xe-0/0/0",
+              "neighborport": "69238784",
+              "systemname": "NPE02ALUBAU"
+            }
+          ]
+        },
+        {
+          "Vendor": "BBB",
+          "Hostname": "rtr5.bac.it",
+          "IPAddress": "1.1.1.5",
+          "lldp": [
+            {
+              "localport": "GigabitEthernet1/0/0",
+              "neighborport": "GigabitEthernet2/0/0",
+              "systemname": "rtr1.bac.it"
+            },
+            {
+              "localport": "GigabitEthernet2/0/0",
+              "neighborport": "628",
+              "systemname": "rtr1.bac.it"
+            },
+            {
+              "localport": "GigabitEthernet2/1/0",
+              "neighborport": "GigabitEthernet1/0/0",
+              "systemname": "sw10.bac.dev"
+            },
+            {
+              "localport": "GigabitEthernet4/0/0",
+              "neighborport": "GigabitEthernet2/0/1",
+              "systemname": "ted1.dev"
+            }
+          ]
+        },
+        {
+          "Vendor": "AAA",
+          "Hostname": "rtr10.bac.it",
+          "IPAddress": "1.1.1.10",
+          "lldp": [
+            {
+              "localport": "ge-0/1/5",
+              "neighborport": "ge-0/1/5",
+              "systemname": "mse02.rndlab"
+            },
+            {
+              "localport": "ge-4/0/3",
+              "neighborport": "ge-4/0/2",
+              "systemname": "mse02.rndlab"
+            },
+            {
+              "localport": "ge-4/0/2",
+              "neighborport": "ge-4/0/3",
+              "systemname": "mse02.rndlab"
+            },
+            {
+              "localport": "ge-4/0/8",
+              "neighborport": "ge-4/0/8",
+              "systemname": "mse02.rndlab"
+            },
+            {
+              "localport": "xe-0/0/0",
+              "neighborport": "69238784",
+              "systemname": "NPE02ALUBAU"
+            }
+          ]
+        },
+        {
+          "Vendor": "CCC",
+          "Hostname": "rtr21.bac.it",
+          "IPAddress": "1.1.1.21",
+          "lldp": [
+            {
+              "localport": "1/1/1",
+              "neighborport": "1/1/1",
+              "systemname": "rt1.bac.it"
+            },
+            {
+              "localport": "1/1/12",
+              "neighborport": "9/0/1",
+              "systemname": "sw2.bac.dev"
+            },
+            {
+              "localport": "7/7/1",
+              "neighborport": "2/2/2",
+              "systemname": "rt1.bac.it"
+            },
+            {
+              "localport": "2/2/1",
+              "neighborport": "xe-6/1/0",
+              "systemname": "rtr3.bac.it"
+            },
+            {
+              "localport": "1/4/1",
+              "neighborport": "Link 2 dev1 *",
+              "systemname": "rtr3.bac.it"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

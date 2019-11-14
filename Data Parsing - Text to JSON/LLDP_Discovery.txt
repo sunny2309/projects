@@ -1,0 +1,63 @@
+Vendor: AAA
+Hostname:rtr1.bac.it
+IP Address:1.1.1.1
+Local Interface Chassis Id        Port info     System Name
+ge-0/0/1        00:aa:01:02:03:f0 ge-0/1/1      rtr3.bac.it
+ge-1/0/1        00:aa:02:02:03:f0 ge-1/0/2      rtr3.bac.it
+ge-1/0/2        00:aa:03:02:03:f0 ge-2/0/1      rtr2.bac.it
+ge-2/0/3        00:aa:04:02:03:f0 ge-2/0/3      rtr1.bac.it
+xe-0/0/0        00:aa:05:02:03:f0 69238784      rtr5.bac.it
+********** Command Completed **********
+
+Vendor: AAA
+Hostname:rtr2.bac.it
+IP Address:1.1.1.2
+Local Interface Chassis Id        Port info     System Name
+ge-0/1/5        00:1f:12:73:47:f0 ge-0/1/5      mse02.rndlab
+ge-4/0/3        00:1f:12:73:47:f0 ge-4/0/2      mse02.rndlab
+ge-4/0/2        00:1f:12:73:47:f0 ge-4/0/3      mse02.rndlab
+ge-4/0/8        00:1f:12:73:47:f0 ge-4/0/8      mse02.rndlab
+xe-0/0/0        00:21:05:a6:b4:24 69238784      NPE02ALUBAU
+********** Command Completed **********
+
+Vendor: BBB
+Hostname:rtr5.bac.it
+IP Address:1.1.1.5
+Local Intf              Neighbor Dev         Neighbor Intf        Exptime (sec)
+-------------------------------------------------------------------------------
+GigabitEthernet1/0/0    rtr1.bac.it          GigabitEthernet2/0/0           110
+GigabitEthernet2/0/0    rtr1.bac.it          628                            103
+GigabitEthernet2/1/0    sw10.bac.dev         GigabitEthernet1/0/0           113
+GigabitEthernet4/0/0    ted1.dev             GigabitEthernet2/0/1           110
+********** Command Completed **********
+
+Vendor: AAA
+Hostname:rtr10.bac.it
+IP Address:1.1.1.10
+Local Interface Chassis Id        Port info     System Name
+ge-0/1/5        00:1f:12:73:47:f0 ge-0/1/5      mse02.rndlab
+ge-4/0/3        00:1f:12:73:47:f0 ge-4/0/2      mse02.rndlab
+ge-4/0/2        00:1f:12:73:47:f0 ge-4/0/3      mse02.rndlab
+ge-4/0/8        00:1f:12:73:47:f0 ge-4/0/8      mse02.rndlab
+xe-0/0/0        00:21:05:a6:b4:24 69238784      NPE02ALUBAU
+********** Command Completed **********
+
+Vendor: CCC
+Hostname:rtr21.bac.it
+IP Address:1.1.1.21
+Link Layer Discovery Protocol (LLDP) System Information
+
+===============================================================================
+NB = nearest-bridge   NTPMR = nearest-non-tpmr   NC = nearest-customer
+===============================================================================
+Lcl Port  Scope  Remote Chassis ID   Index  Remote Port     Remote System Name
+-------------------------------------------------------------------------------
+1/1/1     NB     00:00:01:A6:B4:44   51     1/1/1, 10-Gig * rt1.bac.it
+1/1/12    NB     10:E0:9C:90:30:01   11     9/0/1, 10/100/* sw2.bac.dev
+7/7/1     NB     00:21:05:AC:70:40   15     2/2/2, 10-Gig * rt1.bac.it
+2/2/1     NB     G0:1C:2D:22:37:F0   99     xe-6/1/0        rtr3.bac.it
+1/4/1     NB     G0:1C:2D:22:37:F0   19     Link 2 dev1   * rtr3.bac.it
+===============================================================================
+* indicates that the corresponding row element may have been truncated.
+Number of neighbors : 8
+********** Command Completed **********

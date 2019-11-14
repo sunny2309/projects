@@ -1,0 +1,81 @@
+scandevice [
+   scanlldp
+      Vendor: AAA
+      Hostname: 'Device Hostname'
+      IPAddress: 'Device IpAddress'
+      lldp: 
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx
+      Vendor: AAA
+      Hostname: 'Device Hostname'
+      IPAddress: 'Device IpAddress'
+      lldp:
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx
+      Vendor: BBB
+      Hostname: 'Device Hostname'
+      IPAddress: 'Device IpAddress'
+      lldp:
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx
+      Vendor: CCC
+      Hostname: 'Device Hostname'
+      IPAddress: 'Device IpAddress'
+      lldp:
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx
+      Vendor: AAA
+      Hostname: 'Device Hostname'
+      IPAddress: 'Device IpAddress'
+      lldp:
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx
+      Vendor: CCC
+      Hostname: 'Device Hostname'
+      IPAddress: 'Device IpAddress'
+      lldp:
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx,
+         localport = xxx
+         neighborport = xxx
+         systemname = xxx
+]
