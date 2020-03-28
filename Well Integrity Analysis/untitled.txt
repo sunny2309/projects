@@ -1,0 +1,67 @@
+import numpy as np
+import pandas as pd
+
+import matplotlib.pyplot as plt
+import hvplot.pandas
+import holoviews as hv
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+import plotly.express as px
+
+
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+
+from collections import Counter
+import warnings
+
+warnings.filterwarnings('ignore')
+np.set_printoptions(precision=3)
+pd.set_option('precision',3)
+hv.extension('bokeh', 'matplotlib')
+
+cols = ['Date of submission','PAC WellBore ID','PAC String Type','WELL STATUS','WELL STATUS L1','HEALTHY/UNHEALTHY','UNHEALTHY CATEGORY','ISSUE','WFAM Score','Age','Age Factors','Score','Shallow Gas','Score2','Metal Loss Above Top Packer','Score3','Cement','Score4','Casing Thread','Score5','Corrosive Fluid','Score6','Final Score','WIRE']
+well_integrity = pd.read_csv('Data Well Integrity.csv')
+well_integrity = well_integrity[cols]
+
+well_integrity['WELL STATUS'] =  ['ABANDON' if val in ['Abandoned', 'Abandonment'] else 'ACTIVE' if val=='Active' else 'IDLE' if val=='Idle' else val for val in well_integrity['WELL STATUS']]
+
+well_status_dist = well_integrity.groupby(by=['WELL STATUS', 'WELL STATUS L1']).count()[['PAC String Type']]
+well_status_dist = well_status_dist.rename(columns={'PAC String Type': 'Count'})
+well_status_dist = well_status_dist.sort_values(by=['WELL STATUS', 'Count'], ascending=False)
+well_status_dist = well_status_dist.reset_index()
+
+
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+header = html.H1(children="Well Integrity Risk Escalation(WIRE) Dashboard By Faiz Fabillilah")
+
+graph1 = dcc.Graph(
+        id='graph1',
+        figure={
+                    'data': [
+                        {'x': well_status_dist['WELL STATUS'], 'y': well_status_dist['Count'],
+                         'color': 'WELL STATUS L1',
+                         'type': 'bar',
+                         },
+
+                    ],
+                    'layout': {
+                        'title': 'Distribution Of "WELL STATUS L1" in "WELL STATUS"'
+                    }
+                }
+                )
+
+layout = html.Div(children=[header, graph1])
+
+app.layout = layout
+
+
+app.run_server(debug=True)
+    
+    
+    
+    
